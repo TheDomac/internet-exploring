@@ -1,0 +1,6083 @@
+[
+  {
+    "id": "0fdEQ14LP6vYDWaaftjU",
+    "name": "It's tight in there",
+    "rebuses": [
+      {
+        "clues": [
+          {
+            "subtext": "",
+            "style": "",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "helperText": "",
+            "id": "dd2fa059-aa60-48d0-875d-34a4aca61796",
+            "solutionInfo": {
+              "solvedText": "Weakest fundamental force",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Weakest fundamental force",
+                  "id": "fa6d6678-d942-4eb3-8ba1-87baee7b3170"
+                }
+              ]
+            },
+            "clueValues": [
+              {
+                "id": "0d418130-e361-47d0-846e-396faedaec14",
+                "type": "image",
+                "value": "weakestFundamentalForce.png"
+              }
+            ]
+          },
+          {
+            "style": "",
+            "helperText": "",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "56773f6a-26a3-41b3-9c70-dd6a290c2edb",
+                "value": "Weakest fundamental force",
+                "type": "text"
+              }
+            ],
+            "subtext": "",
+            "dependsOn": [
+              {
+                "id": "9b374e1c-8211-4ab0-ac0d-fb34b9218e7d",
+                "value": "dd2fa059-aa60-48d0-875d-34a4aca61796"
+              }
+            ],
+            "id": "4e57b90d-c1f7-4215-85f8-bf58c4cdfb24",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Gravity",
+              "possibleSolutions": [
+                {
+                  "value": "Gravity",
+                  "id": "a88c8a5f-ff6c-4e19-9ec0-153792ae1f51"
+                }
+              ]
+            }
+          }
+        ],
+        "solutionInfo": {
+          "solvedText": "Gravity",
+          "type": "text",
+          "possibleSolutions": []
+        },
+        "style": "",
+        "id": "9933587e-41b1-46c9-96c5-96b100f20178"
+      },
+      {
+        "style": "",
+        "id": "78c23a00-a2af-4a45-b943-bae09879127f",
+        "clues": [
+          {
+            "helperText": "Formulas for these chemical compounds are synonims for a word. Nitrogen oxide will give you the exact word.",
+            "dependsOn": [],
+            "style": "",
+            "id": "ad24e035-0802-4f0b-b2cf-3d7821126e56",
+            "clueValues": [
+              {
+                "id": "aaabab6f-509c-4177-b0d4-4f25002a92a8",
+                "type": "text",
+                "value": "Sodium hydride"
+              },
+              {
+                "id": "06265366-b866-4d27-881f-3c07fbe42233",
+                "value": "Sodium hypobromite",
+                "type": "text"
+              }
+            ],
+            "subtext": "Synonim",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "No",
+                  "id": "35034e98-cd54-4761-ac4f-b5ce28c5f5ce"
+                }
+              ],
+              "solvedText": "No",
+              "type": "text"
+            },
+            "clueGroup": 0
+          },
+          {
+            "helperText": "What word can mean the opposite of Heavy, Abundant and Shadow? It's an electromagnetic radiation within the portion of the electromagnetic spectrum that is perceived by the human eye.",
+            "subtext": "Antonym",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "value": "Shadow",
+                "type": "text",
+                "id": "f0bffa43-4b47-437f-bb93-8f1c881eb85c"
+              },
+              {
+                "value": "Heavy",
+                "type": "text",
+                "id": "b4d46950-3b52-4ebb-b6af-59703cc4703f"
+              }
+            ],
+            "id": "36844bd2-22d4-4c3d-876c-043d875f3ab5",
+            "style": "",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Light",
+              "possibleSolutions": [
+                {
+                  "value": "Light",
+                  "id": "4fbd1506-d128-4040-a410-15baa634de07"
+                }
+              ]
+            }
+          }
+        ],
+        "solutionInfo": {
+          "possibleSolutions": [],
+          "solvedText": "No light",
+          "type": "text"
+        }
+      },
+      {
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "4ad40c9f-0b48-43ba-ad56-45ab4559857b",
+              "value": "Space"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Space"
+        },
+        "id": "b0188ca1-0153-482b-aded-6b61d2027263",
+        "clues": [
+          {
+            "id": "b6aade7b-1860-4dbb-b0ae-c17501e87a5b",
+            "clueValues": [
+              {
+                "value": "asteroids.png",
+                "type": "image",
+                "id": "d9e0aa7e-6595-4090-9ff1-7d87b26c3779"
+              }
+            ],
+            "dependsOn": [],
+            "subtext": "Old arcade game",
+            "style": "",
+            "helperText": "Arcade game released in1979. and designed by Lyle Rains and Ed Logg.",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Asteroids",
+              "possibleSolutions": [
+                {
+                  "value": "Asteroids",
+                  "id": "12628a0b-64cc-45bb-8585-facb030da976"
+                }
+              ]
+            }
+          },
+          {
+            "dependsOn": [],
+            "id": "27566818-116c-4708-8bf1-f110e0fda21e",
+            "helperText": "Similar to jelly and marmalade. Jimmy Fallon game show.",
+            "clueValues": [
+              {
+                "id": "9d965f5a-8e2c-4628-b146-cab1e55c2f22",
+                "type": "text",
+                "value": "Fruit preserve"
+              },
+              {
+                "id": "afd09750-0523-4a7d-9c2d-12482c81ce34",
+                "value": "A song one likes a lot",
+                "type": "text"
+              },
+              {
+                "value": "A thing becoming stuck",
+                "type": "text",
+                "id": "cf349200-a504-48f1-a3f2-527cd0533d9e"
+              }
+            ],
+            "style": "& .CopySpan { font-size: 27px; }",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Jam",
+                  "id": "46fa46f6-a233-415e-9e4b-4185f90eed52"
+                }
+              ],
+              "solvedText": "Jam"
+            },
+            "subtext": ""
+          },
+          {
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Keyboard",
+                  "id": "4865329b-162c-442a-8aa1-53b03bbe3d91"
+                }
+              ],
+              "solvedText": "Keyboard"
+            },
+            "id": "0aae142a-0334-4749-81d5-845177373fe6",
+            "helperText": "If you're sitting at a computer, the answer is right in front of you.",
+            "subtext": "",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "style": "& .CopySpan { font-size: 27px; }",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "e4ae60c8-a300-46c4-8245-0a87f6fe9b74",
+                "value": "Kevin Mitnick uses it a lot."
+              },
+              {
+                "type": "text",
+                "value": "It's friend is not a rat.",
+                "id": "e6e2e605-657c-4363-97fb-38ca81207366"
+              }
+            ]
+          },
+          {
+            "subtext": "Asteroids",
+            "id": "e95fb8f6-4303-4c05-8297-3c0226465c13",
+            "dependsOn": [
+              {
+                "value": "0aae142a-0334-4749-81d5-845177373fe6",
+                "id": "ad2de63e-d778-4e6b-96a3-97d9ff6fda56"
+              },
+              {
+                "id": "355fe155-0a86-4ec9-b774-b7846db738fb",
+                "value": "27566818-116c-4708-8bf1-f110e0fda21e"
+              },
+              {
+                "value": "b6aade7b-1860-4dbb-b0ae-c17501e87a5b",
+                "id": "f2619b14-1a68-4653-a1b1-d86769469b7f"
+              }
+            ],
+            "clueValues": [
+              {
+                "value": "location.png",
+                "type": "image",
+                "id": "d77061c9-0d27-461e-84f6-a27f70d8e802"
+              }
+            ],
+            "style": "& img { width: 150px; } &.HiddenClue { filter: blur(50px); }",
+            "clueGroup": 0,
+            "helperText": "Where can you find asteroids?",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            }
+          },
+          {
+            "id": "9d6f02dd-2381-4c58-99b8-a801e76cca6b",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "value": "Movie (1996.)",
+                "id": "c994f59e-e260-4c31-b65d-ab9e26d77265",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "subtext": "Jam",
+            "helperText": "A movie starring Michael Jordan.",
+            "dependsOn": [
+              {
+                "value": "0aae142a-0334-4749-81d5-845177373fe6",
+                "id": "43ade476-9647-4378-821e-109190b45dcb"
+              },
+              {
+                "value": "27566818-116c-4708-8bf1-f110e0fda21e",
+                "id": "01c8ea56-6e40-4e28-a42a-d9d1fa8366f0"
+              },
+              {
+                "id": "52886575-4b28-4737-80c2-b4c73bbfc0b9",
+                "value": "b6aade7b-1860-4dbb-b0ae-c17501e87a5b"
+              }
+            ],
+            "style": ""
+          },
+          {
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "clueValues": [
+              {
+                "value": "Button",
+                "id": "1d8cd757-e9b1-4c24-9721-34d8fdc4a55e",
+                "type": "text"
+              }
+            ],
+            "id": "4b0703dc-fdf5-4252-99b0-b273dbcd3edf",
+            "dependsOn": [
+              {
+                "value": "0aae142a-0334-4749-81d5-845177373fe6",
+                "id": "1bdccfbb-b342-4c08-8559-1937eebc91f0"
+              },
+              {
+                "value": "27566818-116c-4708-8bf1-f110e0fda21e",
+                "id": "cb0cd76a-f026-45d9-bc0f-87ab7a386ae2"
+              },
+              {
+                "value": "b6aade7b-1860-4dbb-b0ae-c17501e87a5b",
+                "id": "6c600ee1-45ce-4793-bc2e-8db55a0603f9"
+              }
+            ],
+            "subtext": "Keyboard",
+            "helperText": "",
+            "style": ""
+          }
+        ],
+        "style": ""
+      },
+      {
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "21d96a60-e27c-428d-9bcf-e3a6ff1ae685",
+              "value": "Black hole"
+            },
+            {
+              "value": "Black holes",
+              "id": "bd667aea-feda-4886-88fb-c109eedaf148"
+            }
+          ],
+          "solvedText": "Black hole",
+          "type": "text"
+        },
+        "style": "",
+        "clues": [
+          {
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "b645941d-45b2-4829-a93c-22ac4dd7121c",
+                "value": "An object in space where gravity is so strong that not even light can escape from it."
+              }
+            ],
+            "helperText": "",
+            "style": "& .CopySpan { font-size: 34px; }",
+            "dependsOn": [],
+            "subtext": "",
+            "clueGroup": 0,
+            "id": "c08f3fbb-a0a4-472b-94db-961c592202bd"
+          }
+        ],
+        "id": "f7e1aeef-8863-45a5-abf3-8d4999f972fe"
+      }
+    ],
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "order": 7
+  },
+  {
+    "id": "4R0cQVRRgXaEElxyVHMT",
+    "order": 0,
+    "name": "No names but all the credit",
+    "rebuses": [
+      {
+        "clues": [
+          {
+            "dependsOn": [],
+            "helperText": "Use image search to find who these people are, calculate money values in their names and get a 6 letter name for that coin. The result is also a chemical element with atomic number 28.",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "070e5894-4794-4e7a-8a9a-7f196541fb36",
+                "type": "image",
+                "value": "50cent.png"
+              },
+              {
+                "type": "text",
+                "value": "*",
+                "id": "c7c37580-4a8b-4860-9b91-a79773f371af"
+              },
+              {
+                "type": "text",
+                "value": "2",
+                "id": "eceac9b0-5542-42d1-b4f8-b12898c1ac61"
+              },
+              {
+                "id": "ecb0e604-b772-471e-8351-2b74f8805ebf",
+                "type": "text",
+                "value": "="
+              },
+              {
+                "id": "2fd4f620-8af8-4339-b2ea-0a35d022b2af",
+                "type": "image",
+                "value": "tyDollaSign.png"
+              },
+              {
+                "id": "a538210b-3e8f-4533-bbf9-06806c9383d9",
+                "type": "image",
+                "value": "50cent.png"
+              },
+              {
+                "value": "/",
+                "type": "text",
+                "id": "15c44262-36cb-40b1-8f5e-f78c67d2bc1c"
+              },
+              {
+                "id": "df5fad27-3e5d-4abe-9286-c58c40e3e135",
+                "value": "jimmyDime.png",
+                "type": "image"
+              },
+              {
+                "value": "=",
+                "type": "text",
+                "id": "8e7b2611-9d2e-4bda-93fa-50974850dc8c"
+              },
+              {
+                "type": "text",
+                "id": "979f29c5-e382-468e-ab32-fb5ba5f38a0c",
+                "value": "X"
+              }
+            ],
+            "style": "margin-right: 40px; display:flex; flex-wrap: wrap; align-items: center;width: 475px;  & img {width: 140px; display: inline-block;  margin: 0; margin-bottom: 15px; } & .ClueValue { display: inline-block; width: 64px;}",
+            "solutionInfo": {
+              "solvedText": "Nickel",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "id": "9ed254f6-c8b0-41d8-b91d-e5d9500472b8",
+                  "value": "Nickel"
+                }
+              ]
+            },
+            "id": "81d7adf0-27fb-432f-ac80-00edc2826360",
+            "subtext": "X = ______"
+          },
+          {
+            "helperText": "What word do this part of a body and going to one point and then returning have in common?",
+            "clueGroup": 0,
+            "id": "6f4d56ee-d9ef-40b3-9399-1b38b1acbbc0",
+            "clueValues": [
+              {
+                "value": "back.png",
+                "type": "image",
+                "id": "c56dc448-ee92-4940-ae7c-0c3d37869700"
+              },
+              {
+                "id": "f735ab2b-466f-4e18-bd2f-c725f5628972",
+                "type": "image",
+                "value": "back2.png"
+              }
+            ],
+            "dependsOn": [],
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "Back",
+                  "id": "bba4afbf-3f19-4ebf-96ce-a6a574872bbc"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Back"
+            },
+            "style": "margin: 15px; & img { display: inline-block; margin: 0;}",
+            "subtext": ""
+          },
+          {
+            "id": "31673fb8-677d-44f9-8d8d-089c7ce830a3",
+            "clueValues": [
+              {
+                "value": "Nickleback",
+                "type": "text",
+                "id": "225b4573-eac8-484b-8b8c-7bd730dac0b5"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "helperText": "It's a song that mentions laughing when he sees it in lyrics.",
+            "dependsOn": [
+              {
+                "value": "6f4d56ee-d9ef-40b3-9399-1b38b1acbbc0",
+                "id": "9a504653-f06a-4691-afd3-56f6419eadc2"
+              },
+              {
+                "id": "041fd1d9-3f24-470b-9328-26de54be826a",
+                "value": "81d7adf0-27fb-432f-ac80-00edc2826360"
+              }
+            ],
+            "subtext": "Every time he sees it it makes him laugh",
+            "style": "",
+            "clueGroup": 0
+          }
+        ],
+        "id": "c3ef204d-8dbf-488b-af89-90462c08cdec",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "373231bc-d6df-4477-bc60-cadca9ec586b",
+              "value": "Photograph"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Photograph"
+        },
+        "style": ""
+      },
+      {
+        "id": "002cc9bf-943f-4d49-875b-807f27d6465d",
+        "solutionInfo": {
+          "solvedText": "Rockefeller",
+          "possibleSolutions": [
+            {
+              "value": "Rockefeller",
+              "id": "d4f45d2c-3c04-411b-8785-8281a1f4654b"
+            }
+          ],
+          "type": "text"
+        },
+        "style": "",
+        "clues": [
+          {
+            "style": "",
+            "dependsOn": [],
+            "id": "04be5db9-d70f-4e1c-a211-b690d675456b",
+            "subtext": "",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "rockefeller.png",
+                "id": "fbed98bf-33af-40d1-8f4a-b944ce46f4e9"
+              }
+            ],
+            "helperText": "Find a last name of a family in picture. There is a center in New York named after one of these people."
+          }
+        ]
+      },
+      {
+        "id": "84b1d89b-d989-47ac-8c74-d5f260d2e3ac",
+        "style": "",
+        "solutionInfo": {
+          "solvedText": "1932.",
+          "possibleSolutions": [
+            {
+              "id": "b0339094-46dc-4808-9278-adbfcad6f8cf",
+              "value": {
+                "day": "",
+                "second": "",
+                "minute": "",
+                "year": "1932",
+                "place": "",
+                "hour": "",
+                "month": ""
+              }
+            },
+            {
+              "id": "1c0ee892-ba23-4df5-b8c5-1adeb6dd63bc",
+              "value": {
+                "hour": "",
+                "month": "",
+                "year": "1932.",
+                "place": "",
+                "day": "",
+                "second": "",
+                "minute": ""
+              }
+            }
+          ],
+          "type": "date"
+        },
+        "clues": [
+          {
+            "helperText": "What year does this Nobel prize winner have in common with the other two people?",
+            "id": "a10bc596-01db-476a-a3e0-d2ee2f23e44e",
+            "subtext": "",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "dependsOn": [],
+            "style": "",
+            "clueValues": [
+              {
+                "id": "0e665228-79a4-42e2-920b-df8d1da5cfa4",
+                "value": "John Galsworthy",
+                "type": "text"
+              }
+            ],
+            "clueGroup": 0
+          },
+          {
+            "clueGroup": 0,
+            "style": "",
+            "id": "4d9767bf-eb1e-4a4d-8ced-fb4c558c9fb5",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "helperText": "What year does this Nobel prize winner have in common with the other two people?",
+            "subtext": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Werner Heisenberg",
+                "id": "241c8037-438f-4aa5-80f7-3580b2751802"
+              }
+            ],
+            "dependsOn": []
+          },
+          {
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "subtext": "",
+            "style": "",
+            "helperText": "What year does this Nobel prize winner have in common with the other two people?",
+            "id": "127c36b8-5739-47d4-9135-9d6623f73e70",
+            "clueValues": [
+              {
+                "value": "Irving Langmuir",
+                "type": "text",
+                "id": "7a377a2c-9271-4b47-9feb-d41626691b78"
+              }
+            ],
+            "dependsOn": []
+          }
+        ]
+      },
+      {
+        "id": "f12f33b0-2c37-4756-8132-1ef11a72df53",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Lunch Atop A Skyscraper",
+              "id": "cf4f380b-10b5-40a5-9dba-7c638e52c78d"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Lunch Atop A Skyscraper"
+        },
+        "clues": [
+          {
+            "dependsOn": [],
+            "subtext": "",
+            "helperText": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Photograph",
+                "id": "41f8d7ef-555f-453d-a5fa-10115320bcff"
+              }
+            ],
+            "id": "732fa28c-6d8f-4d72-94ab-318488dacbbd",
+            "clueGroup": 1,
+            "style": "",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "dependsOn": [],
+            "subtext": "",
+            "helperText": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "24273899-c100-4759-a8d2-f9bf749ac3f2",
+                "value": "Rockefeller"
+              }
+            ],
+            "clueGroup": 1,
+            "style": "",
+            "id": "cf7c4e47-2017-4e59-ba84-9d07fca2abdd",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "helperText": "",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "id": "81ab8ae5-9185-4bbc-a008-bc2ec9273ab4",
+                "type": "text",
+                "value": "1932."
+              }
+            ],
+            "style": "",
+            "id": "9180acf7-1da6-44da-80f2-eb719af7fc93",
+            "clueGroup": 1,
+            "subtext": ""
+          }
+        ],
+        "style": ""
+      }
+    ],
+    "collectionId": "WMD6Iuty3jvyywlYjMBu"
+  },
+  {
+    "id": "9Dd2s3501IysbdlZvjvO",
+    "name": "A Journey never finished",
+    "rebuses": [
+      {
+        "clues": [
+          {
+            "solvedText": "ToD",
+            "subtext": "~ 110km(68 mi)",
+            "id": "bce5b50f-abdf-4168-a2a8-b3c4d5749109",
+            "clueValues": [
+              {
+                "id": "54582b60-f3ce-4e19-9f88-e5dcc3470046",
+                "value": "London",
+                "type": "text"
+              }
+            ],
+            "style": "",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            },
+            "dependsOn": [],
+            "clueGroup": 0,
+            "helperText": "Distance from London to that location."
+          },
+          {
+            "dependsOn": [],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "helperText": "Distance from Swindon to that location.",
+            "style": "",
+            "id": "8faa843f-a097-42fa-8992-7439854f0aa9",
+            "clueValues": [
+              {
+                "id": "08908ccc-9d85-4f5f-b099-e2c00ae0ae0d",
+                "value": "Swindon",
+                "type": "text"
+              }
+            ],
+            "subtext": "~ 76km(47 mi)"
+          },
+          {
+            "dependsOn": [],
+            "id": "e27b1f12-8c5b-482c-99c6-2a35648cd3d9",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "subtext": "~ 38km(24 mi)",
+            "style": "",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "value": "Bournemouth",
+                "type": "text",
+                "id": "d610ae74-ced7-456a-950c-6b77d34cf01a"
+              }
+            ],
+            "helperText": "Distance from Bournemouth to that location."
+          },
+          {
+            "subtext": "",
+            "dependsOn": [],
+            "helperText": "",
+            "style": "",
+            "id": "56ffe2a6-224d-4df5-9a6e-bfbb405f2f17",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "value": "location.png",
+                "type": "image",
+                "id": "e45184f1-6054-4e1d-b1ab-2c88d0dd8be7"
+              }
+            ]
+          }
+        ],
+        "style": "",
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "id": "c625d4ae-7bec-4908-8e22-033cde4462c3",
+              "value": "Southampton"
+            }
+          ],
+          "solvedText": "Southampton"
+        },
+        "id": "c01fe421-4c4c-41a7-9eee-4df80221bcf1"
+      },
+      {
+        "id": "848039f7-238e-4ff2-a373-426d847c2d93",
+        "style": "",
+        "clues": [
+          {
+            "style": "",
+            "helperText": "Use image search. It is located at the northern tip of the Cotentin Peninsula",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "subtext": "Coat of arms",
+            "id": "f370d31a-735e-4da5-8bd7-e0f7c061f7a1",
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "cherbourgCrest.png",
+                "id": "6f9fd1ba-db47-4e05-9896-22b49d3daef9"
+              }
+            ]
+          }
+        ],
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Cherbourg",
+          "possibleSolutions": [
+            {
+              "id": "d9f1d5c1-3340-4aed-8048-154c11d4e217",
+              "value": "Cherbourg"
+            },
+            {
+              "value": "Cherbourg-en-Cotentin",
+              "id": "5145dc7a-bd6c-4c93-8d79-c82eed2e24c8"
+            },
+            {
+              "value": "Cherbourg-Octeville",
+              "id": "be043643-9f1b-4938-bd2e-9ee56d50bdac"
+            }
+          ]
+        }
+      },
+      {
+        "clues": [
+          {
+            "style": "",
+            "subtext": "Town",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "id": "3139c071-9fa3-4147-b101-d6dc3768330c",
+            "helperText": "Find a town whose coat of arms has this Latin phrase",
+            "clueValues": [
+              {
+                "id": "2eeee31a-ae72-422c-bd39-404dbe8b9423",
+                "value": "Statio Fidissima Classi",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Cobh",
+              "possibleSolutions": [
+                {
+                  "value": "Cobh",
+                  "id": "4dc72ffb-4198-475b-ab9d-713ec0195439"
+                }
+              ]
+            }
+          },
+          {
+            "style": "",
+            "helperText": "",
+            "clueGroup": 0,
+            "dependsOn": [
+              {
+                "value": "3139c071-9fa3-4147-b101-d6dc3768330c",
+                "id": "0c621fb4-c7cb-48e1-95d7-30116aa5b398"
+              }
+            ],
+            "clueValues": [
+              {
+                "value": "1849. - 1920.",
+                "type": "text",
+                "id": "e623d195-a1b5-4009-9f13-01effcaebbce"
+              }
+            ],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "id": "ea86c327-f111-4e00-987b-ec159d6336e8",
+            "subtext": ""
+          }
+        ],
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Queenstown",
+              "id": "d4c52ff4-027d-4339-b4a0-4bb0d2150bb8"
+            }
+          ],
+          "solvedText": "Queenstown",
+          "type": "text"
+        },
+        "style": "",
+        "id": "743bbe7a-6fe1-4eae-a038-569f6ae902a4"
+      },
+      {
+        "style": "",
+        "solutionInfo": {
+          "solvedText": "Titanic",
+          "possibleSolutions": [
+            {
+              "id": "8c85814d-4ad2-4b97-a5fe-c044143a6025",
+              "value": "Titanic"
+            }
+          ],
+          "type": "text"
+        },
+        "id": "99723080-4aa2-4749-9992-c7ab58fa7949",
+        "clues": [
+          {
+            "clueValues": [
+              {
+                "value": "titanicRoute.png",
+                "id": "15efccf9-2509-4971-8df5-fac294e6b37f",
+                "type": "image"
+              }
+            ],
+            "helperText": "This is a route of a famous ship that never made it to New York.",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "subtext": "",
+            "clueGroup": 0,
+            "style": "",
+            "id": "73bf3537-a0b8-4d1b-80a3-f2bdd479d6a0",
+            "dependsOn": []
+          },
+          {
+            "dependsOn": [],
+            "helperText": "",
+            "clueGroup": 1,
+            "id": "86c1c79c-f995-4598-a64e-b695c64cf88f",
+            "style": "& .ClueValue { max-width: 350px; width: 350px; }",
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "c27fb8ce-0982-437f-9639-adbc42093d14",
+                "value": "Southampton",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            }
+          },
+          {
+            "style": "& .ClueValue { max-width: 350px; width: 350px; }",
+            "clueGroup": 1,
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "68bce72c-4857-4c89-84d5-e4ad3f596b4f",
+                "value": "Cherbourg",
+                "type": "text"
+              }
+            ],
+            "helperText": "",
+            "dependsOn": [],
+            "id": "c233e156-0dad-4ae5-b597-59157f065c18"
+          },
+          {
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "id": "02d6a4ec-793c-42c0-8c07-64ba716a5f1e",
+            "helperText": "",
+            "clueGroup": 1,
+            "style": "& .ClueValue { max-width: 350px; width: 350px; }",
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "de918dcc-2d2f-4c4a-b7b7-7ec020ec863c",
+                "type": "text",
+                "value": "Queenstown"
+              }
+            ],
+            "dependsOn": []
+          },
+          {
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "dependsOn": [],
+            "style": "& .ClueValue { max-width: 350px; width: 350px; }",
+            "subtext": "",
+            "id": "1813794c-e332-4267-884e-4b7f81966fd7",
+            "helperText": "",
+            "clueValues": [
+              {
+                "value": "New York",
+                "type": "text",
+                "id": "ddcd5bb8-8b5b-4dd1-934e-9680cd9e3963"
+              }
+            ],
+            "clueGroup": 1
+          }
+        ]
+      }
+    ],
+    "order": 0,
+    "collectionId": "WMD6Iuty3jvyywlYjMBu"
+  },
+  {
+    "id": "B9DtXQ4e9mnsFuCu4ylP",
+    "collectionId": "WMD6Iuty3jvyywlYjMBu",
+    "rebuses": [
+      {
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "value": "Queen",
+              "id": "aad1144a-7c52-44c0-b313-0ee43bb8af4b"
+            }
+          ],
+          "solvedText": "Queen"
+        },
+        "clues": [
+          {
+            "solutionInfo": {
+              "solvedText": "Australia",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Australia",
+                  "id": "f74433b2-4fcc-4215-991b-3481692bb797"
+                }
+              ]
+            },
+            "style": "",
+            "subtext": "Country",
+            "dependsOn": [],
+            "id": "61be2158-3bf6-46eb-bacf-3dd7936aabeb",
+            "clueValues": [
+              {
+                "value": "australia.png",
+                "type": "image",
+                "id": "0408e28e-0663-4320-9704-78beabd13c5e"
+              }
+            ],
+            "clueGroup": 1,
+            "helperText": "It's also a continent."
+          },
+          {
+            "dependsOn": [],
+            "clueGroup": 2,
+            "helperText": "There's a statue of Jesus looking over it.",
+            "style": "",
+            "subtext": "City",
+            "id": "768e2be4-2de0-451a-b6c7-a29f963b221a",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "Rio de Janeiro",
+                  "id": "b0470dc2-b05a-4e5e-9c30-3aeb91428633"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Rio de Janeiro"
+            },
+            "clueValues": [
+              {
+                "id": "b3075b4e-a5a5-4e62-83e7-12a14cd6b854",
+                "type": "image",
+                "value": "rio_de_janeiro.png"
+              }
+            ]
+          },
+          {
+            "clueValues": [
+              {
+                "value": "wembley.png",
+                "id": "010b8acf-403e-446f-9d47-5e1b506e1cd1",
+                "type": "image"
+              }
+            ],
+            "style": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Wembley",
+              "possibleSolutions": [
+                {
+                  "id": "4f71610b-1dd8-4629-ae1b-78a63adcad4f",
+                  "value": "Wembley"
+                }
+              ]
+            },
+            "helperText": "It's a previous version of a logo of a football stadium in London.",
+            "id": "93619897-0ccf-4e84-a29f-054225adeed8",
+            "clueGroup": 3,
+            "subtext": "Place"
+          },
+          {
+            "clueValues": [
+              {
+                "id": "edcac4d6-2095-4725-90d8-aede8bcb6e6e",
+                "value": "1985.",
+                "type": "text"
+              }
+            ],
+            "subtext": "Rock band",
+            "dependsOn": [
+              {
+                "id": "4af58d01-7081-4392-90ea-8835866fff27",
+                "value": "61be2158-3bf6-46eb-bacf-3dd7936aabeb"
+              },
+              {
+                "value": "768e2be4-2de0-451a-b6c7-a29f963b221a",
+                "id": "f53c22d1-3de1-43d4-be32-11a4e3b47b17"
+              },
+              {
+                "value": "93619897-0ccf-4e84-a29f-054225adeed8",
+                "id": "5272d027-56c0-4926-8347-7c4419e77ad6"
+              }
+            ],
+            "style": "",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "helperText": "A certain band was playing at these locations in 1985.",
+            "id": "64e3746c-836e-42c5-8d6a-2e86286533d8"
+          }
+        ],
+        "style": "",
+        "id": "7a90e485-6452-4a04-9022-3a5cfab827db"
+      },
+      {
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "7d6e090b-65be-4285-9fe8-1e2f96cc21af",
+              "value": "Twist"
+            }
+          ],
+          "solvedText": "Twist",
+          "type": "text"
+        },
+        "id": "a344287b-3df9-4113-9005-3d6362552e7a",
+        "clues": [
+          {
+            "id": "8a664556-88dc-4a93-b680-3641e8196449",
+            "dependsOn": [],
+            "subtext": "",
+            "solutionInfo": {
+              "solvedText": "Arm",
+              "possibleSolutions": [
+                {
+                  "id": "4f5b00d4-e343-4700-88d6-c00f7cf1a584",
+                  "value": "Arm"
+                }
+              ],
+              "type": "text"
+            },
+            "helperText": "Just a part of a human body (Three letter word)",
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "arm.png",
+                "id": "e1b65a08-e770-4006-94da-b707d9d8a3f1"
+              }
+            ],
+            "clueGroup": 1,
+            "style": ""
+          },
+          {
+            "clueValues": [
+              {
+                "value": "July 20 (1944.), Gunpowder (1605.)",
+                "id": "7dd7e023-d4d5-428f-8c9a-d91fb6851d0c",
+                "type": "text"
+              }
+            ],
+            "dependsOn": [],
+            "subtext": "",
+            "clueGroup": 2,
+            "id": "a28eebf1-ff10-46b2-8328-0f04171774cb",
+            "style": "",
+            "helperText": "Full names of these events. Synonim for plan.",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "3b6c5238-b062-4b80-bcb2-f65187671c8b",
+                  "value": "Plot"
+                }
+              ],
+              "solvedText": "Plot",
+              "type": "text"
+            }
+          },
+          {
+            "subtext": "",
+            "id": "6477cb73-d5ce-445b-a374-92d5ca46a2fe",
+            "helperText": "",
+            "style": " & .CopySpan{font-size: 24px;} & .CopyDiv { max-width: 100%; width: 100%;  }",
+            "clueGroup": 1,
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "ddb04c1f-b2e3-41c5-81df-421ceb99a340",
+                "value": "Arm: to grab someone's arm and bend it in order to cause pain"
+              }
+            ],
+            "dependsOn": [
+              {
+                "id": "565dd16d-dc34-4159-817b-63b1de915fb0",
+                "value": "8a664556-88dc-4a93-b680-3641e8196449"
+              },
+              {
+                "id": "7287fbea-d528-450c-89c6-6e64d3f70dd1",
+                "value": "a28eebf1-ff10-46b2-8328-0f04171774cb"
+              }
+            ],
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            }
+          },
+          {
+            "clueValues": [
+              {
+                "id": "ef595aa3-f016-4aff-98ef-c9149917ba3f",
+                "value": "Plot: an unexpected turn in a story",
+                "type": "text"
+              }
+            ],
+            "id": "f2ff462b-3291-4d8f-802a-721d8ee8ef44",
+            "subtext": "",
+            "clueGroup": 2,
+            "dependsOn": [
+              {
+                "value": "a28eebf1-ff10-46b2-8328-0f04171774cb",
+                "id": "71fb4aa1-3f71-4e1a-8d3a-9d167b068170"
+              },
+              {
+                "value": "8a664556-88dc-4a93-b680-3641e8196449",
+                "id": "1350bcfa-f226-4b3e-bcca-8ce8f540be6d"
+              }
+            ],
+            "helperText": "",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "style": " & .CopySpan{font-size: 24px;} & .CopyDiv { max-width: 100%; width: 100%;  }"
+          }
+        ],
+        "style": ""
+      },
+      {
+        "style": "",
+        "id": "0df07324-1a80-42a4-afcd-6d547ffa7c54",
+        "clues": [
+          {
+            "style": "",
+            "helperText": "It's the ring bearer from The Lord of the Rings.",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Elijah Wood",
+              "possibleSolutions": [
+                {
+                  "id": "88f318f7-861a-4c2a-9208-e7c1154158a6",
+                  "value": "Elijah Wood"
+                }
+              ]
+            },
+            "clueGroup": 0,
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "image",
+                "id": "2926d83a-5a94-4c6c-84dd-c62171cb455f",
+                "value": "elijahWood.png"
+              }
+            ],
+            "id": "c6bc79d4-16d9-4137-8659-632976b3990b",
+            "subtext": ""
+          },
+          {
+            "id": "56f6a83a-0b64-4584-a748-aa2af0d1a39c",
+            "clueValues": [
+              {
+                "id": "9f8a538d-a089-43ae-9dad-90db8c11e48b",
+                "type": "image",
+                "value": "ronWood.png"
+              },
+              {
+                "type": "image",
+                "value": "Cake.png",
+                "id": "1f066617-fc27-4b78-8b91-c9da12a11ce0"
+              }
+            ],
+            "style": "& img:nth-child(3) { width: 90px; height: auto; margin-top:7px; }",
+            "helperText": "Member of The Rolling Stones born on given date.",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Ron Wood",
+              "possibleSolutions": [
+                {
+                  "id": "2fbb6264-7e1c-492d-b701-beca33239710",
+                  "value": "Ron Wood"
+                },
+                {
+                  "value": "Ronnie Wood",
+                  "id": "66f71083-b163-4e33-abf4-cdb2921e5528"
+                },
+                {
+                  "value": "Ronald Wood",
+                  "id": "6a2170a0-381f-4133-94f5-ff372b559d38"
+                }
+              ]
+            },
+            "subtext": "1 June 1947"
+          }
+        ],
+        "solutionInfo": {
+          "solvedText": "Wood",
+          "possibleSolutions": [],
+          "type": "text"
+        }
+      },
+      {
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "id": "2f839455-5a94-48cf-bcca-91b9ad3b2cc4",
+              "value": "Oliver"
+            }
+          ],
+          "solvedText": "Oliver"
+        },
+        "id": "09de0a2f-efb8-4af3-a740-8df195f6a307",
+        "style": "",
+        "clues": [
+          {
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "clueGroup": 0,
+            "id": "8a6fa3d0-c929-41e8-92e1-705fb94d4ed7",
+            "dependsOn": [],
+            "style": "",
+            "subtext": "Arrow (TV Series)",
+            "clueValues": [
+              {
+                "value": "Queen",
+                "id": "5e5d59df-e7a4-484c-9391-19fed4281c18",
+                "type": "text"
+              }
+            ],
+            "helperText": "First name of the main character in the TV show Arrow."
+          },
+          {
+            "id": "fa8356f6-b472-4e6a-b248-2b0a3b657827",
+            "style": "",
+            "dependsOn": [],
+            "helperText": "First name of the main character from a book written by Charles Dickens.",
+            "subtext": "Book",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "clueValues": [
+              {
+                "id": "c7578694-12df-488f-a05d-a06f3a993876",
+                "type": "text",
+                "value": "Twist"
+              }
+            ]
+          },
+          {
+            "helperText": "Captain for the Gryffindor Quidditch team in Harry Potter books.",
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "id": "c5b74f00-2210-4853-8271-23ebb9e6398d",
+                "value": "Wood",
+                "type": "text"
+              }
+            ],
+            "clueGroup": 0,
+            "id": "6ca7cc47-855d-4cef-9ed1-ba402affc712",
+            "style": "",
+            "subtext": "Harry Potter books"
+          }
+        ]
+      }
+    ],
+    "name": "A rich man, a poor boy and just a teenager",
+    "order": 0
+  },
+  {
+    "id": "DWAFgWYPsJeU8qtoSqkJ",
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "name": "Celebratory Chemistry",
+    "order": 5,
+    "rebuses": [
+      {
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": {
+                "second": "",
+                "month": "July",
+                "year": "",
+                "minute": "",
+                "day": "4",
+                "place": "",
+                "hour": ""
+              },
+              "id": "8ac03675-5a2d-4226-b3ad-38e6ee1c63cd"
+            }
+          ],
+          "solvedText": "4th of July",
+          "type": "date"
+        },
+        "style": "",
+        "id": "7a802c34-792c-4607-a5b4-bd5ac7df275e",
+        "clues": [
+          {
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            },
+            "subtext": "",
+            "dependsOn": [],
+            "style": "",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "1a64f2d5-765b-4c0b-814e-ed29986b562a",
+                "value": "usPresidents.png",
+                "type": "image"
+              }
+            ],
+            "helperText": "Same thing happened to all three of these US presidents on the same date.",
+            "id": "0fa3862a-e5e7-49ab-ac84-87689af30e2b"
+          }
+        ]
+      },
+      {
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Katy Perry",
+              "id": "ab7470ba-ea38-450a-8f65-9934e94b7c24"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Katy Perry"
+        },
+        "clues": [
+          {
+            "helperText": "First name of the actress playing Lagertha in TV show Vikings.",
+            "style": "",
+            "solutionInfo": {
+              "solvedText": "Katheryn",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Katheryn",
+                  "id": "f2be215d-43c0-4636-8170-3b3e32612445"
+                }
+              ]
+            },
+            "clueGroup": 0,
+            "id": "c2d7751f-e507-42fb-b99d-6bb57a1568a2",
+            "clueValues": [
+              {
+                "value": "katherynWinnick.png",
+                "type": "image",
+                "id": "7ff19a4e-c245-49c3-b3bb-98d8ed79c60b"
+              }
+            ],
+            "dependsOn": [],
+            "subtext": "Vikings"
+          },
+          {
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Elizabeth",
+              "possibleSolutions": [
+                {
+                  "id": "90fcdf78-72dc-458e-b0e3-3e6dcd268b31",
+                  "value": "Elizabeth"
+                }
+              ]
+            },
+            "subtext": "Pirates of the Carribean",
+            "helperText": "First name of the character played by Keira Knightley in Pirates of the Carribean movies.",
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "elizabethSwann.png",
+                "id": "885a64e0-d911-4862-8b80-3aa31f86a7fd"
+              }
+            ],
+            "clueGroup": 0,
+            "id": "e62a07b9-e14c-4b1f-935d-ffbf56b9acbc",
+            "style": "",
+            "dependsOn": []
+          },
+          {
+            "solutionInfo": {
+              "solvedText": "Hudson",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "id": "2d337037-ecc0-4d0e-b7c2-650115d1602c",
+                  "value": "Hudson"
+                }
+              ]
+            },
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "value": "kateHudson.png",
+                "id": "a757fdb5-1655-4aca-93e9-ef745e277737",
+                "type": "image"
+              }
+            ],
+            "dependsOn": [],
+            "style": "",
+            "subtext": "How to Lose a Guy in 10 Days",
+            "helperText": "Last name of the actress playing Andie Anderson in the movie How to Lose a Guy in 10 Days..",
+            "id": "a74567cf-ee0e-4aed-9397-4a881d67ac04"
+          }
+        ],
+        "id": "a8490eab-ba27-4c1d-9e16-d7947f742943",
+        "style": ""
+      },
+      {
+        "clues": [
+          {
+            "clueGroup": 1,
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "location.png",
+                "id": "4b0c3216-e61c-4095-a52e-52249899d70a"
+              }
+            ],
+            "subtext": "All roads",
+            "style": "& img { width: 223px; height: auto; }",
+            "solutionInfo": {
+              "solvedText": "Rome",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Rome",
+                  "id": "1ce0c607-11b2-467a-a22f-0f8a64ac2e1b"
+                },
+                {
+                  "value": "Roman",
+                  "id": "fa0c3167-b8e6-4cda-b7bc-f0986caa6ee7"
+                }
+              ]
+            },
+            "id": "ffc7bcd4-9013-4cda-9884-e0f803846d3a",
+            "helperText": "Where do all roads lead, according to old saying?",
+            "dependsOn": []
+          },
+          {
+            "subtext": "",
+            "helperText": "Tea lights, Pillars, Votives and Taper are all types of what?",
+            "clueValues": [
+              {
+                "value": "Tea lights, Pillars, Votives, Taper",
+                "id": "a7fd6eb8-6111-4fcc-950e-252ea0d75419",
+                "type": "text"
+              }
+            ],
+            "id": "0c1a39ae-c624-4401-9578-ee5c210a1e9f",
+            "style": "",
+            "clueGroup": 2,
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "Candle",
+                  "id": "17318877-f8f9-493b-ba08-2e9a4913829e"
+                },
+                {
+                  "id": "66e8ca27-9ed6-4d33-80e3-00d6940eb591",
+                  "value": "Wax candle"
+                },
+                {
+                  "id": "9e32045e-0b6b-424f-bff9-b895db17ab78",
+                  "value": "Candles"
+                },
+                {
+                  "value": "Wax candles",
+                  "id": "d3a04d3d-a6d9-457e-bf41-18493fea79ae"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Candle"
+            },
+            "dependsOn": []
+          }
+        ],
+        "id": "e3d7c4b1-91f1-42ec-80ec-18799746da32",
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [],
+          "solvedText": "Roman Candle"
+        },
+        "style": ""
+      },
+      {
+        "style": "",
+        "clues": [
+          {
+            "helperText": "It's a tradition happening mostly at night on 4th of July.",
+            "style": "",
+            "id": "d0d5b991-c484-4552-993f-63ae358b89e5",
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "subtext": "Tradition",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "4th of July",
+                "id": "8e22c1ae-3797-4f18-b64a-7301df293345"
+              }
+            ],
+            "dependsOn": []
+          },
+          {
+            "style": "",
+            "subtext": "Song title",
+            "helperText": "It's a song by Katy Perry.",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "clueValues": [
+              {
+                "id": "0e8d2de3-f479-454b-9603-3408b0a4b0c1",
+                "type": "text",
+                "value": "Katy Perry"
+              }
+            ],
+            "id": "1114b3b4-2b4b-4ce4-b97a-22db3fb08750"
+          },
+          {
+            "id": "59cb7ef6-38c6-4871-893d-7aa9e472b1d7",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "subtext": "Type",
+            "clueValues": [
+              {
+                "value": "Roman Candle",
+                "id": "5b2a2aef-1e66-4f9e-a33a-e35300177ce1",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "helperText": "It's a type of the thing we're looking for.",
+            "style": "& .CopyDiv { width: 354px; max-width: 354px;}"
+          }
+        ],
+        "id": "40d6d267-02bd-4a65-a2f1-7d8e4991fba1",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Firework",
+              "id": "2b584dd6-48a5-48de-aad7-ca8055707fff"
+            },
+            {
+              "id": "e974fcb4-c704-4522-8885-ab2969dbb0e8",
+              "value": "Fireworks"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Firework"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Kn3yls643KRUrov3SFSm",
+    "name": "Same place, different time",
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "order": 4,
+    "rebuses": [
+      {
+        "solutionInfo": {
+          "solvedText": "Nikola Tesla",
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "value": "Nikola Tesla",
+              "id": "e2bee911-d2a0-49c1-b585-ef240448145e"
+            },
+            {
+              "value": "Tesla",
+              "id": "18a70781-ad5b-47f0-a19d-7b82a1b04aaa"
+            }
+          ]
+        },
+        "style": "",
+        "id": "448f0472-960f-49ad-951f-c3d92e0c601d",
+        "clues": [
+          {
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "e16d210b-e3bb-4534-82da-e479aa441b0f",
+                "type": "text",
+                "value": "100000 * 0.0001"
+              }
+            ],
+            "clueGroup": 1,
+            "helperText": "Try using a calculator or some online tool to make this calculation.",
+            "dependsOn": [],
+            "style": "",
+            "id": "50d2d6e0-7343-41f8-a238-66d88ff852b6",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "10",
+              "possibleSolutions": [
+                {
+                  "id": "4772abab-081a-4b6d-b465-db2bb4f17663",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          {
+            "helperText": "Icons represent months of the year. You have to figure out which one is the circled one.",
+            "subtext": "",
+            "id": "bbf13422-6fc0-45e8-bf0c-6d7bbb5296cc",
+            "dependsOn": [],
+            "solutionInfo": {
+              "solvedText": "July",
+              "possibleSolutions": [
+                {
+                  "value": "July",
+                  "id": "affb303e-9f08-469e-857d-b95a85cf222b"
+                }
+              ],
+              "type": "text"
+            },
+            "clueValues": [
+              {
+                "value": "july.png",
+                "id": "aac3c4f6-ecf7-4a7a-94e0-fbd9c93f0e08",
+                "type": "image"
+              }
+            ],
+            "clueGroup": 1,
+            "style": ""
+          },
+          {
+            "clueValues": [
+              {
+                "value": "11101000000",
+                "id": "b81af49c-ab4a-4ad0-af79-adaa3ab2d110",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "1856",
+                  "id": "cb4fda16-ea3d-452f-89c9-a25d673b5c91"
+                }
+              ],
+              "type": "text",
+              "solvedText": "1856"
+            },
+            "dependsOn": [],
+            "subtext": "",
+            "style": "",
+            "clueGroup": 1,
+            "helperText": "This number is written in binary. You can try to convert it to decimal yourself or use online tools to do that.",
+            "id": "4da20f93-2b5b-4803-89de-79f3971082c7"
+          },
+          {
+            "id": "ef4377a5-00a7-4342-9fe3-f8deebe0d0fe",
+            "dependsOn": [],
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "style": "",
+            "subtext": "",
+            "clueValues": [
+              {
+                "value": "Cake.png",
+                "id": "6360241b-f076-4dfa-843f-7ff661ee9d5f",
+                "type": "image"
+              }
+            ],
+            "clueGroup": 0,
+            "helperText": "Try to find out who was born on given date."
+          }
+        ]
+      },
+      {
+        "style": "",
+        "id": "1a4c9ffc-f186-408f-9d0d-db1cae28765e",
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "John Lennon",
+          "possibleSolutions": [
+            {
+              "value": "John Lennon",
+              "id": "76464f39-4eef-49f8-998b-fb8f2363f7af"
+            },
+            {
+              "value": "Lennon",
+              "id": "6ff90b61-ba51-40fc-b8a9-932ffd051c71"
+            }
+          ]
+        },
+        "clues": [
+          {
+            "style": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "clueValues": [
+              {
+                "id": "b933c231-3eb5-4ee9-8c29-c85a4d5b48dc",
+                "value": "beatles_arrow_4.png",
+                "type": "image"
+              }
+            ],
+            "clueGroup": 0,
+            "subtext": "",
+            "id": "db9ce443-2143-4d73-abe7-95fb8820d3e6",
+            "helperText": "Which member of the Beatles is the arrow pointing to?"
+          }
+        ]
+      },
+      {
+        "clues": [
+          {
+            "clueValues": [
+              {
+                "id": "219671d4-7462-4324-a581-e8619d481c39",
+                "value": "nixon.png",
+                "type": "image"
+              }
+            ],
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "id": "556f2c04-62f9-4a89-a540-676784f04f27",
+            "helperText": "Find out which American president is the arrow pointing at.",
+            "subtext": "",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "style": ""
+          }
+        ],
+        "style": "",
+        "id": "b60d7a46-8e06-43fd-bedc-9db95c3db293",
+        "solutionInfo": {
+          "solvedText": "Richard Nixon",
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "id": "dbeb3cd6-b487-4087-b3a7-8b73bfe8c574",
+              "value": "Richard Nixon"
+            },
+            {
+              "value": "Nixon",
+              "id": "127e3ca7-af47-4ac4-affa-cb40a65f9a67"
+            }
+          ]
+        }
+      },
+      {
+        "style": "",
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "New York",
+          "possibleSolutions": [
+            {
+              "id": "0de2e338-ce25-40a4-b3aa-c75f0ca292cc",
+              "value": "New York"
+            }
+          ]
+        },
+        "clues": [
+          {
+            "dependsOn": [],
+            "style": "& > .ClueValue .CopySpan { font-size: 45px;  }",
+            "clueValues": [
+              {
+                "id": "b73cdaa2-22ac-47be-89e2-60e960f2f0da",
+                "value": "Nikola Tesla",
+                "type": "text"
+              }
+            ],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "id": "11696e05-e8d3-4544-b658-686ccb5112bd",
+            "helperText": "Death date of Nikola Tesla.",
+            "subtext": "7 January 1943"
+          },
+          {
+            "id": "635a532e-5d7f-4969-8a62-9d25b32d2aa5",
+            "helperText": "Death date of John Lennon.",
+            "dependsOn": [],
+            "subtext": "8 December 1980",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "e7b5bc65-bb66-41e4-9bc0-22c32e400c90",
+                "value": "John Lennon"
+              }
+            ],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "style": "& > .ClueValue .CopySpan { font-size: 45px;  }"
+          },
+          {
+            "helperText": "Death date of Richard Nixon.",
+            "style": "& > .ClueValue .CopySpan { font-size: 45px;  }",
+            "clueGroup": 0,
+            "subtext": "22 April 1994",
+            "id": "365397cf-eafa-46b1-bbf4-ca97b83ae44c",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Richard Nixon",
+                "id": "35af3a8e-bb9a-41e0-a38d-11adf23b9a41"
+              }
+            ]
+          },
+          {
+            "subtext": "",
+            "dependsOn": [],
+            "style": "",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "clueValues": [
+              {
+                "value": "location.png",
+                "type": "image",
+                "id": "819363cc-c824-40fb-980c-c006179b225a"
+              }
+            ],
+            "helperText": "In which city did they die?",
+            "id": "64e7d0f0-b69c-4e3a-831c-9326bdff23d2"
+          }
+        ],
+        "id": "dacc0b86-9a69-43b8-af41-05cd26b19da0"
+      }
+    ]
+  },
+  {
+    "id": "MlFtYajockviA0qijsh0",
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "name": "The Icons of Strategy",
+    "rebuses": [
+      {
+        "clues": [
+          {
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "b103927f-94d4-4281-988e-c577f13cc650",
+                "type": "image",
+                "value": "bishop.png"
+              }
+            ],
+            "subtext": "",
+            "style": "",
+            "dependsOn": [],
+            "helperText": "See what you can find about the hierarchy of the Catholic Church",
+            "id": "88528a1e-1fee-4c9d-aabe-435bcb2b9496",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            }
+          }
+        ],
+        "id": "1e3941bb-048a-4743-ab16-28f015317b7a",
+        "style": "",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "4b8b2704-b2ab-40a2-8a65-e3998d714283",
+              "value": "Bishop"
+            },
+            {
+              "value": "Bishops",
+              "id": "115f09a1-dc01-4f24-9233-c66fd057c849"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Bishop"
+        }
+      },
+      {
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Pawn",
+              "id": "4e75edce-fdf7-41e7-92d3-8bbc1b11ea14"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Pawn"
+        },
+        "id": "bdca38d5-60dc-403d-af80-03e31bd0cff4",
+        "style": "",
+        "clues": [
+          {
+            "helperText": "Find all the words and type in what's left.",
+            "subtext": "",
+            "dependsOn": [],
+            "id": "b86f0ac2-2a76-4629-b358-d1d58ddc8775",
+            "clueValues": [
+              {
+                "id": "15001fde-dad1-46c3-82e5-b4288190a9de",
+                "value": "PawnWordSearch",
+                "type": "customComponent"
+              }
+            ],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "style": "",
+            "clueGroup": 0
+          }
+        ]
+      },
+      {
+        "clues": [
+          {
+            "id": "e3bf1e8b-25bf-46d8-ae07-fd03f8c0988f",
+            "helperText": "What word (opposite of white) do these three terms have in common?",
+            "subtext": "Belt, Hole, Widow",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "id": "b6baebd6-302f-4a60-b4d6-5c3e30fb9416",
+                "value": "dark.png",
+                "type": "image"
+              }
+            ],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Black",
+                  "id": "9b8b5322-115f-4481-8dff-9dc9737fc4de"
+                }
+              ],
+              "solvedText": "Black"
+            },
+            "style": ""
+          },
+          {
+            "id": "db66f917-9a73-48cf-bed6-9ce3331ccfda",
+            "subtext": "Valentine's, Independence, Judgement",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "2c4dd3eb-bb4b-4d55-9864-b34d8ac3b571",
+                "value": "light.png",
+                "type": "image"
+              }
+            ],
+            "helperText": "What word (opposite of night) do these three terms have in common?",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "032d1605-6ccd-4b4d-87b1-8fd44ca485e6",
+                  "value": "Day"
+                }
+              ],
+              "solvedText": "Day",
+              "type": "text"
+            },
+            "style": "",
+            "dependsOn": []
+          },
+          {
+            "id": "aa93e37f-6e7e-45f2-bcd7-cd89aff4c3a1",
+            "clueValues": [
+              {
+                "value": "dark.png",
+                "type": "image",
+                "id": "ff7d0abd-38f6-4031-996d-ecb7b9d6b287"
+              }
+            ],
+            "style": "",
+            "subtext": "Web, Matter, Chocolate",
+            "dependsOn": [],
+            "helperText": "What word (opposite of light) do these three terms have in common?",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "32e160d7-f9f0-425f-82b7-bf1f5b5c6701",
+                  "value": "Dark"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Dark"
+            },
+            "clueGroup": 0
+          },
+          {
+            "subtext": "2001.",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "d7559c9a-6970-4ab8-aae0-9cf0b5f9a620",
+                "value": "Black",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "helperText": "",
+            "dependsOn": [
+              {
+                "id": "2cdcc527-a023-433c-b4da-4ce21825db3b",
+                "value": "aa93e37f-6e7e-45f2-bcd7-cd89aff4c3a1"
+              },
+              {
+                "id": "b3eb8207-f003-4b6a-9490-7d04f8cb8801",
+                "value": "db66f917-9a73-48cf-bed6-9ce3331ccfda"
+              },
+              {
+                "value": "e3bf1e8b-25bf-46d8-ae07-fd03f8c0988f",
+                "id": "75fa3300-cf34-471e-b88e-050ed5320007"
+              }
+            ],
+            "style": "",
+            "id": "dc0eb9c8-eafd-482f-98c0-e4eeb404da92"
+          },
+          {
+            "subtext": "2008.",
+            "clueValues": [
+              {
+                "id": "b69797a1-1ea9-4683-8ee5-4348d70b2455",
+                "type": "text",
+                "value": "Dark"
+              }
+            ],
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "clueGroup": 0,
+            "style": "",
+            "id": "e087827c-9ce4-4450-87bb-5e30860f34d9",
+            "dependsOn": [
+              {
+                "value": "aa93e37f-6e7e-45f2-bcd7-cd89aff4c3a1",
+                "id": "947f2255-5a6a-4076-ab7d-dadfba4828a6"
+              },
+              {
+                "value": "db66f917-9a73-48cf-bed6-9ce3331ccfda",
+                "id": "a33ede12-57cb-4131-a64b-4001aa7a121b"
+              },
+              {
+                "id": "25576be3-714f-44bc-8181-d0da4bcfd2df",
+                "value": "e3bf1e8b-25bf-46d8-ae07-fd03f8c0988f"
+              }
+            ],
+            "helperText": ""
+          },
+          {
+            "style": "",
+            "clueValues": [
+              {
+                "value": "And Day",
+                "id": "626314bb-707e-4d6f-9520-65afb7addfc8",
+                "type": "text"
+              }
+            ],
+            "subtext": "2010.",
+            "helperText": "",
+            "id": "a6a3e983-3d49-4a81-ab28-cb23b61d0a34",
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "dependsOn": [
+              {
+                "value": "aa93e37f-6e7e-45f2-bcd7-cd89aff4c3a1",
+                "id": "5690d777-2b66-45d6-b78e-4a86069c5464"
+              },
+              {
+                "value": "db66f917-9a73-48cf-bed6-9ce3331ccfda",
+                "id": "5370253c-0a73-4312-a328-bec8b2c8f1bf"
+              },
+              {
+                "id": "42e6646f-5d4d-4c73-977b-f432d9a83bec",
+                "value": "e3bf1e8b-25bf-46d8-ae07-fd03f8c0988f"
+              }
+            ]
+          }
+        ],
+        "id": "eb9907b6-ef1d-40b1-ab2b-8d9db3871b00",
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "id": "e249826b-c9b3-4c5e-825f-17e8cc0067b4",
+              "value": "Knight"
+            }
+          ],
+          "solvedText": "Knight"
+        },
+        "style": ""
+      },
+      {
+        "id": "568b72b5-758d-41ac-8339-138ef7ad6c2c",
+        "clues": [
+          {
+            "helperText": "A piece used in a board game we're looking for.",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "5f7f761a-f221-4cc8-854c-8966bd47ea7f",
+                "value": "Bishop"
+              }
+            ],
+            "style": "",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            },
+            "subtext": "",
+            "id": "c4749fc4-2ad6-4801-9015-66498759ce9d"
+          },
+          {
+            "subtext": "",
+            "id": "1b877b5c-fcdd-4418-9174-42f599dc7152",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            },
+            "helperText": "A piece used in a board game we're looking for.",
+            "style": "",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "value": "Pawn",
+                "type": "text",
+                "id": "5ff80358-e335-4a15-966a-e8ae2a294287"
+              }
+            ]
+          },
+          {
+            "clueGroup": 0,
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "id": "5d0de55c-6f78-4c8e-a831-05daf614a1e3",
+            "clueValues": [
+              {
+                "value": "Knight",
+                "id": "0b9a0b7a-196d-4775-be09-4e27239b0946",
+                "type": "text"
+              }
+            ],
+            "subtext": "",
+            "style": "",
+            "dependsOn": [],
+            "helperText": "A piece used in a board game we're looking for."
+          }
+        ],
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "695814a9-5999-4680-8156-07f0b7c96284",
+              "value": "Chess"
+            }
+          ],
+          "solvedText": "Chess",
+          "type": "text"
+        },
+        "style": ""
+      }
+    ],
+    "order": 0
+  },
+  {
+    "id": "P9Zx7jwlpeiU3efeOzVl",
+    "order": 0,
+    "collectionId": "WMD6Iuty3jvyywlYjMBu",
+    "name": "A traveling icon",
+    "rebuses": [
+      {
+        "id": "df94d26b-6c8d-4108-80ce-eed24334f4cf",
+        "clues": [
+          {
+            "subtext": "",
+            "id": "fcf7cebf-dbe4-4497-a89c-7a1afd9b3f42",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "25a1c1c5-7d40-4eb5-8db4-b6c0c9b99700",
+                  "value": ""
+                }
+              ],
+              "type": "customComponent",
+              "solvedText": ""
+            },
+            "helperText": "Find the painting and write in the number of people for every painting.",
+            "style": "width: 500px; max-width: 500px;",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "customComponent",
+                "value": "OfficeCounterXCoordinate",
+                "id": "4cdbdd8d-fdcc-49c1-8832-35623f24df68"
+              }
+            ]
+          },
+          {
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "customComponent",
+                "value": "OfficeYCoordinateSudoku",
+                "id": "554ee24f-a9c4-4962-898b-dd27d3ead268"
+              }
+            ],
+            "clueGroup": 0,
+            "id": "ddc082a7-cc3d-4775-bffd-6612403268e8",
+            "subtext": "",
+            "style": "width: 500px; max-width: 500px;",
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "customComponent",
+              "possibleSolutions": [
+                {
+                  "value": "",
+                  "id": "cbc65bbb-292d-45fd-9de4-2de13d2db340"
+                }
+              ]
+            },
+            "helperText": "Solve the Sudoku and type in highlighted numbers."
+          },
+          {
+            "clueValues": [
+              {
+                "value": "location.png",
+                "type": "image",
+                "id": "e4046d8e-d9f7-4c0c-bb4f-0d62527b774e"
+              }
+            ],
+            "helperText": "Find out which TV Show was filmed at those coordinates.",
+            "dependsOn": [
+              {
+                "id": "dbed5fd9-8d17-474e-af25-df9275dfa867",
+                "value": "ddc082a7-cc3d-4775-bffd-6612403268e8"
+              },
+              {
+                "value": "fcf7cebf-dbe4-4497-a89c-7a1afd9b3f42",
+                "id": "098ef6b0-d2d3-4a89-8308-755f7865b9ca"
+              }
+            ],
+            "id": "9fb82889-bf75-4abd-a6f3-57b680380797",
+            "subtext": "34.210732, -118.436535",
+            "style": "width: 500px; max-width: 500px;",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            },
+            "clueGroup": 0
+          },
+          {
+            "style": "width: 500px; max-width: 500px;",
+            "subtext": "",
+            "clueGroup": 0,
+            "dependsOn": [
+              {
+                "value": "ddc082a7-cc3d-4775-bffd-6612403268e8",
+                "id": "a8d0b372-8375-4d5e-940d-87b987035065"
+              },
+              {
+                "id": "17dd96ea-0314-49e2-9e0e-68ec48a7d602",
+                "value": "fcf7cebf-dbe4-4497-a89c-7a1afd9b3f42"
+              }
+            ],
+            "helperText": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "TV Show filmed at that location.",
+                "id": "2442d668-e7de-48be-901e-5155d4618cc8"
+              }
+            ],
+            "id": "b3209e3d-3099-48f7-ba11-a819916761fb",
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            }
+          }
+        ],
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "953d7052-7efa-4f51-be3c-b921efa829a5",
+              "value": "The Office"
+            },
+            {
+              "id": "63e00b57-a4c0-4f95-a9fe-a0fc120388a3",
+              "value": "Office"
+            }
+          ],
+          "type": "text",
+          "solvedText": "The Office"
+        },
+        "style": ""
+      },
+      {
+        "id": "66345479-1d28-4c30-8a94-b07379a807e0",
+        "solutionInfo": {
+          "solvedText": "Launch Party",
+          "possibleSolutions": [],
+          "type": "text"
+        },
+        "clues": [
+          {
+            "helperText": "6 letter word that you can do with a rocket. Happens in the video titled \"The Greatest Shot In Television\". Rhymes with meal between breakfast and dinner.",
+            "solutionInfo": {
+              "solvedText": "Launch",
+              "possibleSolutions": [
+                {
+                  "id": "a559309d-eee7-4c0e-a5c4-709314486c26",
+                  "value": "Launch"
+                }
+              ],
+              "type": "text"
+            },
+            "subtext": "Synonims: throw, eject, fire",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "value": "The Greatest Shot In Television (1:00)",
+                "type": "text",
+                "id": "7dada809-06be-476f-94b0-a59e4b650ee8"
+              }
+            ],
+            "id": "17b85ada-d0ed-49fc-a541-f7704120110b",
+            "clueGroup": 0,
+            "style": "& > .CopyDiv:first-child { font-size: 45px; }"
+          },
+          {
+            "dependsOn": [],
+            "id": "89150b72-f1e1-45f3-b4b6-0a1022a2667a",
+            "solutionInfo": {
+              "solvedText": "Party",
+              "possibleSolutions": [
+                {
+                  "value": "Party",
+                  "id": "48f2a68e-2b79-4f3e-a766-988e3866988a"
+                }
+              ],
+              "type": "text"
+            },
+            "helperText": "Find a Braille Alphabet and type in correct letters.",
+            "subtext": "",
+            "clueValues": [
+              {
+                "value": "partyBraille.png",
+                "type": "image",
+                "id": "c988502c-013e-4ae0-b1d4-081086b0aa64"
+              }
+            ],
+            "style": "",
+            "clueGroup": 0
+          }
+        ],
+        "style": ""
+      },
+      {
+        "id": "75bdd95c-f2fa-400e-9445-32439befa082",
+        "style": "",
+        "clues": [
+          {
+            "subtext": "Friends",
+            "clueGroup": 0,
+            "style": "& .CopyDiv.ClueValue .CopySpan { font-size: 33px; }",
+            "id": "8dd734ed-8085-4fe9-be3a-ba7bc86bd148",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "clueValues": [
+              {
+                "id": "e57947fe-96b5-43ab-8424-ebe8219c0305",
+                "value": "The Rembrands - I'll be there for you",
+                "type": "text"
+              }
+            ],
+            "helperText": "What is this song to the TV Show friends?",
+            "dependsOn": []
+          },
+          {
+            "subtext": "Malcolm In The Middle",
+            "helperText": "What is this song to the TV Show Malcolm In The Middle?",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "style": "& .CopyDiv.ClueValue .CopySpan { font-size: 33px; }",
+            "id": "ee6dbfd6-505b-4179-8bb0-7f45938c00a0",
+            "clueValues": [
+              {
+                "id": "62e678fa-211e-49b0-a537-051fed815936",
+                "value": "They Might Be Giants - Boss of me",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            }
+          },
+          {
+            "clueGroup": 0,
+            "style": "& .CopyDiv.ClueValue .CopySpan { font-size: 33px; }",
+            "clueValues": [
+              {
+                "id": "80f583ea-412c-4d47-bf43-d3f3378af78a",
+                "value": "The 88 - At Least It Was Here",
+                "type": "text"
+              }
+            ],
+            "subtext": "Community",
+            "helperText": "What is this song to the TV Show The Big Bang Theory?",
+            "id": "a794dc37-6283-44f4-b9aa-e764642bfa3d",
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "dependsOn": []
+          },
+          {
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Synonims: prologue, opening, foreword",
+                "id": "26f8630a-fa1b-4440-91ea-49c65c9d1265"
+              }
+            ],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "id": "445a0c1e-010a-44bf-9573-3f00e7f9942a",
+            "subtext": "",
+            "helperText": "",
+            "style": "& .CopyDiv.ClueValue .CopySpan { font-size: 33px; }",
+            "dependsOn": []
+          }
+        ],
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Intro",
+          "possibleSolutions": [
+            {
+              "id": "61cd33e0-57db-4e89-be67-164dbeee6abd",
+              "value": "Intro"
+            },
+            {
+              "value": "Intro song",
+              "id": "f8ed60c8-b96c-43f4-9324-7c57e5683092"
+            },
+            {
+              "value": "Introduction",
+              "id": "f38e4e79-e817-40d2-9c11-004e3d358739"
+            }
+          ]
+        }
+      },
+      {
+        "clues": [
+          {
+            "style": "",
+            "clueValues": [
+              {
+                "value": "The Office",
+                "id": "6ed8dcda-93aa-4baf-a502-78a6ea158a0b",
+                "type": "text"
+              }
+            ],
+            "dependsOn": [],
+            "id": "deeafd6f-50b4-4aed-a3ad-cb5c1e83a36f",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            },
+            "subtext": "",
+            "clueGroup": 1,
+            "helperText": ""
+          },
+          {
+            "clueValues": [
+              {
+                "id": "59fb94a1-12ab-44ec-8e2d-f95815564d32",
+                "value": "Launch Party",
+                "type": "text"
+              }
+            ],
+            "id": "af0ea928-f57a-4a57-9b80-728f25f0e6de",
+            "helperText": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "clueGroup": 1,
+            "style": "",
+            "subtext": "Episode name"
+          },
+          {
+            "clueGroup": 1,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "id": "6be48795-7411-4296-9477-29831bc06bc5",
+            "dependsOn": [],
+            "style": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Intro",
+                "id": "18a2a270-bdf6-4d34-8ec9-8739f309eb85"
+              }
+            ],
+            "helperText": "",
+            "subtext": ""
+          },
+          {
+            "clueGroup": 0,
+            "helperText": "What Icon is displayed on the screen of a given object in intro scene of the episode Launch Party (S04E03) of TV Show The Office?.",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "id": "d3a92843-bbb7-496a-bb58-dc0b09bd7989",
+                "value": "officeTVLogo.png",
+                "type": "image"
+              }
+            ],
+            "style": "",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "subtext": "Icon",
+            "id": "5a5e2320-9eee-4fa9-8073-ed3639ea6c33"
+          }
+        ],
+        "id": "ef62ec2c-ba0c-4de2-87b5-2a35146f7f7c",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "25b9732e-cc86-4c26-99d6-caa3b6268824",
+              "value": "DVD"
+            },
+            {
+              "value": "DVD Video",
+              "id": "102c2e4d-a674-4055-adce-84fc4d683e3a"
+            }
+          ],
+          "solvedText": "DVD Video",
+          "type": "text"
+        },
+        "style": ""
+      }
+    ]
+  },
+  {
+    "id": "V18JHJt5sqivrWhaJ6w6",
+    "order": 0,
+    "name": "Little red running through",
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "rebuses": [
+      {
+        "style": "",
+        "id": "ef537764-62b7-4c31-8f71-753478fb5e73",
+        "clues": [
+          {
+            "clueGroup": 0,
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "d114a661-c397-4e60-99b8-5812d4db6f8c",
+                  "value": {
+                    "year": "1946",
+                    "day": "6",
+                    "minute": "",
+                    "second": "",
+                    "hour": "",
+                    "place": "",
+                    "month": "July"
+                  }
+                }
+              ],
+              "solvedText": "6 July 1946",
+              "type": "date"
+            },
+            "dependsOn": [],
+            "helperText": "Birthday of an actor playing John Rambo.",
+            "id": "c4685d42-295f-4a3b-8fc6-99ee1eea8761",
+            "clueValues": [
+              {
+                "id": "a07b6f6c-b6a5-4d24-9a9e-d46b46506211",
+                "value": "stalloneBirthday.png",
+                "type": "image"
+              }
+            ],
+            "subtext": "",
+            "style": ""
+          },
+          {
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "-",
+                "id": "3b3de640-0002-4277-b580-a63ce16be2bf"
+              }
+            ],
+            "style": "& .CopyDiv { width: 100px; }",
+            "id": "f332fcaa-95e2-474b-bd4e-28a333bcf5fd",
+            "clueGroup": 0,
+            "subtext": "",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            },
+            "dependsOn": [],
+            "helperText": ""
+          },
+          {
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "92897f1d-1b65-4f82-9c33-08049d54919b",
+                  "value": {
+                    "month": "July",
+                    "year": "1946",
+                    "minute": "",
+                    "day": "6",
+                    "hour": "",
+                    "place": "",
+                    "second": ""
+                  }
+                }
+              ],
+              "type": "date",
+              "solvedText": "6 July 1946"
+            },
+            "style": "",
+            "subtext": "",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "b4901d4b-4901-4c68-a176-3eb64337366c",
+                "value": "bushBirthday.png",
+                "type": "image"
+              }
+            ],
+            "dependsOn": [],
+            "helperText": "Birthday of 43rd US president.",
+            "id": "840a5cf2-520d-4c68-9d20-f69f4e54c454"
+          }
+        ],
+        "solutionInfo": {
+          "solvedText": "0",
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "id": "cf3be522-21e2-4168-8d1b-e356d2dac903",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      {
+        "id": "b6091d2e-08c1-4ca2-8a38-74f1e2af1fd5",
+        "clues": [
+          {
+            "style": "",
+            "clueGroup": 0,
+            "helperText": "Try removing the letters of the words from the group of letters, see what is left.",
+            "subtext": "",
+            "id": "93a8c4a9-f349-4493-9bd8-21b57f1279f4",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "id": "280f58c4-8fb3-4411-88ca-49ad35f57103",
+                "type": "image",
+                "value": "b_rebus.png"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            }
+          }
+        ],
+        "style": "",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "B",
+              "id": "0823ec9d-3c22-41c3-9664-30987f3015fb"
+            }
+          ],
+          "solvedText": "B",
+          "type": "text"
+        }
+      },
+      {
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [],
+          "solvedText": "A"
+        },
+        "clues": [
+          {
+            "helperText": "These are all names of paintings. Who painted them?",
+            "clueGroup": 0,
+            "id": "85612647-f70d-487a-bca1-d63e90bf7aa4",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "Morse",
+                  "id": "eb7e2265-fc51-49d7-ae24-c7b5f805eec0"
+                },
+                {
+                  "id": "7e1bf753-06dd-4bfc-9f38-f2d99fffc434",
+                  "value": "Samuel Morse"
+                },
+                {
+                  "value": "Samuel Finley Breese Morse",
+                  "id": "54caf1c6-38b4-42eb-b2be-2b657c79181e"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Morse"
+            },
+            "clueValues": [
+              {
+                "id": "8ca97a40-3393-44fa-8a39-38bba332f4dc",
+                "value": "James Monroe, Dying Hercules, The Judgment of Jupiter",
+                "type": "text"
+              }
+            ],
+            "dependsOn": [],
+            "style": "& .CopyDiv { max-width: 400px; width: 400px; }",
+            "subtext": ""
+          },
+          {
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "A",
+              "possibleSolutions": [
+                {
+                  "value": "A",
+                  "id": "c326ea39-bfd1-4152-a1b9-fc6971145422"
+                }
+              ]
+            },
+            "clueGroup": 0,
+            "subtext": "",
+            "id": "1073a1ab-e6f4-4848-940b-0b8f713c14b1",
+            "dependsOn": [
+              {
+                "id": "b42b6f64-f6b4-4ff3-b5e0-f415c5d3f5da",
+                "value": "85612647-f70d-487a-bca1-d63e90bf7aa4"
+              }
+            ],
+            "style": "& .CopyDiv { max-width: 315px; }",
+            "clueValues": [
+              {
+                "id": "8c8971ce-77e5-49aa-8636-a78269d3891f",
+                "value": "..-. .. .-. ... - / .-.. . - - . .-. / --- ..-. / - .... . / .- .-.. .--. .... .- -... . -",
+                "type": "text"
+              }
+            ],
+            "helperText": "Try to translate this Morse code, see what you get."
+          }
+        ],
+        "id": "0c2bcab6-3a26-48f3-b697-146311470258",
+        "style": ""
+      },
+      {
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "value": "Blood",
+              "id": "dc795242-d659-4a69-9d02-7b7be2a2eee0"
+            },
+            {
+              "value": "Blood type",
+              "id": "c56b00ee-04e0-4cd7-af4d-37c1824e9abb"
+            },
+            {
+              "id": "35351934-ce0c-4efe-b262-973f01200039",
+              "value": "Blood types"
+            }
+          ],
+          "solvedText": "Blood"
+        },
+        "style": "",
+        "clues": [
+          {
+            "style": "",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "id": "f8d6525b-733f-4a51-8224-19137b489623",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "18dcbfec-ae52-4208-b4d6-98affa961184",
+                "value": "0",
+                "type": "text"
+              }
+            ],
+            "helperText": "It's one of the types of the red liquid we're looking for."
+          },
+          {
+            "id": "7894b9a0-4e59-4703-b2bc-f2652dceb4ec",
+            "helperText": "It's one of the types of the red liquid we're looking for.",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "style": "",
+            "subtext": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "c22062b0-f69e-4347-9738-734f64607fc6",
+                "value": "B"
+              }
+            ]
+          },
+          {
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "9602111f-4861-4360-ade6-eb06d484c2e2",
+                "type": "text",
+                "value": "A"
+              }
+            ],
+            "dependsOn": [],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "style": "",
+            "subtext": "",
+            "id": "66407b78-f9e6-4673-b706-ff636ea8e6dc",
+            "helperText": "It's one of the types of the red liquid we're looking for."
+          },
+          {
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "8e85addd-c85a-4d5a-83b9-8debeb79b7be",
+                "value": "AB"
+              }
+            ],
+            "id": "ece1c153-c924-4953-a4f6-74fbdd0eb828",
+            "subtext": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "helperText": "It's one of the types of the red liquid we're looking for.",
+            "style": ""
+          }
+        ],
+        "id": "22eebe15-4ba3-4882-9fcc-55c6f2e66c02"
+      }
+    ]
+  },
+  {
+    "id": "b1yyDNXZk2FZ4jQ2M8CX",
+    "order": 6,
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "rebuses": [
+      {
+        "id": "ce353c9c-6b44-4833-8524-1d2ffceb2a81",
+        "clues": [
+          {
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "West Virginia",
+              "possibleSolutions": [
+                {
+                  "id": "4c931325-250d-4656-8eb4-c9aeca61014c",
+                  "value": "West Virginia"
+                }
+              ]
+            },
+            "clueGroup": 1,
+            "helperText": "U.S. State mentioned in famous song \"Country Roads\"",
+            "id": "711e7241-15f9-4b91-a7cc-9fd388fbba39",
+            "dependsOn": [],
+            "subtext": "State",
+            "style": "",
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "westVirginia.png",
+                "id": "fcedf003-985c-4f71-bf20-c0c4691b6955"
+              }
+            ]
+          },
+          {
+            "clueValues": [
+              {
+                "value": "wolverine.png",
+                "id": "0832a2df-3679-4c6b-b475-ecd7cdfafbda",
+                "type": "image"
+              },
+              {
+                "type": "image",
+                "value": "loganPaul.png",
+                "id": "a65a27b5-9371-4c0d-886f-deb3c313a1f5"
+              },
+              {
+                "type": "image",
+                "value": "firstName.png",
+                "id": "f25036b4-2ad5-41a9-9324-389bf45ba554"
+              }
+            ],
+            "style": "& img:nth-child(2) { display: inline-block; margin-right: 7px; } & img:nth-child(3) { display: inline-block; }",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Logan",
+              "possibleSolutions": [
+                {
+                  "value": "Logan",
+                  "id": "1d68acbf-b991-4515-ab65-ceb2c02163e6"
+                }
+              ]
+            },
+            "helperText": "Wolverine's and this famous youtuber's (last name Paul) first name.",
+            "clueGroup": 1,
+            "id": "6cfbcd7e-4d8d-4ef7-9c26-c38ad7340891",
+            "subtext": "City",
+            "dependsOn": []
+          },
+          {
+            "clueValues": [
+              {
+                "id": "4b3fd3dd-214e-4cfd-8d24-9286eac51974",
+                "value": "water.png",
+                "type": "image"
+              }
+            ],
+            "helperText": "Four elements. Fire, air, earth and?",
+            "subtext": "Street",
+            "style": "",
+            "dependsOn": [],
+            "id": "339de2a0-02d8-42da-bcf5-8cbe0d7aeb89",
+            "clueGroup": 1,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Water",
+                  "id": "c2d76d2c-4950-410d-bcfc-10acda056d7b"
+                }
+              ],
+              "solvedText": "Water"
+            }
+          },
+          {
+            "dependsOn": [],
+            "style": "",
+            "clueGroup": 1,
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "15ae75c6-8125-4b4b-8426-9ee7cc81fbe8",
+                "type": "text",
+                "value": "(55*55 + 55) / 55 - (55/55) + 55"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "110",
+                  "id": "a2c43703-e0b5-4626-83a9-bd133d6a57a0"
+                }
+              ],
+              "solvedText": "110",
+              "type": "text"
+            },
+            "helperText": "Try using a calculator.",
+            "id": "14e71565-11e6-4c15-aafb-2635a094b12b"
+          },
+          {
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "type": "image",
+                "id": "8f5a3feb-e81a-493d-98f8-9b8ab07195e1",
+                "value": "location.png"
+              }
+            ],
+            "id": "58bf5f72-cec7-42dd-8def-f80f7cca28f6",
+            "helperText": "What is located at the address from previous clues?",
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "style": "",
+            "subtext": "",
+            "dependsOn": []
+          }
+        ],
+        "style": "",
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Wendy's",
+          "possibleSolutions": [
+            {
+              "value": "Wendy's",
+              "id": "692d2906-adf9-4c28-a275-1518bc2f1a07"
+            },
+            {
+              "value": "Wendys",
+              "id": "c345c672-18c9-45e6-bf31-5d60e147e034"
+            }
+          ]
+        }
+      },
+      {
+        "style": "",
+        "clues": [
+          {
+            "style": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "solvedText": "ASCII",
+              "possibleSolutions": [
+                {
+                  "value": "ASCII",
+                  "id": "f3ef8040-eaeb-401a-ac50-b6c9db7751b8"
+                }
+              ],
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "helperText": "Numbers mean how many mines are around every cell. Open all fields that don't have mines.",
+            "subtext": "",
+            "id": "f7c618f4-6074-4ece-904d-6ceecdfcc886",
+            "clueValues": [
+              {
+                "type": "customComponent",
+                "value": "AsciiMinesweeper",
+                "id": "687a8abb-ef48-48a3-b506-4d988cddb9c8"
+              }
+            ]
+          },
+          {
+            "style": "",
+            "id": "56205539-fc9a-4f7a-bc7d-2dc3a2e03b01",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "id": "37bf427f-3d2f-4962-89e9-658751aa6f6a",
+                "type": "text",
+                "value": "84 101 115 116 "
+              }
+            ],
+            "helperText": "Solve the minesweeper and find the connection between its solution and these numbers.",
+            "clueGroup": 0,
+            "subtext": ""
+          }
+        ],
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "61a36f34-db4c-4ad9-adf5-b417bd56c2fd",
+              "value": "Test"
+            }
+          ],
+          "solvedText": "Test",
+          "type": "text"
+        },
+        "id": "2913977f-917f-4af3-bf4a-a0c41723c3be"
+      },
+      {
+        "style": "",
+        "id": "af50cc68-7e90-4421-b3e0-f4cdcae61444",
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Burger",
+          "possibleSolutions": [
+            {
+              "value": "Burger",
+              "id": "35ec0b74-08f3-42a8-b5c1-d7dab09feeeb"
+            }
+          ]
+        },
+        "clues": [
+          {
+            "subtext": "1904. - 1986.",
+            "clueValues": [
+              {
+                "id": "cde282d4-ded7-4f99-982d-8bab566f9771",
+                "type": "text",
+                "value": "Jaap"
+              }
+            ],
+            "helperText": "What does Jaap have in common with the other two?",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "id": "9ff41ee7-dcaa-4cf2-a674-68e1a809d93e",
+            "style": ""
+          },
+          {
+            "id": "9dad439c-9945-48b0-aee6-2ae9aa03e219",
+            "style": "",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "value": "Rudolf",
+                "type": "text",
+                "id": "b3186b5c-bac3-4f13-a857-e1fb337e7874"
+              }
+            ],
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "helperText": "What does Rudolf have in common with the other two?",
+            "subtext": "1938. - 2021.",
+            "dependsOn": []
+          },
+          {
+            "id": "870f3b58-72aa-445e-b9b4-6807ed98adb2",
+            "clueValues": [
+              {
+                "id": "fe5674f0-2a5d-42dc-b480-16543eadb3c6",
+                "value": "Ludwig",
+                "type": "text"
+              }
+            ],
+            "subtext": "1825. - 1884.",
+            "style": "",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "helperText": "What does Ludwig have in common with the other two?",
+            "dependsOn": [],
+            "clueGroup": 0
+          }
+        ]
+      },
+      {
+        "id": "e5c42eb6-08ac-4361-9f21-877e2f23be52",
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "value": "Wendy Testaburger",
+              "id": "868186c9-a703-47b3-b758-5d9ac6857304"
+            }
+          ],
+          "solvedText": "Wendy Testaburger"
+        },
+        "clues": [
+          {
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "dependsOn": [],
+            "clueGroup": 1,
+            "clueValues": [
+              {
+                "id": "8a2c2030-032c-48b4-a7e6-a6afc7737171",
+                "value": "Wendy's",
+                "type": "text"
+              }
+            ],
+            "id": "331fd555-30d7-4dba-baac-de1f297ce488",
+            "helperText": "It's the first name of the character we're looking for.",
+            "style": "",
+            "subtext": ""
+          },
+          {
+            "clueGroup": 1,
+            "subtext": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "57738457-aee0-4cf6-8c62-008092e04c53",
+                "value": "Test"
+              }
+            ],
+            "id": "f17539e4-3f80-4903-af1e-7dbef178328c",
+            "style": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "helperText": "It's a part of the last name of the character we're looking for."
+          },
+          {
+            "dependsOn": [],
+            "helperText": "It's a part of the last name of the character we're looking for.",
+            "style": "",
+            "id": "7a479887-7ca9-4870-a16e-44aefd4a9512",
+            "clueGroup": 1,
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "7247e438-c119-44c0-8681-9d9173a4c876",
+                "value": "Burger",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "style": "",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "value": "southPark.png",
+                "id": "15f46a32-d384-4242-8a1a-5ac79a642858",
+                "type": "image"
+              }
+            ],
+            "subtext": "",
+            "helperText": "It's a girl from a famous show South Park",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "clueGroup": 1,
+            "id": "976a963b-eb49-4c69-9ca9-e13ffb8bf84d"
+          }
+        ],
+        "style": ""
+      }
+    ],
+    "name": "Acing the carbs"
+  },
+  {
+    "id": "e1Y0CnwiCjwTAQUWO0bP",
+    "rebuses": [
+      {
+        "id": "72c280a2-d27f-4465-94b5-4557d95299a7",
+        "solutionInfo": {
+          "solvedText": "Ralph Fiennes",
+          "possibleSolutions": [
+            {
+              "value": "Ralph Fiennes",
+              "id": "3ac3c7b7-8bff-4ad6-a94f-ff002cc528ba"
+            },
+            {
+              "id": "13340dfd-2759-4921-a6f5-9b7b2d93b176",
+              "value": "Fiennes"
+            }
+          ],
+          "type": "text"
+        },
+        "clues": [
+          {
+            "clueGroup": 1,
+            "helperText": "Famous 2012 American computer-animated comedy film. Try looking it up online.",
+            "style": "",
+            "subtext": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "id": "0a0e36b7-fc18-4491-88c4-808694822d1d",
+                  "value": "Ralph"
+                }
+              ],
+              "solvedText": "Ralph"
+            },
+            "id": "ed58e7b4-b986-488a-9e0c-93e131aca488",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "8787b1ff-b242-4985-bac2-127e523dcef1",
+                "value": "Wreck-it _____"
+              }
+            ]
+          },
+          {
+            "id": "eb5d56bb-19f5-487d-a64d-14e00d147b81",
+            "solutionInfo": {
+              "solvedText": "Voldemort",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "id": "50bb123f-231f-45fa-827f-fa050c450cb5",
+                  "value": "Voldemort"
+                }
+              ]
+            },
+            "helperText": "Light saber means Star Wars, ring means Lord of the Rings and wand means Harry Potter. Angel means good guy, devil means bad guy. Follow the circled images.",
+            "clueValues": [
+              {
+                "value": "voldemort.png",
+                "id": "a8adff8d-fb8f-427c-aa78-6a701d5d0157",
+                "type": "image"
+              }
+            ],
+            "dependsOn": [],
+            "clueGroup": 1,
+            "style": "",
+            "subtext": ""
+          }
+        ],
+        "style": ""
+      },
+      {
+        "solutionInfo": {
+          "possibleSolutions": [],
+          "solvedText": "Christoph Waltz",
+          "type": "text"
+        },
+        "id": "679e31b1-063b-4f17-ad2a-a6cc45bc2a46",
+        "style": "",
+        "clues": [
+          {
+            "style": "& .ClueSubtext .CopySpan { text-decoration: line-through 1.5px #ff0000; }",
+            "clueValues": [
+              {
+                "id": "dcb8be87-6826-42b3-b34b-6bdfa2fc19c6",
+                "type": "image",
+                "value": "ChristopherRobin.png"
+              }
+            ],
+            "clueGroup": 0,
+            "dependsOn": [],
+            "helperText": "Famous boy from Winnie-the-Pooh. Lose his last name and the \"er\" at the end of his first name.",
+            "subtext": "er",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Christoph",
+                  "id": "54746cb7-b858-4aba-813e-6e111181a214"
+                }
+              ],
+              "solvedText": "Christoph"
+            },
+            "id": "79136017-c648-4c40-8a6f-058b64a3fa49"
+          },
+          {
+            "helperText": "A popular dance associated with Vienna.",
+            "style": "",
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "waltz.png",
+                "id": "e0961427-2ce2-4e38-9e14-95e3730745b7"
+              }
+            ],
+            "subtext": "Vienna",
+            "clueGroup": 0,
+            "id": "832b2467-9bcb-4733-b1b1-128cd2b4013c",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Waltz",
+              "possibleSolutions": [
+                {
+                  "id": "89c38b92-9f55-4123-b00b-07e25bfafd6a",
+                  "value": "Waltz"
+                }
+              ]
+            },
+            "dependsOn": []
+          }
+        ]
+      },
+      {
+        "style": "",
+        "id": "fac31564-8621-40ee-8976-4b084cef1e10",
+        "clues": [
+          {
+            "clueGroup": 1,
+            "clueValues": [
+              {
+                "id": "6b67bd90-6141-484e-b3c6-c58200c9b5f4",
+                "value": "curriculumVitae.png",
+                "type": "image"
+              }
+            ],
+            "id": "95e8a65b-7e62-48ce-ae44-4a265a4aa808",
+            "subtext": "52°30'28.3N 13°26'08.0E",
+            "style": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "solvedText": "1968",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "id": "9bee6c28-aeef-47ab-8fc3-df9ef96dcc25",
+                  "value": "1968"
+                },
+                {
+                  "value": "1968.",
+                  "id": "2521514a-bd09-4a97-8ffe-8d55ddf40ca2"
+                }
+              ]
+            },
+            "helperText": "Try seeing what is located at those coordinates. Get a good \"street view\" of the location."
+          },
+          {
+            "helperText": "Find out who was born in 1968 and played James Bond.",
+            "style": "",
+            "clueGroup": 1,
+            "clueValues": [
+              {
+                "value": "Cake.png",
+                "id": "da1ad800-f501-479b-8444-eb7bc6dc619f",
+                "type": "image"
+              }
+            ],
+            "subtext": "007",
+            "id": "25092829-d145-4031-8e26-18707ce76e90",
+            "dependsOn": [
+              {
+                "id": "cffaed71-b320-4099-b672-c51672cfdca9",
+                "value": "95e8a65b-7e62-48ce-ae44-4a265a4aa808"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            }
+          }
+        ],
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Daniel Craig",
+          "possibleSolutions": [
+            {
+              "id": "a53e7ef9-0983-4ef0-898c-688e03001422",
+              "value": "Daniel Craig"
+            }
+          ]
+        }
+      },
+      {
+        "style": "",
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Spectre",
+          "possibleSolutions": [
+            {
+              "id": "d9a79c7f-5fff-46e7-b05a-6728e257d557",
+              "value": "Spectre"
+            }
+          ]
+        },
+        "clues": [
+          {
+            "subtext": "",
+            "clueGroup": 1,
+            "id": "e6c0eaf0-ce0c-4e95-9fa9-a0447c0f8d2d",
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "clueValues": [
+              {
+                "value": "Ralph Fiennes",
+                "id": "7ef0653e-ff82-4417-9d28-d8ee4982c669",
+                "type": "text"
+              }
+            ],
+            "style": "",
+            "dependsOn": [],
+            "helperText": ""
+          },
+          {
+            "dependsOn": [],
+            "style": "",
+            "helperText": "",
+            "clueGroup": 1,
+            "id": "d3979a32-d863-4e3e-b759-9499a8c5ce9e",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Christoph Waltz",
+                "id": "382eacf1-d76e-40c3-8f3a-1894e5b58a41"
+              }
+            ],
+            "subtext": "",
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "clueGroup": 1,
+            "style": "",
+            "subtext": "",
+            "helperText": "",
+            "id": "96c4af1b-74c8-47f0-a044-bf2e496e6a79",
+            "clueValues": [
+              {
+                "id": "133b79aa-f58a-4aa9-b15e-e952b2cd967d",
+                "value": "Daniel Craig",
+                "type": "text"
+              }
+            ],
+            "dependsOn": [],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "dependsOn": [],
+            "subtext": "",
+            "style": "",
+            "clueGroup": 1,
+            "clueValues": [
+              {
+                "id": "e638078b-7b94-4439-ae21-84ec1342e2fd",
+                "value": "2015",
+                "type": "text"
+              }
+            ],
+            "id": "30ff513d-1cc0-4ef1-966e-2c11b758b748",
+            "helperText": "What movie did those guys play in that year?",
+            "solutionInfo": {
+              "solvedText": "",
+              "possibleSolutions": [],
+              "type": "text"
+            }
+          }
+        ],
+        "id": "8ee31c3b-2444-409d-ba10-225c60906746"
+      }
+    ],
+    "name": "Looking for a spy",
+    "order": 3,
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE"
+  },
+  {
+    "id": "kxj1dnUb1m0Xfwp6VE2F",
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "name": "It's a Marvelous world",
+    "order": 0,
+    "rebuses": [
+      {
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Arizona",
+              "id": "5fe66bfb-3310-4ecc-9063-6d837e432d9a"
+            }
+          ],
+          "solvedText": "Arizona",
+          "type": "text"
+        },
+        "id": "f0fb4c2b-4810-47d7-ae3d-7e92fc34ea20",
+        "clues": [
+          {
+            "style": "",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "subtext": "",
+            "clueValues": [
+              {
+                "value": "grandCanyon.jpg",
+                "type": "image",
+                "id": "d2818c2b-9fe3-4f32-9d8a-a843640ea7b0"
+              }
+            ],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Grand Canyon",
+              "possibleSolutions": [
+                {
+                  "value": "Grand Canyon",
+                  "id": "da897ffc-d8a1-47dd-8da7-d0a0433c219f"
+                }
+              ]
+            },
+            "id": "7e2ce6af-1840-438c-bef3-4e8bff927ec5",
+            "helperText": "It's a canyon carved by the Colorado river."
+          },
+          {
+            "subtext": "",
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "whichState.png",
+                "id": "55af50d0-7df7-4da3-b56a-c9cb49dc2548"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text",
+              "solvedText": ""
+            },
+            "helperText": "",
+            "id": "5e88fc87-9fdd-4798-9665-5afd83b7ada3",
+            "style": "",
+            "clueGroup": 0,
+            "dependsOn": []
+          }
+        ],
+        "style": ""
+      },
+      {
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Ash",
+          "possibleSolutions": []
+        },
+        "clues": [
+          {
+            "id": "19df1251-f310-4f0f-b545-206d040db47b",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Wood",
+                  "id": "501c58da-599c-4ca8-b23a-8c2274db269c"
+                }
+              ],
+              "solvedText": "Wood"
+            },
+            "style": "& .CopyDiv { max-width: 315px; }",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Pinocchio, Groot, Whomping Willow",
+                "id": "e5115dc3-4166-4b02-a0f8-6476f0defc71"
+              }
+            ],
+            "subtext": "",
+            "helperText": "What material are these fictional characters made of?"
+          },
+          {
+            "helperText": "",
+            "subtext": "",
+            "style": "",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "+",
+                "id": "85ee4779-d83e-4e83-8d1e-863928b60f20"
+              }
+            ],
+            "dependsOn": [],
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "id": "a8066a62-0112-4100-8169-a30ad4b9f30d"
+          },
+          {
+            "style": "",
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "whichElement.png",
+                "id": "3ba53c1a-dd48-4276-a8d1-89a5140a2d69"
+              }
+            ],
+            "clueGroup": 0,
+            "dependsOn": [],
+            "subtext": "Johnny Storm, Johnny Blaze, Johnny Allerdyce",
+            "id": "f2f618af-1be7-4d66-970c-c0bcbecadfd5",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "42c0d722-5924-46b7-9fa5-bca33c0ca564",
+                  "value": "Fire"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Fire"
+            },
+            "helperText": "What superpower do these fictional characters have in common?"
+          },
+          {
+            "style": "",
+            "clueGroup": 0,
+            "helperText": "",
+            "id": "866356dc-9eee-4999-931b-ec5631cf5d4c",
+            "subtext": "",
+            "dependsOn": [],
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "clueValues": [
+              {
+                "value": "=",
+                "id": "cad388ac-f7aa-4aa6-8fb1-abfa7de5b754",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "id": "a8e4fc3a-1757-41eb-9df5-1981b68dad24",
+            "dependsOn": [],
+            "style": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "___",
+                "id": "99b6db64-1f27-49fd-8198-354a5d945e68"
+              }
+            ],
+            "helperText": "",
+            "solutionInfo": {
+              "solvedText": "Ash",
+              "possibleSolutions": [
+                {
+                  "value": "Ash",
+                  "id": "0a177d59-bf47-493e-9b39-72bdd255ca86"
+                }
+              ],
+              "type": "text"
+            },
+            "subtext": "",
+            "clueGroup": 0
+          }
+        ],
+        "style": "",
+        "id": "8391a887-3926-431d-aa6d-139438bf572f"
+      },
+      {
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Jean Grey",
+          "possibleSolutions": []
+        },
+        "id": "52d2e857-c268-4a9c-8e56-772b8cd77c47",
+        "style": "",
+        "clues": [
+          {
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "Jean",
+                  "id": "e238164f-eae7-4ecc-9cfb-972f622a4eac"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Jean"
+            },
+            "style": "",
+            "clueGroup": 0,
+            "id": "8c4602a7-975b-44b3-be6e-e99e0e295669",
+            "helperText": "Convert Roman numerals to Arabic numerals and find which letters are in that position in alphabet.",
+            "dependsOn": [],
+            "subtext": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "c0be372e-2ab0-40d8-804e-bff4cfb439dc",
+                "value": "II=2=B XX=20=T X+V+I+XIV"
+              }
+            ]
+          },
+          {
+            "solutionInfo": {
+              "solvedText": "Grey",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "id": "d295a103-bc7a-477a-853e-1e465edf6573",
+                  "value": "Grey"
+                },
+                {
+                  "value": "Gray",
+                  "id": "f4a64b6f-3f22-484f-afa6-82d5a19c8111"
+                }
+              ]
+            },
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "whichColor.png",
+                "id": "4b449fd8-6f1e-4c9b-8344-d2f8e952434a"
+              }
+            ],
+            "helperText": "Which color has this hexadecimal value?",
+            "subtext": "#7a7a7a",
+            "id": "d9b7e644-43d4-4a3d-ac1e-4b01b4e18609",
+            "style": "",
+            "clueGroup": 0
+          }
+        ]
+      },
+      {
+        "id": "30ee7a23-a24d-4a5a-b22b-ec66edb4c53e",
+        "clues": [
+          {
+            "helperText": "It's the capital of Arizona.",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "dependsOn": [],
+            "id": "1af98eb5-3274-4de4-b482-1939b6c01884",
+            "clueGroup": 1,
+            "subtext": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "c4189d5d-4417-4da8-842d-690719da7dad",
+                "value": "Arizona"
+              }
+            ],
+            "style": ""
+          },
+          {
+            "id": "22f9c22c-2b26-453d-afd9-98fa2840dceb",
+            "helperText": "It turns into ash once it dies and then it's reborn.",
+            "clueGroup": 2,
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Ash",
+                "id": "49dafe62-c356-4b81-9596-7ce78555606d"
+              }
+            ],
+            "subtext": "",
+            "style": "",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "dependsOn": []
+          },
+          {
+            "clueGroup": 3,
+            "clueValues": [
+              {
+                "value": "Jean Grey",
+                "type": "text",
+                "id": "fafd8038-2612-4c77-9630-114f43ed471e"
+              }
+            ],
+            "style": "",
+            "dependsOn": [],
+            "id": "bd2983f7-453c-4844-823f-119c2ab8fd9f",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "helperText": "Fictional entity in X-men series, closely related to Jean Grey.",
+            "subtext": ""
+          },
+          {
+            "clueValues": [
+              {
+                "id": "efa20b97-b29d-4ce6-a87f-905e47ed0964",
+                "value": "eagle.jpg",
+                "type": "image"
+              }
+            ],
+            "dependsOn": [],
+            "style": "width: 510px;",
+            "subtext": "",
+            "clueGroup": 0,
+            "id": "f16de81d-d1b0-4bf7-b1f6-33eafc79c3cb",
+            "helperText": "",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            }
+          }
+        ],
+        "style": "",
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Phoenix",
+          "possibleSolutions": [
+            {
+              "value": "Phoenix",
+              "id": "e7257e75-9d2e-4b63-bd61-44cbbe430ee3"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "nC4m7jM84JVA1UsyQCAe",
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "rebuses": [
+      {
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "value": "Finger",
+              "id": "2ed0a76c-8f6c-463b-b220-ffe29eaf9bb4"
+            },
+            {
+              "id": "27a32e66-8141-462b-b5d5-840c406bf326",
+              "value": "Fingers"
+            }
+          ],
+          "solvedText": "Finger"
+        },
+        "style": "",
+        "clues": [
+          {
+            "style": "",
+            "subtext": "",
+            "helperText": "A cartoon about two rats. The second one's name is Brain.",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "02653677-f183-4fda-9c45-7520fed01150",
+                  "value": "Pinky"
+                }
+              ],
+              "solvedText": "Pinky",
+              "type": "text"
+            },
+            "id": "7abe1490-2da1-4519-84c5-b8433727eb5d",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "05729ed0-670e-4e20-afa0-09e35a6be7fd",
+                "value": "pinky.png",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "id": "24528626-df70-492a-bb3b-394831d410e5",
+            "clueValues": [
+              {
+                "id": "6905a4c2-5b60-4ce9-8b3c-26291dbbde4c",
+                "type": "text",
+                "value": "Olympics - 5"
+              },
+              {
+                "value": "Audi - 4",
+                "type": "text",
+                "id": "3d108075-e9bb-49f0-bdd7-6fffdca07e65"
+              },
+              {
+                "id": "20bf5546-f191-43a0-a77a-1259a58abdbd",
+                "value": "Sauron - 1",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "Ring",
+                  "id": "8b1ad20e-fe95-4de2-a8b9-ebcfdcbb4421"
+                },
+                {
+                  "value": "Rings",
+                  "id": "89c4b1e9-299a-4112-a346-0a2e7081ec56"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Ring"
+            },
+            "style": "",
+            "clueGroup": 0,
+            "subtext": "",
+            "helperText": "You wear it on your hand",
+            "dependsOn": []
+          },
+          {
+            "subtext": "",
+            "id": "e112158e-1190-49b3-9e78-0ad024c169f1",
+            "style": "",
+            "helperText": "Between left and right",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "id": "6eaeb58c-c76b-46c9-86cd-9105069a2cd3",
+                "value": "School",
+                "type": "text"
+              },
+              {
+                "id": "0acfe510-369f-4280-a0b1-81440f74302b",
+                "type": "text",
+                "value": "Earth"
+              },
+              {
+                "id": "b3d945ea-f6dd-49b0-8d77-1980c228c279",
+                "value": "East",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "solvedText": "Middle",
+              "possibleSolutions": [
+                {
+                  "value": "Middle",
+                  "id": "2329c1ad-7ea6-432f-9fc8-0b273983f1ff"
+                }
+              ],
+              "type": "text"
+            }
+          }
+        ],
+        "id": "1010009d-1cae-4a37-a85a-0298148c55c8"
+      },
+      {
+        "solutionInfo": {
+          "type": "text",
+          "possibleSolutions": [],
+          "solvedText": "Tadpole"
+        },
+        "id": "92a60936-1165-4617-87cd-6703e2da6a04",
+        "clues": [
+          {
+            "id": "23297df3-a0ea-4646-8feb-185c00380bda",
+            "subtext": "t",
+            "style": "& > .ClueValue .CopySpan { font-size: 30px; }",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "dependsOn": [],
+            "clueGroup": 0,
+            "helperText": "Cross looks like the letter t. What do other objects look like?",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "04647f42-feb9-4b2c-a238-e37d2720f45a",
+                "value": "Cross"
+              }
+            ]
+          },
+          {
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "f6371981-711f-426f-89fd-c998a79d59d1",
+                "value": "Eiffel Tower"
+              }
+            ],
+            "dependsOn": [],
+            "style": "& > .ClueValue .CopySpan { font-size: 30px; }",
+            "solutionInfo": {
+              "solvedText": "A",
+              "possibleSolutions": [
+                {
+                  "id": "c96b8f18-5ce6-4d6b-81fb-5f1b5952f9e2",
+                  "value": "a"
+                }
+              ],
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "id": "2e70fa40-73e4-4194-a5ac-57706c959ce7",
+            "helperText": "What letter does the Eiffel Tower look like?",
+            "subtext": "?"
+          },
+          {
+            "id": "65393cda-82d1-40e2-b3f4-881589e7e966",
+            "helperText": "What letter does a bow look like?",
+            "subtext": "?",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "d",
+                  "id": "924fa639-c9f8-4574-b2bd-7de6e2b7754a"
+                }
+              ],
+              "solvedText": "D"
+            },
+            "style": "& > .ClueValue .CopySpan { font-size: 30px; }",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "e099646f-7d06-4d9a-a560-5320baac3d7c",
+                "value": "Bow",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Flag on a stick",
+                "id": "b6d550ba-8b15-4567-89a8-cd56f240f4cc"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "p",
+                  "id": "745eea4d-94d6-4a38-aa9c-aa5ef464723a"
+                }
+              ],
+              "type": "text",
+              "solvedText": "P"
+            },
+            "subtext": "?",
+            "dependsOn": [],
+            "helperText": "What letter does a flag on a stick look like?",
+            "style": "& > .ClueValue .CopySpan { font-size: 30px; }",
+            "clueGroup": 0,
+            "id": "fe404cf3-fe90-4447-bd78-42a25a1724a7"
+          },
+          {
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "f4944e53-b3fe-40a5-a7d4-5e5ec60e8a79",
+                "value": "Earth"
+              }
+            ],
+            "dependsOn": [],
+            "id": "55514334-ae5a-4be0-b72b-265c56713e45",
+            "helperText": "What letter does the Earth look like?",
+            "style": "& > .ClueValue .CopySpan { font-size: 30px; }",
+            "subtext": "?",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "6befeb2f-dfb0-4303-9e7a-7233b9d5666a",
+                  "value": "o"
+                }
+              ],
+              "type": "text",
+              "solvedText": "O"
+            }
+          },
+          {
+            "subtext": "?",
+            "style": "& > .ClueValue .CopySpan { font-size: 30px; }",
+            "clueGroup": 0,
+            "id": "c8be451c-9d85-4684-93f9-5d9bb05d91c8",
+            "clueValues": [
+              {
+                "value": "Corner of a frame",
+                "id": "1a993fda-7cf6-4ccd-9531-203835b09337",
+                "type": "text"
+              }
+            ],
+            "dependsOn": [],
+            "helperText": "What letter does a left bottom corner of a frame look like?",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "id": "18c8f8aa-15d5-40ac-9ff4-50a45107eb9a",
+                  "value": "l"
+                }
+              ],
+              "type": "text",
+              "solvedText": "L"
+            }
+          },
+          {
+            "style": "& > .ClueValue .CopySpan { font-size: 30px; }",
+            "dependsOn": [],
+            "subtext": "?",
+            "id": "3406ccc8-4254-47be-ad68-93bf620f6e9b",
+            "clueValues": [
+              {
+                "value": "Traffic light from a side",
+                "id": "71dc51f8-07fa-4b75-831f-260f47f046af",
+                "type": "text"
+              }
+            ],
+            "clueGroup": 0,
+            "helperText": "What letter does a traffic light from a side look like?",
+            "solutionInfo": {
+              "solvedText": "E",
+              "possibleSolutions": [
+                {
+                  "id": "92269cad-e71e-42f3-9a6e-c19155b4a733",
+                  "value": "e"
+                }
+              ],
+              "type": "text"
+            }
+          }
+        ],
+        "style": ""
+      },
+      {
+        "clues": [
+          {
+            "dependsOn": [],
+            "id": "f14f33a7-7c90-4a9e-91c6-d5bc6029f3bc",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "style": "& > .CopyDiv { font-size: 20px; }",
+            "helperText": "He doesn't use it while climbing. It's a good thing to use while climbing.",
+            "subtext": "doesn’t use it",
+            "clueValues": [
+              {
+                "id": "f3ce3cb2-f05f-4189-99a1-a38132b3837f",
+                "value": "Alex Honnold",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "subtext": "used it a bit too much",
+            "style": "& > .CopyDiv { font-size: 20px; }",
+            "helperText": "You use it in public executions. You don't want to wrap your head around that.",
+            "clueValues": [
+              {
+                "value": "Albert Pierrepoint",
+                "id": "4f6ec404-6471-4ee0-9877-568c9d94c35c",
+                "type": "text"
+              }
+            ],
+            "id": "b0592a90-72c9-49f8-8f5c-f0daf5bd9d85",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "dependsOn": [],
+            "clueGroup": 0
+          }
+        ],
+        "id": "32d96600-970b-42c1-a02e-18219552936a",
+        "style": "",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "2fd3ad2a-d1ac-45cd-8179-71c7e1791c04",
+              "value": "Rope"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Rope"
+        }
+      },
+      {
+        "id": "95488137-8aad-45a2-a322-50e17aed6d8e",
+        "clues": [
+          {
+            "dependsOn": [],
+            "helperText": "Finger meant the number 10 000 to the people who built the Pyramids of Giza",
+            "clueValues": [
+              {
+                "value": "Finger",
+                "id": "219def4d-4a53-4c2c-90e4-82cc9aecb5fe",
+                "type": "text"
+              }
+            ],
+            "id": "fefade3b-5471-44ab-bc96-99e54d788912",
+            "style": "",
+            "clueGroup": 1,
+            "subtext": "10 000",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "helperText": "Tadpole meant the number 100 000 to the people who built the Pyramids of Giza",
+            "id": "234ffc08-89b4-40f4-b3cb-8989c7dc835e",
+            "subtext": "100 000",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "clueGroup": 1,
+            "style": "",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "2861701c-3975-4db0-8d36-0851449805ba",
+                "value": "Tadpole"
+              }
+            ]
+          },
+          {
+            "clueValues": [
+              {
+                "id": "4ebb6eb7-6342-419c-af43-362e83151af5",
+                "value": "Rope",
+                "type": "text"
+              }
+            ],
+            "id": "19a44d83-b3d0-4627-b154-b3776df4889b",
+            "style": "",
+            "helperText": "Rope meant the number 100 to the people who built the Pyramids of Giza",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "subtext": "100",
+            "dependsOn": [],
+            "clueGroup": 1
+          }
+        ],
+        "style": "",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Egypt",
+              "id": "c7e1bb1a-7eb9-4579-b89a-15bba0c95a3e"
+            },
+            {
+              "value": "Egyptian numbers",
+              "id": "43454d54-c51a-469d-b455-174dcc770531"
+            },
+            {
+              "value": "Egyptian Number System",
+              "id": "713a8aee-8ab8-440b-b8dd-930bb8315329"
+            },
+            {
+              "id": "17e5397b-f91c-4e86-90e6-39871c183249",
+              "value": "Egyptian Numerals"
+            },
+            {
+              "value": "Egyptian Numeral",
+              "id": "5dce91cc-90b3-4264-b997-18b88570f8db"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Egyptian numbers"
+        }
+      }
+    ],
+    "order": 0,
+    "name": "Ancient Accounting"
+  },
+  {
+    "id": "pa88HuCtT1DW3OYoPuOI",
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE",
+    "order": 0,
+    "rebuses": [
+      {
+        "id": "7e8bd2a0-47a2-4699-8a32-acc79d65c529",
+        "solutionInfo": {
+          "solvedText": "Argentina",
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "id": "ebc7509a-5c8c-4ef8-ae38-94d9186f32cc",
+              "value": "Argentina"
+            }
+          ]
+        },
+        "clues": [
+          {
+            "dependsOn": [],
+            "subtext": "Periodic Table of Elements",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "",
+              "possibleSolutions": []
+            },
+            "style": "",
+            "id": "159dbf3f-165c-4e43-aa0d-4f4a0f9e58ad",
+            "clueValues": [
+              {
+                "value": "Argon, Germanium, Nitrogen, Titanium, Sodium",
+                "id": "5a9160f1-0d2c-4798-a37b-8f55a30b1516",
+                "type": "text"
+              }
+            ],
+            "clueGroup": 0,
+            "helperText": "Combine the shorthands for these elements using the periodic table."
+          }
+        ],
+        "style": ""
+      },
+      {
+        "style": "",
+        "id": "c1c00f53-fcf7-4b46-bd6d-eceb564ec3bd",
+        "clues": [
+          {
+            "dependsOn": [],
+            "helperText": "Famous sitcom created by Craig Thomas and Carter Bays.",
+            "subtext": "",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "6c1f3233-966a-484b-8ea5-73cf01c68b7d",
+                "type": "text",
+                "value": "Ted, Marshall, Lily, Barney, Robin"
+              }
+            ],
+            "id": "d2490038-e885-4dff-b38e-a63e56ae5709",
+            "style": "& .CopySpan {font-size: 24px}",
+            "solutionInfo": {
+              "solvedText": "How I Met Your Mother",
+              "possibleSolutions": [
+                {
+                  "id": "3ce1ec24-d325-4dc5-8586-6f4158aa6573",
+                  "value": "How I Met Your Mother"
+                },
+                {
+                  "id": "db5d65ef-9075-46a6-a2c1-5e7840b5838a",
+                  "value": "HIMYM"
+                }
+              ],
+              "type": "text"
+            }
+          },
+          {
+            "dependsOn": [
+              {
+                "value": "d2490038-e885-4dff-b38e-a63e56ae5709",
+                "id": "f163d6a4-4c93-41d2-aac5-858a6a5d167b"
+              }
+            ],
+            "subtext": "",
+            "clueGroup": 0,
+            "helperText": "A particular type of footwear mentioned in the show How I Met Your Mother. Same color as top left part of Windows logo and worn by people who manage cattle.",
+            "id": "d85e74b1-9b61-427d-854d-f3b8eb66854c",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Boots",
+              "possibleSolutions": [
+                {
+                  "value": "Boot",
+                  "id": "9fe3e520-e5cc-45b6-9a80-791df727b4de"
+                },
+                {
+                  "value": "Boots",
+                  "id": "6d906b34-ba70-447a-b66f-268c939d8754"
+                },
+                {
+                  "value": "Red cowboy boots",
+                  "id": "f79ac03a-e5fc-431e-b164-15f44242ec00"
+                }
+              ]
+            },
+            "clueValues": [
+              {
+                "value": "redCowboy.png",
+                "type": "image",
+                "id": "92383c7a-6f4f-4672-9d63-4210302f55a0"
+              }
+            ],
+            "style": "&.HiddenClue{filter: blur(40px);}"
+          },
+          {
+            "subtext": "Butan, Sri Lanka, ?",
+            "solutionInfo": {
+              "solvedText": "Italy",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "value": "Italy",
+                  "id": "7e71b328-a43d-4a1f-80af-99c4919fb069"
+                }
+              ]
+            },
+            "dependsOn": [
+              {
+                "value": "d2490038-e885-4dff-b38e-a63e56ae5709",
+                "id": "b43410c1-546b-4cfe-bfea-23e787ca3406"
+              },
+              {
+                "value": "d85e74b1-9b61-427d-854d-f3b8eb66854c",
+                "id": "5566598e-067b-443c-a262-aa51ce051a16"
+              }
+            ],
+            "style": "&.HiddenClue{filter: blur(40px);}",
+            "clueGroup": 0,
+            "helperText": "Which country looks like a boot?",
+            "clueValues": [
+              {
+                "type": "image",
+                "id": "4b04382b-c834-46b5-affd-332dafdd8ba4",
+                "value": "italy.png"
+              }
+            ],
+            "id": "6fc30739-f809-4ece-87de-da43a99809ac"
+          },
+          {
+            "helperText": "A city in Italy. Famous for its football club that starts with letter N.",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Napoli",
+              "possibleSolutions": [
+                {
+                  "id": "dbdc31e8-7ee1-498f-8fdf-6fda449cfbc0",
+                  "value": "Napoli"
+                },
+                {
+                  "value": "Naples",
+                  "id": "3a8956d7-d74d-4207-82b0-32e37b1c1d80"
+                }
+              ]
+            },
+            "subtext": "",
+            "dependsOn": [
+              {
+                "value": "6fc30739-f809-4ece-87de-da43a99809ac",
+                "id": "9521400d-c83d-475a-8c16-eadf89f236af"
+              },
+              {
+                "id": "789f1f8f-d13e-4807-828a-1ea9861988e4",
+                "value": "d2490038-e885-4dff-b38e-a63e56ae5709"
+              },
+              {
+                "id": "b7a20311-1193-457a-b8f1-6433fae42113",
+                "value": "d85e74b1-9b61-427d-854d-f3b8eb66854c"
+              }
+            ],
+            "id": "c6d1bbd1-b1a8-4ae2-9f6d-146ac5a1df2d",
+            "clueValues": [
+              {
+                "value": "napoli.png",
+                "type": "image",
+                "id": "4007b95b-cd3a-4ec0-975b-01cf8fbc0534"
+              }
+            ],
+            "clueGroup": 0,
+            "style": "&.HiddenClue{filter: blur(40px);}"
+          }
+        ],
+        "solutionInfo": {
+          "solvedText": "Napoli",
+          "type": "text",
+          "possibleSolutions": []
+        }
+      },
+      {
+        "style": "",
+        "clues": [
+          {
+            "subtext": "",
+            "style": "",
+            "helperText": "Click on pieces of image above, below, on the left or on the right of the hole to move the pieces. Get the full picture to solve the clue.",
+            "clueValues": [
+              {
+                "value": "FootballPictureSlider",
+                "type": "customComponent",
+                "id": "7c69398d-6395-410a-a8ea-10fa74a14c74"
+              }
+            ],
+            "dependsOn": [],
+            "clueGroup": 0,
+            "id": "e2fd0347-814e-4172-8fdf-072eefda6518",
+            "solutionInfo": {
+              "type": "customComponent",
+              "solvedText": "",
+              "possibleSolutions": [
+                {
+                  "id": "73aeb073-8c49-4235-8417-b0407a3476d0",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          {
+            "subtext": "",
+            "helperText": "What sport is displayed on this painting whose author is Alexander Carse?",
+            "clueGroup": 0,
+            "style": "& .CopySpan {font-size: 24px}",
+            "id": "f79e6297-192f-4742-9fe1-72cb8a34947a",
+            "solutionInfo": {
+              "solvedText": "",
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "dependsOn": [
+              {
+                "id": "181a4131-6e23-4ae1-8382-84040d00d4ff",
+                "value": "e2fd0347-814e-4172-8fdf-072eefda6518"
+              }
+            ],
+            "clueValues": [
+              {
+                "id": "28539c99-60a0-429a-aac6-cf3482545c88",
+                "type": "text",
+                "value": "Alexander Carse, Scotland, c. 1830."
+              }
+            ]
+          }
+        ],
+        "solutionInfo": {
+          "solvedText": "Football",
+          "possibleSolutions": [
+            {
+              "id": "6bbd66eb-96b0-4dd3-b0d7-9be36e5f93d4",
+              "value": "Football"
+            },
+            {
+              "value": "The Foot-ball Play",
+              "id": "2d1c08ec-39c6-45d1-b590-5c311a0cc24c"
+            },
+            {
+              "value": "Foot-ball",
+              "id": "25cf4cb1-f88f-4f40-afc1-d5f38f3b7450"
+            }
+          ],
+          "type": "text"
+        },
+        "id": "ca01e690-d1a3-4295-bbbf-a16d85977e8f"
+      },
+      {
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "367f9572-26f8-4d8a-a6fc-f1c113826c1d",
+              "value": "Diego Maradona"
+            },
+            {
+              "value": "Maradona",
+              "id": "df274b6c-8481-4ae6-9960-c5340ce83261"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Maradona"
+        },
+        "style": "",
+        "id": "3b896478-3efa-4a68-a398-e6f50f2b8544",
+        "clues": [
+          {
+            "clueGroup": 0,
+            "dependsOn": [],
+            "helperText": "We're looking for a football player born in Argentina.",
+            "style": "",
+            "id": "475cdb2f-231e-4299-9d37-c3f9637ed6a9",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "subtext": "",
+            "clueValues": [
+              {
+                "value": "Argentina",
+                "type": "text",
+                "id": "ba60f040-f09f-4785-aaf6-1623feb772a1"
+              }
+            ]
+          },
+          {
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "c4c03749-d078-4943-af18-480929e9628a",
+                "value": "Napoli"
+              }
+            ],
+            "dependsOn": [],
+            "style": "",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "",
+              "type": "text"
+            },
+            "helperText": "We're looking for a football player who played in Napoli.",
+            "subtext": "",
+            "clueGroup": 0,
+            "id": "481198ce-2761-463b-ae0c-82fb616d7407"
+          },
+          {
+            "clueGroup": 0,
+            "helperText": "We're looking for a famous football legend.",
+            "style": "",
+            "subtext": "",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "value": "Football",
+                "type": "text",
+                "id": "e6c06172-7369-4741-ada0-80c295d27146"
+              }
+            ],
+            "id": "148fc633-1d0e-46df-a67b-44e982d73e65",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            }
+          },
+          {
+            "helperText": "We're looking for a football player who was born on 30th October 1960.",
+            "id": "56460846-af3f-4711-bf28-80ee0cba2945",
+            "clueValues": [
+              {
+                "type": "image",
+                "id": "856c7d99-bfbe-4dbd-9970-229819173084",
+                "value": "Cake.png"
+              }
+            ],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": [],
+              "solvedText": ""
+            },
+            "dependsOn": [],
+            "subtext": "30 October 1960",
+            "style": ""
+          }
+        ]
+      }
+    ],
+    "name": "Dribble those tiles"
+  },
+  {
+    "id": "riDvoNI07SYuGhTIxFV1",
+    "order": 0,
+    "name": "Mathematical shape of life",
+    "collectionId": "WMD6Iuty3jvyywlYjMBu",
+    "rebuses": [
+      {
+        "clues": [
+          {
+            "subtext": "",
+            "dependsOn": [],
+            "helperText": "The graph of a given equation looks like something. Find out what.",
+            "style": "& img { display: block; }",
+            "id": "95042d40-18ca-44a8-9794-d50ca874c0b3",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "type": "image",
+                "id": "bb047364-a4d0-48ff-a338-eb2450dc816b",
+                "value": "eggMathFormula.png"
+              },
+              {
+                "id": "5f656cb9-0fdf-4733-b71a-b4783f347db2",
+                "value": "graphCurve.png",
+                "type": "image"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            }
+          }
+        ],
+        "style": "",
+        "solutionInfo": {
+          "solvedText": "Egg",
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "value": "Egg",
+              "id": "59ce0ec6-3d5c-4633-9148-0346b6cb691b"
+            }
+          ]
+        },
+        "id": "e542dc8f-1f5a-49bd-a1ce-9ead32891242"
+      },
+      {
+        "clues": [
+          {
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Arthur C. Clarke",
+              "possibleSolutions": [
+                {
+                  "id": "4c8eade3-3cb5-4e29-af6e-bd18d1aed1ee",
+                  "value": "Arthur C. Clarke"
+                },
+                {
+                  "id": "4fc04de0-7876-41f7-9981-f98583def485",
+                  "value": "Arthur Charles Clarke"
+                },
+                {
+                  "id": "fe32e7e5-fff6-497a-92a9-2a3e875df4c9",
+                  "value": "Sir Arthur Charles Clarke"
+                },
+                {
+                  "value": "Arthur Clarke",
+                  "id": "5caeea94-5cac-4230-9134-d8cce26d194e"
+                }
+              ]
+            },
+            "helperText": "Date of birth: 16 December 1917.",
+            "id": "e01a6a72-690a-45b2-b783-374bbc1f9465",
+            "style": "",
+            "subtext": "",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "value": "arthurCClarke.png",
+                "type": "image",
+                "id": "1a1cd61a-32e6-45e7-898a-db5346c67cfa"
+              }
+            ]
+          },
+          {
+            "subtext": "",
+            "style": "",
+            "helperText": "Date of birth: 9 September 1947.",
+            "clueValues": [
+              {
+                "id": "f0f1e3ad-a346-4f51-bfa4-5426af1f2a32",
+                "value": "TMWright.png",
+                "type": "image"
+              }
+            ],
+            "id": "b7ff5542-e638-4312-b651-4466bed50555",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "T.M. Wright",
+              "possibleSolutions": [
+                {
+                  "id": "4f07e739-a0c7-41c7-b295-20b45c4c66db",
+                  "value": "T.M. Wright"
+                },
+                {
+                  "id": "7a7453ce-6f2a-468b-bf1f-409d53a42020",
+                  "value": "Terrance Michael Wright"
+                }
+              ]
+            },
+            "dependsOn": []
+          },
+          {
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "robertLouisStevenson.png",
+                "id": "7a95d915-8e4e-4413-ad7b-34b073e04c78"
+              }
+            ],
+            "clueGroup": 0,
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "Robert Louis Stevenson",
+                  "id": "5615136b-7cdf-4364-b12d-ee9a878fcebf"
+                },
+                {
+                  "value": "Robert Lewis Balfour Stevenson",
+                  "id": "34f0c77b-8a51-45ee-9518-ca41263845b0"
+                },
+                {
+                  "id": "f9b05027-7ce7-4915-a0ec-d418c3dab38c",
+                  "value": "Robert Stevenson"
+                }
+              ],
+              "solvedText": "Robert Louis Stevenson",
+              "type": "text"
+            },
+            "id": "0ae77295-bb99-4c8a-96cb-378ab32d8b2d",
+            "dependsOn": [],
+            "style": "",
+            "subtext": "",
+            "helperText": "Date of birth: 13 November 1850."
+          },
+          {
+            "clueGroup": 0,
+            "helperText": "A book written by Arthur C. Clarke (in 1963.)",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "subtext": "Arthur C. Clarke",
+            "id": "a4b02c07-e3c8-4a7b-abbb-777f3c1c5522",
+            "dependsOn": [
+              {
+                "id": "b98e5e65-1dfc-4bb8-9794-29eb0b9fa6e1",
+                "value": "0ae77295-bb99-4c8a-96cb-378ab32d8b2d"
+              },
+              {
+                "value": "b7ff5542-e638-4312-b651-4466bed50555",
+                "id": "f44f87a6-0abd-4315-b83d-00bc89a76881"
+              },
+              {
+                "value": "e01a6a72-690a-45b2-b783-374bbc1f9465",
+                "id": "3bab43a7-51c1-44f2-8b57-1e11265a4144"
+              }
+            ],
+            "clueValues": [
+              {
+                "id": "c6be1553-0a9b-427d-9b9f-2de0b071f7b3",
+                "value": "Dolphin",
+                "type": "text"
+              }
+            ],
+            "style": ""
+          },
+          {
+            "clueValues": [
+              {
+                "id": "c7af16da-6c82-4c2f-b5f9-397cb105c817",
+                "value": "The",
+                "type": "text"
+              }
+            ],
+            "dependsOn": [
+              {
+                "id": "01c7b08a-a1ee-4f50-943e-16ff5490404b",
+                "value": "0ae77295-bb99-4c8a-96cb-378ab32d8b2d"
+              },
+              {
+                "value": "b7ff5542-e638-4312-b651-4466bed50555",
+                "id": "4a5f9687-6972-43c5-9fce-87570724e635"
+              },
+              {
+                "value": "e01a6a72-690a-45b2-b783-374bbc1f9465",
+                "id": "68ec9d37-4944-47db-90e4-66720116ef7d"
+              }
+            ],
+            "subtext": "T.M. Wright",
+            "id": "9e26fd4f-caf6-494a-8eb9-b37d05499fbb",
+            "helperText": "A book written by T.M Wright (in 1988.)",
+            "style": "",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "style": "",
+            "id": "f65d048e-6c73-478d-ac68-9dc1d16dfc18",
+            "subtext": "Robert Louis Stevenson",
+            "clueValues": [
+              {
+                "id": "e4089e66-6528-4668-a12e-d87378612919",
+                "value": "Treasure",
+                "type": "text"
+              }
+            ],
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "helperText": "A book written by Robert Louis Stevenson (in 1883.)",
+            "dependsOn": [
+              {
+                "id": "ae99e06f-7484-4527-bdcd-29d15022babd",
+                "value": "0ae77295-bb99-4c8a-96cb-378ab32d8b2d"
+              },
+              {
+                "id": "01b5959c-8501-414e-858f-1ac335cd77c6",
+                "value": "b7ff5542-e638-4312-b651-4466bed50555"
+              },
+              {
+                "value": "e01a6a72-690a-45b2-b783-374bbc1f9465",
+                "id": "ed3702f7-c46c-4691-acda-53afa90117eb"
+              }
+            ],
+            "clueGroup": 0
+          }
+        ],
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Island",
+              "id": "ea2431ec-652d-40b1-b329-e7a59a69a929"
+            }
+          ],
+          "solvedText": "Island",
+          "type": "text"
+        },
+        "id": "3c386c92-2cb1-403d-950a-1f470ef3d8c3",
+        "style": ""
+      },
+      {
+        "id": "e057151c-3248-4223-b81d-2f21972ef909",
+        "style": "",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Bunny",
+              "id": "2321ffaa-fa48-44b4-8508-02ba654429b9"
+            }
+          ],
+          "solvedText": "Bunny",
+          "type": "text"
+        },
+        "clues": [
+          {
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "type": "image",
+                "id": "4bd7a80e-4cb1-4da1-aa23-09c0379e3ee3",
+                "value": "bunnyLabyrinth.png"
+              }
+            ],
+            "id": "34ae91c1-537e-4937-83fc-8a5a02d63e3b",
+            "subtext": "",
+            "style": "",
+            "solutionInfo": {
+              "solvedText": "Small rabbit",
+              "possibleSolutions": [
+                {
+                  "id": "dd924ff5-c689-4c55-b298-2296f211b5d6",
+                  "value": "Small rabbit"
+                }
+              ],
+              "type": "text"
+            },
+            "dependsOn": [],
+            "helperText": "Find a path out of the labyrinth."
+          },
+          {
+            "style": "",
+            "dependsOn": [
+              {
+                "id": "d5dfb601-9531-41ca-800d-8335c509838f",
+                "value": "34ae91c1-537e-4937-83fc-8a5a02d63e3b"
+              }
+            ],
+            "subtext": "Small rabbit",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Synonims: hare, coney",
+                "id": "205734e4-3191-4f79-89cb-b5fe1ba8634c"
+              }
+            ],
+            "id": "b4482317-d6f9-4c0a-ad3e-2deb04fa4d71",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "helperText": "",
+            "clueGroup": 0
+          }
+        ]
+      },
+      {
+        "style": "",
+        "id": "dc604436-e472-4e45-b737-ac3de5614fa9",
+        "clues": [
+          {
+            "subtext": "",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "id": "062a76af-ed79-4212-af7d-0b36c927e3a0",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "helperText": "They are usually colored on one day.",
+            "style": "",
+            "clueValues": [
+              {
+                "id": "c40c832d-e75d-4787-8e45-5037fd3ae2f1",
+                "type": "text",
+                "value": "Egg"
+              }
+            ]
+          },
+          {
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Island",
+                "id": "de5d33cd-357c-46f9-b621-27294388ef50"
+              }
+            ],
+            "id": "4d482506-6da9-47cf-849f-a1e11225a350",
+            "dependsOn": [],
+            "style": "",
+            "helperText": "The island most famous for its many statues, called moai.",
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "subtext": ""
+          },
+          {
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "3b3a07b0-01b0-44e7-b65e-e4d3b1f493db",
+                "value": "Bunny"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "id": "8f1cf7fb-34f4-4b1a-90b6-a9916fc59668",
+            "clueGroup": 0,
+            "helperText": "Symbol of a holiday.",
+            "style": "",
+            "dependsOn": [],
+            "subtext": ""
+          }
+        ],
+        "solutionInfo": {
+          "type": "text",
+          "solvedText": "Easter",
+          "possibleSolutions": [
+            {
+              "id": "69bbac86-3c44-4085-9d65-3df113d3332a",
+              "value": "Easter"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "uXN8AXD4ca7sdiddPIGn",
+    "collectionId": "WMD6Iuty3jvyywlYjMBu",
+    "name": "The boundaries of mystery",
+    "order": 0,
+    "rebuses": [
+      {
+        "id": "703aa588-d3f6-4a83-b21e-6225cebf4048",
+        "style": "",
+        "clues": [
+          {
+            "clueGroup": 0,
+            "style": "& img:not(:nth-child(4n)) { display: inline-block; }",
+            "subtext": "",
+            "clueValues": [
+              {
+                "value": "evaMendesRole.png",
+                "id": "22ed4d41-66b7-4b64-884e-ddc30001dee8",
+                "type": "image"
+              },
+              {
+                "type": "image",
+                "id": "ce50fd4b-d2c9-440b-a3c6-3809cc65b85a",
+                "value": "evaMendesActor.png"
+              },
+              {
+                "type": "image",
+                "id": "a62c443d-b6cd-427f-a4f6-aba42de32b1c",
+                "value": "actor.png"
+              }
+            ],
+            "solutionInfo": {
+              "solvedText": "Eva Mendes",
+              "type": "text",
+              "possibleSolutions": [
+                {
+                  "id": "d38dae42-7dea-45d5-afcf-1a76c57e8afd",
+                  "value": "Eva Mendes"
+                }
+              ]
+            },
+            "helperText": "Where is this actress who played in Fast and Furious born?",
+            "dependsOn": [],
+            "id": "ffe20472-3fb5-4dc8-959e-b78749eb686c"
+          },
+          {
+            "helperText": "Where is this actor who played in Fargo born?",
+            "style": "& img:not(:nth-child(4n)) { display: inline-block; }",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "William H. Macy",
+              "possibleSolutions": [
+                {
+                  "id": "c5522490-1ae1-43d6-b18c-5d0ba0e1957c",
+                  "value": "William H. Macy"
+                },
+                {
+                  "id": "2937ab0a-2562-49c7-b3d8-49170eace31f",
+                  "value": "William Hall Macy"
+                },
+                {
+                  "value": "William Hall Macy Jr.",
+                  "id": "df76aac1-3657-4e8a-a4f4-27014dd7377d"
+                },
+                {
+                  "id": "8d70f1c3-948c-4de4-a81e-1441ac6c38a3",
+                  "value": "William H Macy"
+                }
+              ]
+            },
+            "subtext": "",
+            "clueGroup": 0,
+            "clueValues": [
+              {
+                "id": "54a3e84e-27fc-4d7a-bc17-c29b5ebf494e",
+                "value": "williamHMacyRole.png",
+                "type": "image"
+              },
+              {
+                "value": "williamHMacyActor.png",
+                "id": "92af7bb1-2a38-40ab-a445-5b07aee6c3b9",
+                "type": "image"
+              },
+              {
+                "value": "actor.png",
+                "type": "image",
+                "id": "84bdfc42-510f-4b4d-acc9-7b7d5ac4522b"
+              }
+            ],
+            "dependsOn": [],
+            "id": "364f8884-12db-4568-afd1-8d41a2b16579"
+          },
+          {
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "anyaTaylorJoyRole.png",
+                "id": "d5c91e92-2079-4b3a-a38c-f2b72df9bfd4"
+              },
+              {
+                "value": "anyaTaylorJoyActor.png",
+                "type": "image",
+                "id": "7519edbd-289a-4349-aeef-396deaf52ef1"
+              },
+              {
+                "id": "31dd35f3-f3a1-4115-bfee-5fa30d3bf257",
+                "value": "actor.png",
+                "type": "image"
+              }
+            ],
+            "dependsOn": [],
+            "id": "45b08dc6-01bd-4a7d-9df9-7ae865cbda6a",
+            "helperText": "Where is this actress who played in The Queen's Gambit born?",
+            "style": "& img:not(:nth-child(4n)) { display: inline-block; }",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "Anya Taylor-Joy",
+                  "id": "2ef1601d-8f6e-421b-bb1b-3999c5b06617"
+                },
+                {
+                  "value": "Anya Taylor Joy",
+                  "id": "a1c2a9d7-555d-4155-9acf-7ceb4cba4b71"
+                },
+                {
+                  "id": "d2a9952a-e0b7-428b-b6be-6dc4c0689dfa",
+                  "value": "Anya-Josephine Marie Taylor-Joy"
+                }
+              ],
+              "type": "text",
+              "solvedText": "Anya Taylor-Joy"
+            },
+            "subtext": "",
+            "clueGroup": 0
+          },
+          {
+            "clueGroup": 0,
+            "helperText": "Where are these actors born?",
+            "dependsOn": [
+              {
+                "id": "00a66236-4907-4a65-be47-7f7cb74b64cb",
+                "value": "ffe20472-3fb5-4dc8-959e-b78749eb686c"
+              },
+              {
+                "id": "b38a3a3d-b691-44f5-8c2b-f15369188115",
+                "value": "364f8884-12db-4568-afd1-8d41a2b16579"
+              },
+              {
+                "value": "45b08dc6-01bd-4a7d-9df9-7ae865cbda6a",
+                "id": "0d6c6baa-ea36-4d4f-9a8a-f945804c565a"
+              }
+            ],
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "9078163e-22d2-4db0-958b-6d0dbe7279ae",
+                "value": "Cake.png",
+                "type": "image"
+              },
+              {
+                "type": "image",
+                "value": "location.png",
+                "id": "5c35f4ae-aa14-48bc-a317-cac4bea15392"
+              }
+            ],
+            "id": "849c2c61-78a8-44c5-be08-9308cdbeb8b9",
+            "style": "& img { width: 155px; display: inline-block; } &.HiddenClue { filter: blur(50px); height: 260px; }",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            }
+          }
+        ],
+        "solutionInfo": {
+          "solvedText": "Miami",
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "id": "3ed51821-c268-4d94-a946-8d435d4025b1",
+              "value": "Miami"
+            }
+          ]
+        }
+      },
+      {
+        "style": "",
+        "id": "216e4dca-8b29-40a7-88a9-7bf1c7a064ca",
+        "clues": [
+          {
+            "clueValues": [
+              {
+                "value": "RichPortWeighingScale",
+                "id": "5e76a770-b3c9-4e6b-91b6-bc87001f486a",
+                "type": "customComponent"
+              }
+            ],
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "dependsOn": [],
+            "clueGroup": 0,
+            "id": "e3aa1877-6734-428c-9e19-0db8a52bb4c2",
+            "helperText": "Put all 8 balls on the scale so that the scale is in balance. After that figure out which two 4-letter words can be derived from letters on each side.",
+            "style": "",
+            "subtext": ""
+          }
+        ],
+        "solutionInfo": {
+          "solvedText": "Puerto Rico",
+          "possibleSolutions": [
+            {
+              "value": "Puerto Rico",
+              "id": "c5638adb-e23d-4444-85a0-a04cce2ff1b7"
+            }
+          ],
+          "type": "text"
+        }
+      },
+      {
+        "style": "",
+        "solutionInfo": {
+          "solvedText": "John Smith",
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "value": "John Smith",
+              "id": "422899d8-6651-44f1-951f-d091988c4e05"
+            }
+          ]
+        },
+        "clues": [
+          {
+            "clueValues": [
+              {
+                "id": "4eb4cf53-b7d7-4116-ab0e-49fd98ae204b",
+                "type": "text",
+                "value": "Doctor Who alias"
+              }
+            ],
+            "dependsOn": [],
+            "subtext": "",
+            "style": "",
+            "clueGroup": 0,
+            "id": "de52693c-92ac-4365-a24a-c67363af8999",
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Bermuda",
+              "possibleSolutions": []
+            },
+            "helperText": "A generic name he sometimes used"
+          },
+          {
+            "clueGroup": 0,
+            "id": "323f5cb1-e50d-400e-8396-805ce2c647b1",
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Placeholder name",
+                "id": "72fbf73c-413e-4953-b7d8-22c4c963714f"
+              }
+            ],
+            "dependsOn": [],
+            "subtext": "",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "style": "",
+            "helperText": "English first and last name for an average person."
+          },
+          {
+            "subtext": "",
+            "id": "fd1d7806-2afc-4c96-847d-f887974a31ff",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "English explorer",
+                "id": "e2d4d92b-233a-423c-88db-3b2e68df9450"
+              }
+            ],
+            "clueGroup": 0,
+            "style": "",
+            "helperText": "His statue is in Jamestown, Virginia.",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            }
+          }
+        ],
+        "id": "bbdf8b43-6414-4e28-a60f-e9b440c76c3d"
+      },
+      {
+        "style": "",
+        "clues": [
+          {
+            "clueGroup": 0,
+            "dependsOn": [],
+            "style": "",
+            "helperText": "",
+            "clueValues": [
+              {
+                "id": "dade417a-95a7-4b23-b2a9-ca0c82b0911f",
+                "value": "Miami",
+                "type": "text"
+              }
+            ],
+            "id": "9cffe7a6-1ac0-4615-a343-728d94e1a852",
+            "subtext": "",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "id": "828e0a57-598f-4043-8c83-19daad16a793",
+            "subtext": "Capital",
+            "solutionInfo": {
+              "solvedText": "San Juan",
+              "possibleSolutions": [
+                {
+                  "value": "San Juan",
+                  "id": "6d8b12f0-b530-44bf-b319-56bf6fc2fe8b"
+                }
+              ],
+              "type": "text"
+            },
+            "clueGroup": 0,
+            "style": "",
+            "dependsOn": [],
+            "helperText": "",
+            "clueValues": [
+              {
+                "id": "65e0d3f5-ee44-444b-b6c9-1dc36979000d",
+                "value": "Puerto Rico",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "dependsOn": [],
+            "solutionInfo": {
+              "type": "text",
+              "solvedText": "Bermuda",
+              "possibleSolutions": [
+                {
+                  "id": "11568fee-5c67-473f-8bd3-5ab046b8e84f",
+                  "value": "Bermuda"
+                }
+              ]
+            },
+            "helperText": "",
+            "clueValues": [
+              {
+                "type": "image",
+                "value": "location.png",
+                "id": "46b44473-87cd-4a24-b181-fe81d4b4fd3d"
+              }
+            ],
+            "id": "a3d5e43e-0578-46b5-a4a0-268a0acc3acb",
+            "subtext": "John Smith's beach",
+            "style": "& img { width: 88px; }",
+            "clueGroup": 0
+          }
+        ],
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Bermuda triangle",
+              "id": "1ba74d58-ee75-436f-a606-533686b35e1c"
+            },
+            {
+              "value": "Triangle",
+              "id": "8a5e675b-19fc-4a08-8cef-822483ae4eff"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Bermuda triangle"
+        },
+        "id": "5d53aa03-d043-4eb0-8e86-40b94f32c76f"
+      }
+    ]
+  },
+  {
+    "id": "wpcQpBgIAGToEsmSwPfo",
+    "order": 0,
+    "name": "Little yellow running through",
+    "rebuses": [
+      {
+        "clues": [
+          {
+            "subtext": "",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "customComponent",
+                "id": "c677b725-814b-48c0-92f5-479c1a8d7f22",
+                "value": "GuitarCounterXCoordinate"
+              }
+            ],
+            "style": "width: 400px; max-width: 400px; & .CopyDiv { height: 80px; }",
+            "helperText": "Type in the correct numbers.",
+            "id": "61f86dfb-8ecd-49e3-87a4-d12fbfba1128",
+            "solutionInfo": {
+              "possibleSolutions": [
+                {
+                  "value": "",
+                  "id": "373e1600-40de-4740-8bb4-9e9ef6c41e03"
+                }
+              ],
+              "type": "customComponent"
+            },
+            "clueGroup": 0
+          },
+          {
+            "clueValues": [
+              {
+                "id": "4f7889f9-1e6c-46a1-8d1d-30d8aa077f31",
+                "value": "GuitarCounterYCoordinate",
+                "type": "customComponent"
+              }
+            ],
+            "subtext": "",
+            "helperText": "Type in the correct numbers.",
+            "id": "dd9737ac-f7bc-4367-8960-c261cd207410",
+            "dependsOn": [],
+            "style": "width: 400px; max-width: 400px; & .CopyDiv { height: 80px; }",
+            "solutionInfo": {
+              "type": "customComponent",
+              "possibleSolutions": [
+                {
+                  "value": "",
+                  "id": "1dcdc697-b92b-4e9d-8b78-13b839b07bb3"
+                }
+              ]
+            },
+            "clueGroup": 0
+          },
+          {
+            "dependsOn": [
+              {
+                "value": "dd9737ac-f7bc-4367-8960-c261cd207410",
+                "id": "2ad83747-3ecd-466f-a15f-feff8a85512a"
+              },
+              {
+                "value": "61f86dfb-8ecd-49e3-87a4-d12fbfba1128",
+                "id": "b3b622e7-76ea-4fcd-aa5f-0c95760b76d3"
+              }
+            ],
+            "helperText": "",
+            "clueGroup": 0,
+            "subtext": "-33.867, -63.987",
+            "clueValues": [
+              {
+                "value": "location.png",
+                "type": "image",
+                "id": "f6b7a155-e188-4f67-94d6-e8105c928cb8"
+              }
+            ],
+            "id": "1ba5f596-860d-4d0c-9aea-0e328a47127d",
+            "style": "& img { width: 150px; }",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            }
+          },
+          {
+            "dependsOn": [
+              {
+                "id": "e0041a60-02e9-4f9f-bf4a-2425eca8985f",
+                "value": "dd9737ac-f7bc-4367-8960-c261cd207410"
+              },
+              {
+                "id": "b3dbe56c-934b-4b44-877a-647d67fca2e8",
+                "value": "61f86dfb-8ecd-49e3-87a4-d12fbfba1128"
+              }
+            ],
+            "style": "",
+            "helperText": "Find out what instrument can be found at given coordinates.",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "subtext": "",
+            "clueValues": [
+              {
+                "id": "f3138f89-563f-4e05-8586-706e2cbd8ed5",
+                "value": "Instrument",
+                "type": "text"
+              }
+            ],
+            "clueGroup": 0,
+            "id": "74caef97-3138-473e-bc5a-dbced98b6fad"
+          }
+        ],
+        "style": "",
+        "id": "96ad51d6-3709-4bbb-924a-2ea76463874d",
+        "solutionInfo": {
+          "solvedText": "Guitar",
+          "type": "text",
+          "possibleSolutions": [
+            {
+              "id": "1754f113-7761-47b8-a8bb-2889010f2ea5",
+              "value": "Guitar"
+            }
+          ]
+        }
+      },
+      {
+        "clues": [
+          {
+            "subtext": "",
+            "id": "ac97ebf0-46bb-49e3-90f3-3f181c542633",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "solvedText": "Guitar",
+              "type": "text"
+            },
+            "style": "",
+            "clueGroup": 0,
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "id": "0fc4b326-2209-420d-bf3c-6c1677bfc269",
+                "value": "CarCircuits",
+                "type": "customComponent"
+              }
+            ],
+            "helperText": "Connect all lightbulbs."
+          }
+        ],
+        "solutionInfo": {
+          "solvedText": "Car",
+          "possibleSolutions": [
+            {
+              "value": "Car",
+              "id": "eb44a220-cc1c-4da1-92af-11f567a13049"
+            }
+          ],
+          "type": "text"
+        },
+        "style": "",
+        "id": "ce07d3f7-7091-41ac-82e5-58d7ce07b4a4"
+      },
+      {
+        "style": "",
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "value": "Toothbrush",
+              "id": "3344120c-5841-4da2-a830-c7f971ee3886"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Toothbrush"
+        },
+        "id": "e9c934d4-7fb2-4157-9c2c-d8ef08a06b3e",
+        "clues": [
+          {
+            "subtext": "doesn't need it",
+            "solutionInfo": {
+              "possibleSolutions": [],
+              "type": "text"
+            },
+            "helperText": "You use it twice a day (hopefully), in the morning and in the evening.",
+            "clueGroup": 0,
+            "style": "",
+            "clueValues": [
+              {
+                "value": "Edentulous person",
+                "type": "text",
+                "id": "e568073a-c6d8-4744-b939-e065f547d350"
+              }
+            ],
+            "dependsOn": [],
+            "id": "6b2cb55d-ae94-401d-ba8b-f05d7be06d16"
+          }
+        ]
+      },
+      {
+        "style": "",
+        "id": "4cd1ef94-a440-4e3b-adeb-33c027915a88",
+        "clues": [
+          {
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "style": "",
+            "dependsOn": [],
+            "clueValues": [
+              {
+                "type": "text",
+                "value": "Car",
+                "id": "47945af0-a877-438b-b8ba-1ca3e52b5e45"
+              }
+            ],
+            "helperText": "These types of cars are getting more and more popular.",
+            "clueGroup": 0,
+            "id": "af061d77-4a0e-4d50-adbb-2e741072c8b8",
+            "subtext": "type"
+          },
+          {
+            "clueGroup": 0,
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "id": "027a46aa-f22c-426f-b733-da0364e3748b",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "1c1cfa30-39d0-4b86-97d7-07bc0de7eee0",
+                "value": "Guitar"
+              }
+            ],
+            "helperText": "Find out what types of guitar there are.",
+            "subtext": "type",
+            "style": "",
+            "dependsOn": []
+          },
+          {
+            "id": "6282a97c-f160-4887-a172-351bc3233e02",
+            "dependsOn": [],
+            "clueGroup": 0,
+            "subtext": "type",
+            "solutionInfo": {
+              "type": "text",
+              "possibleSolutions": []
+            },
+            "helperText": "It uses a battery.",
+            "style": "",
+            "clueValues": [
+              {
+                "type": "text",
+                "id": "0633876a-cd4f-4180-b6b4-06e5a73fc5e3",
+                "value": "Toothbrush"
+              }
+            ]
+          }
+        ],
+        "solutionInfo": {
+          "possibleSolutions": [
+            {
+              "id": "868396fd-4c2f-4133-b00f-16b55c805cc6",
+              "value": "Electric"
+            },
+            {
+              "value": "Electronic",
+              "id": "0e9fdb6c-1473-43e4-af23-de70889817ab"
+            }
+          ],
+          "type": "text",
+          "solvedText": "Electric"
+        }
+      }
+    ],
+    "collectionId": "9bRrO0ZuQYp1n5pBcuUE"
+  }
+]
