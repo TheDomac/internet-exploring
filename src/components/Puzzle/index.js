@@ -9,8 +9,6 @@ import ArrowBack from "../../common/components/ArrowBack";
 
 
 const Puzzle = () => {
-
-console.log(process.env)
   const params = useParams();
   const navigate = useNavigate();
 
