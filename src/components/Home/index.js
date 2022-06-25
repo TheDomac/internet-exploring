@@ -28,8 +28,11 @@ const Home = () => {
         >Beta</span>
 
       </div>
-      <p style={{ marginTop: "-20px", fontSize: "28px" }}>
+      <p style={{ marginTop: "-20px", marginBottom: "7px", fontSize: "28px" }}>
         What if the Internet was your escape room?
+      </p>
+      <p style={{ marginTop: "0", fontSize: "18px" }}>
+        Solve riddles whose clues and answers are hidden online.
       </p>
 
       <Link to="/play" style={{ marginBottom: "20px", maxWidth: "80%" }}>

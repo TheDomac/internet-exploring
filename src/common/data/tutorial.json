@@ -252,7 +252,7 @@
               }
             }
           ],
-          "helperText": "Click on an image and open it in your browser. You can use image search from there. It's a wizard from a trilogy we're looking for.",
+          "helperText": "Use image search. It's a wizard from a trilogy we're looking for.",
           "subtext": "",
           "clueGroup": 0,
           "style": {
@@ -287,7 +287,7 @@
               }
             }
           ],
-          "helperText": "Click on an image and open it in your browser. You can use image search from there. It's a main character from a trilogy we're looking for.",
+          "helperText": "Use image search. It's a main character from a trilogy we're looking for.",
           "subtext": "",
           "clueGroup": 0,
           "style": {
