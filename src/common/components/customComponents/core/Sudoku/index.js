@@ -1,37 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import styled from "styled-components"
+import { motion } from "framer-motion";
+
+import { SolvedBox } from "../../../SolvedBox.styled";
+import Check from "../../../Check";
+
 import getCellColor from "./getCellColor";
 import checkIfGameIsWon from "./checkIfGameIsWon";
 import { Cell, PuzzleWrapper, Row } from "./index.styled";
 
-const Sudoku = ({ initialGame, onFinish }) => {
+
+export const ClickableNumber = styled.button`
+  margin-right: 5px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+`;
+
+const Sudoku = ({ initialGame, onFinish, solved, solution }) => {
   const [selectedCell, setSelectedCell] = useState(null);
   const [game, setGame] = useState(initialGame);
 
-  const checkNumberOdDeleteKeydown = (e) => {
-    if (e.key === "Backspace") {
-      e.preventDefault();
-    }
-    if (selectedCell?.isPrefilled) {
+  const handleNumberOrDeleteClick = (e) => {
+    if (!selectedCell || selectedCell?.isPrefilled) {
       return;
     }
 
-    if (["1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(e.key)) {
-      updateGameAtSelectedField(Number(e.key));
+    if (["1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(e.target.name)) {
+      updateGameAtSelectedField(Number(e.target.name));
     }
 
-    if (["Backspace", "Delete"].includes(e.key)) {
+    if (e.target.name === "Del") {
       updateGameAtSelectedField(null);
     }
   };
-
-  useEffect(() => {
-    window.addEventListener("keydown", checkNumberOdDeleteKeydown);
-
-    return () => {
-      window.removeEventListener("keydown", checkNumberOdDeleteKeydown);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedCell]);
 
   const handleCellClick = (cell) => () => {
     const isDeselect = cell.x === selectedCell?.x && cell.y === selectedCell?.y;
@@ -64,6 +70,7 @@ const Sudoku = ({ initialGame, onFinish }) => {
   };
 
   return (
+    <>
     <PuzzleWrapper>
       {game.map((row, i) => (
         <Row key={i}>
@@ -80,7 +87,22 @@ const Sudoku = ({ initialGame, onFinish }) => {
           ))}
         </Row>
       ))}
+      
     </PuzzleWrapper>
+    {solved ? <SolvedBox
+              as={motion.div}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              $small
+            >
+              {solution}
+              <Check />
+            </SolvedBox>  : ["1","2","3","4","5","6","7","8","9","Del"].map((n) => (
+            <ClickableNumber name={n} type="button" onClick={handleNumberOrDeleteClick} key={n}>
+              {n}
+            </ClickableNumber>
+          ))}
+    </>
   );
 };
 

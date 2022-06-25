@@ -6,6 +6,7 @@ import { Button } from "../../common/components/Button.styled";
 import { Container } from "../../common/components/Container.styled";
 
 import Logo from "../../images/Logo.png";
+import buyMeACoffeeLogo from "../../images/buyMeACoffee.svg";
 
 const Home = () => {
   return (
@@ -42,7 +43,12 @@ const Home = () => {
         href="https://www.buymeacoffee.com/internetexp"
         target="_blank"
       >
-        <Button style={{ maxWidth: "100%" }}>Buy me a coffee</Button>
+        <Button style={{ maxWidth: "100%", padding: "12px 20px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginRight: "-20px"}}>
+          <span>Buy me a coffee</span>
+          <img src={buyMeACoffeeLogo} alt="buyMeACoffee" />
+          </div>
+          </Button>
       </a>
     </Container>
   );

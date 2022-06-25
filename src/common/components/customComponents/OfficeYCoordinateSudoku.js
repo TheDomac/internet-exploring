@@ -1,10 +1,5 @@
 import React from "react";
-import { useToggle } from "../../services/useToggle";
-
-import Counter from "./core/Counter";
 import Sudoku from "./core/Sudoku";
-
-const solution = [1, 1, 8, 4, 3, 6, 5, 3, 5];
 
 const initialGame = [
   [
@@ -529,27 +524,26 @@ const OfficeYCoordinateSudoku = ({
   stateMaintenanceValue,
   updateMaintenance,
 }) => {
-  const sudokuSolved = useToggle(solved);
-
   const handleFinish = () => {
     markAsSolved(id, true);
   };
 
   return (
-    <Counter
-      solution={solution}
-      dotIndex={3}
-      isNegative
-      onFinish={handleFinish}
-      solved={solved}
-      isInputShown={sudokuSolved.isOn}
-      stateMaintenanceValue={stateMaintenanceValue}
-      updateMaintenance={updateMaintenance}
-      id={id}
-      renderContent={() => (
-        <Sudoku initialGame={initialGame} onFinish={sudokuSolved.setOn} />
-      )}
-    />
+    <Sudoku initialGame={initialGame} onFinish={handleFinish} solved={solved} solution="-118.436535" />
+    // <Counter
+    //   solution={solution}
+    //   dotIndex={3}
+    //   isNegative
+    //   onFinish={handleFinish}
+    //   solved={solved}
+    //   isInputShown={sudokuSolved.isOn}
+    //   stateMaintenanceValue={stateMaintenanceValue}
+    //   updateMaintenance={updateMaintenance}
+    //   id={id}
+    //   renderContent={() => (
+        
+    //   )}
+    // />
   );
 };
 

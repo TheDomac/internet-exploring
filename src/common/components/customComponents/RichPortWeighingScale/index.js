@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { TouchBackend } from 'react-dnd-touch-backend'
 
 import TextInput from "../../TextInput";
 
@@ -20,6 +21,10 @@ import {
   RightWeighWrapper,
   LeftWeighWrapper,
 } from "./index.styled";
+
+const isTouchDevice = (('ontouchstart' in window) ||
+(navigator.maxTouchPoints > 0) ||
+(navigator.msMaxTouchPoints > 0))
 
 const initialPositions = {
   bottom: [
@@ -42,7 +47,6 @@ const RichPortWeighingScale = ({
   updateMaintenance,
 }) => {
   const [positions, setPositions] = useState(initialPositions);
-  const [positions2, setPositions2] = useState(initialPositions);
   const [firstSolution, setFirstSolution] = useState(
     stateMaintenanceValue?.firstSolution || ""
   );
@@ -121,7 +125,7 @@ const RichPortWeighingScale = ({
   }
 
   return (
-    <DndProvider backend={HTML5Backend}>
+    <DndProvider backend={isTouchDevice ? TouchBackend : HTML5Backend}>
       <Wrapper>
         <img src={stand} alt="stand" />
         <WeighWrapper tilt={tilt}>
