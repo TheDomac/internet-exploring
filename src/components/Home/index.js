@@ -7,6 +7,8 @@ import { Container } from "../../common/components/Container.styled";
 
 import Logo from "../../images/Logo.png";
 import buyMeACoffeeLogo from "../../images/buyMeACoffee.svg";
+import patreonLogo from "../../images/patreonLogo.png";
+import redditLogo from "../../images/redditLogo.png";
 
 const Home = () => {
   return (
@@ -41,18 +43,48 @@ const Home = () => {
       <Link to="/tutorial" style={{ marginBottom: "20px", maxWidth: "80%" }}>
         <Button style={{ maxWidth: "100%" }}>Tutorial</Button>
       </Link>
+      <div style={{ display: "flex", width: "500px", maxWidth: "500px"}}>
       <a
         rel="noreferrer"
         href="https://www.buymeacoffee.com/internetexp"
         target="_blank"
+        style={{ display:"inline-block", width: "100%", marginRight: "20px"}}
       >
-        <Button style={{ maxWidth: "100%", padding: "12px 20px" }}>
+        <Button style={{ width: "100%", maxWidth: "100%", padding: "12px 20px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginRight: "-20px"}}>
           <span>Buy me a coffee</span>
           <img src={buyMeACoffeeLogo} alt="buyMeACoffee" />
           </div>
           </Button>
       </a>
+      <a
+        rel="noreferrer"
+        href="https://www.patreon.com/internetexploring"
+        target="_blank"
+        style={{ display:"inline-block", width: "100%",  marginRight: "20px"}}
+      >
+        <Button style={{ width: "100%", maxWidth: "100%", padding: "12px 20px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginRight: "-20px"}}>
+          <span>Become a patron</span>
+          <img style={{ display: "inline-block", marginLeft: 7}} src={patreonLogo} alt="patreon" />
+          </div>
+          </Button>
+      </a>
+      <a
+        rel="noreferrer"
+        href="https://www.reddit.com/r/internetexploring/"
+        target="_blank"
+        style={{ display:"inline-block", width: "100%"}}
+      >
+        <Button style={{ width: "100%", maxWidth: "100%", padding: "12px 20px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginRight: "-20px"}}>
+          <span>Join on Reddit</span>
+          <img style={{ display: "inline-block", marginLeft: 7, marginRight: 3}} src={redditLogo} alt="reddit" />
+          </div>
+          </Button>
+      </a>
+
+      </div>
     </Container>
   );
 };
