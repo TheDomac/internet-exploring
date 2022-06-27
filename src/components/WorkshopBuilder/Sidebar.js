@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import {
   DEFAULT_SOLUTION_VALUES,
   solutionTypes,
-} from "@rebus-mono/common/src/consts";
+} from "../../common/consts";
 import {
   StyledSidebar,
   SaveButton,

@@ -33,4 +33,11 @@ export const LOCAL_STORAGE_KEYS = {
   SOLVED_PUZZLES: "solvedPuzzles",
   ARE_ANSWERS_HIDDEN: "areAnswersHidden",
   USER_NICKNAME: "userNickname",
+  USER_SOCIAL_MEDIA_URL: "userSocialMediaURL",
 };
+
+export const RIDDLE_STATUSES = {
+  DRAFT: "draft",
+  DONE: "done",
+  NEEDS_APPROVAL: "needs_approval",
+}

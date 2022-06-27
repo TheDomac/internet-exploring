@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react";
-import { getAuth, signInWithPopup, signOut } from "firebase/auth";
+import { signInWithPopup, signOut, onAuthStateChanged, } from "firebase/auth";
 
-import { provider } from "../firebase";
+import { provider, auth } from "../firebase";
 
 export const AuthContext = createContext({
   user: null,
@@ -9,40 +9,17 @@ export const AuthContext = createContext({
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const auth = getAuth();
 
-  const handleLoginClick = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        // const credential = GoogleAuthProvider.credentialFromResult(result);
-        // const token = credential.accessToken;
-        // The signed-in user info.
-        const user = result.user;
-        setUser(user);
-        // ...
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        // const errorCode = error.code;
-        // const errorMessage = error.message;
-        // The email of the user's account used.
-        // const email = error.email;
-        // The AuthCredential type that was used.
-        // const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
-      });
+  onAuthStateChanged(auth, async (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const handleLoginClick = async () => {
+    await signInWithPopup(auth, provider)
   };
 
-  const handleLogOutClick = () => {
-    signOut(auth)
-      .then(() => {
-        setUser(null);
-        // Sign-out successful.
-      })
-      .catch((error) => {
-        // An error happened.
-      });
+  const handleLogOutClick = async () => {
+    await signOut(auth)
   };
 
   const value = { user, handleLoginClick, handleLogOutClick };

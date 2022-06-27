@@ -1,8 +1,8 @@
-import { clueTypes } from "@rebus-mono/common/src/consts";
+import { clueTypes } from "../../common/consts";
 
 import { StyledClueValue, StyledFileInputLabel } from "./ClueValue.styled";
 import { DeleteButton, StyledInput, StyledSelect } from "./index.styled";
-import Image from "@rebus-mono/common/src/components/Image";
+import Image from "../../common/components/Image";
 
 const ClueValue = ({
   clueValue,

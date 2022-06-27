@@ -3,12 +3,12 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 
-import CommonPuzzle from "@rebus-mono/common/src/components/Puzzle";
-import { db } from "@rebus-mono/common/src/firebase";
-import ArrowBack from "@rebus-mono/common/src/components/ArrowBack";
-import { useToggle } from "@rebus-mono/common/src/services/useToggle";
+import CommonPuzzle from "../../common/components/Puzzle";
+import { db } from "../../common/firebase";
+import ArrowBack from "../../common/components/ArrowBack";
+import { useToggle } from "../../common/services/useToggle";
 
-import { WorkshopContext } from "../../services/WorkshopContext";
+import { WorkshopContext } from "../../common/services/WorkshopContext";
 
 const WorkshopPlayPage = () => {
   const { riddleId } = useParams();

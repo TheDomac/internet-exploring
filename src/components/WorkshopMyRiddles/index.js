@@ -1,15 +1,30 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
+import styled from "styled-components"
 
-import { Button } from "@rebus-mono/common/src/components/Button.styled";
-import { AuthContext } from "@rebus-mono/common/src/services/AuthContext";
+import { Button } from "../../common/components/Button.styled";
+import { AuthContext } from "../../common/services/AuthContext";
 
-import { Container } from "@rebus-mono/common/src/components/Container.styled";
-import ArrowBack from "@rebus-mono/common/src/components/ArrowBack";
+import { Container } from "../../common/components/Container.styled";
+import ArrowBack from "../../common/components/ArrowBack";
 import List from "./List";
 
+const LogOutButton = styled.button`
+cursor: pointer;
+position: fixed;
+top: 10px;
+right: 10px;
+border: none;
+background: transparent;
+  color: white;
+  padding: 10px;
+  font-family: "Fredoka";
+  box-sizing: border-box;
+`
+
+
 const WorkshopMyRiddles = () => {
-  const { user, handleLoginClick } = useContext(AuthContext);
+  const { user, handleLoginClick, handleLogOutClick } = useContext(AuthContext);
 
   return (
     <Container>
@@ -20,12 +35,13 @@ const WorkshopMyRiddles = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
+      {user && <LogOutButton onClick={handleLogOutClick}>Log out</LogOutButton>}
       <Link to="/play/workshop">Workshop</Link>
       {user ? (
         <List />
       ) : (
         <Button onClick={handleLoginClick} style={{ maxWidth: "100%" }}>
-          Log in
+          Log in to see your riddles
         </Button>
       )}
     </Container>

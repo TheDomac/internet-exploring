@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
-import { solutionTypes, clueTypes } from "@rebus-mono/common/src/consts";
-import Modal, { ModalConfirm } from "@rebus-mono/common/src/components/Modal";
+import { solutionTypes, clueTypes } from "../../common/consts";
+import Modal, { ModalConfirm } from "../../common/components/Modal";
 
 import Clue from "./Clue";
 import { RebusWrapper } from "./Rebus.styled";

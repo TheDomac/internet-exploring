@@ -12,13 +12,11 @@ const PlayPage = () => {
       <Link to="/play/puzzles" style={{ marginBottom: "40px" }}>
         <Button style={{ maxWidth: "100%" }}>Riddles</Button>
       </Link>
-      {/* <Link to="/play/workshop"> */}
-      <Button disabled style={{ maxWidth: "100%" }}>
+      <Link to="/play/workshop">
+      <Button style={{ maxWidth: "100%" }}>
         Workshop
-        <br />
-        <span style={{ fontSize: "14px" }}>Coming soon</span>
       </Button>
-      {/* </Link> */}
+      </Link>
       <Link to="/">
         <ArrowBack />
       </Link>

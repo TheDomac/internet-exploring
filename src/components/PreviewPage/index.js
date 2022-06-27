@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 // import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 
-import CommonPuzzle from "@rebus-mono/common/src/components/Puzzle";
+import CommonPuzzle from "../../common/components/Puzzle";
 
-import ArrowBack from "@rebus-mono/common/src/components/ArrowBack";
-import { WorkshopContext } from "../../services/WorkshopContext";
+import ArrowBack from "../../common/components/ArrowBack";
+import { WorkshopContext } from "../../common/services/WorkshopContext";
 
 const PreviewPage = () => {
   // const params = useParams();

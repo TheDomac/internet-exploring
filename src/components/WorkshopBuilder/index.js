@@ -2,12 +2,12 @@ import { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { motion } from "framer-motion";
 
-import { solutionTypes } from "@rebus-mono/common/src/consts";
+import { solutionTypes } from "../../common/consts";
 import Modal, {
   ModalConfirm,
   ModalInfo,
-} from "@rebus-mono/common/src/components/Modal";
-import { useToggle } from "@rebus-mono/common/src/services/useToggle";
+} from "../../common/components/Modal";
+import { useToggle } from "../../common/services/useToggle";
 
 import {
   Container,
@@ -19,7 +19,7 @@ import {
 
 import Rebus from "./Rebus";
 import Sidebar from "./Sidebar";
-import { WorkshopContext } from "../../services/WorkshopContext";
+import { WorkshopContext } from "../../common/services/WorkshopContext";
 import helpModalContents from "./HelpModalContents";
 import { useNavigate } from "react-router-dom";
 

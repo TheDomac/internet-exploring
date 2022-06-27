@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import { clueTypes } from "@rebus-mono/common/src/consts";
+import { clueTypes } from "../../common/consts";
 
 import ClueValue from "./ClueValue";
 

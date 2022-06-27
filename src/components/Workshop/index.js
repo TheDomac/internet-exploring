@@ -1,43 +1,60 @@
 import { Link, useNavigate } from "react-router-dom";
+import styled from "styled-components";
 import { useEffect, useState, useContext } from "react";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 
-import { Button } from "@rebus-mono/common/src/components/Button.styled";
-import { Container } from "@rebus-mono/common/src/components/Container.styled";
-import ArrowBack from "@rebus-mono/common/src/components/ArrowBack";
-import { useToggle } from "@rebus-mono/common/src/services/useToggle";
-import { db } from "@rebus-mono/common/src/firebase";
+import { Button } from "../../common/components/Button.styled";
+import { Container } from "../../common/components/Container.styled";
+import ArrowBack from "../../common/components/ArrowBack";
+import { useToggle } from "../../common/services/useToggle";
+import { db} from "../../common/firebase";
+import { WorkshopContext } from "../../common/services/WorkshopContext";
+import { AuthContext } from "../../common/services/AuthContext";
 
-import { WorkshopContext } from "../../services/WorkshopContext";
+
+const LogOutButton = styled.button`
+cursor: pointer;
+position: fixed;
+top: 10px;
+right: 10px;
+border: none;
+background: transparent;
+  color: white;
+  padding: 10px;
+  font-family: "Fredoka";
+  box-sizing: border-box;
+`
+
 
 const Workshop = () => {
   const navigate = useNavigate();
   const { setWorkshopPlayPuzzle } = useContext(WorkshopContext);
+  const {handleLogOutClick, user} = useContext(AuthContext);
   const loading = useToggle();
   const error = useToggle();
-  const [data, setData] = useState(null);
+  const [fetchedPuzzles, setFetchedPuzzles] = useState(null);
 
-  const fetchWorkshopRiddles = async () => {
+
+  useEffect(() => {
+    let unsubscribe;
     try {
       loading.setOn();
-      const q = query(collection(db, "workshopPuzzles"));
-      const querySnapshot = await getDocs(q);
-      let fetchedPuzzles = [];
-      querySnapshot.forEach((doc) => {
-        fetchedPuzzles.push({ id: doc.id, ...doc.data() });
+      const q = query(collection(db, "workshopPuzzles"), orderBy("updatedAt", "desc"));
+      unsubscribe = onSnapshot(q, (querySnapshot) => {
+        const newFetchedPuzzles = [];
+        querySnapshot.forEach((doc) => {
+            newFetchedPuzzles.push({ id: doc.id, ...doc.data() });
+        });
+        setFetchedPuzzles(newFetchedPuzzles)
       });
-
-      setData(fetchedPuzzles);
-      loading.setOff();
-      return fetchedPuzzles;
     } catch (err) {
       error.setOn();
       loading.setOff();
     }
-  };
 
-  useEffect(() => {
-    fetchWorkshopRiddles();
+    return () => {
+      unsubscribe && unsubscribe()
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -55,8 +72,9 @@ const Workshop = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
+      {user && <LogOutButton onClick={handleLogOutClick}>Log out</LogOutButton>}
       <Link to="/play/workshop/my-riddles">My riddles</Link>
-      {data?.map((puzzle) => (
+      {fetchedPuzzles?.map((puzzle) => (
         <div onClick={handlePuzzleClick(puzzle)} key={puzzle.id}>
           {puzzle.name}
         </div>

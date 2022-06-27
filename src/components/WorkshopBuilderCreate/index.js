@@ -1,20 +1,20 @@
 import { useEffect, useContext, useState } from "react";
 import styled from "styled-components";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 import Modal, {
   ButtonsWrapper,
   Text,
-} from "@rebus-mono/common/src/components/Modal";
-import { useToggle } from "@rebus-mono/common/src/services/useToggle";
-import { db } from "@rebus-mono/common/src/firebase";
-import { LOCAL_STORAGE_KEYS } from "@rebus-mono/common/src/consts";
-import { Button } from "@rebus-mono/common/src/components/Button.styled";
-import { AuthContext } from "@rebus-mono/common/src/services/AuthContext";
+} from "../../common/components/Modal";
+import { useToggle } from "../../common/services/useToggle";
+import { db } from "../../common/firebase";
+import { LOCAL_STORAGE_KEYS, RIDDLE_STATUSES } from "../../common/consts";
+import { Button } from "../../common/components/Button.styled";
+import { AuthContext } from "../../common/services/AuthContext";
 
 import WorkshopBuilder from "../WorkshopBuilder";
-import { WorkshopContext } from "../../services/WorkshopContext";
+import { WorkshopContext } from "../../common/services/WorkshopContext";
 
 const StyledInput = styled.input`
   background: transparent;
@@ -33,6 +33,9 @@ const StyledInput = styled.input`
 const initialUserNickname = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_NICKNAME
 );
+const initialUserSocialMediaURL = localStorage.getItem(
+  LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
+);
 
 const WokrshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
@@ -44,6 +47,7 @@ const WokrshopBuilderCreate = () => {
   const navigate = useNavigate();
 
   const [userNickname, setUserNickname] = useState(initialUserNickname || "");
+  const [userSocialMediaURL, setUserSocialMediaURL] = useState(initialUserSocialMediaURL || "");
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -54,21 +58,30 @@ const WokrshopBuilderCreate = () => {
   const handleUserNicknameChange = (e) => {
     setUserNickname(e.target.value);
   };
+  const handleUserSocialMediaURLChange = (e) => {
+    setUserSocialMediaURL(e.target.value);
+  };
 
   const handleSave = async (e) => {
     const isDraft = e.target.name === "draft";
-    const collectionName = isDraft ? "workshopPuzzlesDraft" : "workshopPuzzles";
+    const status = isDraft ? RIDDLE_STATUSES.DRAFT : RIDDLE_STATUSES.DONE;
 
     localStorage.setItem(LOCAL_STORAGE_KEYS.USER_NICKNAME, userNickname);
-    const puzzleWithUserNickname = {
+    localStorage.setItem(LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL, userSocialMediaURL);
+    const newPuzzle = {
       ...puzzle,
+      uid: user.uid,
+      status,
       userNickname,
+      userSocialMediaURL,
+      createdAt: serverTimestamp(),
+      updatedAt: serverTimestamp()
     };
 
     try {
       saveLoading.setOn();
       saveError.setOff();
-      await addDoc(collection(db, collectionName), puzzleWithUserNickname);
+      await addDoc(collection(db, "workshopPuzzles"), newPuzzle);
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles`);
     } catch (error) {
@@ -77,6 +90,9 @@ const WokrshopBuilderCreate = () => {
       saveLoading.setOff();
     }
   };
+
+
+
   return (
     puzzle && (
       <>
@@ -97,12 +113,20 @@ const WokrshopBuilderCreate = () => {
             ) : (
               <>
                 {user && (
+                  <>
                   <StyledInput
                     type="text"
                     value={userNickname}
                     onChange={handleUserNicknameChange}
                     placeholder="Your nickname"
                   />
+                  <StyledInput
+                    type="text"
+                    value={userSocialMediaURL}
+                    onChange={handleUserSocialMediaURLChange}
+                    placeholder="Your social media link"
+                  />
+                  </>
                 )}
                 <ButtonsWrapper>
                   {user ? (
