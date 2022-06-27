@@ -64,7 +64,7 @@ const WokrshopBuilderCreate = () => {
 
   const handleSave = async (e) => {
     const isDraft = e.target.name === "draft";
-    const status = isDraft ? RIDDLE_STATUSES.DRAFT : RIDDLE_STATUSES.DONE;
+    const status = isDraft ? RIDDLE_STATUSES.DRAFT : RIDDLE_STATUSES.NEEDS_APPROVAL;
 
     localStorage.setItem(LOCAL_STORAGE_KEYS.USER_NICKNAME, userNickname);
     localStorage.setItem(LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL, userSocialMediaURL);
@@ -74,6 +74,7 @@ const WokrshopBuilderCreate = () => {
       status,
       userNickname,
       userSocialMediaURL,
+      deniedReason: null,
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp()
     };

@@ -52,7 +52,7 @@ const Word = styled.div`
 
 const WordWrapper = styled.div`
   position: absolute;
-  left: 105%;
+  left: 400px;
 `;
 
 const generateLettersClickedArray = (array) =>

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useEffect, useState, useContext } from "react";
-import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import { collection, query, orderBy, where, onSnapshot } from "firebase/firestore";
 
 import { Button } from "../../common/components/Button.styled";
 import { Container } from "../../common/components/Container.styled";
@@ -39,7 +39,7 @@ const Workshop = () => {
     let unsubscribe;
     try {
       loading.setOn();
-      const q = query(collection(db, "workshopPuzzles"), orderBy("updatedAt", "desc"));
+      const q = query(collection(db, "workshopPuzzles"), where("status", "==", "done"), orderBy("updatedAt", "desc"));
       unsubscribe = onSnapshot(q, (querySnapshot) => {
         const newFetchedPuzzles = [];
         querySnapshot.forEach((doc) => {
