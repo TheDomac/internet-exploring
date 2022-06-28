@@ -1,448 +1,411 @@
 {
-  "id": "4R0cQVRRgXaEElxyVHMT",
+  "name": "Stepping into surreal",
   "order": 0,
-  "name": "No names but all the credit",
   "rebuses": [
     {
-      "style": {},
+      "id": "8bc5f485-fab1-40ea-a0b3-d26ce8cd9485",
       "clues": [
         {
-          "subtext": "x = _____",
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
-          "id": "ef978790-d2ef-4cab-90d6-8ef381ad1432",
-          "clueGroup": 0,
-          "dependsOn": [],
+          "id": "76ecd135-8901-451f-89ba-8927c8b3cbe9",
           "clueValues": [
             {
-              "style": {
-                "width": "calc(30% - 10px)"
-              },
-              "type": "image",
-              "id": "1f714f5b-c372-4b66-911c-b9011bb00b29",
-              "subtext": "",
-              "value": "50cent.png"
-            },
-            {
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(10% - 10px)"
-              },
-              "value": "*",
-              "id": "d0052ef3-c019-4e41-ad4c-40dd29acac96"
-            },
-            {
-              "value": "2",
-              "id": "ed93ebed-bf89-4254-bec0-376601506b7c",
-              "style": {
-                "width": "calc(10% - 10px)"
-              },
-              "type": "text",
-              "subtext": ""
-            },
-            {
-              "type": "text",
-              "style": {
-                "width": "calc(10% - 10px)"
-              },
-              "id": "300965b0-645b-45b4-9ebc-34cda081a7cb",
-              "value": "=",
-              "subtext": ""
-            },
-            {
-              "type": "image",
-              "id": "ebc03d96-6ffe-439b-b297-f2b9dcacff3a",
-              "subtext": "",
-              "value": "tyDollaSign.png",
-              "style": {
-                "width": "calc(30% - 10px)"
-              }
-            },
-            {
-              "style": {
-                "width": "calc(30% - 10px)"
-              },
+              "id": "4a666386-0296-4743-884c-2fa847f66ab4",
+              "value": "kateUpton.png",
               "type": "image",
               "subtext": "",
-              "id": "3196ccec-95e5-47ed-95a5-cc9a84daac98",
-              "value": "50cent.png"
-            },
-            {
-              "style": {
-                "width": "calc(10% - 10px)"
-              },
-              "id": "e9136d31-46f6-4205-9bc7-cd4cc1b1e05d",
-              "type": "text",
-              "value": "/",
-              "subtext": ""
-            },
-            {
-              "subtext": "",
-              "value": "jimmyDime.png",
-              "type": "image",
-              "style": {
-                "width": "calc(30% - 10px)"
-              },
-              "id": "7073eb7b-0bf7-46fe-91ff-a188f81b1a15"
-            },
-            {
-              "value": "=",
-              "type": "text",
-              "id": "f686c821-28e6-4ba0-999c-250ab8e29a74",
-              "subtext": "",
-              "style": {
-                "width": "calc(10% - 10px)"
-              }
-            },
-            {
-              "id": "5e88d22e-4e9a-4c96-bc4b-c1d187366928",
-              "subtext": "",
-              "style": {
-                "width": "calc(10% - 10px)"
-              },
-              "type": "text",
-              "value": "X"
-            }
-          ],
-          "helperText": "Use image search to find who these people are, calculate money values in their names and get a 6 letter name for that coin. The result is also a chemical element with atomic number 28.",
-          "solutionInfo": {
-            "possibleSolutions": [
-              {
-                "id": "1a341249-1076-4f3a-8858-2f9a8aa27e02",
-                "value": "Nickel"
-              }
-            ],
-            "solvedText": "Nickel",
-            "type": "text"
-          }
-        },
-        {
-          "clueGroup": 0,
-          "clueValues": [
-            {
-              "id": "9db337be-c32a-4852-9dc3-a9b162cb0a0b",
-              "type": "image",
-              "value": "back.png",
-              "style": {
-                "width": "calc(50% - 10px)"
-              },
-              "subtext": ""
-            },
-            {
-              "type": "image",
-              "style": {
-                "width": "calc(50% - 10px)"
-              },
-              "id": "a9e269af-0fca-401d-8e9a-83babc6ceb8d",
-              "value": "back2.png",
-              "subtext": ""
-            }
-          ],
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "solvedText": "Back",
-            "possibleSolutions": [
-              {
-                "id": "f266a991-ad12-48c1-91f1-7cdf3b1a0136",
-                "value": "Back"
-              }
-            ]
-          },
-          "id": "195a7180-995f-4233-9107-c752663b887c",
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
-          "helperText": "What word do this part of a body and going to one point and then returning have in common?",
-          "subtext": ""
-        },
-        {
-          "solutionInfo": {
-            "possibleSolutions": [],
-            "type": "text",
-            "solvedText": ""
-          },
-          "clueGroup": 0,
-          "dependsOn": [
-            {
-              "id": "d7d41fd2-bcf3-46ce-b214-387c8cec8c36",
-              "value": "ef978790-d2ef-4cab-90d6-8ef381ad1432"
-            },
-            {
-              "id": "4dc01ce1-de16-487d-b87d-f525d204e1f5",
-              "value": "195a7180-995f-4233-9107-c752663b887c"
-            }
-          ],
-          "clueValues": [
-            {
-              "subtext": "Every time he sees it it makes him laugh",
-              "id": "5a90c043-7dc6-453c-9de9-5576a2a47c39",
-              "type": "text",
-              "value": "Nickleback",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
+          "helperText": "Use image search to find the name of this American model.",
+          "subtext": "",
+          "clueGroup": 0,
           "style": {
-            "width": "calc(100% - 10px)"
+            "width": "calc(25% - 10px)"
           },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "f76ba087-8565-4544-ab24-497d2971c6ef",
+          "clueValues": [
+            {
+              "id": "208195d1-5396-4b08-9d47-9bada155d528",
+              "value": "➜",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
           "helperText": "",
-          "id": "6b77f73a-c5de-4b4a-a09b-88b1e59f6633",
-          "subtext": ""
-        }
-      ],
-      "id": "88fc21fd-7583-46fb-be17-734c4599983f",
-      "solutionInfo": {
-        "solvedText": "Photograph",
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "value": "Photograph",
-            "id": "cd25c29c-ca39-4464-8e96-38867f06f3d3"
-          }
-        ]
-      }
-    },
-    {
-      "style": {},
-      "id": "6df16f6f-63c3-4be2-b998-5b8e059836ec",
-      "clues": [
-        {
-          "helperText": "Find a last name of a family in picture. There is a center in New York named after one of these people.",
           "subtext": "",
-          "id": "dbfa2d3e-b6c4-412d-8060-d36a913c0076",
-          "dependsOn": [],
+          "clueGroup": 0,
           "style": {
-            "width": "calc(100% - 10px)"
+            "width": "calc(5% - 10px)"
           },
+          "dependsOn": [],
           "solutionInfo": {
             "type": "text",
             "possibleSolutions": [],
             "solvedText": ""
-          },
-          "clueGroup": 0,
+          }
+        },
+        {
+          "id": "425432ca-549e-40b0-8161-4b9424b80f46",
           "clueValues": [
             {
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "subtext": "",
+              "id": "140da9b3-b6ef-41bd-9330-1b1200adbe8f",
+              "value": "kateMiddleton.png",
               "type": "image",
-              "value": "rockefeller.png",
-              "id": "d59af721-6d68-4715-bf05-ed3c2f285b97"
-            }
-          ]
-        }
-      ],
-      "solutionInfo": {
-        "type": "text",
-        "solvedText": "Rockefeller",
-        "possibleSolutions": [
-          {
-            "value": "Rockefeller",
-            "id": "06867ff7-9941-46f5-81cf-daa73ba179f8"
-          }
-        ]
-      }
-    },
-    {
-      "clues": [
-        {
-          "id": "36867971-dbbe-478d-b48a-f679ea231d03",
-          "dependsOn": [],
-          "helperText": "What year does this Nobel prize winner have in common with the other two people?",
-          "clueValues": [
-            {
-              "id": "6b451c80-a6c0-484d-9d83-98dca0ac3323",
               "subtext": "",
-              "value": "John Galsworthy",
-              "type": "text",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
+          "helperText": "Use image search to find the name of this member of the royal family.",
+          "subtext": "",
+          "clueGroup": 0,
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(25% - 10px)"
           },
+          "dependsOn": [],
           "solutionInfo": {
             "type": "text",
             "possibleSolutions": [],
             "solvedText": ""
-          },
-          "clueGroup": 0,
-          "subtext": ""
+          }
         },
         {
-          "helperText": "What year does this Nobel prize winner have in common with the other two people?",
-          "subtext": "",
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "possibleSolutions": [],
-            "solvedText": "",
-            "type": "text"
-          },
-          "id": "f3a2d389-e4f8-455f-8cb7-ec0f29f9ecdb",
-          "clueGroup": 0,
+          "id": "eeaadfd0-f0ad-464a-8ad2-c7eb3bd96dc5",
           "clueValues": [
             {
-              "subtext": "",
-              "value": "Werner Heisenberg",
+              "id": "db8f3b09-3819-4382-af2b-2a2c2b3deb31",
+              "value": "➜",
               "type": "text",
-              "id": "649a4be9-065f-4c48-8524-4c74e9c2407a",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ]
-        },
-        {
-          "solutionInfo": {
-            "type": "text",
-            "solvedText": "",
-            "possibleSolutions": []
-          },
-          "dependsOn": [],
-          "clueValues": [
-            {
-              "value": "Irving Langmuir",
-              "id": "192cb1d1-c71d-426d-8391-077ef109485d",
               "subtext": "",
-              "type": "text",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
+          "helperText": "",
           "subtext": "",
-          "helperText": "What year does this Nobel prize winner have in common with the other two people?",
-          "id": "37b878a1-a2a0-4471-8b40-770f3f61af0a",
           "clueGroup": 0,
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(5% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "6f07803e-c459-425d-8502-4ffc00730c6a",
+          "clueValues": [
+            {
+              "id": "696dc4bc-848f-4174-be53-c0bb4b790793",
+              "value": "direction.png",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "These two women have directions in them. Find the third direction.",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(25% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
           }
         }
       ],
-      "id": "3bb2c826-6408-4fe6-92a6-799ac5704266",
       "style": {},
       "solutionInfo": {
-        "type": "date",
+        "type": "text",
         "possibleSolutions": [
           {
-            "value": {
-              "day": "",
-              "second": "",
-              "minute": "",
-              "hour": "",
-              "place": "",
-              "year": "1932",
-              "month": ""
-            },
-            "id": "c8b2f07a-2e86-4582-bc51-ece327ea970a"
+            "id": "d425b529-d0eb-405c-b988-8c7dd1ea880f",
+            "value": "Down"
+          },
+          {
+            "id": "dce2cf8e-ce5c-4b24-81a5-a8b8eee40afc",
+            "value": "Kate Downton"
+          },
+          {
+            "id": "ece691a8-e63e-461b-b66a-0e4f456986bb",
+            "value": "Downton"
           }
         ],
-        "solvedText": "1932."
+        "solvedText": "Down"
       }
     },
     {
-      "solutionInfo": {
-        "solvedText": "Lunch Atop A Skyscraper",
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "value": "Lunch Atop A Skyscraper",
-            "id": "7452ba44-e8fe-42f7-9897-2e4774d65570"
-          }
-        ]
-      },
-      "style": {},
+      "id": "8720c364-e2d7-4f63-bce1-42837cd04e39",
       "clues": [
         {
-          "solutionInfo": {
-            "type": "text",
-            "solvedText": "",
-            "possibleSolutions": []
-          },
+          "id": "a4e58f00-410e-4d55-a7b7-0789090dd200",
           "clueValues": [
             {
+              "id": "30f1855c-6c0a-469c-a461-b186482ff9c3",
+              "value": "blob:http://localhost:3000/f098b5ff-f06c-499b-a043-776b4b65a2d7",
+              "type": "image",
               "subtext": "",
-              "type": "text",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "value": "Photograph",
-              "id": "f58c4ad0-37f6-4136-b974-f8fb50e6c850"
-            }
-          ],
-          "dependsOn": [],
-          "clueGroup": 1,
-          "id": "8a6e9286-5c2e-495a-bd8b-7ff29bf9a8b8",
-          "subtext": "",
-          "helperText": "",
-          "style": {
-            "width": "calc(33% - 10px)"
-          }
-        },
-        {
-          "clueValues": [
-            {
-              "type": "text",
-              "value": "Rockefeller",
-              "subtext": "",
-              "id": "77680139-026f-4b29-a1b2-917c3d8a1996",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
+          "helperText": "Use image search to find this actor born in 1979.",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(50% - 10px)"
+          },
           "dependsOn": [],
           "solutionInfo": {
             "type": "text",
-            "solvedText": "",
-            "possibleSolutions": []
-          },
-          "subtext": "",
-          "helperText": "",
-          "clueGroup": 1,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "id": "f68188d5-759b-447f-a37e-4a90440f56f1"
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
         },
         {
-          "solutionInfo": {
-            "solvedText": "",
-            "type": "text",
-            "possibleSolutions": []
-          },
-          "clueGroup": 1,
+          "id": "8b16932e-d444-490f-874c-989f64538e17",
           "clueValues": [
             {
-              "id": "af5b2964-6cde-4107-a1af-8b37d809fce5",
-              "value": "1932.",
+              "id": "12a30856-db7c-43b1-b281-ea291debbd99",
+              "value": "blob:http://localhost:3000/be6062ba-5c12-4e6b-858d-0550d097e810",
+              "type": "image",
+              "subtext": "",
               "style": {
                 "width": "calc(100% - 10px)"
-              },
-              "type": "text",
-              "subtext": ""
+              }
             }
           ],
-          "id": "f263a8b5-7f65-483f-af26-aa877dffacba",
-          "dependsOn": [],
+          "helperText": "Use image search to find this actress born in 1978.",
           "subtext": "",
-          "helperText": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(50% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "3db8193f-bc1f-430f-8934-207f9f2f86c3",
+          "clueValues": [
+            {
+              "id": "5610e5d0-3413-4185-b7c9-96cb0cbcf0fa",
+              "value": "blob:http://localhost:3000/b47f40a6-fe6a-4cfb-a4b1-c1b3a2bd6da5",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(50% - 10px)"
+              }
+            },
+            {
+              "id": "4b375170-8391-44fd-996b-cbc9c333ca6d",
+              "value": "blob:http://localhost:3000/136b1814-e709-44b5-a672-23492923f195",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(50% - 10px)"
+              }
+            }
+          ],
+          "helperText": "Both actors are also voice actors. Both actors played the role of an animal. Which one?",
+          "subtext": "",
+          "clueGroup": 0,
           "style": {
             "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
           }
         }
       ],
-      "id": "893a6f34-b9d8-432e-a7e0-383d46a7f835"
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "id": "2e54bf2a-6b97-43ed-8f9b-eeab9234bc7c",
+            "value": "Rabbit"
+          },
+          {
+            "id": "1c4c1085-f496-40f3-846c-83b314a88667",
+            "value": "Bunny"
+          }
+        ],
+        "solvedText": "Rabbit"
+      }
+    },
+    {
+      "id": "9af52ad5-82da-4ed0-8943-ee3a1f72c8f7",
+      "clues": [
+        {
+          "id": "1e328936-0211-4060-aea0-c2c10c7db4f4",
+          "clueValues": [
+            {
+              "id": "cb1f23ed-2f37-42ad-9a78-1c6a4dee5e54",
+              "value": "Andy Dufresne",
+              "type": "text",
+              "subtext": "made it",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "It took him a long time.",
+          "subtext": "",
+          "clueGroup": 1,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "10c1d3f4-744b-4f64-8ffd-875cbfdad023",
+          "clueValues": [
+            {
+              "id": "1112c885-68c4-4489-bf5c-edfc8a1350db",
+              "value": "The Dark Knight",
+              "type": "text",
+              "subtext": "climbed it",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "\"Deshi Basara\"",
+          "subtext": "",
+          "clueGroup": 2,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "bf38cb35-87f1-4de7-b077-dd109e70fc05",
+          "clueValues": [
+            {
+              "id": "dabb3799-d8b3-43c7-aa28-b8503ef21fec",
+              "value": "Joseph Cooper",
+              "type": "text",
+              "subtext": "entered it",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "Where was he when he was her ghost?",
+          "subtext": "",
+          "clueGroup": 3,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        }
+      ],
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "id": "db5eb187-6157-406c-8c3c-fde84e592177",
+            "value": "Hole"
+          }
+        ],
+        "solvedText": "Hole"
+      }
+    },
+    {
+      "id": "a72319fa-28c5-4e46-95c4-bfbe6868a272",
+      "clues": [
+        {
+          "id": "8d162e5b-55d0-42ce-8258-d50c1e92b821",
+          "clueValues": [
+            {
+              "id": "6dfe4e28-b2a8-4f27-8798-257f733be74b",
+              "value": "Down the rabbit hole",
+              "type": "text",
+              "subtext": "slang origin",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        }
+      ],
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "id": "6add2f39-1a73-4703-8c2b-fd35aabd3e72",
+            "value": "Alice in Wonderland"
+          },
+          {
+            "id": "062190a0-07ec-47c3-81b9-4c4965ec3530",
+            "value": "Alice's Adventures in Wonderland"
+          },
+          {
+            "id": "c40da5a4-1677-4ef0-87cb-6e5e05faacf3",
+            "value": "Alice"
+          }
+        ],
+        "solvedText": "Alice in Wonderland"
+      }
     }
   ]
 }

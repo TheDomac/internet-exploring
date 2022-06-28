@@ -346,7 +346,8 @@ const Sidebar = ({
     if (error) {
       setValidationModal(error);
     } else {
-      handleSave();
+      console.log(cleanedUpPuzzle)
+      // handleSave();
     }
   };
 
