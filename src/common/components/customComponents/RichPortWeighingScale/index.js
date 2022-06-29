@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { TouchBackend } from 'react-dnd-touch-backend'
+import { TouchBackend } from "react-dnd-touch-backend";
 
 import TextInput from "../../TextInput";
 
@@ -22,9 +22,10 @@ import {
   LeftWeighWrapper,
 } from "./index.styled";
 
-const isTouchDevice = (('ontouchstart' in window) ||
-(navigator.maxTouchPoints > 0) ||
-(navigator.msMaxTouchPoints > 0))
+const isTouchDevice =
+  "ontouchstart" in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0;
 
 const initialPositions = {
   bottom: [

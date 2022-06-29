@@ -1,57 +1,62 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState, useContext } from "react";
-import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { useEffect, useContext } from "react";
 
-import { useToggle } from "../../common/services/useToggle";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import { db} from "../../common/firebase";
-import { AuthContext } from "../../common/services/AuthContext";
+import { PuzzleBox } from "../../common/components/PuzzleList.styled";
+import Loading from "../../common/components/Loading.styled";
+import Alert from "../../common/components/Alert.styled";
 
 const List = () => {
   const navigate = useNavigate();
-  const { setWorkshopPlayPuzzle } = useContext(WorkshopContext);
-  const loading = useToggle();
-  const error = useToggle();
-  const [fetchedPuzzles, setFetchedPuzzles] = useState(null);
-  const { user } = useContext(AuthContext)
+  const {
+    setWorkshopPlayPuzzle,
+    myWorkshopPuzzles,
+    fetchMyWorkshopPuzzles,
+    myWorkshopPuzzlesLoading,
+    myWorkshopPuzzlesError,
+  } = useContext(WorkshopContext);
+
+  useEffect(() => {
+    if (!myWorkshopPuzzles) {
+      fetchMyWorkshopPuzzles();
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handlePuzzleClick = (puzzle) => () => {
     setWorkshopPlayPuzzle(puzzle);
     navigate(`/play/workshop/${puzzle.id}`);
   };
 
-  useEffect(() => {
-    let unsubscribe;
-    try {
-      loading.setOn();
-      const q = query(collection(db, "workshopPuzzles"), where('uid', '==', user.uid));
-      unsubscribe = onSnapshot(q, (querySnapshot) => {
-        const newFetchedPuzzles = [];
-        querySnapshot.forEach((doc) => {
-            newFetchedPuzzles.push({ id: doc.id, ...doc.data() });
-        });
-        setFetchedPuzzles(newFetchedPuzzles)
-      });
-    } catch (err) {
-      error.setOn();
-      loading.setOff();
-    }
-
-    return () => {
-      unsubscribe && unsubscribe()
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-
-  return <div>
-          {fetchedPuzzles?.map((puzzle) => (
-        <div onClick={handlePuzzleClick(puzzle)} key={puzzle.id}>
-          {puzzle.name}
+  return (
+    <>
+      {myWorkshopPuzzlesError.isOn && (
+        <Alert>Sorry, something went wrong.</Alert>
+      )}
+      {myWorkshopPuzzlesLoading.isOn && (
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Loading />
         </div>
-      ))}
+      )}
 
-  </div>;
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {myWorkshopPuzzles?.map((puzzle) => (
+          <PuzzleBox
+            onClick={handlePuzzleClick(puzzle)}
+            key={puzzle.id}
+            title={puzzle.name}
+          >
+            <span style={{ wordBreak: "break-word" }}>
+              {puzzle.name.length > 65
+                ? `${puzzle.name.slice(0, 65)}...`
+                : puzzle.name}
+            </span>
+          </PuzzleBox>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default List;

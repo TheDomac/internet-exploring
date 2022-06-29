@@ -5,15 +5,10 @@ import { motion } from "framer-motion";
 import ArrowBack from "../../common/components/ArrowBack";
 import puzzles from "../../common/data/puzzles.json";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
+import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
+import { Wrapper, PuzzleBox } from "../../common/components/PuzzleList.styled";
 
-import {
-  PuzzleLink,
-  PuzzleListContainer,
-  PuzzleRow,
-  PuzzleTitle,
-  SolutionDisplayToggle,
-  TextLink,
-} from "./index.styled";
+import { PuzzleRow, PuzzleTitle, TextLink, PuzzleLink } from "./index.styled";
 
 const PuzzleList = () => {
   const {
@@ -25,12 +20,7 @@ const PuzzleList = () => {
   const sortedPuzzles = puzzles.sort((a, b) => (a.order > b.order ? 1 : -1));
 
   return (
-    <PuzzleListContainer
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <Wrapper as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <div
         style={{
           display: "flex",
@@ -39,9 +29,12 @@ const PuzzleList = () => {
         }}
         onClick={handleToggleAreSolutionsHidden}
       >
-        <SolutionDisplayToggle $areSolutionsHidden={areSolutionsHidden.isOn}>
+        <CheckboxButton
+          $isChecked={areSolutionsHidden.isOn}
+          style={{ borderRadius: "10px", width: "170px" }}
+        >
           {areSolutionsHidden.isOn ? "Show" : "Hide"} solved solutions
-        </SolutionDisplayToggle>
+        </CheckboxButton>
       </div>
       {sortedPuzzles.map((puzzle) => (
         <PuzzleRow key={puzzle.id}>
@@ -60,19 +53,24 @@ const PuzzleList = () => {
                 puzzlesSolvingSync[puzzle.id].includes(r.id)
               );
             });
+
+            const isTextShown = isSolved && !areSolutionsHidden.isOn;
             return (
               <PuzzleLink
-                to={`/play/puzzles/${puzzle.id}?selectedRebusIndex=${rebusIndex}`}
                 key={rebus.id}
-                $isSolved={isSolved}
-                $isDisabled={
-                  rebusIndex === puzzle.rebuses.length - 1 &&
-                  !areAllPreviousRebusesSolved
-                }
+                to={`/play/puzzles/${puzzle.id}?selectedRebusIndex=${rebusIndex}`}
               >
-                {isSolved && !areSolutionsHidden.isOn
-                  ? rebus.solutionInfo.solvedText
-                  : "?"}
+                <PuzzleBox
+                  $isSolved={isSolved}
+                  $isDisabled={
+                    rebusIndex === puzzle.rebuses.length - 1 &&
+                    !areAllPreviousRebusesSolved
+                  }
+                >
+                  <span style={{ fontSize: isTextShown ? 20 : 40 }}>
+                    {isTextShown ? rebus.solutionInfo.solvedText : "?"}
+                  </span>
+                </PuzzleBox>
               </PuzzleLink>
             );
           })}
@@ -97,7 +95,7 @@ const PuzzleList = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
-    </PuzzleListContainer>
+    </Wrapper>
   );
 };
 

@@ -529,7 +529,12 @@ const OfficeYCoordinateSudoku = ({
   };
 
   return (
-    <Sudoku initialGame={initialGame} onFinish={handleFinish} solved={solved} solution="-118.436535" />
+    <Sudoku
+      initialGame={initialGame}
+      onFinish={handleFinish}
+      solved={solved}
+      solution="-118.436535"
+    />
     // <Counter
     //   solution={solution}
     //   dotIndex={3}
@@ -541,7 +546,7 @@ const OfficeYCoordinateSudoku = ({
     //   updateMaintenance={updateMaintenance}
     //   id={id}
     //   renderContent={() => (
-        
+
     //   )}
     // />
   );

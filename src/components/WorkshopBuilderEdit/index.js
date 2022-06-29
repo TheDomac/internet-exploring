@@ -9,7 +9,7 @@ const WokrshopBuilderEdit = () => {
 
   useEffect(() => {
     initPuzzle(puzzleId);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSave = () => {};

@@ -7,7 +7,6 @@ import puzzles from "../../common/data/puzzles.json";
 
 import ArrowBack from "../../common/components/ArrowBack";
 
-
 const Puzzle = () => {
   const params = useParams();
   const navigate = useNavigate();

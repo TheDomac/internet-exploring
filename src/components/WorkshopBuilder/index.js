@@ -3,10 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { motion } from "framer-motion";
 
 import { solutionTypes } from "../../common/consts";
-import Modal, {
-  ModalConfirm,
-  ModalInfo,
-} from "../../common/components/Modal";
+import Modal, { ModalConfirm, ModalInfo } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 
 import {

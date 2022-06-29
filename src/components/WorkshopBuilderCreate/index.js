@@ -3,16 +3,13 @@ import styled from "styled-components";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-import Modal, {
-  ButtonsWrapper,
-  Text,
-} from "../../common/components/Modal";
+import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import { db } from "../../common/firebase";
 import { LOCAL_STORAGE_KEYS, RIDDLE_STATUSES } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
-
+import Alert from "../../common/components/Alert.styled";
 import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 
@@ -47,7 +44,9 @@ const WokrshopBuilderCreate = () => {
   const navigate = useNavigate();
 
   const [userNickname, setUserNickname] = useState(initialUserNickname || "");
-  const [userSocialMediaURL, setUserSocialMediaURL] = useState(initialUserSocialMediaURL || "");
+  const [userSocialMediaURL, setUserSocialMediaURL] = useState(
+    initialUserSocialMediaURL || ""
+  );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -64,10 +63,15 @@ const WokrshopBuilderCreate = () => {
 
   const handleSave = async (e) => {
     const isDraft = e.target.name === "draft";
-    const status = isDraft ? RIDDLE_STATUSES.DRAFT : RIDDLE_STATUSES.NEEDS_APPROVAL;
+    const status = isDraft
+      ? RIDDLE_STATUSES.DRAFT
+      : RIDDLE_STATUSES.NEEDS_APPROVAL;
 
     localStorage.setItem(LOCAL_STORAGE_KEYS.USER_NICKNAME, userNickname);
-    localStorage.setItem(LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL, userSocialMediaURL);
+    localStorage.setItem(
+      LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL,
+      userSocialMediaURL
+    );
     const newPuzzle = {
       ...puzzle,
       uid: user.uid,
@@ -76,7 +80,7 @@ const WokrshopBuilderCreate = () => {
       userSocialMediaURL,
       deniedReason: null,
       createdAt: serverTimestamp(),
-      updatedAt: serverTimestamp()
+      updatedAt: serverTimestamp(),
     };
 
     try {
@@ -92,8 +96,6 @@ const WokrshopBuilderCreate = () => {
     }
   };
 
-
-
   return (
     puzzle && (
       <>
@@ -101,32 +103,23 @@ const WokrshopBuilderCreate = () => {
           <Modal isModalShown={saveModal.isOn}>
             <Text>{!user && "Please log in first to save your riddle."}</Text>
             {saveError.isOn ? (
-              <div
-                style={{
-                  padding: 10,
-                  boxSizing: "border-box",
-                  color: "white",
-                  background: "#b74848",
-                }}
-              >
-                Sorry, something went wrong.
-              </div>
+              <Alert>Sorry, something went wrong.</Alert>
             ) : (
               <>
                 {user && (
                   <>
-                  <StyledInput
-                    type="text"
-                    value={userNickname}
-                    onChange={handleUserNicknameChange}
-                    placeholder="Your nickname"
-                  />
-                  <StyledInput
-                    type="text"
-                    value={userSocialMediaURL}
-                    onChange={handleUserSocialMediaURLChange}
-                    placeholder="Your social media link"
-                  />
+                    <StyledInput
+                      type="text"
+                      value={userNickname}
+                      onChange={handleUserNicknameChange}
+                      placeholder="Your nickname"
+                    />
+                    <StyledInput
+                      type="text"
+                      value={userSocialMediaURL}
+                      onChange={handleUserSocialMediaURLChange}
+                      placeholder="Your social media link"
+                    />
                   </>
                 )}
                 <ButtonsWrapper>

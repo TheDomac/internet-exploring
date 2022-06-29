@@ -2,10 +2,7 @@ import { Fragment } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 
-import {
-  DEFAULT_SOLUTION_VALUES,
-  solutionTypes,
-} from "../../common/consts";
+import { DEFAULT_SOLUTION_VALUES, solutionTypes } from "../../common/consts";
 import {
   StyledSidebar,
   SaveButton,
@@ -346,7 +343,7 @@ const Sidebar = ({
     if (error) {
       setValidationModal(error);
     } else {
-      console.log(cleanedUpPuzzle)
+      console.log(cleanedUpPuzzle);
       // handleSave();
     }
   };

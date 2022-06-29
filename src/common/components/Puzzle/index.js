@@ -17,7 +17,7 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick }) => {
     const params = new URLSearchParams(location.search);
     const selectedRebusIndexParam = params.get("selectedRebusIndex");
     initPuzzle(selectedPuzzle, Number(selectedRebusIndexParam));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!puzzle) {

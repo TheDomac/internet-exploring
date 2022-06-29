@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import { signInWithPopup, signOut, onAuthStateChanged, } from "firebase/auth";
+import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 
 import { provider, auth } from "../firebase";
 
@@ -15,11 +15,11 @@ const AuthProvider = ({ children }) => {
   });
 
   const handleLoginClick = async () => {
-    await signInWithPopup(auth, provider)
+    await signInWithPopup(auth, provider);
   };
 
   const handleLogOutClick = async () => {
-    await signOut(auth)
+    await signOut(auth);
   };
 
   const value = { user, handleLoginClick, handleLogOutClick };
