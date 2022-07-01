@@ -40,4 +40,5 @@ export const RIDDLE_STATUSES = {
   DRAFT: "draft",
   DONE: "done",
   NEEDS_APPROVAL: "needs_approval",
+  DENIED: "denied",
 };

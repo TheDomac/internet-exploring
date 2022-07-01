@@ -1,13 +1,19 @@
+import { useEffect, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useContext } from "react";
 
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 import { PuzzleBox } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
 import Alert from "../../common/components/Alert.styled";
+import { RIDDLE_STATUSES } from "../../common/consts";
+import Modal, { Text } from "../../common/components/Modal";
+import { Button } from "../../common/components/Button.styled";
+
+import { CornerIcons, CornerIcon, MessageWrapper } from "./index.styled";
 
 const List = () => {
   const navigate = useNavigate();
+  const [selectedPuzzle, setSelectedPuzzle] = useState(null);
   const {
     setWorkshopPlayPuzzle,
     myWorkshopPuzzles,
@@ -24,13 +30,48 @@ const List = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handlePuzzleClick = (puzzle) => () => {
-    setWorkshopPlayPuzzle(puzzle);
-    navigate(`/play/workshop/${puzzle.id}`);
+  const handlePuzzlePlayClick = () => {
+    setWorkshopPlayPuzzle(selectedPuzzle);
+    navigate(`/play/workshop/${selectedPuzzle.id}`);
+  };
+
+  const handlePuzzleClick = (puzzle) => (e) => {
+    setSelectedPuzzle(puzzle);
   };
 
   return (
     <>
+      <Modal isModalShown={Boolean(selectedPuzzle)}>
+        <Text style={{ margin: 0, marginBottom: 35 }}>
+          {selectedPuzzle?.name}
+        </Text>
+        {selectedPuzzle?.message && (
+          <MessageWrapper>
+            <p style={{ margin: 0, marginBottom: 7 }}>
+              Message from Internet Exploring:
+            </p>
+            <code>{selectedPuzzle?.message}</code>
+          </MessageWrapper>
+        )}
+        <Button
+          style={{ width: "100%", maxWidth: "100%", marginBottom: 15 }}
+          onClick={handlePuzzlePlayClick}
+        >
+          Play
+        </Button>
+        <div style={{ display: "flex", marginBottom: 15 }}>
+          <Button style={{ marginRight: 15 }} disabled>
+            Edit
+          </Button>
+          <Button disabled>Delete</Button>
+        </div>
+        <Button
+          style={{ width: "100%", maxWidth: "100%" }}
+          onClick={() => setSelectedPuzzle(null)}
+        >
+          Close
+        </Button>
+      </Modal>
       {myWorkshopPuzzlesError.isOn && (
         <Alert>Sorry, something went wrong.</Alert>
       )}
@@ -52,6 +93,13 @@ const List = () => {
                 ? `${puzzle.name.slice(0, 65)}...`
                 : puzzle.name}
             </span>
+            <CornerIcons>
+              {puzzle.message && (
+                <CornerIcon title="Message" $status={puzzle.status}>
+                  !
+                </CornerIcon>
+              )}
+            </CornerIcons>
           </PuzzleBox>
         ))}
       </div>

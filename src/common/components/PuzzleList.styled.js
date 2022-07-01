@@ -26,6 +26,7 @@ export const PuzzleBox = styled.div`
   transition: 300ms;
   font-size: 18px;
   cursor: pointer;
+  position: relative;
 
   ${({ $isSolved }) => ($isSolved ? "background: #309d6d" : "")};
   ${({ $isDisabled }) =>

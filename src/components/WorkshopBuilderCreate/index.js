@@ -78,7 +78,7 @@ const WokrshopBuilderCreate = () => {
       status,
       userNickname,
       userSocialMediaURL,
-      deniedReason: null,
+      message: "",
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     };
