@@ -35,7 +35,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
 );
 
 const WokrshopBuilderCreate = () => {
-  const { initPuzzle, puzzle } = useContext(WorkshopContext);
+  const { initPuzzle, puzzle, fetchMyWorkshopPuzzles } = useContext(WorkshopContext);
   const { user, handleLoginClick } = useContext(AuthContext);
 
   const saveModal = useToggle();
@@ -87,6 +87,7 @@ const WokrshopBuilderCreate = () => {
       saveLoading.setOn();
       saveError.setOff();
       await addDoc(collection(db, "workshopPuzzles"), newPuzzle);
+      await fetchMyWorkshopPuzzles();
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles`);
     } catch (error) {

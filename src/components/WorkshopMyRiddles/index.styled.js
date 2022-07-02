@@ -4,23 +4,21 @@ import { RIDDLE_STATUSES } from "../../common/consts";
 const backgrounds = {
   [RIDDLE_STATUSES.DENIED]: "#b74848",
   [RIDDLE_STATUSES.NEEDS_APPROVAL]: "#1d93c1",
-};
-const textColors = {
-  [RIDDLE_STATUSES.DENIED]: "white",
-  [RIDDLE_STATUSES.NEEDS_APPROVAL]: "white",
+  [RIDDLE_STATUSES.DONE]: "#309d6d",
 };
 
 export const CornerIcons = styled.div`
   position: absolute;
   bottom: 5px;
   right: 5px;
+  display: flex;
 `;
 
 export const CornerIcon = styled.div`
   width: 25px;
   height: 25px;
   font-family: "Fredoka";
-  font-size: 13px;
+  font-size: 16px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -28,8 +26,12 @@ export const CornerIcon = styled.div`
   cursor: pointer;
   transition: 300ms;
   background: ${({ $status }) => backgrounds[$status] || "#CCC"};
-  color: ${({ $status }) => textColors[$status] || "#333"};
+  color: #333;
   border: 1px solid white;
+  
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
 `;
 
 export const MessageWrapper = styled.div`

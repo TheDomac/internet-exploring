@@ -9,6 +9,8 @@ import ArrowBack from "../../common/components/ArrowBack";
 import { useToggle } from "../../common/services/useToggle";
 
 import { WorkshopContext } from "../../common/services/WorkshopContext";
+import { LOCAL_STORAGE_KEYS } from "../../common/consts";
+
 
 const WorkshopPlayPage = () => {
   const { riddleId } = useParams();
@@ -35,13 +37,20 @@ const WorkshopPlayPage = () => {
   };
 
   useEffect(() => {
-    if (!workshopPlayPuzzle) {
+    if (!workshopPlayPuzzle || workshopPlayPuzzle.id !== riddleId) {
       fetchPuzzle();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleRedirect = () => {
+  const handleFinish = () => {
+    const workshopSolvedPuzzlesIDs = localStorage.getItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS)
+    const workshopSolvedPuzzlesIDsParsed = JSON.parse(workshopSolvedPuzzlesIDs || "[]");
+    if (!workshopSolvedPuzzlesIDsParsed.includes(riddleId)) {
+      const newWorkshopSolvedPuzzlesIDs = workshopSolvedPuzzlesIDsParsed.concat(riddleId)
+      localStorage.setItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS, JSON.stringify(newWorkshopSolvedPuzzlesIDs))
+    }
+
     setWorkshopPlayPuzzle(null);
     navigate("/play/workshop");
   };
@@ -67,10 +76,10 @@ const WorkshopPlayPage = () => {
   return (
     puzzle && (
       <>
-        <ArrowBack onClick={handleRedirect} />
+        <ArrowBack onClick={handleFinish} />
         <CommonPuzzle
           selectedPuzzle={puzzle}
-          handleFinishClick={handleRedirect}
+          handleFinishClick={handleFinish}
         />
       </>
     )

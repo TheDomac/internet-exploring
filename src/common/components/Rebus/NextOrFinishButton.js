@@ -59,6 +59,11 @@ const NextOrFinishButton = ({ isSolved, handleFinishClick }) => {
       buttonRef.current.focus();
 
       const previousSolvedPuzzle = puzzlesSolvingSync[puzzle.id] || [];
+
+      if (previousSolvedPuzzle.includes(rebus.id)) {
+        return;
+      }
+
       const newPuzzlesSolvingSync = {
         ...puzzlesSolvingSync,
         [puzzle.id]: previousSolvedPuzzle.concat(rebus.id),

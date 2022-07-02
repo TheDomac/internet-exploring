@@ -34,6 +34,7 @@ export const LOCAL_STORAGE_KEYS = {
   ARE_ANSWERS_HIDDEN: "areAnswersHidden",
   USER_NICKNAME: "userNickname",
   USER_SOCIAL_MEDIA_URL: "userSocialMediaURL",
+  WORKSHOP_SOLVED_PUZZLES_IDS: "workshopSolvedPuzzlesIDs",
 };
 
 export const RIDDLE_STATUSES = {
@@ -42,3 +43,10 @@ export const RIDDLE_STATUSES = {
   NEEDS_APPROVAL: "needs_approval",
   DENIED: "denied",
 };
+
+export const RIDDLE_STATUSES_TITLES = {
+  [RIDDLE_STATUSES.DRAFT]: "Draft",
+  [RIDDLE_STATUSES.DONE]: "Approved",
+  [RIDDLE_STATUSES.NEEDS_APPROVAL]: "Waiting for approval",
+  [RIDDLE_STATUSES.DENIED]: "Rejected",
+}
