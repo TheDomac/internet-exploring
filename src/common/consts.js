@@ -1,3 +1,5 @@
+export const workshopCollectionName = process.env[`REACT_APP_COLLECTION_${process.env.REACT_APP_STAGE.toUpperCase()}`]
+
 export const clueTypes = {
   TEXT: "text",
   IMAGE: "image",

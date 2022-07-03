@@ -8,7 +8,7 @@ import { doc, getDoc } from "firebase/firestore";
 import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import { db } from "../../common/firebase";
-import { LOCAL_STORAGE_KEYS, RIDDLE_STATUSES } from "../../common/consts";
+import { LOCAL_STORAGE_KEYS, RIDDLE_STATUSES, workshopCollectionName } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
 import Alert from "../../common/components/Alert.styled";
@@ -56,7 +56,7 @@ const WorkshopBuilderEdit = () => {
 
   const fetchAndInitPuzzle = async () => {
     try {
-      const docRef = doc(db, "workshopPuzzles", params.riddleId);
+      const docRef = doc(db, workshopCollectionName, params.riddleId);
       const docSnap = await getDoc(docRef);
       const fetchedPuzzle = { id: docSnap.id, ...docSnap.data() };
       initPuzzle(fetchedPuzzle);
@@ -100,7 +100,7 @@ const WorkshopBuilderEdit = () => {
     try {
       saveLoading.setOn();
       saveError.setOff();
-      await setDoc(doc(db, "workshopPuzzles", puzzle.id), newPuzzle);
+      await setDoc(doc(db, workshopCollectionName, puzzle.id), newPuzzle);
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {

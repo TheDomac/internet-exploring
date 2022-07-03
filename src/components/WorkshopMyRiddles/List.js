@@ -19,7 +19,7 @@ import { useToggle } from "../../common/services/useToggle";
 import { PuzzleBox } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
 import Alert from "../../common/components/Alert.styled";
-import { RIDDLE_STATUSES, RIDDLE_STATUSES_TITLES } from "../../common/consts";
+import { RIDDLE_STATUSES, RIDDLE_STATUSES_TITLES, workshopCollectionName } from "../../common/consts";
 import Modal, { Text } from "../../common/components/Modal";
 import { Button } from "../../common/components/Button.styled";
 
@@ -61,14 +61,14 @@ const List = () => {
 
       const q = myWorkshopPuzzlesLastRef.current ? 
       query(
-        collection(db, "workshopPuzzles"),
+        collection(db, workshopCollectionName),
         where("uid", "==", user.uid),
         orderBy("updatedAt", "desc"),
         startAfter(myWorkshopPuzzlesLastRef.current),
         limit(LIMIT),
       ) :
       query(
-        collection(db, "workshopPuzzles"),
+        collection(db, workshopCollectionName),
         where("uid", "==", user.uid),
         orderBy("updatedAt", "desc"),
         limit(LIMIT),
@@ -125,7 +125,7 @@ const List = () => {
   const handleDeleteConfirm = async () => {
     try {
       deleteLoading.setOn()
-      await deleteDoc(doc(db, "workshopPuzzles", selectedPuzzle.id));
+      await deleteDoc(doc(db, workshopCollectionName, selectedPuzzle.id));
       setSelectedPuzzle(null);
       myWorkshopPuzzlesLastRef.current = null;
       deleteLoading.setOff();

@@ -22,7 +22,7 @@ import { useToggle } from "../../common/services/useToggle";
 import { PuzzleBox, Wrapper } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
 import Alert from "../../common/components/Alert.styled";
-import { LOCAL_STORAGE_KEYS } from "../../common/consts";
+import { LOCAL_STORAGE_KEYS, workshopCollectionName } from "../../common/consts";
 import { db } from "../../common/firebase";
 
 const LogOutButton = styled.button`
@@ -56,14 +56,14 @@ const LIMIT = 15;
       workshopPuzzlesLoading.setOn();
       const q = workshopPuzzlesLastRef.current ? 
       query(
-        collection(db, "workshopPuzzles"),
+        collection(db, workshopCollectionName),
         where("status", "==", "done"),
         orderBy("updatedAt", "desc"),
         startAfter(workshopPuzzlesLastRef.current),
         limit(LIMIT),
       ) :
       query(
-        collection(db, "workshopPuzzles"),
+        collection(db, workshopCollectionName),
         where("status", "==", "done"),
         orderBy("updatedAt", "desc"),
         limit(LIMIT),

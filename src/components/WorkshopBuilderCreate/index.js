@@ -10,6 +10,7 @@ import {
   LOCAL_STORAGE_KEYS,
   RIDDLE_STATUSES,
   CATEGORIES,
+  workshopCollectionName
 } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
@@ -94,7 +95,7 @@ const WorkshopBuilderCreate = () => {
     try {
       saveLoading.setOn();
       saveError.setOff();
-      await addDoc(collection(db, "workshopPuzzles"), newPuzzle);
+      await addDoc(collection(db, workshopCollectionName), newPuzzle);
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {

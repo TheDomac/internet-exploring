@@ -9,7 +9,7 @@ import ArrowBack from "../../common/components/ArrowBack";
 import { useToggle } from "../../common/services/useToggle";
 
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import { LOCAL_STORAGE_KEYS } from "../../common/consts";
+import { LOCAL_STORAGE_KEYS, workshopCollectionName } from "../../common/consts";
 
 const WorkshopPlayPage = () => {
   const { riddleId } = useParams();
@@ -24,7 +24,7 @@ const WorkshopPlayPage = () => {
   const fetchPuzzle = async () => {
     try {
       loading.setOn();
-      const docRef = doc(db, "workshopPuzzles", riddleId);
+      const docRef = doc(db, workshopCollectionName, riddleId);
       const docSnap = await getDoc(docRef);
       const newFetchedPuzzle = { id: docSnap.id, ...docSnap.data() };
       setFetchedPuzzle(newFetchedPuzzle);
