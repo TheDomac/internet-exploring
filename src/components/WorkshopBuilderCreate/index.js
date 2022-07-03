@@ -1,4 +1,4 @@
-import { useEffect, useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -6,10 +6,16 @@ import { useNavigate } from "react-router-dom";
 import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import { db } from "../../common/firebase";
-import { LOCAL_STORAGE_KEYS, RIDDLE_STATUSES } from "../../common/consts";
+import {
+  LOCAL_STORAGE_KEYS,
+  RIDDLE_STATUSES,
+  CATEGORIES,
+} from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
 import Alert from "../../common/components/Alert.styled";
+import ArrowBack from "../../common/components/ArrowBack";
+import CommonPuzzle from "../../common/components/Puzzle";
 import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 
@@ -34,13 +40,14 @@ const initialUserSocialMediaURL = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
 
-const WokrshopBuilderCreate = () => {
-  const { initPuzzle, puzzle, fetchMyWorkshopPuzzles } = useContext(WorkshopContext);
+const WorkshopBuilderCreate = () => {
+  const { initPuzzle, puzzle } = useContext(WorkshopContext);
   const { user, handleLoginClick } = useContext(AuthContext);
 
   const saveModal = useToggle();
   const saveLoading = useToggle();
   const saveError = useToggle();
+  const preview = useToggle();
   const navigate = useNavigate();
 
   const [userNickname, setUserNickname] = useState(initialUserNickname || "");
@@ -79,6 +86,7 @@ const WokrshopBuilderCreate = () => {
       userNickname,
       userSocialMediaURL,
       message: "",
+      category: CATEGORIES.GENERAL,
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     };
@@ -87,9 +95,8 @@ const WokrshopBuilderCreate = () => {
       saveLoading.setOn();
       saveError.setOff();
       await addDoc(collection(db, "workshopPuzzles"), newPuzzle);
-      await fetchMyWorkshopPuzzles();
       saveLoading.setOff();
-      navigate(`/play/workshop/my-riddles`);
+      navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {
       console.log(error);
       saveError.setOn();
@@ -97,74 +104,89 @@ const WokrshopBuilderCreate = () => {
     }
   };
 
-  return (
-    puzzle && (
+  if (!puzzle) {
+    return null;
+  }
+
+  if (preview.isOn) {
+    return (
       <>
-        {saveModal.isOn && (
-          <Modal isModalShown={saveModal.isOn}>
-            <Text>{!user && "Please log in first to save your riddle."}</Text>
-            {saveError.isOn ? (
-              <Alert>Sorry, something went wrong.</Alert>
-            ) : (
-              <>
-                {user && (
-                  <>
-                    <StyledInput
-                      type="text"
-                      value={userNickname}
-                      onChange={handleUserNicknameChange}
-                      placeholder="Your nickname"
-                    />
-                    <StyledInput
-                      type="text"
-                      value={userSocialMediaURL}
-                      onChange={handleUserSocialMediaURLChange}
-                      placeholder="Your social media link"
-                    />
-                  </>
-                )}
-                <ButtonsWrapper>
-                  {user ? (
-                    <>
-                      <Button
-                        disabled={saveLoading.isOn || !userNickname}
-                        name="draft"
-                        onClick={handleSave}
-                        style={{ marginRight: "10px" }}
-                      >
-                        Save as draft
-                      </Button>
-                      <Button
-                        disabled={saveLoading.isOn || !userNickname}
-                        onClick={handleSave}
-                        style={{ marginRight: "10px" }}
-                      >
-                        Save
-                      </Button>
-                    </>
-                  ) : (
-                    <Button
-                      style={{ marginRight: "10px" }}
-                      onClick={handleLoginClick}
-                    >
-                      Log in
-                    </Button>
-                  )}
-                  <Button
-                    disabled={saveLoading.isOn}
-                    onClick={saveModal.setOff}
-                  >
-                    Cancel
-                  </Button>
-                </ButtonsWrapper>
-              </>
-            )}
-          </Modal>
-        )}
-        <WorkshopBuilder puzzle={puzzle} handleSave={saveModal.setOn} />
+        <ArrowBack onClick={preview.setOff} />
+        <CommonPuzzle
+          selectedPuzzle={puzzle}
+          handleFinishClick={preview.setOff}
+        />
       </>
-    )
+    );
+  }
+
+  return (
+    <>
+      {saveModal.isOn && (
+        <Modal isModalShown={saveModal.isOn}>
+          <Text>{!user && "Please log in first to save your riddle."}</Text>
+          {saveError.isOn ? (
+            <Alert>Sorry, something went wrong.</Alert>
+          ) : (
+            <>
+              {user && (
+                <>
+                  <StyledInput
+                    type="text"
+                    value={userNickname}
+                    onChange={handleUserNicknameChange}
+                    placeholder="Your nickname"
+                  />
+                  <StyledInput
+                    type="text"
+                    value={userSocialMediaURL}
+                    onChange={handleUserSocialMediaURLChange}
+                    placeholder="Your social media link"
+                  />
+                </>
+              )}
+              <ButtonsWrapper>
+                {user ? (
+                  <>
+                    <Button
+                      disabled={saveLoading.isOn || !userNickname}
+                      name="draft"
+                      onClick={handleSave}
+                      style={{ marginRight: "10px", fontSize: 16 }}
+                    >
+                      Save as draft
+                    </Button>
+                    <Button
+                      disabled={saveLoading.isOn || !userNickname}
+                      onClick={handleSave}
+                      style={{ marginRight: "10px", fontSize: 16 }}
+                    >
+                      Save for review
+                    </Button>
+                  </>
+                ) : (
+                  <Button
+                    style={{ marginRight: "10px", fontSize: 16 }}
+                    onClick={handleLoginClick}
+                  >
+                    Log in
+                  </Button>
+                )}
+                <Button style={{ fontSize: 16 }} disabled={saveLoading.isOn} onClick={saveModal.setOff}>
+                  Cancel
+                </Button>
+              </ButtonsWrapper>
+            </>
+          )}
+        </Modal>
+      )}
+      <WorkshopBuilder
+        puzzle={puzzle}
+        handlePreview={preview.setOn}
+        handleSave={saveModal.setOn}
+      />
+    </>
   );
 };
 
-export default WokrshopBuilderCreate;
+export default WorkshopBuilderCreate;

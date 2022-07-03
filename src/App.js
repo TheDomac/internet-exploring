@@ -17,7 +17,6 @@ import TutorialPage from "./components/Tutorial";
 import TempPage from "./components/Temp";
 
 import WorkshopContextProvider from "./common/services/WorkshopContext";
-import PreviewPage from "./components/PreviewPage";
 import WorkshopPlayPage from "./components/WorkshopPlay";
 
 const App = () => {
@@ -34,7 +33,7 @@ const App = () => {
                 element={<WorkshopBuilderCreatePage />}
               />
               <Route
-                path="/play/workshop/edit"
+                path="/play/workshop/edit/:riddleId"
                 element={<WorkshopBuilderEditPage />}
               />
               <Route path="/play/workshop" element={<WorkshopPage />} />
@@ -42,7 +41,6 @@ const App = () => {
                 path="/play/workshop/my-riddles"
                 element={<WorkshopMyRiddlesPage />}
               />
-              <Route path="/play/workshop/preview" element={<PreviewPage />} />
               <Route
                 path="/play/workshop/:riddleId"
                 element={<WorkshopPlayPage />}

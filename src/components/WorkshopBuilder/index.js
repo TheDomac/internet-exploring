@@ -20,7 +20,7 @@ import { WorkshopContext } from "../../common/services/WorkshopContext";
 import helpModalContents from "./HelpModalContents";
 import { useNavigate } from "react-router-dom";
 
-const WorkshopBuilder = ({ puzzle, handleSave }) => {
+const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
   const navigate = useNavigate();
   const { setPuzzle, selectedRebusId, setSelectedRebusId } =
     useContext(WorkshopContext);
@@ -207,6 +207,7 @@ const WorkshopBuilder = ({ puzzle, handleSave }) => {
           exitModal={exitModal}
           handleSetHelpModal={handleSetHelpModal}
           handleSave={handleSave}
+          handlePreview={handlePreview}
         />
       </Container>
     </>

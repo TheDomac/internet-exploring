@@ -11,7 +11,6 @@ import { useToggle } from "../../common/services/useToggle";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
 
-
 const WorkshopPlayPage = () => {
   const { riddleId } = useParams();
   const navigate = useNavigate();
@@ -44,16 +43,29 @@ const WorkshopPlayPage = () => {
   }, []);
 
   const handleFinish = () => {
-    const workshopSolvedPuzzlesIDs = localStorage.getItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS)
-    const workshopSolvedPuzzlesIDsParsed = JSON.parse(workshopSolvedPuzzlesIDs || "[]");
+    const workshopSolvedPuzzlesIDs = localStorage.getItem(
+      LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS
+    );
+    const workshopSolvedPuzzlesIDsParsed = JSON.parse(
+      workshopSolvedPuzzlesIDs || "[]"
+    );
     if (!workshopSolvedPuzzlesIDsParsed.includes(riddleId)) {
-      const newWorkshopSolvedPuzzlesIDs = workshopSolvedPuzzlesIDsParsed.concat(riddleId)
-      localStorage.setItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS, JSON.stringify(newWorkshopSolvedPuzzlesIDs))
+      const newWorkshopSolvedPuzzlesIDs =
+        workshopSolvedPuzzlesIDsParsed.concat(riddleId);
+      localStorage.setItem(
+        LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS,
+        JSON.stringify(newWorkshopSolvedPuzzlesIDs)
+      );
     }
 
     setWorkshopPlayPuzzle(null);
     navigate("/play/workshop");
   };
+
+  const handleRedirect = () => {
+    setWorkshopPlayPuzzle(null);
+    navigate("/play/workshop");
+  }
 
   if (error.isOn) {
     return (
@@ -76,7 +88,7 @@ const WorkshopPlayPage = () => {
   return (
     puzzle && (
       <>
-        <ArrowBack onClick={handleFinish} />
+        <ArrowBack onClick={handleRedirect} />
         <CommonPuzzle
           selectedPuzzle={puzzle}
           handleFinishClick={handleFinish}

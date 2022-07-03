@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { useNavigate } from "react-router-dom";
 
 import { DEFAULT_SOLUTION_VALUES, solutionTypes } from "../../common/consts";
 import {
@@ -33,8 +32,8 @@ const Sidebar = ({
   exitModal,
   handleSetHelpModal,
   handleSave,
+  handlePreview,
 }) => {
-  const navigate = useNavigate();
   const selectedClue =
     selectedClueId && rebus.clues.find((clue) => clue.id === selectedClueId);
 
@@ -353,7 +352,7 @@ const Sidebar = ({
     if (error) {
       setValidationModal(error);
     } else {
-      navigate("/play/workshop/preview");
+      handlePreview();
     }
   };
 
@@ -683,7 +682,7 @@ const Sidebar = ({
       <div style={{ display: "flex" }}>
         <PreviewButton onClick={handlePreviewClick}>Preview</PreviewButton>
       </div>
-      <div style={{ display: "flex", marginTop: 5 }}>
+      <div style={{ display: "flex" }}>
         {<SaveButton onClick={handleSaveClick}>Save</SaveButton>}
         <ExitButton onClick={exitModal.setOn}>Exit</ExitButton>
       </div>

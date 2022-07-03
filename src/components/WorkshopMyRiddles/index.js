@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { useLocation } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -9,7 +10,10 @@ import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import { Wrapper } from "../../common/components/PuzzleList.styled";
 
 import ArrowBack from "../../common/components/ArrowBack";
+import { RIDDLE_STATUSES } from "../../common/consts";
+import Alert from "../../common/components/Alert.styled";
 import List from "./List";
+import { WorkshopContext } from "../../common/services/WorkshopContext";
 
 const LogOutButton = styled.button`
   cursor: pointer;
@@ -24,8 +28,23 @@ const LogOutButton = styled.button`
   box-sizing: border-box;
 `;
 
+const successAlertText = {
+  [RIDDLE_STATUSES.DRAFT]: "Riddle saved successfully.",
+  [RIDDLE_STATUSES.NEEDS_APPROVAL]: "Riddle submitted for review successfully.",
+}
+
 const WorkshopMyRiddles = () => {
   const { user, handleLoginClick, handleLogOutClick } = useContext(AuthContext);
+  const { initPuzzle } = useContext(WorkshopContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const params = new URLSearchParams(location.search);
+  const successAlertStatus = params.get("successStatus");
+
+  const handleCreateNewRiddleClick = () => {
+    initPuzzle();
+    navigate("/play/workshop/new");
+  };
 
   return (
     <>
@@ -37,6 +56,7 @@ const WorkshopMyRiddles = () => {
         as={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        style={{ maxWidth: 900 }}
       >
         <div
           style={{
@@ -45,9 +65,12 @@ const WorkshopMyRiddles = () => {
             marginBottom: 15,
           }}
         >
-          <Link to="/play/workshop/new">
-            <Button style={{ maxWidth: "100%" }}>Create new riddle</Button>
-          </Link>
+          <Button
+            style={{ maxWidth: "100%" }}
+            onClick={handleCreateNewRiddleClick}
+          >
+            Create new riddle
+          </Button>
         </div>
         <div
           style={{
@@ -65,6 +88,11 @@ const WorkshopMyRiddles = () => {
             </CheckboxButton>
           </Link>
         </div>
+        {successAlertStatus && (
+          <Alert style={{ marginBottom: 15 }} $type="success">
+            {successAlertText[successAlertStatus]}
+          </Alert>
+        )}
         {user ? (
           <List />
         ) : (

@@ -28,7 +28,7 @@ export const CornerIcon = styled.div`
   background: ${({ $status }) => backgrounds[$status] || "#CCC"};
   color: #333;
   border: 1px solid white;
-  
+
   &:not(:last-child) {
     margin-right: 5px;
   }

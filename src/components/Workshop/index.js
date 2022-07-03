@@ -1,7 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useEffect, useContext, useState, useRef } from "react";
-import { collection, query, orderBy, where, getDocs, limit, startAfter } from "firebase/firestore";
+import {
+  collection,
+  query,
+  orderBy,
+  where,
+  getDocs,
+  limit,
+  startAfter,
+} from "firebase/firestore";
 
 import { motion } from "framer-motion";
 
@@ -15,8 +23,7 @@ import { PuzzleBox, Wrapper } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
 import Alert from "../../common/components/Alert.styled";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
-import { db } from "../../common/firebase"
-
+import { db } from "../../common/firebase";
 
 const LogOutButton = styled.button`
   cursor: pointer;
@@ -33,28 +40,33 @@ const LogOutButton = styled.button`
 
 const Workshop = () => {
   const navigate = useNavigate();
-  const {
-    setWorkshopPlayPuzzle,
-  } = useContext(WorkshopContext);
+  const { setWorkshopPlayPuzzle, initPuzzle } = useContext(WorkshopContext);
   const { handleLogOutClick, user } = useContext(AuthContext);
 
   const [workshopPuzzles, setWorkshopPuzzles] = useState(null);
   const workshopPuzzlesLoading = useToggle();
   const workshopPuzzlesError = useToggle();
-  const workshopPuzzlesLastRef = useRef(null)
+  const workshopPuzzlesLastRef = useRef(null);
   const isLoadMoreButtonShown = useToggle(true);
 
-  
+const LIMIT = 15;
+
   const fetchWorkshopPuzzles = async () => {
     try {
       workshopPuzzlesLoading.setOn();
-
-      const q = query(
+      const q = workshopPuzzlesLastRef.current ? 
+      query(
         collection(db, "workshopPuzzles"),
         where("status", "==", "done"),
-        orderBy("updatedAt"),
+        orderBy("updatedAt", "desc"),
         startAfter(workshopPuzzlesLastRef.current),
-        limit(10),
+        limit(LIMIT),
+      ) :
+      query(
+        collection(db, "workshopPuzzles"),
+        where("status", "==", "done"),
+        orderBy("updatedAt", "desc"),
+        limit(LIMIT),
       );
 
       const querySnapshot = await getDocs(q);
@@ -63,21 +75,24 @@ const Workshop = () => {
         newFetchedPuzzles.push({ id: doc.id, ...doc.data() });
       });
 
-      workshopPuzzlesLastRef.current = querySnapshot.docs[querySnapshot.docs.length -1]
+      workshopPuzzlesLastRef.current =
+        querySnapshot.docs[querySnapshot.docs.length - 1];
 
-      const newWorkshopPuzzles = (workshopPuzzles || []).concat(newFetchedPuzzles)
+      const newWorkshopPuzzles = (workshopPuzzles || []).concat(
+        newFetchedPuzzles
+      );
       setWorkshopPuzzles(newWorkshopPuzzles);
       workshopPuzzlesLoading.setOff();
 
-      if (newFetchedPuzzles.length < 10) {
-        isLoadMoreButtonShown.setOff()
+      if (newFetchedPuzzles.length < LIMIT) {
+        isLoadMoreButtonShown.setOff();
       }
-
     } catch (error) {
+      console.log(error)
       workshopPuzzlesError.setOn();
       workshopPuzzlesLoading.setOff();
-    } 
-  }
+    }
+  };
 
   useEffect(() => {
     fetchWorkshopPuzzles();
@@ -89,7 +104,14 @@ const Workshop = () => {
     navigate(`/play/workshop/${puzzle.id}`);
   };
 
-  const workshopSolvedPuzzlesIDs = localStorage.getItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS) || "[]"
+  const handleCreateNewRiddleClick = () => {
+    initPuzzle();
+    navigate("/play/workshop/new");
+  };
+
+  const workshopSolvedPuzzlesIDs =
+    localStorage.getItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS) ||
+    "[]";
   const workshopSolvedPuzzlesIDsParsed = JSON.parse(workshopSolvedPuzzlesIDs);
 
   return (
@@ -110,9 +132,12 @@ const Workshop = () => {
             marginBottom: 15,
           }}
         >
-          <Link to="/play/workshop/new">
-            <Button style={{ maxWidth: "100%" }}>Create new riddle</Button>
-          </Link>
+          <Button
+            style={{ maxWidth: "100%" }}
+            onClick={handleCreateNewRiddleClick}
+          >
+            Create new riddle
+          </Button>
         </div>
         <div
           style={{
@@ -141,29 +166,36 @@ const Workshop = () => {
         )}
 
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {!workshopPuzzlesLoading.isOn  && workshopPuzzles && (
-          <>
-          {workshopPuzzles.map((puzzle) => (
-          <PuzzleBox
-          $isSolved={workshopSolvedPuzzlesIDsParsed.includes(puzzle.id)}
-            onClick={handlePuzzleClick(puzzle)}
-            key={puzzle.id}
-            title={puzzle.name}
-          >
-            <span style={{ wordBreak: "break-word" }}>
-              {puzzle.name.length > 65
-                ? `${puzzle.name.slice(0, 65)}...`
-                : puzzle.name}
-            </span>
-          </PuzzleBox>
-        ))}
-        {isLoadMoreButtonShown.isOn &&
-        <div style={{ display: "flex", marginTop: "15px", justifyContent: "center", width: "100%"}}>
-        <Button onClick={fetchWorkshopPuzzles}>Load more</Button>
-        </div>
-        }
-          </>
-        )}
+          {!workshopPuzzlesLoading.isOn && workshopPuzzles && (
+            <>
+              {workshopPuzzles.map((puzzle) => (
+                <PuzzleBox
+                  $isSolved={workshopSolvedPuzzlesIDsParsed.includes(puzzle.id)}
+                  onClick={handlePuzzleClick(puzzle)}
+                  key={puzzle.id}
+                  title={puzzle.name}
+                >
+                  <span style={{ wordBreak: "break-word" }}>
+                    {puzzle.name.length > 65
+                      ? `${puzzle.name.slice(0, 65)}...`
+                      : puzzle.name}
+                  </span>
+                </PuzzleBox>
+              ))}
+              {isLoadMoreButtonShown.isOn && (
+                <div
+                  style={{
+                    display: "flex",
+                    marginTop: "15px",
+                    justifyContent: "center",
+                    width: "100%",
+                  }}
+                >
+                  <Button onClick={fetchWorkshopPuzzles}>Load more</Button>
+                </div>
+              )}
+            </>
+          )}
         </div>
       </Wrapper>
     </>

@@ -49,4 +49,8 @@ export const RIDDLE_STATUSES_TITLES = {
   [RIDDLE_STATUSES.DONE]: "Approved",
   [RIDDLE_STATUSES.NEEDS_APPROVAL]: "Waiting for approval",
   [RIDDLE_STATUSES.DENIED]: "Rejected",
-}
+};
+
+export const CATEGORIES = {
+  GENERAL: "general",
+};
