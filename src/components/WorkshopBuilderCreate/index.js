@@ -91,7 +91,7 @@ const WorkshopBuilderCreate = () => {
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     };
-
+    console.log(newPuzzle)
     try {
       saveLoading.setOn();
       saveError.setOff();

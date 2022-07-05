@@ -119,7 +119,7 @@ const LIMIT = 15;
       <Link to="/play">
         <ArrowBack />
       </Link>
-      {user && <LogOutButton onClick={handleLogOutClick}>Log out</LogOutButton>}
+      {user && <LogOutButton title={user.email} onClick={handleLogOutClick}><span style={{ fontSize: 16}}>Log out</span> <br /> <span style={{ fontSize: 12}}>{user.displayName}</span></LogOutButton>}
       <Wrapper
         as={motion.div}
         initial={{ opacity: 0 }}
