@@ -1,15 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { useEffect, useContext, useState, useRef } from "react";
-import {
-  collection,
-  query,
-  orderBy,
-  where,
-  getDocs,
-  limit,
-  startAfter,
-} from "firebase/firestore";
+import { useContext } from "react";
 
 import { motion } from "framer-motion";
 
@@ -18,12 +9,10 @@ import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 import { AuthContext } from "../../common/services/AuthContext";
-import { useToggle } from "../../common/services/useToggle";
-import { PuzzleBox, Wrapper } from "../../common/components/PuzzleList.styled";
-import Loading from "../../common/components/Loading.styled";
-import Alert from "../../common/components/Alert.styled";
-import { LOCAL_STORAGE_KEYS, workshopCollectionName } from "../../common/consts";
-import { db } from "../../common/firebase";
+import { PuzzleBox, Wrapper, PuzzleLink } from "../../common/components/PuzzleList.styled";
+import workshopPuzzles from "../../common/data/workshopPuzzles.json"
+import { LOCAL_STORAGE_KEYS
+} from "../../common/consts";
 
 const LogOutButton = styled.button`
   cursor: pointer;
@@ -40,69 +29,8 @@ const LogOutButton = styled.button`
 
 const Workshop = () => {
   const navigate = useNavigate();
-  const { setWorkshopPlayPuzzle, initPuzzle } = useContext(WorkshopContext);
+  const { initPuzzle } = useContext(WorkshopContext);
   const { handleLogOutClick, user } = useContext(AuthContext);
-
-  const [workshopPuzzles, setWorkshopPuzzles] = useState(null);
-  const workshopPuzzlesLoading = useToggle();
-  const workshopPuzzlesError = useToggle();
-  const workshopPuzzlesLastRef = useRef(null);
-  const isLoadMoreButtonShown = useToggle(true);
-
-const LIMIT = 15;
-
-  const fetchWorkshopPuzzles = async () => {
-    try {
-      workshopPuzzlesLoading.setOn();
-      const q = workshopPuzzlesLastRef.current ? 
-      query(
-        collection(db, workshopCollectionName),
-        where("status", "==", "done"),
-        orderBy("updatedAt", "desc"),
-        startAfter(workshopPuzzlesLastRef.current),
-        limit(LIMIT),
-      ) :
-      query(
-        collection(db, workshopCollectionName),
-        where("status", "==", "done"),
-        orderBy("updatedAt", "desc"),
-        limit(LIMIT),
-      );
-
-      const querySnapshot = await getDocs(q);
-      const newFetchedPuzzles = [];
-      querySnapshot.forEach((doc) => {
-        newFetchedPuzzles.push({ id: doc.id, ...doc.data() });
-      });
-
-      workshopPuzzlesLastRef.current =
-        querySnapshot.docs[querySnapshot.docs.length - 1];
-
-      const newWorkshopPuzzles = (workshopPuzzles || []).concat(
-        newFetchedPuzzles
-      );
-      setWorkshopPuzzles(newWorkshopPuzzles);
-      workshopPuzzlesLoading.setOff();
-
-      if (newFetchedPuzzles.length < LIMIT) {
-        isLoadMoreButtonShown.setOff();
-      }
-    } catch (error) {
-      console.log(error)
-      workshopPuzzlesError.setOn();
-      workshopPuzzlesLoading.setOff();
-    }
-  };
-
-  useEffect(() => {
-    fetchWorkshopPuzzles();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const handlePuzzleClick = (puzzle) => () => {
-    setWorkshopPlayPuzzle(puzzle);
-    navigate(`/play/workshop/${puzzle.id}`);
-  };
 
   const handleCreateNewRiddleClick = () => {
     initPuzzle();
@@ -156,23 +84,14 @@ const LIMIT = 15;
           </Link>
         </div>
 
-        {workshopPuzzlesError.isOn && (
-          <Alert>Sorry, something went wrong.</Alert>
-        )}
-        {workshopPuzzlesLoading.isOn && (
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Loading />
-          </div>
-        )}
-
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {!workshopPuzzlesLoading.isOn && workshopPuzzles && (
-            <>
-              {workshopPuzzles.map((puzzle) => (
+        {workshopPuzzles.map((puzzle) => (
+          <PuzzleLink
+          key={puzzle.id}
+          to={`/play/workshop/${puzzle.id}`}
+        >
                 <PuzzleBox
                   $isSolved={workshopSolvedPuzzlesIDsParsed.includes(puzzle.id)}
-                  onClick={handlePuzzleClick(puzzle)}
-                  key={puzzle.id}
                   title={puzzle.name}
                 >
                   <span style={{ wordBreak: "break-word" }}>
@@ -181,21 +100,8 @@ const LIMIT = 15;
                       : puzzle.name}
                   </span>
                 </PuzzleBox>
+                </PuzzleLink>
               ))}
-              {isLoadMoreButtonShown.isOn && (
-                <div
-                  style={{
-                    display: "flex",
-                    marginTop: "15px",
-                    justifyContent: "center",
-                    width: "100%",
-                  }}
-                >
-                  <Button onClick={fetchWorkshopPuzzles}>Load more</Button>
-                </div>
-              )}
-            </>
-          )}
         </div>
       </Wrapper>
     </>

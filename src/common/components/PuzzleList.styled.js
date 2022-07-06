@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+export const PuzzleLink = styled(Link)`
+  text-decoration: none;
+  display: block;
+`;
 
 export const Wrapper = styled.div`
   max-width: 956px;

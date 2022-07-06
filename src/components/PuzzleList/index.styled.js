@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-export const PuzzleLink = styled(Link)`
-  text-decoration: none;
-  display: block;
-`;
+import { PuzzleLink } from "../../common/components/PuzzleList.styled";
 
 export const PuzzleRow = styled.div`
   display: flex;
