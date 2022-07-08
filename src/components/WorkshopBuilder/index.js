@@ -192,6 +192,7 @@ const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
             dependencyClueId={dependencyClueId}
             setDependencyClueId={setDependencyClueId}
             setSelectedClueValueId={setSelectedClueValueId}
+            selectedClueValueId={selectedClueValueId}
           />
         </Content>
         <Sidebar

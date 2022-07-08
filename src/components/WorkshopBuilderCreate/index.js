@@ -173,14 +173,14 @@ const WorkshopBuilderCreate = () => {
               <ButtonsWrapper>
                 {user ? (
                   <>
-                    <Button
+                    {puzzle.status === RIDDLE_STATUSES.DRAFT && <Button
                       disabled={saveLoading.isOn || !userNickname}
                       name="draft"
                       onClick={handleSave}
                       style={{ marginRight: "10px", fontSize: 16 }}
                     >
                       Save as draft
-                    </Button>
+                    </Button>}
                     <Button
                       disabled={saveLoading.isOn || !userNickname}
                       onClick={handleSave}

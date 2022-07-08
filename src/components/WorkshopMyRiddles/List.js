@@ -9,6 +9,7 @@ import {
   limit,
   startAfter,
   deleteDoc,
+  setDoc,
   doc
 } from "firebase/firestore";
 
@@ -19,7 +20,7 @@ import { useToggle } from "../../common/services/useToggle";
 import { PuzzleBox } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
 import Alert from "../../common/components/Alert.styled";
-import { RIDDLE_STATUSES, RIDDLE_STATUSES_TITLES, workshopCollectionName } from "../../common/consts";
+import { RIDDLE_STATUSES, RIDDLE_STATUSES_TITLES, workshopCollectionName, toBeDeletedCollectionName } from "../../common/consts";
 import Modal, { Text } from "../../common/components/Modal";
 import { Button } from "../../common/components/Button.styled";
 
@@ -30,7 +31,7 @@ import checkSVG from "./check.svg";
 import draftSVG from "./draft.svg";
 
 const statusIcons = {
-  [RIDDLE_STATUSES.DRAFT]: <img src={draftSVG} alt="done" />,
+  [RIDDLE_STATUSES.DRAFT]: <img src={draftSVG} alt="draft" />,
   [RIDDLE_STATUSES.NEEDS_APPROVAL]: <img src={clockSVG} alt="needs_approval" />,
   [RIDDLE_STATUSES.DENIED]: <img src={closeSVG} alt="rejected" />,
   [RIDDLE_STATUSES.DONE]: <img src={checkSVG} alt="done" />,
@@ -125,6 +126,9 @@ const List = () => {
   const handleDeleteConfirm = async () => {
     try {
       deleteLoading.setOn()
+      if (selectedPuzzle.status === RIDDLE_STATUSES.DONE) {
+        await setDoc(doc(db, toBeDeletedCollectionName, selectedPuzzle.id), {});
+      }
       await deleteDoc(doc(db, workshopCollectionName, selectedPuzzle.id));
       setSelectedPuzzle(null);
       myWorkshopPuzzlesLastRef.current = null;
@@ -165,7 +169,9 @@ const List = () => {
           deleteToggle.isOn ? (
             <>
             {deleteError.isOn && <Alert>Sorry, something went wrong.</Alert>}
-              <p style={{ textAlign: "center"}}>Are you sure you want to delete this riddle?</p>
+              <p style={{ textAlign: "center"}}>Are you sure you want to delete this riddle?<br />
+              {selectedPuzzle?.status === RIDDLE_STATUSES.DONE && "Note: approved riddles might take a day to get deleted from workshop list."}
+              </p>
             <div style={{ display: "flex", marginBottom: 15 }}>
           <Button
             style={{ marginRight: 15 }}
@@ -180,7 +186,7 @@ const List = () => {
         </div></>
           ) : (
             <div style={{ display: "flex", marginBottom: 15 }}>
-          <Button
+          {selectedPuzzle?.status === RIDDLE_STATUSES.DRAFT && <Button
             style={{ marginRight: 15 }}
             onClick={handleEditClick}
             disabled={[
@@ -189,8 +195,8 @@ const List = () => {
             ].includes(selectedPuzzle?.status)}
           >
             Edit
-          </Button>
-          <Button onClick={deleteToggle.setOn}>Delete</Button>
+          </Button>}
+          <Button style={{...(selectedPuzzle?.status !== RIDDLE_STATUSES.DRAFT ? {width: "100%", maxWidth: "100%"} : {})}} onClick={deleteToggle.setOn}>Delete</Button>
         </div>
           )
         }

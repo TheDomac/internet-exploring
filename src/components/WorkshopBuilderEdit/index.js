@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { setDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import { doc, getDoc } from "firebase/firestore";
 import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import { db } from "../../common/firebase";
-import { LOCAL_STORAGE_KEYS, RIDDLE_STATUSES, workshopCollectionName } from "../../common/consts";
+import { LOCAL_STORAGE_KEYS, RIDDLE_STATUSES, workshopCollectionName, clueTypes } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
 import Alert from "../../common/components/Alert.styled";
@@ -16,6 +16,9 @@ import ArrowBack from "../../common/components/ArrowBack";
 import CommonPuzzle from "../../common/components/Puzzle";
 import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
+import getImageClueValues from "../../common/services/getImageClueValues";
+import uploadImages from "../../common/services/uploadImages";
+import deleteImages from "../../common/services/deleteImages";
 
 const StyledInput = styled.input`
   background: transparent;
@@ -48,6 +51,7 @@ const WorkshopBuilderEdit = () => {
   const saveError = useToggle();
   const preview = useToggle();
   const fetchingError = useToggle();
+  const oldPuzzle = useRef()
 
   const [userNickname, setUserNickname] = useState(initialUserNickname || "");
   const [userSocialMediaURL, setUserSocialMediaURL] = useState(
@@ -59,6 +63,7 @@ const WorkshopBuilderEdit = () => {
       const docRef = doc(db, workshopCollectionName, params.riddleId);
       const docSnap = await getDoc(docRef);
       const fetchedPuzzle = { id: docSnap.id, ...docSnap.data() };
+      oldPuzzle.current = fetchedPuzzle;
       initPuzzle(fetchedPuzzle);
     } catch (err) {
       fetchingError.setOn();
@@ -89,18 +94,45 @@ const WorkshopBuilderEdit = () => {
       LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL,
       userSocialMediaURL
     );
+
+    const imageClueValues = getImageClueValues(puzzle.rebuses);
+    const oldImageClueValues = getImageClueValues(oldPuzzle.current.rebuses);
+
+    const imagesToUpload = imageClueValues.filter(cv => !oldImageClueValues.find(ocv => ocv.id === cv.id));
+    const imagesToDelete = oldImageClueValues.filter(ocv => !imageClueValues.find(cv => cv.id === ocv.id));
+    try {
+      saveLoading.setOn();
+      saveError.setOff();
+    const uploadedImages = await uploadImages(imagesToUpload, user.uid);
+
     const newPuzzle = {
       ...puzzle,
       status,
       userNickname,
       userSocialMediaURL,
       updatedAt: serverTimestamp(),
+      rebuses: puzzle.rebuses.map(r => ({
+        ...r,
+        clues: r.clues.map(c => ({
+          ...c,
+          clueValues: c.clueValues.map((cv) => {
+            if (cv.type !== clueTypes.IMAGE) {
+              return cv;
+            }
+            const foundUploadedImage = uploadedImages.find(icv => icv.id === cv.id)
+            return foundUploadedImage?.downloadURL ? {
+              ...cv,
+              value: foundUploadedImage.downloadURL
+            } : cv
+          })
+        }))
+      }))
     };
 
-    try {
-      saveLoading.setOn();
-      saveError.setOff();
+
+    
       await setDoc(doc(db, workshopCollectionName, puzzle.id), newPuzzle);
+      await deleteImages(imagesToDelete, user.uid);
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {

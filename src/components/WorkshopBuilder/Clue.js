@@ -20,6 +20,7 @@ const Clue = ({
   dependencyClueId,
   setDependencyClueId,
   setSelectedClueValueId,
+  selectedClueValueId,
 }) => {
   const handleSelectClue = () => {
     setSelectedClueId(clue.id);
@@ -63,7 +64,7 @@ const Clue = ({
       clueValues: clue.clueValues.concat({
         id: newClueValueId,
         value: "",
-        type: clueTypes.TEXT,
+        type: clueTypes.NONE,
         subtext: "",
         style: { width: "calc(100% - 10px)" },
       }),
@@ -116,6 +117,7 @@ const Clue = ({
             updateClue={updateClue}
             clue={clue}
             rebusId={rebus.id}
+            isSelected={selectedClueValueId === clueValue.id && selectedClueId === clue.id}
           />
         ))}
         <AddClueButton size={50} onClick={handleAddClueValue}>

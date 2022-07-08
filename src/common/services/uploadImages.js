@@ -13,7 +13,6 @@ const uploadImages = async (imageClueValues, userId) => {
         uploadedImages.push({ id: imageClueValue.id, downloadURL })
     }
 
-    console.log("return uploadedImages", uploadedImages)
     return uploadedImages;
 }
  

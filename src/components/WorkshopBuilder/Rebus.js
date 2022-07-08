@@ -18,6 +18,7 @@ const Rebus = ({
   dependencyClueId,
   setDependencyClueId,
   setSelectedClueValueId,
+  selectedClueValueId
 }) => {
   const [deleteClueId, setDeleteClueId] = useState(null);
 
@@ -30,7 +31,7 @@ const Rebus = ({
         {
           id: newClueValueId,
           value: "",
-          type: clueTypes.TEXT,
+          type: clueTypes.NONE,
           subtext: "",
           style: { width: "calc(100% - 10px)" },
         },
@@ -109,6 +110,7 @@ const Rebus = ({
             clue={clue}
             rebus={rebus}
             selectedClueId={selectedClueId}
+            selectedClueValueId={selectedClueValueId}
             setDeleteClueId={setDeleteClueId}
             setSelectedClueId={setSelectedClueId}
             updateClue={updateClue}

@@ -1,9 +1,11 @@
 export const workshopCollectionName = process.env[`REACT_APP_COLLECTION_${process.env.REACT_APP_STAGE.toUpperCase()}`]
+export const toBeDeletedCollectionName = process.env[`REACT_APP_TO_BE_DELETED_${process.env.REACT_APP_STAGE.toUpperCase()}`]
 
 export const clueTypes = {
   TEXT: "text",
   IMAGE: "image",
   CUSTOM_COMPONENT: "customComponent",
+  NONE: null,
 };
 
 export const solutionTypes = {

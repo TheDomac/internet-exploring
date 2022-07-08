@@ -9,7 +9,7 @@ const StyledImage = styled.img`
 
 const Image = ({ fileName, className }) => {
   let image;
-  if (fileName.startsWith("blob")) {
+  if (fileName.startsWith("blob") || fileName.startsWith("https")) {
     image = fileName;
   } else {
     try {

@@ -1,3 +1,5 @@
+import { clueTypes } from "../../../common/consts";
+
 const cleanUp = (puzzle) => {
   return {
     ...puzzle,
@@ -11,6 +13,7 @@ const cleanUp = (puzzle) => {
       },
       clues: rebus.clues.map((clue) => ({
         ...clue,
+        clueValues: clue.clueValues.filter(clueValue => clueValue.type !== clueTypes.NONE),
         solutionInfo: {
           ...clue.solutionInfo,
           solvedText:

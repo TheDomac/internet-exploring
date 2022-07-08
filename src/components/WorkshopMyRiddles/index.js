@@ -30,7 +30,7 @@ const LogOutButton = styled.button`
 
 const successAlertText = {
   [RIDDLE_STATUSES.DRAFT]: "Riddle saved successfully.",
-  [RIDDLE_STATUSES.NEEDS_APPROVAL]: "Riddle submitted for review successfully. For easier approval you can send explanation of the riddle to contact@internetexploring.io (include name of the riddle).",
+  [RIDDLE_STATUSES.NEEDS_APPROVAL]: "Riddle submitted for review successfully. You can send an explanation of the riddle to contact@internetexploring.io for faster approval. Make sure that you include the name of the riddle.",
 }
 
 const WorkshopMyRiddles = () => {

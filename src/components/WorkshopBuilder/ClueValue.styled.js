@@ -18,6 +18,10 @@ export const StyledClueValue = styled.div`
   position: relative;
   transition: 300ms;
   margin: 5px;
+  ${({ $isSelected }) => ($isSelected ? "background: rgba(0,0,0,0.6);" : "")}
+  &:hover {
+    background: rgba(0,0,0,0.6);
+  }
 `;
 
 export const StyledFileInputLabel = styled.label`

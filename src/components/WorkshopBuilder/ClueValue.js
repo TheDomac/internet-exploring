@@ -1,7 +1,7 @@
 import { clueTypes } from "../../common/consts";
 
 import { StyledClueValue, StyledFileInputLabel } from "./ClueValue.styled";
-import { DeleteButton, StyledInput, StyledSelect } from "./index.styled";
+import { ButtonGroup, DeleteButton, StyledInput, StyledSelect, Button } from "./index.styled";
 import Image from "../../common/components/Image";
 
 const ClueValue = ({
@@ -11,6 +11,7 @@ const ClueValue = ({
   clue,
   rebusId,
   setSelectedClueValueId,
+  isSelected
 }) => {
   const handleSubtextChange = (e) => {
     const newClue = {
@@ -24,7 +25,7 @@ const ClueValue = ({
   };
 
   const handleTypeChange = (e) => {
-    const newType = e.target.value;
+    const newType = e.target.name;
 
     const newClue = {
       ...clue,
@@ -64,21 +65,16 @@ const ClueValue = ({
   };
 
   return (
-    <StyledClueValue style={clueValue.style} onClick={handleClueValueClick}>
+    <StyledClueValue 
+    $isSelected={isSelected}
+     style={clueValue.style} onClick={handleClueValueClick}>
       <div style={{ marginBottom: "5px", fontSize: "12px" }}>Clue Value</div>
-      <StyledSelect
-        value={clueValue.type}
-        onChange={handleTypeChange}
-        style={{ textTransform: "capitalize" }}
-      >
-        {[clueTypes.TEXT, clueTypes.IMAGE].map((o) => (
-          <option key={o} value={o}>
-            {o[0].toUpperCase()}
-            {o.slice(1)}
-          </option>
-        ))}
-      </StyledSelect>
-
+      {clueValue.type === clueTypes.NONE && (
+        <>
+          <Button style={{ marginBottom: 7}} name={clueTypes.TEXT} onClick={handleTypeChange}>Text</Button>
+          <Button name={clueTypes.IMAGE} onClick={handleTypeChange}>Image</Button>
+          </>
+      )}
       {clueValue.type === clueTypes.TEXT && (
         <StyledInput
           type="text"
@@ -102,13 +98,13 @@ const ClueValue = ({
       {clueValue.type === clueTypes.IMAGE && clueValue.value && (
         <Image fileName={clueValue.value} alt="clueValueImage" />
       )}
-      <StyledInput
+      {clueValue.type !== clueTypes.NONE && <StyledInput
         type="text"
         value={clueValue.subtext}
         style={{ textAlign: "center", padding: "7px" }}
         placeholder="Subtext..."
         onChange={handleSubtextChange}
-      />
+      />}
 
       <DeleteButton
         style={{ top: "5px", right: "5px" }}
