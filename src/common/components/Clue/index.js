@@ -77,7 +77,10 @@ const Clue = ({ clue, clueIndex }) => {
           return (
             <StyledClueValue style={clueValue.style} key={clueValue.id}>
               {clueValue.type === clueTypes.TEXT && (
-                <CopyableText text={clueValue.value} large />
+                <CopyableText
+                  text={clueValue.value}
+                  fontSize={clueValue.style.fontSize}
+                />
               )}
               {clueValue.type === clueTypes.IMAGE && (
                 <Image fileName={clueValue.value} />
@@ -97,13 +100,15 @@ const Clue = ({ clue, clueIndex }) => {
                   }}
                 />
               )}
-              {clueValue.subtext && <CopyableText text={clueValue.subtext} />}
+              {clueValue.subtext && (
+                <CopyableText text={clueValue.subtext} fontSize="16px" />
+              )}
             </StyledClueValue>
           );
         })}
       </ClueValuesWrapper>
 
-      {clue.subtext && <CopyableText text={clue.subtext} />}
+      {clue.subtext && <CopyableText text={clue.subtext} fontSize="16px" />}
       {clue.solutionInfo.possibleSolutions.length > 0 && (
         <>
           {clue.solutionInfo.type === solutionTypes.TEXT && (

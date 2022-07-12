@@ -8,7 +8,12 @@ import { doc, getDoc } from "firebase/firestore";
 import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import { db } from "../../common/firebase";
-import { LOCAL_STORAGE_KEYS, RIDDLE_STATUSES, workshopCollectionName, clueTypes } from "../../common/consts";
+import {
+  LOCAL_STORAGE_KEYS,
+  RIDDLE_STATUSES,
+  workshopCollectionName,
+  clueTypes,
+} from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
 import Alert from "../../common/components/Alert.styled";
@@ -51,7 +56,7 @@ const WorkshopBuilderEdit = () => {
   const saveError = useToggle();
   const preview = useToggle();
   const fetchingError = useToggle();
-  const oldPuzzle = useRef()
+  const oldPuzzle = useRef();
 
   const [userNickname, setUserNickname] = useState(initialUserNickname || "");
   const [userSocialMediaURL, setUserSocialMediaURL] = useState(
@@ -98,39 +103,45 @@ const WorkshopBuilderEdit = () => {
     const imageClueValues = getImageClueValues(puzzle.rebuses);
     const oldImageClueValues = getImageClueValues(oldPuzzle.current.rebuses);
 
-    const imagesToUpload = imageClueValues.filter(cv => !oldImageClueValues.find(ocv => ocv.id === cv.id));
-    const imagesToDelete = oldImageClueValues.filter(ocv => !imageClueValues.find(cv => cv.id === ocv.id));
+    const imagesToUpload = imageClueValues.filter(
+      (cv) => !oldImageClueValues.find((ocv) => ocv.id === cv.id)
+    );
+    const imagesToDelete = oldImageClueValues.filter(
+      (ocv) => !imageClueValues.find((cv) => cv.id === ocv.id)
+    );
     try {
       saveLoading.setOn();
       saveError.setOff();
-    const uploadedImages = await uploadImages(imagesToUpload, user.uid);
+      const uploadedImages = await uploadImages(imagesToUpload, user.uid);
 
-    const newPuzzle = {
-      ...puzzle,
-      status,
-      userNickname,
-      userSocialMediaURL,
-      updatedAt: serverTimestamp(),
-      rebuses: puzzle.rebuses.map(r => ({
-        ...r,
-        clues: r.clues.map(c => ({
-          ...c,
-          clueValues: c.clueValues.map((cv) => {
-            if (cv.type !== clueTypes.IMAGE) {
-              return cv;
-            }
-            const foundUploadedImage = uploadedImages.find(icv => icv.id === cv.id)
-            return foundUploadedImage?.downloadURL ? {
-              ...cv,
-              value: foundUploadedImage.downloadURL
-            } : cv
-          })
-        }))
-      }))
-    };
+      const newPuzzle = {
+        ...puzzle,
+        status,
+        userNickname,
+        userSocialMediaURL,
+        updatedAt: serverTimestamp(),
+        rebuses: puzzle.rebuses.map((r) => ({
+          ...r,
+          clues: r.clues.map((c) => ({
+            ...c,
+            clueValues: c.clueValues.map((cv) => {
+              if (cv.type !== clueTypes.IMAGE) {
+                return cv;
+              }
+              const foundUploadedImage = uploadedImages.find(
+                (icv) => icv.id === cv.id
+              );
+              return foundUploadedImage?.downloadURL
+                ? {
+                    ...cv,
+                    value: foundUploadedImage.downloadURL,
+                  }
+                : cv;
+            }),
+          })),
+        })),
+      };
 
-
-    
       await setDoc(doc(db, workshopCollectionName, puzzle.id), newPuzzle);
       await deleteImages(imagesToDelete, user.uid);
       saveLoading.setOff();
@@ -224,7 +235,11 @@ const WorkshopBuilderEdit = () => {
                     Log in
                   </Button>
                 )}
-                <Button style={{ fontSize: 16 }} disabled={saveLoading.isOn} onClick={saveModal.setOff}>
+                <Button
+                  style={{ fontSize: 16 }}
+                  disabled={saveLoading.isOn}
+                  onClick={saveModal.setOff}
+                >
                   Cancel
                 </Button>
               </ButtonsWrapper>

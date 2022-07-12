@@ -9,8 +9,11 @@ import ArrowBack from "../../common/components/ArrowBack";
 import { useToggle } from "../../common/services/useToggle";
 
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import { LOCAL_STORAGE_KEYS, workshopCollectionName } from "../../common/consts";
-import workshopPuzzles  from "../../common/data/workshopPuzzles.json";
+import {
+  LOCAL_STORAGE_KEYS,
+  workshopCollectionName,
+} from "../../common/consts";
+import workshopPuzzles from "../../common/data/workshopPuzzles.json";
 
 const WorkshopPlayPage = () => {
   const { riddleId } = useParams();
@@ -21,7 +24,6 @@ const WorkshopPlayPage = () => {
   const [fetchedPuzzle, setFetchedPuzzle] = useState(null);
   const { workshopPlayPuzzle, setWorkshopPlayPuzzle } =
     useContext(WorkshopContext);
-
 
   const fetchPuzzle = async () => {
     try {
@@ -37,10 +39,13 @@ const WorkshopPlayPage = () => {
     }
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const localPuzzle = useMemo(() => workshopPuzzles.find(p => p.id === riddleId), [])
+  const localPuzzle = useMemo(
+    () => workshopPuzzles.find((p) => p.id === riddleId),
+    []
+  );
 
   useEffect(() => {
-    const isCorrectWorkshopPlayPuzzle = workshopPlayPuzzle?.id === riddleId
+    const isCorrectWorkshopPlayPuzzle = workshopPlayPuzzle?.id === riddleId;
     if (!localPuzzle && !isCorrectWorkshopPlayPuzzle) {
       fetchPuzzle();
     }
@@ -70,7 +75,7 @@ const WorkshopPlayPage = () => {
   const handleRedirect = () => {
     setWorkshopPlayPuzzle(null);
     navigate("/play/workshop");
-  }
+  };
 
   if (error.isOn) {
     return (

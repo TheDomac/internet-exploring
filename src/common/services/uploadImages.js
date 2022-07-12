@@ -1,19 +1,19 @@
-import {ref, uploadBytes, getDownloadURL} from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "../firebase";
 
 const uploadImages = async (imageClueValues, userId) => {
-    const uploadedImages = [];
+  const uploadedImages = [];
 
-    for (const imageClueValue of imageClueValues) {
-        const file = await fetch(imageClueValue.value);
-        const fileBlob = await file.blob();
-        const imageRef = ref(storage, `images/${userId}/${imageClueValue.id}`);
-        await uploadBytes(imageRef, fileBlob);
-        const downloadURL = await getDownloadURL(imageRef);
-        uploadedImages.push({ id: imageClueValue.id, downloadURL })
-    }
+  for (const imageClueValue of imageClueValues) {
+    const file = await fetch(imageClueValue.value);
+    const fileBlob = await file.blob();
+    const imageRef = ref(storage, `images/${userId}/${imageClueValue.id}`);
+    await uploadBytes(imageRef, fileBlob);
+    const downloadURL = await getDownloadURL(imageRef);
+    uploadedImages.push({ id: imageClueValue.id, downloadURL });
+  }
 
-    return uploadedImages;
-}
- 
+  return uploadedImages;
+};
+
 export default uploadImages;

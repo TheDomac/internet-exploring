@@ -1,7 +1,13 @@
 import { clueTypes } from "../../common/consts";
 
 import { StyledClueValue, StyledFileInputLabel } from "./ClueValue.styled";
-import { ButtonGroup, DeleteButton, StyledInput, StyledSelect, Button } from "./index.styled";
+import {
+  ButtonGroup,
+  DeleteButton,
+  StyledInput,
+  StyledSelect,
+  Button,
+} from "./index.styled";
 import Image from "../../common/components/Image";
 
 const ClueValue = ({
@@ -11,7 +17,8 @@ const ClueValue = ({
   clue,
   rebusId,
   setSelectedClueValueId,
-  isSelected
+  isSelected,
+  imageSizeErrorModal,
 }) => {
   const handleSubtextChange = (e) => {
     const newClue = {
@@ -49,15 +56,19 @@ const ClueValue = ({
   };
 
   const handleImageValueChange = (e) => {
-    const imageObjectURL = URL.createObjectURL(e.target.files[0]);
-    const newClue = {
-      ...clue,
-      clueValues: clue.clueValues.map((cv) =>
-        cv.id === clueValue.id ? { ...cv, value: imageObjectURL } : cv
-      ),
-    };
-
-    updateClue({ rebusId, clueId: clue.id, newClue });
+    if (e.target.files[0].size >= 1 * 1024 * 1024) {
+      imageSizeErrorModal.setOn();
+    } else {
+      const imageObjectURL = URL.createObjectURL(e.target.files[0]);
+      const newClue = {
+        ...clue,
+        clueValues: clue.clueValues.map((cv) =>
+          cv.id === clueValue.id ? { ...cv, value: imageObjectURL } : cv
+        ),
+      };
+  
+      updateClue({ rebusId, clueId: clue.id, newClue });
+    }
   };
 
   const handleClueValueClick = () => {
@@ -65,15 +76,25 @@ const ClueValue = ({
   };
 
   return (
-    <StyledClueValue 
-    $isSelected={isSelected}
-     style={clueValue.style} onClick={handleClueValueClick}>
+    <StyledClueValue
+      $isSelected={isSelected}
+      style={clueValue.style}
+      onClick={handleClueValueClick}
+    >
       <div style={{ marginBottom: "5px", fontSize: "12px" }}>Clue Value</div>
       {clueValue.type === clueTypes.NONE && (
         <>
-          <Button style={{ marginBottom: 7}} name={clueTypes.TEXT} onClick={handleTypeChange}>Text</Button>
-          <Button name={clueTypes.IMAGE} onClick={handleTypeChange}>Image</Button>
-          </>
+          <Button
+            style={{ marginBottom: 7 }}
+            name={clueTypes.TEXT}
+            onClick={handleTypeChange}
+          >
+            Text
+          </Button>
+          <Button name={clueTypes.IMAGE} onClick={handleTypeChange}>
+            Image
+          </Button>
+        </>
       )}
       {clueValue.type === clueTypes.TEXT && (
         <StyledInput
@@ -98,13 +119,15 @@ const ClueValue = ({
       {clueValue.type === clueTypes.IMAGE && clueValue.value && (
         <Image fileName={clueValue.value} alt="clueValueImage" />
       )}
-      {clueValue.type !== clueTypes.NONE && <StyledInput
-        type="text"
-        value={clueValue.subtext}
-        style={{ textAlign: "center", padding: "7px" }}
-        placeholder="Subtext..."
-        onChange={handleSubtextChange}
-      />}
+      {clueValue.type !== clueTypes.NONE && (
+        <StyledInput
+          type="text"
+          value={clueValue.subtext}
+          style={{ textAlign: "center", padding: "7px" }}
+          placeholder="Subtext..."
+          onChange={handleSubtextChange}
+        />
+      )}
 
       <DeleteButton
         style={{ top: "5px", right: "5px" }}

@@ -13,7 +13,9 @@ const cleanUp = (puzzle) => {
       },
       clues: rebus.clues.map((clue) => ({
         ...clue,
-        clueValues: clue.clueValues.filter(clueValue => clueValue.type !== clueTypes.NONE),
+        clueValues: clue.clueValues.filter(
+          (clueValue) => clueValue.type !== clueTypes.NONE
+        ),
         solutionInfo: {
           ...clue.solutionInfo,
           solvedText:

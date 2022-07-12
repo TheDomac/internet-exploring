@@ -10,7 +10,7 @@ import {
   startAfter,
   deleteDoc,
   setDoc,
-  doc
+  doc,
 } from "firebase/firestore";
 
 import { WorkshopContext } from "../../common/services/WorkshopContext";
@@ -20,7 +20,12 @@ import { useToggle } from "../../common/services/useToggle";
 import { PuzzleBox } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
 import Alert from "../../common/components/Alert.styled";
-import { RIDDLE_STATUSES, RIDDLE_STATUSES_TITLES, workshopCollectionName, toBeDeletedCollectionName } from "../../common/consts";
+import {
+  RIDDLE_STATUSES,
+  RIDDLE_STATUSES_TITLES,
+  workshopCollectionName,
+  toBeDeletedCollectionName,
+} from "../../common/consts";
 import Modal, { Text } from "../../common/components/Modal";
 import { Button } from "../../common/components/Button.styled";
 
@@ -60,20 +65,20 @@ const List = () => {
     try {
       myWorkshopPuzzlesLoading.setOn();
 
-      const q = myWorkshopPuzzlesLastRef.current ? 
-      query(
-        collection(db, workshopCollectionName),
-        where("uid", "==", user.uid),
-        orderBy("updatedAt", "desc"),
-        startAfter(myWorkshopPuzzlesLastRef.current),
-        limit(LIMIT),
-      ) :
-      query(
-        collection(db, workshopCollectionName),
-        where("uid", "==", user.uid),
-        orderBy("updatedAt", "desc"),
-        limit(LIMIT),
-      );
+      const q = myWorkshopPuzzlesLastRef.current
+        ? query(
+            collection(db, workshopCollectionName),
+            where("uid", "==", user.uid),
+            orderBy("updatedAt", "desc"),
+            startAfter(myWorkshopPuzzlesLastRef.current),
+            limit(LIMIT)
+          )
+        : query(
+            collection(db, workshopCollectionName),
+            where("uid", "==", user.uid),
+            orderBy("updatedAt", "desc"),
+            limit(LIMIT)
+          );
 
       const querySnapshot = await getDocs(q);
       const newFetchedPuzzles = [];
@@ -81,13 +86,10 @@ const List = () => {
         newFetchedPuzzles.push({ id: doc.id, ...doc.data() });
       });
 
-
       const newPage = page + 1;
-      setPage(newPage)
+      setPage(newPage);
 
-      const newMyWorkshopPuzzles = (initialPuzzles).concat(
-        newFetchedPuzzles
-      );
+      const newMyWorkshopPuzzles = initialPuzzles.concat(newFetchedPuzzles);
       setMyWorkshopPuzzles(newMyWorkshopPuzzles);
       myWorkshopPuzzlesLoading.setOff();
 
@@ -95,7 +97,7 @@ const List = () => {
         isLoadMoreButtonShown.setOff();
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
       myWorkshopPuzzlesError.setOn();
       myWorkshopPuzzlesLoading.setOff();
     }
@@ -120,12 +122,12 @@ const List = () => {
   };
 
   const handleLoadMoreClick = () => {
-    fetchMyWorkshopPuzzles(myWorkshopPuzzles)
-  }
+    fetchMyWorkshopPuzzles(myWorkshopPuzzles);
+  };
 
   const handleDeleteConfirm = async () => {
     try {
-      deleteLoading.setOn()
+      deleteLoading.setOn();
       if (selectedPuzzle.status === RIDDLE_STATUSES.DONE) {
         await setDoc(doc(db, toBeDeletedCollectionName, selectedPuzzle.id), {});
       }
@@ -134,14 +136,14 @@ const List = () => {
       myWorkshopPuzzlesLastRef.current = null;
       deleteLoading.setOff();
       fetchMyWorkshopPuzzles();
-    
     } catch (error) {
       deleteError.setOn();
-      deleteLoading.setOff()
+      deleteLoading.setOff();
     }
-  }
+  };
 
-  const isEditEnabled = isPatreonUser.isOn || selectedPuzzle?.status === RIDDLE_STATUSES.DRAFT;
+  const isEditEnabled =
+    isPatreonUser.isOn || selectedPuzzle?.status === RIDDLE_STATUSES.DRAFT;
 
   return (
     <>
@@ -166,38 +168,51 @@ const List = () => {
         >
           Play
         </Button>
-        {
-          deleteToggle.isOn ? (
-            <>
+        {deleteToggle.isOn ? (
+          <>
             {deleteError.isOn && <Alert>Sorry, something went wrong.</Alert>}
-              <p style={{ textAlign: "center"}}>Are you sure you want to delete this riddle?<br />
-              {selectedPuzzle?.status === RIDDLE_STATUSES.DONE && "Note: approved riddles might take a day to get deleted from workshop list."}
-              </p>
+            <p style={{ textAlign: "center" }}>
+              Are you sure you want to delete this riddle?
+              <br />
+              {selectedPuzzle?.status === RIDDLE_STATUSES.DONE &&
+                "Note: approved riddles might take a day to get deleted from workshop list."}
+            </p>
             <div style={{ display: "flex", marginBottom: 15 }}>
-          <Button
-            style={{ marginRight: 15 }}
-            onClick={handleDeleteConfirm}
-            disabled={deleteLoading.isOn}
-          >
-            Yes
-          </Button>
-          <Button onClick={deleteToggle.setOff}
-            disabled={deleteLoading.isOn}
-            >No</Button>
-        </div></>
-          ) : (
-            <div style={{ display: "flex", marginBottom: 15 }}>
-          {isEditEnabled && <Button
-            style={{ marginRight: 15 }}
-            onClick={handleEditClick}
-          >
-            Edit
-          </Button>}
-          <Button style={{...(selectedPuzzle?.status !== RIDDLE_STATUSES.DRAFT ? {width: "100%", maxWidth: "100%"} : {})}} onClick={deleteToggle.setOn}>Delete</Button>
-        </div>
-          )
-        }
-        
+              <Button
+                style={{ marginRight: 15 }}
+                onClick={handleDeleteConfirm}
+                disabled={deleteLoading.isOn}
+              >
+                Yes
+              </Button>
+              <Button
+                onClick={deleteToggle.setOff}
+                disabled={deleteLoading.isOn}
+              >
+                No
+              </Button>
+            </div>
+          </>
+        ) : (
+          <div style={{ display: "flex", marginBottom: 15 }}>
+            {isEditEnabled && (
+              <Button style={{ marginRight: 15 }} onClick={handleEditClick}>
+                Edit
+              </Button>
+            )}
+            <Button
+              style={{
+                ...(selectedPuzzle?.status !== RIDDLE_STATUSES.DRAFT
+                  ? { width: "100%", maxWidth: "100%" }
+                  : {}),
+              }}
+              onClick={deleteToggle.setOn}
+            >
+              Delete
+            </Button>
+          </div>
+        )}
+
         <Button
           style={{ width: "100%", maxWidth: "100%" }}
           onClick={() => setSelectedPuzzle(null)}

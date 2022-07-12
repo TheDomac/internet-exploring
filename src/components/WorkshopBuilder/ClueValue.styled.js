@@ -20,7 +20,7 @@ export const StyledClueValue = styled.div`
   margin: 5px;
   ${({ $isSelected }) => ($isSelected ? "background: rgba(0,0,0,0.6);" : "")}
   &:hover {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
   }
 `;
 

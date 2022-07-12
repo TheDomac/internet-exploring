@@ -18,7 +18,8 @@ const Rebus = ({
   dependencyClueId,
   setDependencyClueId,
   setSelectedClueValueId,
-  selectedClueValueId
+  selectedClueValueId,
+  imageSizeErrorModal
 }) => {
   const [deleteClueId, setDeleteClueId] = useState(null);
 
@@ -118,6 +119,7 @@ const Rebus = ({
             dependencyClueId={dependencyClueId}
             setDependencyClueId={setDependencyClueId}
             setSelectedClueValueId={setSelectedClueValueId}
+            imageSizeErrorModal={imageSizeErrorModal}
           />
         ))}
         <AddClueButtonWrapper>

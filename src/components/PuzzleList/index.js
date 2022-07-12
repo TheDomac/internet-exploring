@@ -6,7 +6,11 @@ import ArrowBack from "../../common/components/ArrowBack";
 import puzzles from "../../common/data/puzzles.json";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
-import { Wrapper, PuzzleBox, PuzzleLink } from "../../common/components/PuzzleList.styled";
+import {
+  Wrapper,
+  PuzzleBox,
+  PuzzleLink,
+} from "../../common/components/PuzzleList.styled";
 
 import { PuzzleRow, PuzzleTitle, TextLink } from "./index.styled";
 

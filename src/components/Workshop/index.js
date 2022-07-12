@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { useContext } from "react";
+import { useContext, Fragment } from "react";
 
 import { motion } from "framer-motion";
 
@@ -9,10 +9,13 @@ import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 import { AuthContext } from "../../common/services/AuthContext";
-import { PuzzleBox, Wrapper, PuzzleLink } from "../../common/components/PuzzleList.styled";
-import workshopPuzzles from "../../common/data/workshopPuzzles.json"
-import { LOCAL_STORAGE_KEYS
-} from "../../common/consts";
+import {
+  PuzzleBox,
+  Wrapper,
+  PuzzleLink,
+} from "../../common/components/PuzzleList.styled";
+import workshopPuzzles from "../../common/data/workshopPuzzles.json";
+import { LOCAL_STORAGE_KEYS } from "../../common/consts";
 
 const LogOutButton = styled.button`
   cursor: pointer;
@@ -26,6 +29,14 @@ const LogOutButton = styled.button`
   font-family: "Fredoka";
   box-sizing: border-box;
 `;
+
+export const TextLink = styled.a`
+  color: #309d6d;
+  -webkit-text-stroke: 0.5px white;
+  text-decoration: none;
+`;
+
+const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
 
 const Workshop = () => {
   const navigate = useNavigate();
@@ -47,7 +58,12 @@ const Workshop = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
-      {user && <LogOutButton title={user.email} onClick={handleLogOutClick}><span style={{ fontSize: 16}}>Log out</span> <br /> <span style={{ fontSize: 12}}>{user.displayName}</span></LogOutButton>}
+      {user && (
+        <LogOutButton title={user.email} onClick={handleLogOutClick}>
+          <span style={{ fontSize: 16 }}>Log out</span> <br />{" "}
+          <span style={{ fontSize: 12 }}>{user.displayName}</span>
+        </LogOutButton>
+      )}
       <Wrapper
         as={motion.div}
         initial={{ opacity: 0 }}
@@ -85,11 +101,10 @@ const Workshop = () => {
         </div>
 
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {workshopPuzzles.map((puzzle) => (
-          <PuzzleLink
-          key={puzzle.id}
-          to={`/play/workshop/${puzzle.id}`}
-        >
+          {workshopPuzzles.map((puzzle) => (
+            <div key={puzzle.id}>
+              {console.log(puzzle)}
+              <PuzzleLink to={`/play/workshop/${puzzle.id}`}>
                 <PuzzleBox
                   $isSolved={workshopSolvedPuzzlesIDsParsed.includes(puzzle.id)}
                   title={puzzle.name}
@@ -100,8 +115,31 @@ const Workshop = () => {
                       : puzzle.name}
                   </span>
                 </PuzzleBox>
-                </PuzzleLink>
-              ))}
+              </PuzzleLink>
+              <p
+                title={puzzle.userNickname}
+                style={{
+                  textAlign: "center",
+                  maxWidth: "160px",
+                  margin: "10px",
+                  wordBreak: "break-word",
+                }}
+              >
+                By{" "}
+                {puzzle.userSocialMediaURL ? (
+                  <TextLink
+                    href={addHttps(puzzle.userSocialMediaURL)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {puzzle.userNickname.length > 30 ? `${puzzle.userNickname.slice(0, 30)}...` : puzzle.userNickname}
+                  </TextLink>
+                ) : (
+                  puzzle.userNickname.length > 30 ? `${puzzle.userNickname.slice(0, 30)}...` : puzzle.userNickname
+                )}
+              </p>
+            </div>
+          ))}
         </div>
       </Wrapper>
     </>

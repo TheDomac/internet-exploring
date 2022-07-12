@@ -21,6 +21,7 @@ const Clue = ({
   setDependencyClueId,
   setSelectedClueValueId,
   selectedClueValueId,
+  imageSizeErrorModal,
 }) => {
   const handleSelectClue = () => {
     setSelectedClueId(clue.id);
@@ -117,7 +118,10 @@ const Clue = ({
             updateClue={updateClue}
             clue={clue}
             rebusId={rebus.id}
-            isSelected={selectedClueValueId === clueValue.id && selectedClueId === clue.id}
+            imageSizeErrorModal={imageSizeErrorModal}
+            isSelected={
+              selectedClueValueId === clueValue.id && selectedClueId === clue.id
+            }
           />
         ))}
         <AddClueButton size={50} onClick={handleAddClueValue}>

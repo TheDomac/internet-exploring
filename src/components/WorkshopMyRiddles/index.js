@@ -30,8 +30,9 @@ const LogOutButton = styled.button`
 
 const successAlertText = {
   [RIDDLE_STATUSES.DRAFT]: "Riddle saved successfully.",
-  [RIDDLE_STATUSES.NEEDS_APPROVAL]: "Riddle submitted for review successfully. You can send an explanation of the riddle to contact@internetexploring.io for faster approval. Make sure that you include the name of the riddle.",
-}
+  [RIDDLE_STATUSES.NEEDS_APPROVAL]:
+    "Riddle submitted for review successfully. You can send an explanation of the riddle to contact@internetexploring.io for faster approval. Make sure that you include the name of the riddle.",
+};
 
 const WorkshopMyRiddles = () => {
   const { user, handleLoginClick, handleLogOutClick } = useContext(AuthContext);
@@ -51,7 +52,12 @@ const WorkshopMyRiddles = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
-      {user && <LogOutButton title={user.email} onClick={handleLogOutClick}><span style={{ fontSize: 16}}>Log out</span> <br /> <span style={{ fontSize: 12}}>{user.displayName}</span></LogOutButton>}
+      {user && (
+        <LogOutButton title={user.email} onClick={handleLogOutClick}>
+          <span style={{ fontSize: 16 }}>Log out</span> <br />{" "}
+          <span style={{ fontSize: 12 }}>{user.displayName}</span>
+        </LogOutButton>
+      )}
       <Wrapper
         as={motion.div}
         initial={{ opacity: 0 }}

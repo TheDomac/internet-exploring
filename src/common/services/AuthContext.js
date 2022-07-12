@@ -22,7 +22,7 @@ const AuthProvider = ({ children }) => {
         await getDoc(docRef);
         isPatreonUser.setOn();
       } catch (err) {
-        isPatreonUser.setOff()
+        isPatreonUser.setOff();
       }
     }
   });

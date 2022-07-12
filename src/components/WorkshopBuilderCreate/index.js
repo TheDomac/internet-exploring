@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import {ref, uploadBytes, getDownloadURL} from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 
 import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
@@ -14,7 +14,7 @@ import {
   RIDDLE_STATUSES,
   CATEGORIES,
   workshopCollectionName,
-  clueTypes
+  clueTypes,
 } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
@@ -89,36 +89,38 @@ const WorkshopBuilderCreate = () => {
       saveLoading.setOn();
       saveError.setOff();
 
-    const imageClueValues = getImageClueValues(puzzle.rebuses);
-    const uploadedImages = await uploadImages(imageClueValues, user.uid);
-    const newPuzzle = {
-      ...puzzle,
-      uid: user.uid,
-      status,
-      userNickname,
-      userSocialMediaURL,
-      message: "",
-      category: CATEGORIES.GENERAL,
-      createdAt: serverTimestamp(),
-      updatedAt: serverTimestamp(),
-      rebuses: puzzle.rebuses.map(r => ({
-        ...r,
-        clues: r.clues.map(c => ({
-          ...c,
-          clueValues: c.clueValues.map((cv) => {
-            if (cv.type !== clueTypes.IMAGE) {
-              return cv;
-            }
-            const foundUploadedImage = uploadedImages.find(icv => icv.id === cv.id).downloadURL
-            return {
-              ...cv,
-              value: foundUploadedImage
-            }
-          })
-        }))
-      }))
-    };
-    
+      const imageClueValues = getImageClueValues(puzzle.rebuses);
+      const uploadedImages = await uploadImages(imageClueValues, user.uid);
+      const newPuzzle = {
+        ...puzzle,
+        uid: user.uid,
+        status,
+        userNickname,
+        userSocialMediaURL,
+        message: "",
+        category: CATEGORIES.GENERAL,
+        createdAt: serverTimestamp(),
+        updatedAt: serverTimestamp(),
+        rebuses: puzzle.rebuses.map((r) => ({
+          ...r,
+          clues: r.clues.map((c) => ({
+            ...c,
+            clueValues: c.clueValues.map((cv) => {
+              if (cv.type !== clueTypes.IMAGE) {
+                return cv;
+              }
+              const foundUploadedImage = uploadedImages.find(
+                (icv) => icv.id === cv.id
+              ).downloadURL;
+              return {
+                ...cv,
+                value: foundUploadedImage,
+              };
+            }),
+          })),
+        })),
+      };
+
       await addDoc(collection(db, workshopCollectionName), newPuzzle);
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
@@ -128,6 +130,11 @@ const WorkshopBuilderCreate = () => {
       saveLoading.setOff();
     }
   };
+
+  const handleCloseModal = () => {
+    saveModal.setOff();
+    saveError.setOff();
+  }
 
   if (!puzzle) {
     return null;
@@ -145,7 +152,8 @@ const WorkshopBuilderCreate = () => {
     );
   }
 
-  const canCreateAsDraft = puzzle.status === RIDDLE_STATUSES.DRAFT || isPatreonUser.isOn;
+  const canCreateAsDraft =
+    puzzle.status === RIDDLE_STATUSES.DRAFT || isPatreonUser.isOn;
 
   return (
     <>
@@ -153,7 +161,15 @@ const WorkshopBuilderCreate = () => {
         <Modal isModalShown={saveModal.isOn}>
           <Text>{!user && "Please log in first to save your riddle."}</Text>
           {saveError.isOn ? (
-            <Alert>Sorry, something went wrong.</Alert>
+            <>
+            <Alert style={{ marginBottom: "7px"}}>Sorry, something went wrong.</Alert>
+            <Button
+                  style={{ fontSize: 16, width: "100%", maxWidth: "100%" }}
+                  onClick={handleCloseModal}
+                >
+                  Close
+                </Button>
+            </>
           ) : (
             <>
               {user && (
@@ -175,14 +191,16 @@ const WorkshopBuilderCreate = () => {
               <ButtonsWrapper>
                 {user ? (
                   <>
-                    {canCreateAsDraft && <Button
-                      disabled={saveLoading.isOn || !userNickname}
-                      name="draft"
-                      onClick={handleSave}
-                      style={{ marginRight: "10px", fontSize: 16 }}
-                    >
-                      Save as draft
-                    </Button>}
+                    {canCreateAsDraft && (
+                      <Button
+                        disabled={saveLoading.isOn || !userNickname}
+                        name="draft"
+                        onClick={handleSave}
+                        style={{ marginRight: "10px", fontSize: 16 }}
+                      >
+                        Save as draft
+                      </Button>
+                    )}
                     <Button
                       disabled={saveLoading.isOn || !userNickname}
                       onClick={handleSave}
@@ -199,7 +217,11 @@ const WorkshopBuilderCreate = () => {
                     Log in
                   </Button>
                 )}
-                <Button style={{ fontSize: 16 }} disabled={saveLoading.isOn} onClick={saveModal.setOff}>
+                <Button
+                  style={{ fontSize: 16 }}
+                  disabled={saveLoading.isOn}
+                  onClick={handleCloseModal}
+                >
                   Cancel
                 </Button>
               </ButtonsWrapper>

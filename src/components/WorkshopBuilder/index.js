@@ -31,6 +31,7 @@ const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
   const [validationModal, setValidationModal] = useState(null);
   const [helpModal, setHelpModal] = useState(null);
   const exitModal = useToggle();
+  const imageSizeErrorModal = useToggle();
 
   const handleRebusTabClick = (rebusId) => () => {
     setSelectedClueId(null);
@@ -138,6 +139,12 @@ const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
           onClose={() => setValidationModal(null)}
         />
       </Modal>
+      <Modal isModalShown={imageSizeErrorModal.isOn}>
+        <ModalInfo
+          text="Image size too large (max 1MB)."
+          onClose={imageSizeErrorModal.setOff}
+        />
+      </Modal>
       <Modal widthLimit={false} isModalShown={Boolean(helpModal)}>
         <ModalInfo onClose={() => setHelpModal(null)}>
           <div style={{ marginBottom: "10px", textAlign: "center" }}>
@@ -193,6 +200,7 @@ const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
             setDependencyClueId={setDependencyClueId}
             setSelectedClueValueId={setSelectedClueValueId}
             selectedClueValueId={selectedClueValueId}
+            imageSizeErrorModal={imageSizeErrorModal}
           />
         </Content>
         <Sidebar

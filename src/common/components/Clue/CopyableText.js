@@ -16,10 +16,10 @@ const CopySpan = styled.span`
     background: rgba(255, 255, 255, 0.2);
   }
 
-  ${({ large }) => (large ? "font-size: 25px" : "")}
+  ${({ fontSize }) => `font-size: ${fontSize};`}
 `;
 
-const CopyableText = ({ text, displayText = text, large }) => {
+const CopyableText = ({ text, displayText = text, fontSize = "25px" }) => {
   const { handleCopyClick } = useContext(PuzzleContext);
 
   const handleClick = async () => {
@@ -31,7 +31,7 @@ const CopyableText = ({ text, displayText = text, large }) => {
 
   return (
     <div>
-      <CopySpan onClick={handleClick} large={large}>
+      <CopySpan onClick={handleClick} fontSize={fontSize}>
         {displayText}
       </CopySpan>
     </div>

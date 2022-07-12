@@ -1,1 +1,50 @@
-{"id":"IAJELwbuOGi5yPWqgCoJ","updatedAt":{"seconds":1657300917,"nanoseconds":790000000},"message":"kurac","rebuses":[{"clues":[{"dependsOn":[],"id":"ff117d4e-e7eb-4c19-baae-052424ecc027","style":{"width":"calc(33% - 10px)"},"helperText":"","solutionInfo":{"solvedText":"","type":"text","possibleSolutions":[]},"clueValues":[{"id":"f0cbdc87-56af-458f-8efa-631147a9bc91","subtext":"","type":"text","style":{"width":"calc(100% - 10px)"},"value":"test"}],"clueGroup":0,"subtext":""}],"id":"4ef515dc-22f4-4009-83c0-2b43ca634fab","solutionInfo":{"solvedText":"test","type":"text","possibleSolutions":[{"id":"0aa07686-25a5-4cd0-9769-1ab5ca63b49f","value":"test"}]},"style":{}}],"status":"needs_approval","category":"general","name":"test","createdAt":{"seconds":1657300917,"nanoseconds":790000000},"userNickname":"Reactor","uid":"9O2G5r2t9BYVPRqjhXQlwaCNPyE2","order":0,"userSocialMediaURL":"www.reactor.studio"}
+{
+  "id": "IAJELwbuOGi5yPWqgCoJ",
+  "updatedAt": { "seconds": 1657300917, "nanoseconds": 790000000 },
+  "message": "kurac",
+  "rebuses": [
+    {
+      "clues": [
+        {
+          "dependsOn": [],
+          "id": "ff117d4e-e7eb-4c19-baae-052424ecc027",
+          "style": { "width": "calc(33% - 10px)" },
+          "helperText": "",
+          "solutionInfo": {
+            "solvedText": "",
+            "type": "text",
+            "possibleSolutions": []
+          },
+          "clueValues": [
+            {
+              "id": "f0cbdc87-56af-458f-8efa-631147a9bc91",
+              "subtext": "",
+              "type": "text",
+              "style": { "width": "calc(100% - 10px)" },
+              "value": "test"
+            }
+          ],
+          "clueGroup": 0,
+          "subtext": ""
+        }
+      ],
+      "id": "4ef515dc-22f4-4009-83c0-2b43ca634fab",
+      "solutionInfo": {
+        "solvedText": "test",
+        "type": "text",
+        "possibleSolutions": [
+          { "id": "0aa07686-25a5-4cd0-9769-1ab5ca63b49f", "value": "test" }
+        ]
+      },
+      "style": {}
+    }
+  ],
+  "status": "needs_approval",
+  "category": "general",
+  "name": "test",
+  "createdAt": { "seconds": 1657300917, "nanoseconds": 790000000 },
+  "userNickname": "Reactor",
+  "uid": "9O2G5r2t9BYVPRqjhXQlwaCNPyE2",
+  "order": 0,
+  "userSocialMediaURL": "www.reactor.studio"
+}

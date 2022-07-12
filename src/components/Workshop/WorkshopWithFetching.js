@@ -22,7 +22,10 @@ import { useToggle } from "../../common/services/useToggle";
 import { PuzzleBox, Wrapper } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
 import Alert from "../../common/components/Alert.styled";
-import { LOCAL_STORAGE_KEYS, workshopCollectionName } from "../../common/consts";
+import {
+  LOCAL_STORAGE_KEYS,
+  workshopCollectionName,
+} from "../../common/consts";
 import { db } from "../../common/firebase";
 
 const LogOutButton = styled.button`
@@ -49,25 +52,25 @@ const Workshop = () => {
   const workshopPuzzlesLastRef = useRef(null);
   const isLoadMoreButtonShown = useToggle(true);
 
-const LIMIT = 15;
+  const LIMIT = 15;
 
   const fetchWorkshopPuzzles = async () => {
     try {
       workshopPuzzlesLoading.setOn();
-      const q = workshopPuzzlesLastRef.current ? 
-      query(
-        collection(db, workshopCollectionName),
-        where("status", "==", "done"),
-        orderBy("updatedAt", "desc"),
-        startAfter(workshopPuzzlesLastRef.current),
-        limit(LIMIT),
-      ) :
-      query(
-        collection(db, workshopCollectionName),
-        where("status", "==", "done"),
-        orderBy("updatedAt", "desc"),
-        limit(LIMIT),
-      );
+      const q = workshopPuzzlesLastRef.current
+        ? query(
+            collection(db, workshopCollectionName),
+            where("status", "==", "done"),
+            orderBy("updatedAt", "desc"),
+            startAfter(workshopPuzzlesLastRef.current),
+            limit(LIMIT)
+          )
+        : query(
+            collection(db, workshopCollectionName),
+            where("status", "==", "done"),
+            orderBy("updatedAt", "desc"),
+            limit(LIMIT)
+          );
 
       const querySnapshot = await getDocs(q);
       const newFetchedPuzzles = [];
@@ -88,7 +91,7 @@ const LIMIT = 15;
         isLoadMoreButtonShown.setOff();
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
       workshopPuzzlesError.setOn();
       workshopPuzzlesLoading.setOff();
     }
@@ -119,7 +122,12 @@ const LIMIT = 15;
       <Link to="/play">
         <ArrowBack />
       </Link>
-      {user && <LogOutButton title={user.email} onClick={handleLogOutClick}><span style={{ fontSize: 16}}>Log out</span> <br /> <span style={{ fontSize: 12}}>{user.displayName}</span></LogOutButton>}
+      {user && (
+        <LogOutButton title={user.email} onClick={handleLogOutClick}>
+          <span style={{ fontSize: 16 }}>Log out</span> <br />{" "}
+          <span style={{ fontSize: 12 }}>{user.displayName}</span>
+        </LogOutButton>
+      )}
       <Wrapper
         as={motion.div}
         initial={{ opacity: 0 }}
