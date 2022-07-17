@@ -97,7 +97,6 @@ const List = () => {
         isLoadMoreButtonShown.setOff();
       }
     } catch (error) {
-      console.log(error);
       myWorkshopPuzzlesError.setOn();
       myWorkshopPuzzlesLoading.setOff();
     }

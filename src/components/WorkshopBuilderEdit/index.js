@@ -147,7 +147,6 @@ const WorkshopBuilderEdit = () => {
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {
-      console.log(error);
       saveError.setOn();
       saveLoading.setOff();
     }

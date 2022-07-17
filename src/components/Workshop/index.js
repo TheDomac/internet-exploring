@@ -103,7 +103,6 @@ const Workshop = () => {
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {workshopPuzzles.map((puzzle) => (
             <div key={puzzle.id}>
-              {console.log(puzzle)}
               <PuzzleLink to={`/play/workshop/${puzzle.id}`}>
                 <PuzzleBox
                   $isSolved={workshopSolvedPuzzlesIDsParsed.includes(puzzle.id)}

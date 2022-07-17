@@ -29,6 +29,7 @@ const ModalContent = styled.div`
 export const ButtonsWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 `;
 
 export const Text = styled.p`

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import ArrowBack from "../../common/components/ArrowBack";
+import { BUY_ME_A_COFFEE_URL } from "../../common/consts";
 import puzzles from "../../common/data/puzzles.json";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
@@ -89,7 +90,7 @@ const PuzzleList = () => {
         <br />
         If you like the game you can{" "}
         <TextLink
-          href="https://www.buymeacoffee.com/internetexp"
+          href={BUY_ME_A_COFFEE_URL}
           target="_blank"
         >
           buy me a coffee

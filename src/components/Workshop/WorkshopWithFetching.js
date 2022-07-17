@@ -91,7 +91,6 @@ const Workshop = () => {
         isLoadMoreButtonShown.setOff();
       }
     } catch (error) {
-      console.log(error);
       workshopPuzzlesError.setOn();
       workshopPuzzlesLoading.setOff();
     }

@@ -1,20 +1,20 @@
 import { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 
 import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import getImageClueValues from "../../common/services/getImageClueValues";
 import uploadImages from "../../common/services/uploadImages";
-import { db, storage } from "../../common/firebase";
+import { db } from "../../common/firebase";
 import {
   LOCAL_STORAGE_KEYS,
   RIDDLE_STATUSES,
   CATEGORIES,
   workshopCollectionName,
   clueTypes,
+  PATREON_URL
 } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
@@ -36,6 +36,12 @@ const StyledInput = styled.input`
   border-bottom: 2px solid #355e65;
   margin-bottom: 15px;
   text-align: center;
+`;
+
+const TextLink = styled.a`
+  color: #309d6d;
+  -webkit-text-stroke: 0.5px white;
+  text-decoration: none;
 `;
 
 const initialUserNickname = localStorage.getItem(
@@ -125,7 +131,6 @@ const WorkshopBuilderCreate = () => {
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {
-      console.log(error);
       saveError.setOn();
       saveLoading.setOff();
     }
@@ -178,7 +183,7 @@ const WorkshopBuilderCreate = () => {
                     type="text"
                     value={userNickname}
                     onChange={handleUserNicknameChange}
-                    placeholder="Your nickname"
+                    placeholder="Sign your riddle (nickame)"
                   />
                   <StyledInput
                     type="text"
@@ -191,34 +196,42 @@ const WorkshopBuilderCreate = () => {
               <ButtonsWrapper>
                 {user ? (
                   <>
-                    {canCreateAsDraft && (
-                      <Button
-                        disabled={saveLoading.isOn || !userNickname}
-                        name="draft"
-                        onClick={handleSave}
-                        style={{ marginRight: "10px", fontSize: 16 }}
-                      >
-                        Save as draft
-                      </Button>
-                    )}
                     <Button
                       disabled={saveLoading.isOn || !userNickname}
                       onClick={handleSave}
-                      style={{ marginRight: "10px", fontSize: 16 }}
+                      style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
                     >
                       Save for review
                     </Button>
+                    {false ? <Button
+                        disabled={saveLoading.isOn || !userNickname}
+                        name="draft"
+                        onClick={handleSave}
+                        style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
+                      >
+                        Save as draft
+                      </Button> : (
+                        <div style={{ width: 140, marginRight: 10, textAlign: "center", color: "#666"}}>Saving as draft<br /> for{" "}
+                        <TextLink
+          rel="noreferrer"
+          href={PATREON_URL}
+          target="_blank"
+        >
+                        Patreons{" "}
+                        </TextLink>
+                        only</div>
+                      )}
                   </>
                 ) : (
                   <Button
-                    style={{ marginRight: "10px", fontSize: 16 }}
+                    style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
                     onClick={handleLoginClick}
                   >
                     Log in
                   </Button>
                 )}
                 <Button
-                  style={{ fontSize: 16 }}
+                  style={{ fontSize: 16, flex: 1 }}
                   disabled={saveLoading.isOn}
                   onClick={handleCloseModal}
                 >

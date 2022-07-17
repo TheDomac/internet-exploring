@@ -2,10 +2,8 @@ import { clueTypes } from "../../common/consts";
 
 import { StyledClueValue, StyledFileInputLabel } from "./ClueValue.styled";
 import {
-  ButtonGroup,
   DeleteButton,
   StyledInput,
-  StyledSelect,
   Button,
 } from "./index.styled";
 import Image from "../../common/components/Image";
@@ -114,6 +112,7 @@ const ClueValue = ({
             onChange={handleImageValueChange}
           />
           Browse
+          <p style={{ fontSize: 10}}>Max size: 1MB</p>
         </StyledFileInputLabel>
       )}
       {clueValue.type === clueTypes.IMAGE && clueValue.value && (

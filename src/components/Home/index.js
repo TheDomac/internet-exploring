@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { Button } from "../../common/components/Button.styled";
 import { Container } from "../../common/components/Container.styled";
+import { PATREON_URL, REDDIT_URL, BUY_ME_A_COFFEE_URL } from "../../common/consts";
 
 import Logo from "../../images/Logo.png";
 import buyMeACoffeeLogo from "../../images/buyMeACoffee.svg";
@@ -47,7 +48,7 @@ const Home = () => {
       <div style={{ display: "flex", width: "500px", maxWidth: "500px" }}>
         <a
           rel="noreferrer"
-          href="https://www.buymeacoffee.com/internetexp"
+          href={BUY_ME_A_COFFEE_URL}
           target="_blank"
           style={{
             display: "inline-block",
@@ -73,7 +74,7 @@ const Home = () => {
         </a>
         <a
           rel="noreferrer"
-          href="https://www.patreon.com/internetexploring"
+          href={PATREON_URL}
           target="_blank"
           style={{
             display: "inline-block",
@@ -103,7 +104,7 @@ const Home = () => {
         </a>
         <a
           rel="noreferrer"
-          href="https://www.reddit.com/r/internetexploring/"
+          href={REDDIT_URL}
           target="_blank"
           style={{ display: "inline-block", width: "100%" }}
         >
