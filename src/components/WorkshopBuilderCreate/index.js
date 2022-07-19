@@ -203,7 +203,7 @@ const WorkshopBuilderCreate = () => {
                     >
                       Save for review
                     </Button>
-                    {false ? <Button
+                    {canCreateAsDraft ? <Button
                         disabled={saveLoading.isOn || !userNickname}
                         name="draft"
                         onClick={handleSave}
