@@ -41,6 +41,7 @@ const WorkshopPlayPage = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const localPuzzle = useMemo(
     () => workshopPuzzles.find((p) => p.id === riddleId),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
 

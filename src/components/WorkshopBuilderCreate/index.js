@@ -53,7 +53,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
 
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user, handleLoginClick, isPatreonUser } = useContext(AuthContext);
+  const { user, handleLoginClick, /*isPatreonUser*/ } = useContext(AuthContext);
 
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -157,10 +157,10 @@ const WorkshopBuilderCreate = () => {
     );
   }
 
-  const canCreateAsDraft =
-    puzzle.status === RIDDLE_STATUSES.DRAFT || isPatreonUser.isOn;
+  // const canCreateAsDraft = isPatreonUser.isOn;
+  const canCreateAsDraft = true;
 
-  return (
+    return (
     <>
       {saveModal.isOn && (
         <Modal isModalShown={saveModal.isOn}>
