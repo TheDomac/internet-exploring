@@ -4,6 +4,8 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 import { GoogleAuthProvider } from "firebase/auth";
+import { getStripePayments } from "@stripe/firestore-stripe-payments";
+
 
 export const provider = new GoogleAuthProvider();
 
@@ -25,6 +27,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
+export const payments = getStripePayments(firebaseApp, {
+  productsCollection: "products",
+  customersCollection: "customers",
+});
+
 getAnalytics(firebaseApp);
 
 export const db = getFirestore();

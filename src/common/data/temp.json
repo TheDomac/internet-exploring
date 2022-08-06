@@ -1,43 +1,48 @@
 {
-  "name": "Stepping into surreal",
+  "name": "Do you speak english?",
   "order": 0,
   "rebuses": [
     {
-      "id": "8bc5f485-fab1-40ea-a0b3-d26ce8cd9485",
+      "id": "8a0328a8-163c-411e-ae44-e46b25ab1eb6",
       "clues": [
         {
-          "id": "76ecd135-8901-451f-89ba-8927c8b3cbe9",
+          "id": "0cdcabe3-7887-4b3a-a82b-f348ba9df827",
           "clueValues": [
             {
-              "id": "4a666386-0296-4743-884c-2fa847f66ab4",
-              "value": "kateUpton.png",
-              "type": "image",
+              "id": "4a85fc08-08cb-4177-aa83-c8e6d1738fed",
+              "value": "HollywoodWeighingScale",
+              "type": "customComponent",
               "subtext": "",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
-          "helperText": "Use image search to find the name of this American model.",
+          "helperText": "Find out the weights of circle, square and triangle balls. Start by comparing them to grey balls.",
           "subtext": "",
           "clueGroup": 0,
           "style": {
-            "width": "calc(25% - 10px)"
+            "width": "calc(50% - 10px)"
           },
           "dependsOn": [],
           "solutionInfo": {
             "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
+            "possibleSolutions": [
+              {
+                "id": "412445e0-c433-48c5-a8ba-7baf3d868bcd",
+                "value": "2663"
+              }
+            ],
+            "solvedText": "2663"
           }
         },
         {
-          "id": "f76ba087-8565-4544-ab24-497d2971c6ef",
+          "id": "860d316f-e5b3-45c4-ad90-3c632955fd33",
           "clueValues": [
             {
-              "id": "208195d1-5396-4b08-9d47-9bada155d528",
-              "value": "➜",
-              "type": "text",
+              "id": "4417f627-742e-46c3-8b9f-0c46a50c2a72",
+              "value": "star.png",
+              "type": "image",
               "subtext": "",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -48,198 +53,53 @@
           "subtext": "",
           "clueGroup": 0,
           "style": {
-            "width": "calc(5% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "425432ca-549e-40b0-8161-4b9424b80f46",
-          "clueValues": [
-            {
-              "id": "140da9b3-b6ef-41bd-9330-1b1200adbe8f",
-              "value": "kateMiddleton.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Use image search to find the name of this member of the royal family.",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(25% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "eeaadfd0-f0ad-464a-8ad2-c7eb3bd96dc5",
-          "clueValues": [
-            {
-              "id": "db8f3b09-3819-4382-af2b-2a2c2b3deb31",
-              "value": "➜",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(5% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "6f07803e-c459-425d-8502-4ffc00730c6a",
-          "clueValues": [
-            {
-              "id": "696dc4bc-848f-4174-be53-c0bb4b790793",
-              "value": "direction.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "These two women have directions in them. Find the third direction.",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(25% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        }
-      ],
-      "style": {},
-      "solutionInfo": {
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "id": "d425b529-d0eb-405c-b988-8c7dd1ea880f",
-            "value": "Down"
-          },
-          {
-            "id": "dce2cf8e-ce5c-4b24-81a5-a8b8eee40afc",
-            "value": "Kate Downton"
-          },
-          {
-            "id": "ece691a8-e63e-461b-b66a-0e4f456986bb",
-            "value": "Downton"
-          }
-        ],
-        "solvedText": "Down"
-      }
-    },
-    {
-      "id": "8720c364-e2d7-4f63-bce1-42837cd04e39",
-      "clues": [
-        {
-          "id": "a4e58f00-410e-4d55-a7b7-0789090dd200",
-          "clueValues": [
-            {
-              "id": "30f1855c-6c0a-469c-a461-b186482ff9c3",
-              "value": "kevinHart.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Use image search to find this actor born in 1979.",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
             "width": "calc(50% - 10px)"
           },
           "dependsOn": [],
           "solutionInfo": {
             "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
+            "possibleSolutions": [
+              {
+                "id": "d37e4a78-f013-46a9-8078-20f8672d1f09",
+                "value": "Star"
+              },
+              {
+                "id": "d37e4a78-f013-46a9-8078-20f8ttttf09",
+                "value": "Stars"
+              }
+            ],
+            "solvedText": "Star"
           }
         },
         {
-          "id": "8b16932e-d444-490f-874c-989f64538e17",
+          "id": "6c65b125-e96d-4179-8e1d-31cc6fe2022c",
           "clueValues": [
             {
-              "id": "12a30856-db7c-43b1-b281-ea291debbd99",
-              "value": "ginniferGoodwin.png",
+              "id": "3a606b2a-3c99-4bfe-a0cc-46b9f772450e",
+              "value": "actor.png",
               "type": "image",
-              "subtext": "",
+              "subtext": "Hollywood",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
-          "helperText": "Use image search to find this actress born in 1978.",
+          "helperText": "Who has the 2663rd star on the Hollywood Walk of Fame?",
           "subtext": "",
           "clueGroup": 0,
           "style": {
             "width": "calc(50% - 10px)"
           },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "3db8193f-bc1f-430f-8934-207f9f2f86c3",
-          "clueValues": [
+          "dependsOn": [
             {
-              "id": "5610e5d0-3413-4185-b7c9-96cb0cbcf0fa",
-              "value": "sound.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(50% - 10px)"
-              }
+              "id": "15a1a19a-0ce1-474b-b4d9-333b3837a610",
+              "value": "0cdcabe3-7887-4b3a-a82b-f348ba9df827"
             },
             {
-              "id": "4b375170-8391-44fd-996b-cbc9c333ca6d",
-              "value": "whichAnimal.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(50% - 10px)"
-              }
+              "id": "e637d8c9-9824-402f-aa27-8c29bf092a37",
+              "value": "860d316f-e5b3-45c4-ad90-3c632955fd33"
             }
           ],
-          "helperText": "Both actors are also voice actors. Both actors played the role of an animal. Which one?",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
           "solutionInfo": {
             "type": "text",
             "possibleSolutions": [],
@@ -252,163 +112,11 @@
         "type": "text",
         "possibleSolutions": [
           {
-            "id": "2e54bf2a-6b97-43ed-8f9b-eeab9234bc7c",
-            "value": "Rabbit"
-          },
-          {
-            "id": "1c4c1085-f496-40f3-846c-83b314a88667",
-            "value": "Bunny"
+            "id": "815dbdb7-01a5-446a-b599-574d83926169",
+            "value": "Anne Hathaway"
           }
         ],
-        "solvedText": "Rabbit"
-      }
-    },
-    {
-      "id": "9af52ad5-82da-4ed0-8943-ee3a1f72c8f7",
-      "clues": [
-        {
-          "id": "1e328936-0211-4060-aea0-c2c10c7db4f4",
-          "clueValues": [
-            {
-              "id": "cb1f23ed-2f37-42ad-9a78-1c6a4dee5e54",
-              "value": "Andy Dufresne",
-              "type": "text",
-              "subtext": "made it",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "It took him a long time.",
-          "subtext": "",
-          "clueGroup": 1,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "10c1d3f4-744b-4f64-8ffd-875cbfdad023",
-          "clueValues": [
-            {
-              "id": "1112c885-68c4-4489-bf5c-edfc8a1350db",
-              "value": "The Dark Knight",
-              "type": "text",
-              "subtext": "climbed it",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "\"Deshi Basara\"",
-          "subtext": "",
-          "clueGroup": 2,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "bf38cb35-87f1-4de7-b077-dd109e70fc05",
-          "clueValues": [
-            {
-              "id": "dabb3799-d8b3-43c7-aa28-b8503ef21fec",
-              "value": "Joseph Cooper",
-              "type": "text",
-              "subtext": "entered it",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Where was he when he was her ghost?",
-          "subtext": "",
-          "clueGroup": 3,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        }
-      ],
-      "style": {},
-      "solutionInfo": {
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "id": "db5eb187-6157-406c-8c3c-fde84e592177",
-            "value": "Hole"
-          }
-        ],
-        "solvedText": "Hole"
-      }
-    },
-    {
-      "id": "a72319fa-28c5-4e46-95c4-bfbe6868a272",
-      "clues": [
-        {
-          "id": "8d162e5b-55d0-42ce-8258-d50c1e92b821",
-          "clueValues": [
-            {
-              "id": "6dfe4e28-b2a8-4f27-8798-257f733be74b",
-              "value": "Down the rabbit hole",
-              "type": "text",
-              "subtext": "slang origin",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        }
-      ],
-      "style": {},
-      "solutionInfo": {
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "id": "6add2f39-1a73-4703-8c2b-fd35aabd3e72",
-            "value": "Alice in Wonderland"
-          },
-          {
-            "id": "6add2f39-1a73-4703-8aab-fd35aabd3e72",
-            "value": "Alice in the Wonderland"
-          },
-          {
-            "id": "062190a0-07ec-47c3-81b9-4c4965ec3530",
-            "value": "Alice's Adventures in Wonderland"
-          },
-          {
-            "id": "c40da5a4-1677-4ef0-87cb-6e5e05faacf3",
-            "value": "Alice"
-          }
-        ],
-        "solvedText": "Alice in Wonderland"
+        "solvedText": "Anne Hathaway"
       }
     }
   ]

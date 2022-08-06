@@ -7,6 +7,7 @@ import CarCircuits from "./CarCircuits";
 import GuitarCounterXCoordinate from "./GuitarCounterXCoordinate";
 import GuitarCounterYCoordinate from "./GuitarCounterYCoordinate";
 import RichPortWeighingScale from "./RichPortWeighingScale";
+import HollywoodWeighingScale from "./HollywoodWeighingScale";
 
 const customComponentsArray = [
   { name: "PawnWordSearch", Component: PawnWordSearch },
@@ -18,6 +19,7 @@ const customComponentsArray = [
   { name: "GuitarCounterXCoordinate", Component: GuitarCounterXCoordinate },
   { name: "GuitarCounterYCoordinate", Component: GuitarCounterYCoordinate },
   { name: "RichPortWeighingScale", Component: RichPortWeighingScale },
+  { name: "HollywoodWeighingScale", Component: HollywoodWeighingScale },
 ];
 
 export default customComponentsArray;

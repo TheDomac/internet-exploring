@@ -18,10 +18,12 @@ import TempPage from "./components/Temp";
 
 import WorkshopContextProvider from "./common/services/WorkshopContext";
 import WorkshopPlayPage from "./components/WorkshopPlay";
+import PaymentProvider from "./common/services/PaymentContext";
 
 const App = () => {
   return (
     <AuthProvider>
+    <PaymentProvider>
       <WorkshopContextProvider>
         <PuzzleContextProvider>
           <Router>
@@ -53,6 +55,7 @@ const App = () => {
           </Router>
         </PuzzleContextProvider>
       </WorkshopContextProvider>
+    </PaymentProvider>
     </AuthProvider>
   );
 };

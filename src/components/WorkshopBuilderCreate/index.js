@@ -79,62 +79,65 @@ const WorkshopBuilderCreate = () => {
     setUserSocialMediaURL(e.target.value);
   };
 
-  const handleSave = async (e) => {
-    const isDraft = e.target.name === "draft";
-    const status = isDraft
-      ? RIDDLE_STATUSES.DRAFT
-      : RIDDLE_STATUSES.NEEDS_APPROVAL;
+  const handleSave = e => {
+    console.log(puzzle)
+  }
+  // const handleSave = async (e) => {
+  //   const isDraft = e.target.name === "draft";
+  //   const status = isDraft
+  //     ? RIDDLE_STATUSES.DRAFT
+  //     : RIDDLE_STATUSES.NEEDS_APPROVAL;
 
-    localStorage.setItem(LOCAL_STORAGE_KEYS.USER_NICKNAME, userNickname);
-    localStorage.setItem(
-      LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL,
-      userSocialMediaURL
-    );
+  //   localStorage.setItem(LOCAL_STORAGE_KEYS.USER_NICKNAME, userNickname);
+  //   localStorage.setItem(
+  //     LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL,
+  //     userSocialMediaURL
+  //   );
 
-    try {
-      saveLoading.setOn();
-      saveError.setOff();
+  //   try {
+  //     saveLoading.setOn();
+  //     saveError.setOff();
 
-      const imageClueValues = getImageClueValues(puzzle.rebuses);
-      const uploadedImages = await uploadImages(imageClueValues, user.uid);
-      const newPuzzle = {
-        ...puzzle,
-        uid: user.uid,
-        status,
-        userNickname,
-        userSocialMediaURL,
-        message: "",
-        category: CATEGORIES.GENERAL,
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp(),
-        rebuses: puzzle.rebuses.map((r) => ({
-          ...r,
-          clues: r.clues.map((c) => ({
-            ...c,
-            clueValues: c.clueValues.map((cv) => {
-              if (cv.type !== clueTypes.IMAGE) {
-                return cv;
-              }
-              const foundUploadedImage = uploadedImages.find(
-                (icv) => icv.id === cv.id
-              ).downloadURL;
-              return {
-                ...cv,
-                value: foundUploadedImage,
-              };
-            }),
-          })),
-        })),
-      };
+  //     const imageClueValues = getImageClueValues(puzzle.rebuses);
+  //     const uploadedImages = await uploadImages(imageClueValues, user.uid);
+  //     const newPuzzle = {
+  //       ...puzzle,
+  //       uid: user.uid,
+  //       status,
+  //       userNickname,
+  //       userSocialMediaURL,
+  //       message: "",
+  //       category: CATEGORIES.GENERAL,
+  //       createdAt: serverTimestamp(),
+  //       updatedAt: serverTimestamp(),
+  //       rebuses: puzzle.rebuses.map((r) => ({
+  //         ...r,
+  //         clues: r.clues.map((c) => ({
+  //           ...c,
+  //           clueValues: c.clueValues.map((cv) => {
+  //             if (cv.type !== clueTypes.IMAGE) {
+  //               return cv;
+  //             }
+  //             const foundUploadedImage = uploadedImages.find(
+  //               (icv) => icv.id === cv.id
+  //             ).downloadURL;
+  //             return {
+  //               ...cv,
+  //               value: foundUploadedImage,
+  //             };
+  //           }),
+  //         })),
+  //       })),
+  //     };
 
-      await addDoc(collection(db, workshopCollectionName), newPuzzle);
-      saveLoading.setOff();
-      navigate(`/play/workshop/my-riddles?successStatus=${status}`);
-    } catch (error) {
-      saveError.setOn();
-      saveLoading.setOff();
-    }
-  };
+  //     await addDoc(collection(db, workshopCollectionName), newPuzzle);
+  //     saveLoading.setOff();
+  //     navigate(`/play/workshop/my-riddles?successStatus=${status}`);
+  //   } catch (error) {
+  //     saveError.setOn();
+  //     saveLoading.setOff();
+  //   }
+  // };
 
   const handleCloseModal = () => {
     saveModal.setOff();
