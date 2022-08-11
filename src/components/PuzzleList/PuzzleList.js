@@ -6,7 +6,6 @@ import ArrowBack from "../../common/components/ArrowBack";
 import { BUY_ME_A_COFFEE_URL } from "../../common/consts";
 import puzzles from "../../common/data/puzzles.json";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
-import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import {
   Wrapper,
   PuzzleBox,
@@ -18,29 +17,12 @@ import { PuzzleRow, PuzzleTitle, TextLink } from "./index.styled";
 const PuzzleList = () => {
   const {
     puzzlesSolvingSync,
-    areSolutionsHidden,
-    handleToggleAreSolutionsHidden,
   } = useContext(PuzzleContext);
 
   const sortedPuzzles = puzzles.sort((a, b) => (a.order > b.order ? 1 : -1));
 
   return (
     <Wrapper as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          marginBottom: "7px",
-        }}
-        onClick={handleToggleAreSolutionsHidden}
-      >
-        <CheckboxButton
-          $isChecked={areSolutionsHidden.isOn}
-          style={{ borderRadius: "10px", width: "170px" }}
-        >
-          {areSolutionsHidden.isOn ? "Show" : "Hide"} solved solutions
-        </CheckboxButton>
-      </div>
       {sortedPuzzles.map((puzzle) => (
         <PuzzleRow key={puzzle.id}>
           <PuzzleTitle>{puzzle.name}</PuzzleTitle>
@@ -59,7 +41,6 @@ const PuzzleList = () => {
               );
             });
 
-            const isTextShown = isSolved && !areSolutionsHidden.isOn;
             return (
               <PuzzleLink
                 key={rebus.id}
@@ -72,8 +53,8 @@ const PuzzleList = () => {
                     !areAllPreviousRebusesSolved
                   }
                 >
-                  <span style={{ fontSize: isTextShown ? 20 : 40 }}>
-                    {isTextShown ? rebus.solutionInfo.solvedText : "?"}
+                  <span style={{ fontSize: isSolved ? 20 : 40 }}>
+                    {isSolved ? rebus.solutionInfo.solvedText : "?"}
                   </span>
                 </PuzzleBox>
               </PuzzleLink>

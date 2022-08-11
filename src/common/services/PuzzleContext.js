@@ -201,15 +201,6 @@ const PuzzleContextProvider = ({ children }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [puzzleSolvingState]);
 
-  const handleToggleAreSolutionsHidden = () => {
-    const newAreSolutionsHidden = !areSolutionsHidden.isOn;
-    areSolutionsHidden.set(newAreSolutionsHidden);
-    localStorage.setItem(
-      LOCAL_STORAGE_KEYS.ARE_ANSWERS_HIDDEN,
-      newAreSolutionsHidden
-    );
-  };
-
   const value = {
     puzzle,
     initPuzzle,
@@ -235,7 +226,6 @@ const PuzzleContextProvider = ({ children }) => {
     updateClueMaintenance,
     updateRebusMaintenance,
     areSolutionsHidden,
-    handleToggleAreSolutionsHidden,
   };
 
   return (
