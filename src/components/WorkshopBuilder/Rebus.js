@@ -19,7 +19,7 @@ const Rebus = ({
   setDependencyClueId,
   setSelectedClueValueId,
   selectedClueValueId,
-  imageSizeErrorModal
+  imageSizeErrorModal,
 }) => {
   const [deleteClueId, setDeleteClueId] = useState(null);
 

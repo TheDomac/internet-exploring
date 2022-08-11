@@ -14,7 +14,7 @@ import {
   CATEGORIES,
   workshopCollectionName,
   clueTypes,
-  PATREON_URL
+  PATREON_URL,
 } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
@@ -53,7 +53,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
 
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user, handleLoginClick, /*isPatreonUser*/ } = useContext(AuthContext);
+  const { user, handleLoginClick /*isPatreonUser*/ } = useContext(AuthContext);
 
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -66,7 +66,6 @@ const WorkshopBuilderCreate = () => {
     initialUserSocialMediaURL || ""
   );
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     initPuzzle();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -142,7 +141,7 @@ const WorkshopBuilderCreate = () => {
   const handleCloseModal = () => {
     saveModal.setOff();
     saveError.setOff();
-  }
+  };
 
   if (!puzzle) {
     return null;
@@ -163,20 +162,22 @@ const WorkshopBuilderCreate = () => {
   // const canCreateAsDraft = isPatreonUser.isOn;
   const canCreateAsDraft = true;
 
-    return (
+  return (
     <>
       {saveModal.isOn && (
         <Modal isModalShown={saveModal.isOn}>
           <Text>{!user && "Please log in first to save your riddle."}</Text>
           {saveError.isOn ? (
             <>
-            <Alert style={{ marginBottom: "7px"}}>Sorry, something went wrong.</Alert>
-            <Button
-                  style={{ fontSize: 16, width: "100%", maxWidth: "100%" }}
-                  onClick={handleCloseModal}
-                >
-                  Close
-                </Button>
+              <Alert style={{ marginBottom: "7px" }}>
+                Sorry, something went wrong.
+              </Alert>
+              <Button
+                style={{ fontSize: 16, width: "100%", maxWidth: "100%" }}
+                onClick={handleCloseModal}
+              >
+                Close
+              </Button>
             </>
           ) : (
             <>
@@ -206,24 +207,36 @@ const WorkshopBuilderCreate = () => {
                     >
                       Save for review
                     </Button>
-                    {canCreateAsDraft ? <Button
+                    {canCreateAsDraft ? (
+                      <Button
                         disabled={saveLoading.isOn || !userNickname}
                         name="draft"
                         onClick={handleSave}
                         style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
                       >
                         Save as draft
-                      </Button> : (
-                        <div style={{ width: 140, marginRight: 10, textAlign: "center", color: "#666"}}>Saving as draft<br /> for{" "}
+                      </Button>
+                    ) : (
+                      <div
+                        style={{
+                          width: 140,
+                          marginRight: 10,
+                          textAlign: "center",
+                          color: "#666",
+                        }}
+                      >
+                        Saving as draft
+                        <br /> for{" "}
                         <TextLink
-          rel="noreferrer"
-          href={PATREON_URL}
-          target="_blank"
-        >
-                        Patreons{" "}
+                          rel="noreferrer"
+                          href={PATREON_URL}
+                          target="_blank"
+                        >
+                          Patreons{" "}
                         </TextLink>
-                        only</div>
-                      )}
+                        only
+                      </div>
+                    )}
                   </>
                 ) : (
                   <Button

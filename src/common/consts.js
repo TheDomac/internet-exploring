@@ -3,7 +3,7 @@ export const workshopCollectionName =
     `REACT_APP_COLLECTION_${process.env.REACT_APP_STAGE.toUpperCase()}`
   ];
 
-  export const toBeDeletedCollectionName =
+export const toBeDeletedCollectionName =
   process.env[
     `REACT_APP_TO_BE_DELETED_${process.env.REACT_APP_STAGE.toUpperCase()}`
   ];
@@ -26,9 +26,9 @@ export const projects = {
   ELECTRON: "electron",
 };
 
-export const PATREON_URL = "https://www.patreon.com/internetexploring"
-export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/"
-export const BUY_ME_A_COFFEE_URL = "https://www.buymeacoffee.com/internetexp"
+export const PATREON_URL = "https://www.patreon.com/internetexploring";
+export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
+export const BUY_ME_A_COFFEE_URL = "https://www.buymeacoffee.com/internetexp";
 
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",

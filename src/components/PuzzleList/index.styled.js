@@ -18,7 +18,7 @@ export const PuzzleTitle = styled.div`
   margin-right: 11px;
 `;
 
-export const TextLink = styled.a`
+export const TextLink = styled.span`
   color: #309d6d;
   -webkit-text-stroke: 0.5px white;
 `;

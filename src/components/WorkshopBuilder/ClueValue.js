@@ -1,11 +1,7 @@
 import { clueTypes } from "../../common/consts";
 
 import { StyledClueValue, StyledFileInputLabel } from "./ClueValue.styled";
-import {
-  DeleteButton,
-  StyledInput,
-  Button,
-} from "./index.styled";
+import { DeleteButton, StyledInput, Button } from "./index.styled";
 import Image from "../../common/components/Image";
 
 const ClueValue = ({
@@ -64,7 +60,7 @@ const ClueValue = ({
           cv.id === clueValue.id ? { ...cv, value: imageObjectURL } : cv
         ),
       };
-  
+
       updateClue({ rebusId, clueId: clue.id, newClue });
     }
   };
@@ -112,7 +108,7 @@ const ClueValue = ({
             onChange={handleImageValueChange}
           />
           Browse
-          <p style={{ fontSize: 10}}>Max size: 1MB</p>
+          <p style={{ fontSize: 10 }}>Max size: 1MB</p>
         </StyledFileInputLabel>
       )}
       {clueValue.type === clueTypes.IMAGE && clueValue.value && (

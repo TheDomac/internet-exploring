@@ -82,18 +82,23 @@ const PuzzleList = () => {
         </PuzzleRow>
       ))}
       <p style={{ textAlign: "center" }}>
-        This list is constantly getting updated. Check out{" "}
-        <TextLink to="/play/workshop">workshop</TextLink> for more!
+        This list is frequently getting updated. Check out{" "}
+        <Link style={{ textDecoration: "none" }} to="/play/workshop">
+          <TextLink>workshop</TextLink>
+        </Link>{" "}
+        for more!
         <br /> You can send your suggestions and ideas to
         contact@internetexploring.io
         <br />
-        If you like the game, please consider{" "}
-        <TextLink
+        If you'd like to support the game you can{" "}
+        <a
+          style={{ textDecoration: "none" }}
           href={BUY_ME_A_COFFEE_URL}
           target="_blank"
+          rel="noreferrer"
         >
-          buying me a coffee
-        </TextLink>
+          <TextLink>buy me a coffee</TextLink>
+        </a>
         .
       </p>
       <Link to="/play">

@@ -51,7 +51,7 @@ const List = () => {
   const myWorkshopPuzzlesError = useToggle();
   const [page, setPage] = useState(0);
   const myWorkshopPuzzlesLastRef = useRef(null);
-  const { user, /*isPatreonUser*/ } = useContext(AuthContext);
+  const { user /*isPatreonUser*/ } = useContext(AuthContext);
 
   const [selectedPuzzle, setSelectedPuzzle] = useState(null);
   const isLoadMoreButtonShown = useToggle(true);

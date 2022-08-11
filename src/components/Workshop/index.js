@@ -131,10 +131,14 @@ const Workshop = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {puzzle.userNickname.length > 30 ? `${puzzle.userNickname.slice(0, 30)}...` : puzzle.userNickname}
+                    {puzzle.userNickname.length > 30
+                      ? `${puzzle.userNickname.slice(0, 30)}...`
+                      : puzzle.userNickname}
                   </TextLink>
+                ) : puzzle.userNickname.length > 30 ? (
+                  `${puzzle.userNickname.slice(0, 30)}...`
                 ) : (
-                  puzzle.userNickname.length > 30 ? `${puzzle.userNickname.slice(0, 30)}...` : puzzle.userNickname
+                  puzzle.userNickname
                 )}
               </p>
             </div>

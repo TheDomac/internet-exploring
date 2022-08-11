@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 
 import { Button } from "../../common/components/Button.styled";
 import { Container } from "../../common/components/Container.styled";
-import { PATREON_URL, REDDIT_URL, BUY_ME_A_COFFEE_URL } from "../../common/consts";
+import {
+  PATREON_URL,
+  REDDIT_URL,
+  BUY_ME_A_COFFEE_URL,
+} from "../../common/consts";
 
 import Logo from "../../images/Logo.png";
 import buyMeACoffeeLogo from "../../images/buyMeACoffee.svg";

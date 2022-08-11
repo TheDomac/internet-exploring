@@ -2,9 +2,11 @@ import React, { useState, createContext } from "react";
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 // import { doc, getDoc } from "firebase/firestore";
 
-import { provider, auth,
+import {
+  provider,
+  auth,
   //  db
-   } from "../firebase";
+} from "../firebase";
 // import { useToggle } from "./useToggle";
 
 export const AuthContext = createContext({
@@ -43,7 +45,7 @@ const AuthProvider = ({ children }) => {
     await signOut(auth);
   };
 
-  const value = { user, handleLoginClick, handleLogOutClick, /*isPatreonUser*/ };
+  const value = { user, handleLoginClick, handleLogOutClick /*isPatreonUser*/ };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
