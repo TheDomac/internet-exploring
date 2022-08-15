@@ -1,44 +1,92 @@
-import { useContext} from "react";
-import { getProducts } from "@stripe/firestore-stripe-payments";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-import { AuthContext } from "../../common/services/AuthContext";
-import { PaymentContext } from "../../common/services/PaymentContext";
-import PuzzleList from "./PuzzleList";
-import { payments } from "../../common/firebase";
-const USER_PAID_FULL_LIST = false;
+import ArrowBack from "../../common/components/ArrowBack";
+import { BUY_ME_A_COFFEE_URL } from "../../common/consts";
+import puzzles from "../../common/data/puzzles.json";
+import { PuzzleContext } from "../../common/services/PuzzleContext";
+import {
+  Wrapper,
+  PuzzleBox,
+  PuzzleLink,
+} from "../../common/components/PuzzleList.styled";
 
-const PuzzleListPage = () => {
+import { PuzzleRow, PuzzleTitle, TextLink } from "./index.styled";
 
-  const {stripePromise} = useContext(PaymentContext);
-  const fetchProducts = async () => {
-    console.log("before payments")
-    console.log(payments)
-    console.log("before products")
-    const products = await getProducts(payments, {
-      includePrices: true,
-      activeOnly: true,
-    });
-    console.log(products)
-    console.log("after products")
-  }
-
+const PuzzleList = () => {
   const {
-    user,
-    handleLoginClick
-  } = useContext(AuthContext);
+    puzzlesSolvingSync,
+  } = useContext(PuzzleContext);
 
-  if (user && USER_PAID_FULL_LIST) {
-    return <PuzzleList />
-  }
+  const sortedPuzzles = puzzles.sort((a, b) => (a.order > b.order ? 1 : -1));
 
-  if (!user) {
-    return <button type="button" onClick={handleLoginClick}>login</button>
-  }
-  return <div>
+  return (
+    <Wrapper as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      {sortedPuzzles.map((puzzle) => (
+        <PuzzleRow key={puzzle.id}>
+          <PuzzleTitle>{puzzle.name}</PuzzleTitle>
+          {puzzle.rebuses.map((rebus, rebusIndex) => {
+            const isSolved =
+              puzzlesSolvingSync[puzzle.id] &&
+              puzzlesSolvingSync[puzzle.id].includes(rebus.id);
 
-      <div>weeeeeeeeeee</div>
-      <button type="button" onClick={fetchProducts}>Submit</button>
-  </div>
-}
- 
-export default PuzzleListPage;
+            const areAllPreviousRebusesSolved = puzzle.rebuses.every((r, i) => {
+              if (i === puzzle.rebuses.length - 1) {
+                return true;
+              }
+              return (
+                puzzlesSolvingSync[puzzle.id] &&
+                puzzlesSolvingSync[puzzle.id].includes(r.id)
+              );
+            });
+
+            return (
+              <PuzzleLink
+                key={rebus.id}
+                to={`/play/puzzles/${puzzle.id}?selectedRebusIndex=${rebusIndex}`}
+              >
+                <PuzzleBox
+                  $isSolved={isSolved}
+                  $isDisabled={
+                    rebusIndex === puzzle.rebuses.length - 1 &&
+                    !areAllPreviousRebusesSolved
+                  }
+                >
+                  <span style={{ fontSize: isSolved ? 20 : 40 }}>
+                    {isSolved ? rebus.solutionInfo.solvedText : "?"}
+                  </span>
+                </PuzzleBox>
+              </PuzzleLink>
+            );
+          })}
+        </PuzzleRow>
+      ))}
+      <p style={{ textAlign: "center" }}>
+        This list is frequently getting updated. Check out{" "}
+        <Link style={{ textDecoration: "none" }} to="/play/workshop">
+          <TextLink>workshop</TextLink>
+        </Link>{" "}
+        for more!
+        <br /> You can send your suggestions and ideas to
+        contact@internetexploring.io
+        <br />
+        If you'd like to support the game you can{" "}
+        <a
+          style={{ textDecoration: "none" }}
+          href={BUY_ME_A_COFFEE_URL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <TextLink>buy me a coffee</TextLink>
+        </a>
+        .
+      </p>
+      <Link to="/play">
+        <ArrowBack />
+      </Link>
+    </Wrapper>
+  );
+};
+
+export default PuzzleList;

@@ -49,7 +49,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
 const WorkshopBuilderEdit = () => {
   const navigate = useNavigate();
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user, handleLoginClick } = useContext(AuthContext);
+  const { user, handleStandardLoginClick } = useContext(AuthContext);
   const params = useParams();
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -229,7 +229,7 @@ const WorkshopBuilderEdit = () => {
                 ) : (
                   <Button
                     style={{ marginRight: "10px", fontSize: 16 }}
-                    onClick={handleLoginClick}
+                    onClick={handleStandardLoginClick}
                   >
                     Log in
                   </Button>

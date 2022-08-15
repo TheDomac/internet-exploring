@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import { useEffect, useContext, useState, useRef } from "react";
 import {
   collection,
@@ -17,7 +16,6 @@ import { Button } from "../../common/components/Button.styled";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import { AuthContext } from "../../common/services/AuthContext";
 import { useToggle } from "../../common/services/useToggle";
 import { PuzzleBox, Wrapper } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
@@ -27,24 +25,12 @@ import {
   workshopCollectionName,
 } from "../../common/consts";
 import { db } from "../../common/firebase";
+import LoginCorner from "../../common/components/LoginCorner";
 
-const LogOutButton = styled.button`
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: transparent;
-  color: white;
-  padding: 10px;
-  font-family: "Fredoka";
-  box-sizing: border-box;
-`;
 
 const Workshop = () => {
   const navigate = useNavigate();
   const { setWorkshopPlayPuzzle, initPuzzle } = useContext(WorkshopContext);
-  const { handleLogOutClick, user } = useContext(AuthContext);
 
   const [workshopPuzzles, setWorkshopPuzzles] = useState(null);
   const workshopPuzzlesLoading = useToggle();
@@ -121,12 +107,7 @@ const Workshop = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
-      {user && (
-        <LogOutButton title={user.email} onClick={handleLogOutClick}>
-          <span style={{ fontSize: 16 }}>Log out</span> <br />{" "}
-          <span style={{ fontSize: 12 }}>{user.displayName}</span>
-        </LogOutButton>
-      )}
+      <LoginCorner />
       <Wrapper
         as={motion.div}
         initial={{ opacity: 0 }}

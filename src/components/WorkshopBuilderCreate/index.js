@@ -53,7 +53,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
 
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user, handleLoginClick /*isPatreonUser*/ } = useContext(AuthContext);
+  const { user, handleStandardLoginClick  } = useContext(AuthContext);
 
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -241,7 +241,7 @@ const WorkshopBuilderCreate = () => {
                 ) : (
                   <Button
                     style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
-                    onClick={handleLoginClick}
+                    onClick={handleStandardLoginClick}
                   >
                     Log in
                   </Button>

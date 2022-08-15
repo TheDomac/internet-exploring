@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useLocation } from "react-router";
 import { Link, useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import { Button } from "../../common/components/Button.styled";
@@ -14,19 +13,7 @@ import { RIDDLE_STATUSES } from "../../common/consts";
 import Alert from "../../common/components/Alert.styled";
 import List from "./List";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-
-const LogOutButton = styled.button`
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: transparent;
-  color: white;
-  padding: 10px;
-  font-family: "Fredoka";
-  box-sizing: border-box;
-`;
+import LoginCorner from "../../common/components/LoginCorner";
 
 const successAlertText = {
   [RIDDLE_STATUSES.DRAFT]: "Riddle saved successfully.",
@@ -35,7 +22,7 @@ const successAlertText = {
 };
 
 const WorkshopMyRiddles = () => {
-  const { user, handleLoginClick, handleLogOutClick } = useContext(AuthContext);
+  const { user, handleStandardLoginClick } = useContext(AuthContext);
   const { initPuzzle } = useContext(WorkshopContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -52,12 +39,7 @@ const WorkshopMyRiddles = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
-      {user && (
-        <LogOutButton title={user.email} onClick={handleLogOutClick}>
-          <span style={{ fontSize: 16 }}>Log out</span> <br />{" "}
-          <span style={{ fontSize: 12 }}>{user.displayName}</span>
-        </LogOutButton>
-      )}
+      <LoginCorner />
       <Wrapper
         as={motion.div}
         initial={{ opacity: 0 }}
@@ -103,7 +85,7 @@ const WorkshopMyRiddles = () => {
           <List />
         ) : (
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button onClick={handleLoginClick} style={{ maxWidth: "100%" }}>
+            <Button onClick={handleStandardLoginClick} style={{ maxWidth: "100%" }}>
               Log in to see your riddles
             </Button>
           </div>

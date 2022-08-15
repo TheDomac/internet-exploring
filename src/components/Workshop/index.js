@@ -8,7 +8,6 @@ import { Button } from "../../common/components/Button.styled";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import { AuthContext } from "../../common/services/AuthContext";
 import {
   PuzzleBox,
   Wrapper,
@@ -16,19 +15,8 @@ import {
 } from "../../common/components/PuzzleList.styled";
 import workshopPuzzles from "../../common/data/workshopPuzzles.json";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
+import LoginCorner from "../../common/components/LoginCorner";
 
-const LogOutButton = styled.button`
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: transparent;
-  color: white;
-  padding: 10px;
-  font-family: "Fredoka";
-  box-sizing: border-box;
-`;
 
 export const TextLink = styled.a`
   color: #309d6d;
@@ -41,7 +29,6 @@ const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
 const Workshop = () => {
   const navigate = useNavigate();
   const { initPuzzle } = useContext(WorkshopContext);
-  const { handleLogOutClick, user } = useContext(AuthContext);
 
   const handleCreateNewRiddleClick = () => {
     initPuzzle();
@@ -58,12 +45,7 @@ const Workshop = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
-      {user && (
-        <LogOutButton title={user.email} onClick={handleLogOutClick}>
-          <span style={{ fontSize: 16 }}>Log out</span> <br />{" "}
-          <span style={{ fontSize: 12 }}>{user.displayName}</span>
-        </LogOutButton>
-      )}
+      <LoginCorner />
       <Wrapper
         as={motion.div}
         initial={{ opacity: 0 }}
