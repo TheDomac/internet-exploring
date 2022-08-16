@@ -5,7 +5,6 @@ import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 import { GoogleAuthProvider } from "firebase/auth";
 
-
 export const provider = new GoogleAuthProvider();
 
 // Import the functions you need from the SDKs you need

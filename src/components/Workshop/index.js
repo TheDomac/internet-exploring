@@ -17,7 +17,6 @@ import workshopPuzzles from "../../common/data/workshopPuzzles.json";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
 import LoginCorner from "../../common/components/LoginCorner";
 
-
 export const TextLink = styled.a`
   color: #309d6d;
   -webkit-text-stroke: 0.5px white;

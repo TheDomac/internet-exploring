@@ -27,7 +27,6 @@ import {
 import { db } from "../../common/firebase";
 import LoginCorner from "../../common/components/LoginCorner";
 
-
 const Workshop = () => {
   const navigate = useNavigate();
   const { setWorkshopPlayPuzzle, initPuzzle } = useContext(WorkshopContext);

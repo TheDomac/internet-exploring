@@ -6,15 +6,15 @@ import UpgradeModal from "./UpgradeModal";
 import LoginModal from "./LoginModal";
 
 const Modals = () => {
-    const { upgradeModal, loginModal } = useContext(PaymentContext)
-    // const { loginModal } = useContext(AuthContext);
+  const { upgradeModal, loginModal } = useContext(PaymentContext);
+  // const { loginModal } = useContext(AuthContext);
 
-    return ( 
-        <div>
-     {upgradeModal.isOn && <UpgradeModal />}
-     {loginModal.isOn && <LoginModal />}
-        </div>
-     );
-}
- 
+  return (
+    <div>
+      {upgradeModal.isOn && <UpgradeModal />}
+      {loginModal.isOn && <LoginModal />}
+    </div>
+  );
+};
+
 export default Modals;

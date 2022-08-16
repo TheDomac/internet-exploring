@@ -24,40 +24,40 @@ import PaymentProvider from "./common/services/PaymentContext";
 const App = () => {
   return (
     <AuthProvider>
-    <PaymentProvider>
-      <WorkshopContextProvider>
-        <PuzzleContextProvider>
-          <Router>
-          <Modals />
-            <Routes>
-              <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
-              <Route path="/play/puzzles" element={<PuzzleList />} />
-              <Route
-                path="/play/workshop/new"
-                element={<WorkshopBuilderCreatePage />}
-              />
-              <Route
-                path="/play/workshop/edit/:riddleId"
-                element={<WorkshopBuilderEditPage />}
-              />
-              <Route path="/play/workshop" element={<WorkshopPage />} />
-              <Route
-                path="/play/workshop/my-riddles"
-                element={<WorkshopMyRiddlesPage />}
-              />
-              <Route
-                path="/play/workshop/:riddleId"
-                element={<WorkshopPlayPage />}
-              />
-              <Route path="/play" element={<PlayPage />} />
-              <Route path="/tutorial" element={<TutorialPage />} />
-              <Route path="/temp" element={<TempPage />} />
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </Router>
-        </PuzzleContextProvider>
-      </WorkshopContextProvider>
-    </PaymentProvider>
+      <PaymentProvider>
+        <WorkshopContextProvider>
+          <PuzzleContextProvider>
+            <Router>
+              <Modals />
+              <Routes>
+                <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
+                <Route path="/play/puzzles" element={<PuzzleList />} />
+                <Route
+                  path="/play/workshop/new"
+                  element={<WorkshopBuilderCreatePage />}
+                />
+                <Route
+                  path="/play/workshop/edit/:riddleId"
+                  element={<WorkshopBuilderEditPage />}
+                />
+                <Route path="/play/workshop" element={<WorkshopPage />} />
+                <Route
+                  path="/play/workshop/my-riddles"
+                  element={<WorkshopMyRiddlesPage />}
+                />
+                <Route
+                  path="/play/workshop/:riddleId"
+                  element={<WorkshopPlayPage />}
+                />
+                <Route path="/play" element={<PlayPage />} />
+                <Route path="/tutorial" element={<TutorialPage />} />
+                <Route path="/temp" element={<TempPage />} />
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </Router>
+          </PuzzleContextProvider>
+        </WorkshopContextProvider>
+      </PaymentProvider>
     </AuthProvider>
   );
 };

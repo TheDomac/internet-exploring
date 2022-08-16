@@ -54,8 +54,8 @@ const initialUserSocialMediaURL = localStorage.getItem(
 
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user  } = useContext(AuthContext);
-  const {loginModal} = useContext(PaymentContext);
+  const { user } = useContext(AuthContext);
+  const { loginModal } = useContext(PaymentContext);
 
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -80,9 +80,9 @@ const WorkshopBuilderCreate = () => {
     setUserSocialMediaURL(e.target.value);
   };
 
-  const handleSave = e => {
-    console.log(puzzle)
-  }
+  const handleSave = (e) => {
+    console.log(puzzle);
+  };
   // const handleSave = async (e) => {
   //   const isDraft = e.target.name === "draft";
   //   const status = isDraft
@@ -206,16 +206,15 @@ const WorkshopBuilderCreate = () => {
                     >
                       Save for review
                     </Button>
-                    
+
                     <Button
-                        disabled={saveLoading.isOn || !userNickname}
-                        name="draft"
-                        onClick={handleSave}
-                        style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
-                      >
-                        Save as draft
-                      </Button>
-                    
+                      disabled={saveLoading.isOn || !userNickname}
+                      name="draft"
+                      onClick={handleSave}
+                      style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
+                    >
+                      Save as draft
+                    </Button>
                   </>
                 ) : (
                   <Button

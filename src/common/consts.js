@@ -75,5 +75,4 @@ export const statuses = {
   LOADING: "loading",
   ERROR: "error",
   SUCCESS: "success",
-}
-
+};

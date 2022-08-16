@@ -3,7 +3,6 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { TouchBackend } from "react-dnd-touch-backend";
 
-
 import weigh from "./images/weigh.png";
 import leftRight from "./images/leftRight.png";
 import stand from "./images/stand.png";
@@ -12,7 +11,7 @@ import LeftBalls from "./LeftBalls";
 import BottomBalls from "./BottomBalls";
 import RightBalls from "./RightBalls";
 
-import {Circle, Square, Triangle} from "./Shapes";
+import { Circle, Square, Triangle } from "./Shapes";
 
 import {
   Wrapper,
@@ -46,7 +45,6 @@ const RichPortWeighingScale = ({
 }) => {
   const [positions, setPositions] = useState(initialPositions);
 
-
   const sumOfLeftBalls = positions.left.reduce(
     (prev, ball) => prev + ball.weight,
     0
@@ -79,25 +77,33 @@ const RichPortWeighingScale = ({
 
   return (
     <>
-    <DndProvider backend={isTouchDevice ? TouchBackend : HTML5Backend}>
-      <Wrapper>
-        <img src={stand} alt="stand" />
-        <WeighWrapper tilt={tilt}>
-          <img src={weigh} alt="weigh" />
-          <LeftWeighWrapper style={{ transform: `rotate(${tilt * -1}deg)` }}>
-            <img src={leftRight} alt="left" />
-            <LeftBalls handleDrop={handleDrop} ballsArray={positions.left} />
-          </LeftWeighWrapper>
-          <RightWeighWrapper style={{ transform: `rotate(${tilt * -1}deg)` }}>
-            <img src={leftRight} alt="right" />
+      <DndProvider backend={isTouchDevice ? TouchBackend : HTML5Backend}>
+        <Wrapper>
+          <img src={stand} alt="stand" />
+          <WeighWrapper tilt={tilt}>
+            <img src={weigh} alt="weigh" />
+            <LeftWeighWrapper style={{ transform: `rotate(${tilt * -1}deg)` }}>
+              <img src={leftRight} alt="left" />
+              <LeftBalls handleDrop={handleDrop} ballsArray={positions.left} />
+            </LeftWeighWrapper>
+            <RightWeighWrapper style={{ transform: `rotate(${tilt * -1}deg)` }}>
+              <img src={leftRight} alt="right" />
 
-            <RightBalls handleDrop={handleDrop} ballsArray={positions.right} />
-          </RightWeighWrapper>
-        </WeighWrapper>
-        <BottomBalls handleDrop={handleDrop} ballsArray={positions.bottom} />
-      </Wrapper>
-    </DndProvider>
-    <div style={{ display: "flex", justifyContent: "center", marginTop: 11}}><Circle style={{ marginRight: 5}} /><Square  style={{ marginRight: 5}}  /><Square  style={{ marginRight: 5}}  /><Triangle /></div>
+              <RightBalls
+                handleDrop={handleDrop}
+                ballsArray={positions.right}
+              />
+            </RightWeighWrapper>
+          </WeighWrapper>
+          <BottomBalls handleDrop={handleDrop} ballsArray={positions.bottom} />
+        </Wrapper>
+      </DndProvider>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 11 }}>
+        <Circle style={{ marginRight: 5 }} />
+        <Square style={{ marginRight: 5 }} />
+        <Square style={{ marginRight: 5 }} />
+        <Triangle />
+      </div>
     </>
   );
 };

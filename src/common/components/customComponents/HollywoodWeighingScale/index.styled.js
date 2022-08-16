@@ -32,7 +32,7 @@ export const StyledBall = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${({ $isPicture}) => $isPicture ? "#952727" : "#1a744a"};
+  background: ${({ $isPicture }) => ($isPicture ? "#952727" : "#1a744a")};
   border-radius: 50%;
   transition: 300ms;
   margin-right: 5px;

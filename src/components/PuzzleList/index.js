@@ -15,9 +15,7 @@ import {
 import { PuzzleRow, PuzzleTitle, TextLink } from "./index.styled";
 
 const PuzzleList = () => {
-  const {
-    puzzlesSolvingSync,
-  } = useContext(PuzzleContext);
+  const { puzzlesSolvingSync } = useContext(PuzzleContext);
 
   const sortedPuzzles = puzzles.sort((a, b) => (a.order > b.order ? 1 : -1));
 
