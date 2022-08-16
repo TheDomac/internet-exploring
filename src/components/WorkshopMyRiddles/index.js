@@ -14,6 +14,7 @@ import Alert from "../../common/components/Alert.styled";
 import List from "./List";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 import LoginCorner from "../../common/components/LoginCorner";
+import { PaymentContext } from "../../common/services/PaymentContext";
 
 const successAlertText = {
   [RIDDLE_STATUSES.DRAFT]: "Riddle saved successfully.",
@@ -22,7 +23,8 @@ const successAlertText = {
 };
 
 const WorkshopMyRiddles = () => {
-  const { user, handleStandardLoginClick } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
+  const { loginModal } = useContext(PaymentContext);
   const { initPuzzle } = useContext(WorkshopContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -85,8 +87,8 @@ const WorkshopMyRiddles = () => {
           <List />
         ) : (
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button onClick={handleStandardLoginClick} style={{ maxWidth: "100%" }}>
-              Log in to see your riddles
+            <Button onClick={loginModal.setOn} style={{ maxWidth: "100%" }}>
+              Sign in to see your riddles
             </Button>
           </div>
         )}

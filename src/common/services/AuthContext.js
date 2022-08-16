@@ -1,10 +1,12 @@
-import React, { useState, createContext } from "react";
-import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import React, { useState, createContext, useEffect } from "react";
+import { signInWithPopup, signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 
 import {
-  googleProvider,
+  provider,
   auth,
 } from "../firebase";
+// import { useToggle } from "./useToggle";
+import { statuses } from "../consts";
 
 export const AuthContext = createContext({
   user: null,
@@ -12,30 +14,55 @@ export const AuthContext = createContext({
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [registrationStatus, setRegistrationStatus] = useState(statuses.IDLE)
+  const [logInStatus, setLogInStatus] = useState(statuses.IDLE)
+  const [passwordResetStatus, setPasswordResetStatus] = useState(statuses.IDLE)
 
-  onAuthStateChanged(auth, async (currentUser) => {
-    setUser(currentUser);
-  });
+  useEffect(() => {
+    onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+    });
+  }, [])
 
   const handleGoogleLoginClick = async () => {
-    try {
-      console.log("starting")
-      await signInWithPopup(auth, googleProvider);
-    } catch (err) {
-      console.log("dafuq")
-      console.log(err)
-    }
+    await signInWithPopup(auth, provider);
   };
-
-  const handleStandardLoginClick = () => {
-
-  }
 
   const handleLogOutClick = async () => {
     await signOut(auth);
   };
 
-  const value = { user, handleGoogleLoginClick, handleStandardLoginClick, handleLogOutClick };
+  const registerUser = async (email, password) => {
+    try {
+      setRegistrationStatus(statuses.LOADING)
+      await createUserWithEmailAndPassword(auth, email, password)
+      setRegistrationStatus(statuses.SUCCESS)
+    } catch (e) {
+      setRegistrationStatus(statuses.ERROR)
+    }
+  }
+
+  const loginUser = async (email, password) => {
+    try {
+      setLogInStatus(statuses.LOADING)
+      await signInWithEmailAndPassword(auth, email, password)
+      setLogInStatus(statuses.SUCCESS)
+    } catch (e) {
+      setLogInStatus(statuses.ERROR)
+    }
+  }
+
+  const resetPassword = async (email) => {
+    try {
+      setPasswordResetStatus(statuses.LOADING)
+      await sendPasswordResetEmail(auth, email)
+      setPasswordResetStatus(statuses.SUCCESS)
+    } catch (e) {
+      setPasswordResetStatus(statuses.ERROR)
+    }
+  }
+
+  const value = { user, handleGoogleLoginClick, handleLogOutClick, registerUser, loginUser, logInStatus, registrationStatus, resetPassword, passwordResetStatus };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

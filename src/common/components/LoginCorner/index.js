@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useContext } from "react";
 import { AuthContext } from "../../services/AuthContext";
+import { PaymentContext } from "../../services/PaymentContext";
 
 const Button = styled.button`
 cursor: pointer;
@@ -15,17 +16,20 @@ font-family: "Fredoka";
 box-sizing: border-box;
 `;
 
+const shortenString = (string) => string.length > 10 ? `${string.slice(0, 10)}...` : string
+
 const LoginCorner = () => {
-    const { handleLogOutClick, user } = useContext(AuthContext);
+    const { handleLogOutClick, user  } = useContext(AuthContext);
+    const {loginModal} = useContext(PaymentContext);
 
     return user ? (
         <Button title={user.email} onClick={handleLogOutClick}>
-          <span style={{ fontSize: 16 }}>Log out</span> <br />{" "}
-          <span style={{ fontSize: 12 }}>{user.displayName}</span>
+          <span style={{ fontSize: 16 }}>Sign out</span> <br />{" "}
+          <span style={{ fontSize: 12 }}>{user.displayName ? shortenString(user.displayName) : shortenString(user.email)}</span>
         </Button>
       ) : (
-        <Button title="Login" onClick={() => {}}>
-          Login
+        <Button  title="Sign in" onClick={loginModal.setOn}>
+          Sign in
         </Button>
       );
 }

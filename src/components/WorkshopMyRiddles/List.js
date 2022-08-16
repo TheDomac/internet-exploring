@@ -51,7 +51,7 @@ const List = () => {
   const myWorkshopPuzzlesError = useToggle();
   const [page, setPage] = useState(0);
   const myWorkshopPuzzlesLastRef = useRef(null);
-  const { user /*isPatreonUser*/ } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const [selectedPuzzle, setSelectedPuzzle] = useState(null);
   const isLoadMoreButtonShown = useToggle(true);
@@ -141,8 +141,6 @@ const List = () => {
     }
   };
 
-  // const isEditEnabled =
-  //   isPatreonUser.isOn && selectedPuzzle?.status === RIDDLE_STATUSES.DRAFT;
   const isEditEnabled = selectedPuzzle?.status === RIDDLE_STATUSES.DRAFT;
 
   return (

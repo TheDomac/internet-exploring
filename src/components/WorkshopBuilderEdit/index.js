@@ -24,6 +24,7 @@ import { WorkshopContext } from "../../common/services/WorkshopContext";
 import getImageClueValues from "../../common/services/getImageClueValues";
 import uploadImages from "../../common/services/uploadImages";
 import deleteImages from "../../common/services/deleteImages";
+import { PaymentContext } from "../../common/services/PaymentContext";
 
 const StyledInput = styled.input`
   background: transparent;
@@ -49,7 +50,8 @@ const initialUserSocialMediaURL = localStorage.getItem(
 const WorkshopBuilderEdit = () => {
   const navigate = useNavigate();
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user, handleStandardLoginClick } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
+  const { loginModal } = useContext(PaymentContext);
   const params = useParams();
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -186,7 +188,7 @@ const WorkshopBuilderEdit = () => {
     <>
       {saveModal.isOn && (
         <Modal isModalShown={saveModal.isOn}>
-          <Text>{!user && "Please log in first to save your riddle."}</Text>
+          <Text>{!user && "Please sign in first to save your riddle."}</Text>
           {saveError.isOn ? (
             <Alert>Sorry, something went wrong.</Alert>
           ) : (
@@ -229,9 +231,9 @@ const WorkshopBuilderEdit = () => {
                 ) : (
                   <Button
                     style={{ marginRight: "10px", fontSize: 16 }}
-                    onClick={handleStandardLoginClick}
+                    onClick={loginModal.setOn}
                   >
-                    Log in
+                    Sign in
                   </Button>
                 )}
                 <Button

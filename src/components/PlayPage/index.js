@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -6,20 +6,18 @@ import { Container } from "../../common/components/Container.styled";
 import { Button } from "../../common/components/Button.styled";
 
 import ArrowBack from "../../common/components/ArrowBack";
-import UpgradeModal from "./UpgradeModal";
-import { useToggle } from "../../common/services/useToggle";
 import LoginCorner from "../../common/components/LoginCorner";
+import { PaymentContext } from "../../common/services/PaymentContext";
 
 const LITTLE_RED_RUNNING_THROUGH_ID = "V18JHJt5sqivrWhaJ6w6"
 
 const IS_PAID_USER = false;
 
 const PlayPage = () => {
-  const upgradeModal = useToggle()
+  const { upgradeModal} = useContext(PaymentContext)
 
   return (
     <>
-     {upgradeModal.isOn && <UpgradeModal onClose={upgradeModal.setOff} />}
      <LoginCorner />
     <Container>
       <Link to={`/play/puzzles/${LITTLE_RED_RUNNING_THROUGH_ID}`} style={{ marginBottom: "40px" }}>

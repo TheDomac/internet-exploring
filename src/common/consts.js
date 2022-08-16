@@ -69,3 +69,11 @@ export const RIDDLE_STATUSES_TITLES = {
 export const CATEGORIES = {
   GENERAL: "general",
 };
+
+export const statuses = {
+  IDLE: "idle",
+  LOADING: "loading",
+  ERROR: "error",
+  SUCCESS: "success",
+}
+

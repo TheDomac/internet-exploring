@@ -23,6 +23,7 @@ import ArrowBack from "../../common/components/ArrowBack";
 import CommonPuzzle from "../../common/components/Puzzle";
 import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
+import { PaymentContext } from "../../common/services/PaymentContext";
 
 const StyledInput = styled.input`
   background: transparent;
@@ -53,7 +54,8 @@ const initialUserSocialMediaURL = localStorage.getItem(
 
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user, handleStandardLoginClick  } = useContext(AuthContext);
+  const { user  } = useContext(AuthContext);
+  const {loginModal} = useContext(PaymentContext);
 
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -159,14 +161,11 @@ const WorkshopBuilderCreate = () => {
     );
   }
 
-  // const canCreateAsDraft = isPatreonUser.isOn;
-  const canCreateAsDraft = true;
-
   return (
     <>
       {saveModal.isOn && (
         <Modal isModalShown={saveModal.isOn}>
-          <Text>{!user && "Please log in first to save your riddle."}</Text>
+          <Text>{!user && "Please sign in first to save your riddle."}</Text>
           {saveError.isOn ? (
             <>
               <Alert style={{ marginBottom: "7px" }}>
@@ -207,8 +206,8 @@ const WorkshopBuilderCreate = () => {
                     >
                       Save for review
                     </Button>
-                    {canCreateAsDraft ? (
-                      <Button
+                    
+                    <Button
                         disabled={saveLoading.isOn || !userNickname}
                         name="draft"
                         onClick={handleSave}
@@ -216,34 +215,14 @@ const WorkshopBuilderCreate = () => {
                       >
                         Save as draft
                       </Button>
-                    ) : (
-                      <div
-                        style={{
-                          width: 140,
-                          marginRight: 10,
-                          textAlign: "center",
-                          color: "#666",
-                        }}
-                      >
-                        Saving as draft
-                        <br /> for{" "}
-                        <TextLink
-                          rel="noreferrer"
-                          href={PATREON_URL}
-                          target="_blank"
-                        >
-                          Patreons{" "}
-                        </TextLink>
-                        only
-                      </div>
-                    )}
+                    
                   </>
                 ) : (
                   <Button
                     style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
-                    onClick={handleStandardLoginClick}
+                    onClick={loginModal.setOn}
                   >
-                    Log in
+                    Sign in
                   </Button>
                 )}
                 <Button

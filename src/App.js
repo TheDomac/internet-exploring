@@ -10,6 +10,7 @@ import WorkshopMyRiddlesPage from "./components/WorkshopMyRiddles";
 import WorkshopBuilderCreatePage from "./components/WorkshopBuilderCreate";
 import WorkshopBuilderEditPage from "./components/WorkshopBuilderEdit";
 
+import Modals from "./common/components/Modals";
 import PuzzleContextProvider from "./common/services/PuzzleContext";
 import AuthProvider from "./common/services/AuthContext";
 
@@ -27,6 +28,7 @@ const App = () => {
       <WorkshopContextProvider>
         <PuzzleContextProvider>
           <Router>
+          <Modals />
             <Routes>
               <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
               <Route path="/play/puzzles" element={<PuzzleList />} />
