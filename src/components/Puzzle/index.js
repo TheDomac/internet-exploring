@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useContext, useMemo } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 
@@ -6,10 +6,13 @@ import CommonPuzzle from "../../common/components/Puzzle";
 import puzzles from "../../common/data/puzzles.json";
 
 import ArrowBack from "../../common/components/ArrowBack";
+import { AuthContext } from "../../common/services/AuthContext";
+import { FREE_RIDDLE_ID } from "../../common/consts";
 
 const Puzzle = () => {
   const params = useParams();
   const navigate = useNavigate();
+  const { upgradedUser } = useContext(AuthContext)
 
   const puzzle = useMemo(
     () => puzzles.find((puzzle) => puzzle.id === params.puzzleId),
@@ -18,8 +21,16 @@ const Puzzle = () => {
   );
 
   const handleRedirect = () => {
-    navigate("/play/puzzles");
+    if (upgradedUser.isOn) {
+      navigate("/play/puzzles");
+    } else {
+      navigate("/play")
+    }
   };
+
+  if (!upgradedUser.isOn && params.puzzleId !== FREE_RIDDLE_ID) {
+    return null;
+  }
 
   return (
     <>

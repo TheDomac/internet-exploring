@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { AuthContext } from "../../../services/AuthContext";
 
 import Modal from "../../Modal";
 import LoginForm from "../../LoginForm";
@@ -8,7 +7,7 @@ import { PaymentContext } from "../../../services/PaymentContext";
 
 const LoginModal = () => {
   const { loginModal } = useContext(PaymentContext);
-  // console.log(loginModal.isOn)
+
   return (
     <Modal isModalShown>
       <LoginForm />

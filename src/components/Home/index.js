@@ -4,42 +4,27 @@ import { Link } from "react-router-dom";
 
 import { Button } from "../../common/components/Button.styled";
 import { Container } from "../../common/components/Container.styled";
+import LoginCorner from "../../common/components/LoginCorner";
 import {
-  PATREON_URL,
   REDDIT_URL,
-  BUY_ME_A_COFFEE_URL,
 } from "../../common/consts";
 
 import Logo from "../../images/Logo.png";
-import buyMeACoffeeLogo from "../../images/buyMeACoffee.svg";
-import patreonLogo from "../../images/patreonLogo.png";
 import redditLogo from "../../images/redditLogo.png";
 
 const Home = () => {
   return (
     <Container>
-      <div style={{ position: "relative" }}>
+      <LoginCorner />
         <img
           src={Logo}
           alt="logo"
           style={{ marginBottom: "10px", maxWidth: "100%" }}
         />
-        <span
-          style={{
-            position: "absolute",
-            color: "rgb(198, 98, 98)",
-            bottom: "7%",
-            right: "17%",
-            fontSize: "32px",
-          }}
-        >
-          Beta
-        </span>
-      </div>
       <p style={{ marginTop: "-20px", marginBottom: "7px", fontSize: "28px" }}>
         What if the Internet was your escape room?
       </p>
-      <p style={{ marginTop: "0", fontSize: "18px" }}>
+      <p style={{ marginTop: "0", fontSize: "18px", marginBottom: 40 }}>
         Solve riddles whose clues and answers are hidden online.
       </p>
 
@@ -50,62 +35,6 @@ const Home = () => {
         <Button style={{ maxWidth: "100%" }}>Tutorial</Button>
       </Link>
       <div style={{ display: "flex", width: "500px", maxWidth: "500px" }}>
-        <a
-          rel="noreferrer"
-          href={BUY_ME_A_COFFEE_URL}
-          target="_blank"
-          style={{
-            display: "inline-block",
-            width: "100%",
-            marginRight: "20px",
-          }}
-        >
-          <Button
-            style={{ width: "100%", maxWidth: "100%", padding: "12px 20px" }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginRight: "-20px",
-              }}
-            >
-              <span>Buy me a coffee</span>
-              <img src={buyMeACoffeeLogo} alt="buyMeACoffee" />
-            </div>
-          </Button>
-        </a>
-        <a
-          rel="noreferrer"
-          href={PATREON_URL}
-          target="_blank"
-          style={{
-            display: "inline-block",
-            width: "100%",
-            marginRight: "20px",
-          }}
-        >
-          <Button
-            style={{ width: "100%", maxWidth: "100%", padding: "12px 20px" }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginRight: "-20px",
-              }}
-            >
-              <span>Become a patron</span>
-              <img
-                style={{ display: "inline-block", marginLeft: 7 }}
-                src={patreonLogo}
-                alt="patreon"
-              />
-            </div>
-          </Button>
-        </a>
         <a
           rel="noreferrer"
           href={REDDIT_URL}

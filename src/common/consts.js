@@ -1,11 +1,13 @@
+export const env = process.env.REACT_APP_STAGE.toUpperCase()
+
 export const workshopCollectionName =
   process.env[
-    `REACT_APP_COLLECTION_${process.env.REACT_APP_STAGE.toUpperCase()}`
+    `REACT_APP_COLLECTION_${env}`
   ];
 
 export const toBeDeletedCollectionName =
   process.env[
-    `REACT_APP_TO_BE_DELETED_${process.env.REACT_APP_STAGE.toUpperCase()}`
+    `REACT_APP_TO_BE_DELETED_${env}`
   ];
 
 export const clueTypes = {
@@ -26,9 +28,9 @@ export const projects = {
   ELECTRON: "electron",
 };
 
-export const PATREON_URL = "https://www.patreon.com/internetexploring";
 export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
-export const BUY_ME_A_COFFEE_URL = "https://www.buymeacoffee.com/internetexp";
+
+export const FREE_RIDDLE_ID = "V18JHJt5sqivrWhaJ6w6"; // Little red running through
 
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",

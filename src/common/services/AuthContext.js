@@ -1,4 +1,5 @@
 import React, { useState, createContext, useEffect } from "react";
+import { doc, getDoc } from "firebase/firestore";
 import {
   signInWithPopup,
   signOut,
@@ -8,8 +9,8 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 
-import { provider, auth } from "../firebase";
-// import { useToggle } from "./useToggle";
+import { provider, auth, db } from "../firebase";
+import { useToggle } from "./useToggle";
 import { statuses } from "../consts";
 
 export const AuthContext = createContext({
@@ -21,11 +22,27 @@ const AuthProvider = ({ children }) => {
   const [registrationStatus, setRegistrationStatus] = useState(statuses.IDLE);
   const [logInStatus, setLogInStatus] = useState(statuses.IDLE);
   const [passwordResetStatus, setPasswordResetStatus] = useState(statuses.IDLE);
+  const upgradedUser = useToggle()
+
 
   useEffect(() => {
     onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
+
+      if (currentUser) {
+        try {
+          const docRef = doc(db, "customers", currentUser.uid);
+          const docSnap = await getDoc(docRef);
+          const fetchedCustomer = { id: docSnap.id, ...docSnap.data() };
+          if (fetchedCustomer?.paymentStatus === "paid") {
+            upgradedUser.setOn();
+          }
+        } catch (err) {}
+      } else {
+        upgradedUser.setOff()
+      }
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleGoogleLoginClick = async () => {
@@ -34,6 +51,7 @@ const AuthProvider = ({ children }) => {
 
   const handleLogOutClick = async () => {
     await signOut(auth);
+    
   };
 
   const registerUser = async (email, password) => {
@@ -68,6 +86,7 @@ const AuthProvider = ({ children }) => {
 
   const value = {
     user,
+    upgradedUser,
     handleGoogleLoginClick,
     handleLogOutClick,
     registerUser,

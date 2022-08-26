@@ -8,25 +8,19 @@ import { Button } from "../../common/components/Button.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import LoginCorner from "../../common/components/LoginCorner";
 import { PaymentContext } from "../../common/services/PaymentContext";
-
-const LITTLE_RED_RUNNING_THROUGH_ID = "V18JHJt5sqivrWhaJ6w6";
-
-const IS_PAID_USER = false;
+import { AuthContext } from "../../common/services/AuthContext";
+import { FREE_RIDDLE_ID } from "../../common/consts";
 
 const PlayPage = () => {
   const { upgradeModal } = useContext(PaymentContext);
+  const { upgradedUser } = useContext(AuthContext);
 
   return (
     <>
       <LoginCorner />
       <Container>
-        <Link
-          to={`/play/puzzles/${LITTLE_RED_RUNNING_THROUGH_ID}`}
-          style={{ marginBottom: "40px" }}
-        >
-          <Button style={{ maxWidth: "100%" }}>Play a Free Riddle</Button>
-        </Link>
-        {IS_PAID_USER ? (
+        
+        {upgradedUser.isOn ? (
           <>
             <Link to="/play/puzzles" style={{ marginBottom: "40px" }}>
               <Button style={{ maxWidth: "100%" }}>Riddles</Button>
@@ -40,26 +34,24 @@ const PlayPage = () => {
           </>
         ) : (
           <>
+          <Link
+          to={`/play/puzzles/${FREE_RIDDLE_ID}`}
+          style={{ marginBottom: "40px" }}
+        >
+          <Button style={{ maxWidth: "100%" }}>Play a Free Riddle</Button>
+        </Link>
             <Button
               onClick={upgradeModal.setOn}
               style={{ maxWidth: "100%", marginBottom: "40px" }}
             >
               Riddles
-              {!IS_PAID_USER && (
-                <>
-                  <br />
-                  <span style={{ fontSize: "14px" }}>Upgrade to Play</span>
-                </>
-              )}
+              <br />
+              <span style={{ fontSize: "14px" }}>Upgrade to Play</span>
             </Button>
             <Button onClick={upgradeModal.setOn} style={{ maxWidth: "100%" }}>
               Workshop
-              {!IS_PAID_USER && (
-                <>
-                  <br />
-                  <span style={{ fontSize: "14px" }}>Upgrade to Play</span>
-                </>
-              )}
+              <br />
+              <span style={{ fontSize: "14px" }}>Upgrade to Play</span>
             </Button>
             <Link to="/">
               <ArrowBack />

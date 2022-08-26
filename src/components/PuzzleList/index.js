@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import ArrowBack from "../../common/components/ArrowBack";
-import { BUY_ME_A_COFFEE_URL } from "../../common/consts";
 import puzzles from "../../common/data/puzzles.json";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
 import {
@@ -69,16 +68,6 @@ const PuzzleList = () => {
         <br /> You can send your suggestions and ideas to
         contact@internetexploring.io
         <br />
-        If you'd like to support the game you can{" "}
-        <a
-          style={{ textDecoration: "none" }}
-          href={BUY_ME_A_COFFEE_URL}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <TextLink>buy me a coffee</TextLink>
-        </a>
-        .
       </p>
       <Link to="/play">
         <ArrowBack />

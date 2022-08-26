@@ -2,7 +2,6 @@ import { useState, createContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { solutionTypes } from "../consts";
-import { db } from "../../common/firebase";
 
 // import initialPuzzle from "../data/tutorial.json"
 // const initialRebusId = initialPuzzle.rebuses[0].id;
