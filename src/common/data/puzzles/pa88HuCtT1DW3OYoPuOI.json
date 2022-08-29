@@ -1,0 +1,435 @@
+{
+  "id": "pa88HuCtT1DW3OYoPuOI",
+  "order": 110,
+  "rebuses": [
+    {
+      "clues": [
+        {
+          "solutionInfo": {
+            "possibleSolutions": [],
+            "solvedText": "",
+            "type": "text"
+          },
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "subtext": "",
+          "dependsOn": [],
+          "helperText": "Combine the shorthands for these elements using the periodic table.",
+          "clueValues": [
+            {
+              "id": "af38a03a-61e7-4d9d-8d2d-454c71fcc20e",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": "",
+              "value": "Argon",
+              "type": "text"
+            },
+            {
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": "",
+              "type": "text",
+              "value": "Germanium",
+              "id": "d3b39919-8caf-42b4-9b1c-ac2e5f6ec237"
+            },
+            {
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "type": "text",
+              "subtext": "",
+              "id": "529979d5-f1a9-43fc-8bb1-65ac9af42d6a",
+              "value": "Nitrogen"
+            },
+            {
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "Titanium",
+              "type": "text",
+              "subtext": "",
+              "id": "07f0617b-b429-43a8-96cc-381a22156eb9"
+            },
+            {
+              "type": "text",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": "",
+              "value": "Sodium",
+              "id": "2daf8feb-c442-4adf-9543-4cffcf8fca08"
+            }
+          ],
+          "id": "3232ad5b-6a7d-4a75-8205-4b1895c786c1",
+          "clueGroup": 0
+        }
+      ],
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "solvedText": "Argentina",
+        "possibleSolutions": [
+          {
+            "id": "7d66fd1b-4292-4b67-9360-d74968f23677",
+            "value": "Argentina"
+          }
+        ]
+      },
+      "id": "82df311f-26d2-4760-9576-dc00fbeb84ab"
+    },
+    {
+      "id": "f142d421-9c38-4df9-a274-367e92bc1ec5",
+      "clues": [
+        {
+          "dependsOn": [],
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "id": "9711af87-adf2-4455-b295-a0799e906ef2",
+          "solutionInfo": {
+            "possibleSolutions": [
+              {
+                "id": "54d223af-8c4e-4172-817b-1029b057cc49",
+                "value": "How I Met Your Mother"
+              },
+              {
+                "id": "79df788c-4351-4bbd-b38b-4648c8e7246c",
+                "value": "HIMYM"
+              }
+            ],
+            "solvedText": "How I Met Your Mother",
+            "type": "text"
+          },
+          "subtext": "",
+          "helperText": "Famous sitcom created by Craig Thomas and Carter Bays.",
+          "clueValues": [
+            {
+              "id": "c469b054-1f4e-48ea-ab15-cf3b6fdaecb6",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": "",
+              "value": "Ted, Marshall, Lily, Barney, Robin",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "clueValues": [
+            {
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "redCowboy.png",
+              "id": "e5d11214-7eb2-472e-9d4a-6fe99128ff5e",
+              "type": "image"
+            }
+          ],
+          "helperText": "A particular type of footwear mentioned in the show How I Met Your Mother. Same color as top left part of Windows logo and worn by people who manage cattle.",
+          "dependsOn": [
+            {
+              "value": "9711af87-adf2-4455-b295-a0799e906ef2",
+              "id": "2e0b8bb7-2b6d-4dd2-8015-b676a8c8ae20"
+            }
+          ],
+          "id": "0f99ba2e-4137-4942-bb01-3aed11be0ead",
+          "solutionInfo": {
+            "possibleSolutions": [
+              {
+                "id": "8f259b8d-591c-49da-8080-9c84cd621aa6",
+                "value": "Boots"
+              },
+              {
+                "id": "11924625-5cf9-4a9e-bf8b-843b203f320d",
+                "value": "Red cowboy boots"
+              },
+              {
+                "id": "38d4ccc7-b384-46af-8799-10b4923841f0",
+                "value": "Boot"
+              }
+            ],
+            "solvedText": "Boots",
+            "type": "text"
+          }
+        },
+        {
+          "clueGroup": 0,
+          "subtext": "",
+          "helperText": "Which country looks like a boot?",
+          "solutionInfo": {
+            "possibleSolutions": [
+              {
+                "id": "9a200aa7-0fae-4f78-8adc-c55f10f9fea9",
+                "value": "Italy"
+              }
+            ],
+            "type": "text",
+            "solvedText": "Italy"
+          },
+          "dependsOn": [
+            {
+              "id": "44554c9c-ba46-4c9e-8925-b3b754cbcce9",
+              "value": "0f99ba2e-4137-4942-bb01-3aed11be0ead"
+            }
+          ],
+          "style": {
+            "width": "calc(35% - 10px)"
+          },
+          "id": "0065c057-a041-44be-b55b-4256121057c6",
+          "clueValues": [
+            {
+              "id": "46a8b446-1240-46eb-8ee7-a2a2948225dc",
+              "type": "image",
+              "subtext": "Butan, Sri Lanka, ?",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "italy.png"
+            }
+          ]
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "657250ba-345e-427b-a865-cbcf381a45f0",
+              "value": "0065c057-a041-44be-b55b-4256121057c6"
+            }
+          ],
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "clueGroup": 0,
+          "subtext": "",
+          "helperText": "A city in Italy. Famous for its football club that starts with letter N.",
+          "id": "9d120b63-cd86-40d1-b67d-f2ea442d8a31",
+          "solutionInfo": {
+            "solvedText": "Napoli",
+            "type": "text",
+            "possibleSolutions": [
+              {
+                "value": "Napoli",
+                "id": "f8f714d2-76d6-40dd-b540-455d56491c45"
+              },
+              {
+                "value": "Naples",
+                "id": "4405f380-5ba1-4712-9885-c0f0f29b0246"
+              }
+            ]
+          },
+          "clueValues": [
+            {
+              "subtext": "",
+              "value": "napoli.png",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "2375a763-9bfc-44a2-9e66-2e1d6845d985",
+              "type": "image"
+            }
+          ]
+        }
+      ],
+      "solutionInfo": {
+        "possibleSolutions": [],
+        "type": "text",
+        "solvedText": "Napoli"
+      },
+      "style": {}
+    },
+    {
+      "style": {},
+      "id": "3c1d0b0e-ebcb-4d03-9c05-7906b22eadce",
+      "solutionInfo": {
+        "solvedText": "Football",
+        "possibleSolutions": [
+          {
+            "id": "1e60b188-c757-4314-8094-f2e4c2c3bd79",
+            "value": "Football"
+          },
+          {
+            "value": "Foot-ball",
+            "id": "7d83db42-a320-4212-8a3e-82f5e38d413e"
+          },
+          {
+            "value": "The Foot-ball Play",
+            "id": "7e61a4b7-24a5-43e8-9610-e6b5175ce44a"
+          }
+        ],
+        "type": "text"
+      },
+      "clues": [
+        {
+          "clueGroup": 0,
+          "subtext": "",
+          "style": {
+            "width": "calc(66% - 10px)"
+          },
+          "clueValues": [
+            {
+              "value": "FootballPictureSlider",
+              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
+              "subtext": "",
+              "type": "customComponent",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "helperText": "Click on pieces of image above, below, on the left or on the right of the hole to move the pieces. Get the full picture to solve the clue.",
+          "dependsOn": [],
+          "solutionInfo": {
+            "solvedText": "",
+            "type": "customComponent",
+            "possibleSolutions": [
+              {
+                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "solutionInfo": {
+            "possibleSolutions": [],
+            "solvedText": "",
+            "type": "text"
+          },
+          "id": "14e22d34-1db1-4bf7-b29c-c6e74a7b6ab1",
+          "clueGroup": 0,
+          "dependsOn": [
+            {
+              "id": "3b66308f-9edc-4614-8db8-2ac37ebd3dc4",
+              "value": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6"
+            }
+          ],
+          "clueValues": [
+            {
+              "id": "c5a24013-6b82-4af8-bea1-92a7dc4c1df3",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "type": "text",
+              "subtext": "",
+              "value": "Alexander Carse, Scotland, c. 1830."
+            }
+          ],
+          "subtext": "",
+          "helperText": "What sport is displayed on this painting whose author is Alexander Carse?"
+        }
+      ]
+    },
+    {
+      "id": "c3203a36-4e4f-4d72-9c80-32eded927821",
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "solvedText": "Maradona",
+        "possibleSolutions": [
+          {
+            "id": "994f3cdb-5237-4723-bbd7-b6c9c29cba11",
+            "value": "Maradona"
+          },
+          {
+            "id": "c8834676-0925-4022-a35a-5f83c86051a3",
+            "value": "Diego Maradona"
+          }
+        ]
+      },
+      "clues": [
+        {
+          "clueGroup": 1,
+          "id": "b2a1b074-c35c-47b1-871b-66699a55b7a1",
+          "clueValues": [
+            {
+              "value": "Argentina",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "6243658a-ed6c-416a-82ac-2727baa3f4b1",
+              "type": "text",
+              "subtext": ""
+            }
+          ],
+          "solutionInfo": {
+            "possibleSolutions": [],
+            "solvedText": "",
+            "type": "text"
+          },
+          "subtext": "",
+          "helperText": "We're looking for a football player born in Argentina.",
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": []
+        },
+        {
+          "clueValues": [
+            {
+              "type": "text",
+              "id": "86e92d0a-97ee-402a-a600-c79ba7c97d53",
+              "value": "Napoli",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": ""
+            }
+          ],
+          "id": "01b91051-8860-4ce1-845b-5d49b3404bad",
+          "helperText": "We're looking for a football player who played in Napoli.",
+          "subtext": "",
+          "clueGroup": 1,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "solutionInfo": {
+            "possibleSolutions": [],
+            "solvedText": "",
+            "type": "text"
+          },
+          "dependsOn": []
+        },
+        {
+          "dependsOn": [],
+          "clueGroup": 1,
+          "clueValues": [
+            {
+              "subtext": "",
+              "type": "text",
+              "id": "145ba89a-2181-42ff-be97-46595fb8891a",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "Football"
+            }
+          ],
+          "helperText": "We're looking for a famous football legend.",
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          },
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "subtext": "",
+          "id": "ebfb0943-2e5a-4acf-8fc9-18620c1fc31a"
+        }
+      ]
+    }
+  ],
+  "name": "Dribble those tiles"
+}

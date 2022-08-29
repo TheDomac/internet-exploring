@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 
 import CommonPuzzle from "../../common/components/Puzzle";
-import puzzles from "../../common/data/puzzles.json";
+import puzzles from "../../common/data/puzzles";
 
 import ArrowBack from "../../common/components/ArrowBack";
 import { AuthContext } from "../../common/services/AuthContext";

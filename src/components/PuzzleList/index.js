@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import ArrowBack from "../../common/components/ArrowBack";
-import puzzles from "../../common/data/puzzles.json";
+import puzzles from "../../common/data/puzzles";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
 import {
   Wrapper,
