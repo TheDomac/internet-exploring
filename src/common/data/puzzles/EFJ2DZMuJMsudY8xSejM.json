@@ -1,6 +1,7 @@
 {
   "name": "Do you speak english?",
   "order": 65,
+  "id": "EFJ2DZMuJMsudY8xSejM",
   "rebuses": [
     {
       "id": "8a0328a8-163c-411e-ae44-e46b25ab1eb6",
@@ -218,14 +219,6 @@
                 {
                   "id": "818a513c-9a11-4dc7-8cfd-785cfd967e29",
                   "value": "Balls"
-                },
-                {
-                  "id": "b79faf42-7446-427e-9d22-21ad0a5d87ed",
-                  "value": "Circle"
-                },
-                {
-                  "id": "e6ce205a-f328-43bd-a7f2-c666023b5940",
-                  "value": "Circles"
                 }
               ],
               "solvedText": "Sphere"
@@ -452,19 +445,5 @@
           "solvedText": "William Shakespeare"
         }
       }
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   ]
 }

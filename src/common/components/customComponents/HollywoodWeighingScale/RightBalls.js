@@ -8,7 +8,7 @@ const RightBalls = ({ ballsArray, handleDrop }) => {
     () => ({
       accept: "Ball",
       drop: () => ({ position: "right" }),
-      canDrop: () => ballsArray.length < 4,
+      canDrop: () => ballsArray.length < 3,
       collect: (monitor) => ({
         isOver: monitor.isOver(),
         canDrop: monitor.canDrop(),
