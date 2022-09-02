@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../../common/components/Button.styled";
 import { Container } from "../../common/components/Container.styled";
 import LoginCorner from "../../common/components/LoginCorner";
-import {
-  REDDIT_URL,
-} from "../../common/consts";
+import { REDDIT_URL } from "../../common/consts";
 
 import Logo from "../../images/Logo.png";
 import redditLogo from "../../images/redditLogo.png";
@@ -16,11 +14,11 @@ const Home = () => {
   return (
     <Container>
       <LoginCorner />
-        <img
-          src={Logo}
-          alt="logo"
-          style={{ marginBottom: "10px", maxWidth: "100%" }}
-        />
+      <img
+        src={Logo}
+        alt="logo"
+        style={{ marginBottom: "10px", maxWidth: "100%" }}
+      />
       <p style={{ marginTop: "-20px", marginBottom: "7px", fontSize: "28px" }}>
         What if the Internet was your escape room?
       </p>

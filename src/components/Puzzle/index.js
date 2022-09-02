@@ -12,7 +12,7 @@ import { FREE_RIDDLE_ID } from "../../common/consts";
 const Puzzle = () => {
   const params = useParams();
   const navigate = useNavigate();
-  const { upgradedUser } = useContext(AuthContext)
+  const { upgradedUser } = useContext(AuthContext);
 
   const puzzle = useMemo(
     () => puzzles.find((puzzle) => puzzle.id === params.puzzleId),
@@ -24,7 +24,7 @@ const Puzzle = () => {
     if (upgradedUser.isOn) {
       navigate("/play/puzzles");
     } else {
-      navigate("/play")
+      navigate("/play");
     }
   };
 

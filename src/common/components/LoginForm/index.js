@@ -9,7 +9,7 @@ import { Input } from "../Input.styled";
 import Alert from "../Alert.styled";
 import { statuses } from "../../consts";
 
-import googleLogo from "../../../images/googleLogo.svg"
+import googleLogo from "../../../images/googleLogo.svg";
 
 const ForgotPasswordButton = styled.button`
   cursor: pointer;
@@ -77,24 +77,24 @@ const LoginForm = () => {
         onClick={handleGoogleLoginClick}
       >
         <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginRight: "-20px",
-              }}
-            >
-              <img
-                style={{
-                  display: "inline-block",
-                  marginLeft: 3,
-                  marginRight: 10,
-                }}
-                src={googleLogo}
-                alt="reddit"
-              />
-              <span>Sign in with Google</span>
-            </div>
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginRight: "-20px",
+          }}
+        >
+          <img
+            style={{
+              display: "inline-block",
+              marginLeft: 3,
+              marginRight: 10,
+            }}
+            src={googleLogo}
+            alt="reddit"
+          />
+          <span>Sign in with Google</span>
+        </div>
       </Button>
       <div style={{ display: "flex", marginBottom: 20 }}>
         <CheckboxButton

@@ -17,35 +17,41 @@ import { useContext } from "react";
 import { AuthContext } from "./common/services/AuthContext";
 
 const RoutesGroup = () => {
-    const { upgradedUser } = useContext(AuthContext)
+  const { upgradedUser } = useContext(AuthContext);
 
-    return ( <Router>
-        <Routes>
-          <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
-          {upgradedUser.isOn && <><Route path="/play/puzzles" element={<PuzzleList />} />
-          <Route
-            path="/play/workshop/new"
-            element={<WorkshopBuilderCreatePage />}
-          />
-          <Route
-            path="/play/workshop/edit/:riddleId"
-            element={<WorkshopBuilderEditPage />}
-          />
-          <Route path="/play/workshop" element={<WorkshopPage />} />
-          <Route
-            path="/play/workshop/my-riddles"
-            element={<WorkshopMyRiddlesPage />}
-          />
-          <Route
-            path="/play/workshop/:riddleId"
-            element={<WorkshopPlayPage />}
-          /></>}
-          <Route path="/play" element={<PlayPage />} />
-          <Route path="/tutorial" element={<TutorialPage />} />
-          <Route path="/temp" element={<TempPage />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router> );
-}
- 
+  return (
+    <Router>
+      <Routes>
+        <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
+        {upgradedUser.isOn && (
+          <>
+            <Route path="/play/puzzles" element={<PuzzleList />} />
+            <Route
+              path="/play/workshop/new"
+              element={<WorkshopBuilderCreatePage />}
+            />
+            <Route
+              path="/play/workshop/edit/:riddleId"
+              element={<WorkshopBuilderEditPage />}
+            />
+            <Route path="/play/workshop" element={<WorkshopPage />} />
+            <Route
+              path="/play/workshop/my-riddles"
+              element={<WorkshopMyRiddlesPage />}
+            />
+            <Route
+              path="/play/workshop/:riddleId"
+              element={<WorkshopPlayPage />}
+            />
+          </>
+        )}
+        <Route path="/play" element={<PlayPage />} />
+        <Route path="/tutorial" element={<TutorialPage />} />
+        <Route path="/temp" element={<TempPage />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+};
+
 export default RoutesGroup;

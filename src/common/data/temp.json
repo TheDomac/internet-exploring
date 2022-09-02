@@ -6,11 +6,11 @@
       "id": "8a0328a8-163c-411e-ae44-e46b25ab1eb6",
       "clues": [
         {
-          "id": "0cdcabe3-7887-4b3a-a82b-f348ba9df827",
+          "id": "0cdcabe3-7b-f348ba9df827",
           "clueValues": [
             {
               "id": "4a85fc08-08cb-4177-aa83-c8e6d1738fed",
-              "value": "HollywoodWeighingScale",
+              "value": "EdgarCryptogram",
               "type": "customComponent",
               "subtext": "",
               "style": {
@@ -18,88 +18,13 @@
               }
             }
           ],
-          "helperText": "Find out the weights of circle, square and triangle balls. Start by comparing them to grey balls.",
+          "helperText": "F M L = T H E",
           "subtext": "",
           "clueGroup": 0,
           "style": {
-            "width": "calc(50% - 10px)"
+            "width": "calc(100% - 10px)"
           },
           "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [
-              {
-                "id": "412445e0-c433-48c5-a8ba-7baf3d868bcd",
-                "value": "2663"
-              }
-            ],
-            "solvedText": "2663"
-          }
-        },
-        {
-          "id": "860d316f-e5b3-45c4-ad90-3c632955fd33",
-          "clueValues": [
-            {
-              "id": "4417f627-742e-46c3-8b9f-0c46a50c2a72",
-              "value": "star.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [
-              {
-                "id": "d37e4a78-f013-46a9-8078-20f8672d1f09",
-                "value": "Star"
-              },
-              {
-                "id": "d37e4a78-f013-46a9-8078-20f8ttttf09",
-                "value": "Stars"
-              }
-            ],
-            "solvedText": "Star"
-          }
-        },
-        {
-          "id": "6c65b125-e96d-4179-8e1d-31cc6fe2022c",
-          "clueValues": [
-            {
-              "id": "3a606b2a-3c99-4bfe-a0cc-46b9f772450e",
-              "value": "actor.png",
-              "type": "image",
-              "subtext": "Hollywood",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Who has the 2663rd star on the Hollywood Walk of Fame?",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
-          "dependsOn": [
-            {
-              "id": "15a1a19a-0ce1-474b-b4d9-333b3837a610",
-              "value": "0cdcabe3-7887-4b3a-a82b-f348ba9df827"
-            },
-            {
-              "id": "e637d8c9-9824-402f-aa27-8c29bf092a37",
-              "value": "860d316f-e5b3-45c4-ad90-3c632955fd33"
-            }
-          ],
           "solutionInfo": {
             "type": "text",
             "possibleSolutions": [],
@@ -113,358 +38,95 @@
         "possibleSolutions": [
           {
             "id": "815dbdb7-01a5-446a-b599-574d83926169",
-            "value": "Anne Hathaway"
+            "value": "Edgar Allan Poe"
           }
         ],
-        "solvedText": "Anne Hathaway"
+        "solvedText": "Edgar Allan Poe"
       }
     },
-  
-  
-  
-  
-  
-  
-  
-  
-    
-      {
-        "id": "3f5164ae-ecc5-49cb-b54b-4130cbbd0455",
-        "clues": [
-          {
-            "id": "3d820824-5e03-4908-9281-97917fb91008",
-            "clueValues": [
-              {
-                "id": "daac667c-7f8b-4b64-af2b-d33c2940f532",
-                "value": "map.png",
-                "type": "image",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              }
-            ],
-            "helperText": "Butterfly type - Araschnia levana, Painting by Jasper Johns - Made in 1961.",
-            "subtext": "",
-            "clueGroup": 0,
-            "style": {
-              "width": "calc(50% - 10px)"
-            },
-            "dependsOn": [],
-            "solutionInfo": {
-              "type": "text",
-              "possibleSolutions": [
-                {
-                  "id": "16acece4-8e10-4381-804f-2afa74f95811",
-                  "value": "Map"
-                }
-              ],
-              "solvedText": "Map"
-            }
-          },
-          {
-            "id": "5224433b-8737-49b4-96dc-eef2a1c0e464",
-            "clueValues": [
-              {
-                "id": "e5dbd155-002b-4d84-872a-a6714b8bd803",
-                "value": "60°10'13.9\"N 24°56'28.7\"E",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              },
-              {
-                "id": "694287f8-2b74-44dd-879c-68c8409a16ed",
-                "value": "48°51'50.4\"N 2°20'13.7\"E",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              },
-              {
-                "id": "14e767ad-f540-4294-b4df-c3f9a63a8c8c",
-                "value": "40°45'31.9\"N 73°58'37.1\"W",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              }
-            ],
-            "helperText": "Look at the statues and fountains at these locations. What geometrical object do they have in common?",
-            "subtext": "Geometrical object",
-            "clueGroup": 0,
-            "style": {
-              "width": "calc(50% - 10px)"
-            },
-            "dependsOn": [],
-            "solutionInfo": {
-              "type": "text",
-              "possibleSolutions": [
-                {
-                  "id": "be96d4e3-4853-4d59-b213-7d3763d611ea",
-                  "value": "Sphere"
-                },
-                {
-                  "id": "0dc9af08-724b-49ec-aa41-0d4a3beccc05",
-                  "value": "Spheres"
-                },
-                {
-                  "id": "bf427051-48fe-47f1-95ea-a698d1536a66",
-                  "value": "Ball"
-                },
-                {
-                  "id": "818a513c-9a11-4dc7-8cfd-785cfd967e29",
-                  "value": "Balls"
-                },
-                {
-                  "id": "b79faf42-7446-427e-9d22-21ad0a5d87ed",
-                  "value": "Circle"
-                },
-                {
-                  "id": "e6ce205a-f328-43bd-a7f2-c666023b5940",
-                  "value": "Circles"
-                }
-              ],
-              "solvedText": "Sphere"
-            }
-          }
-        ],
-        "style": {},
-        "solutionInfo": {
-          "type": "text",
-          "possibleSolutions": [
+    {
+      "id": "8a0328a8-s3c-411e-ae44-e46b25absb6",
+      "clues": [
+        {
+          "id": "0cdcaa-4b3a-a82b-f348ba9df827",
+          "clueValues": [
             {
-              "id": "d115cb85-f12a-451b-ac84-9427116606eb",
-              "value": "Globe"
-            },
-            {
-              "id": "b37d0f84-9d12-473b-81ba-79aa8c2a3271",
-              "value": "Globus"
+              "id": "4a85fc08-08cb-4177-aa83-c8e6d1738fed",
+              "value": "EdgarCryptogram",
+              "type": "customComponent",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
             }
           ],
-          "solvedText": "Globe"
+          "helperText": "F M L = T H E",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(100% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
         }
-      },
-      {
-        "id": "29b5495f-c6fc-43bd-800e-7008d91a8a8e",
-        "clues": [
+      ],
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "possibleSolutions": [
           {
-            "id": "88309cde-3e3d-44ba-b657-6692a193f9f2",
-            "clueValues": [
-              {
-                "id": "71e9b8a4-a241-4190-b725-34eb9a3e9cc5",
-                "value": "July",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              }
-            ],
-            "helperText": "Who is July named after?",
-            "subtext": "",
-            "clueGroup": 0,
-            "style": {
-              "width": "calc(33% - 10px)"
-            },
-            "dependsOn": [],
-            "solutionInfo": {
-              "type": "text",
-              "possibleSolutions": [],
-              "solvedText": ""
-            }
-          },
-          {
-            "id": "b7ce8a30-bb6f-481c-8375-d82827d89adf",
-            "clueValues": [
-              {
-                "id": "fb1b9ad5-b448-408a-b423-e42bfb932fb1",
-                "value": "C-section",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              }
-            ],
-            "helperText": "Who is C-section named after?",
-            "subtext": "",
-            "clueGroup": 0,
-            "style": {
-              "width": "calc(33% - 10px)"
-            },
-            "dependsOn": [],
-            "solutionInfo": {
-              "type": "text",
-              "possibleSolutions": [],
-              "solvedText": ""
-            }
-          },
-          {
-            "id": "af687bff-1695-4452-a6d6-54560a8cb0fd",
-            "clueValues": [
-              {
-                "id": "915e4292-9125-4313-9454-61db3ef5fcb2",
-                "value": "Tsar",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              }
-            ],
-            "helperText": "Where does the origin of the word Tsar come from?",
-            "subtext": "",
-            "clueGroup": 0,
-            "style": {
-              "width": "calc(33% - 10px)"
-            },
-            "dependsOn": [],
-            "solutionInfo": {
-              "type": "text",
-              "possibleSolutions": [],
-              "solvedText": ""
-            }
+            "id": "815dbdb7-01a5-446a-b599-574d83926169",
+            "value": "Edgar Allan Poe"
           }
         ],
-        "style": {},
-        "solutionInfo": {
-          "type": "text",
-          "possibleSolutions": [
-            {
-              "id": "56b46776-2683-4bf8-b204-cbffbfeb4ba8",
-              "value": "Julius Caesar"
-            },
-            {
-              "id": "4cd0fdff-33a1-40f3-9483-71f8233b20b4",
-              "value": "Caesar"
-            },
-            {
-              "id": "bdeb8c4c-3891-47fd-a402-67a5f0529b24",
-              "value": "Cesar"
-            },
-            {
-              "id": "54981ae2-595e-4bf4-a210-bb947b741d55",
-              "value": "Cezar"
-            }
-          ],
-          "solvedText": "Julius Caesar"
-        }
-      },
-      {
-        "id": "c71e013c-25fb-4d71-b025-dc9ac005d2b3",
-        "clues": [
-          {
-            "id": "81ed8fa8-054b-4d4a-9e6b-c2034082eb50",
-            "clueValues": [
-              {
-                "id": "fceda035-a4f5-4739-ae28-0f2c712d0b87",
-                "value": "Anne Hathaway",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              }
-            ],
-            "helperText": "She was the wife of the person we're looking for.",
-            "subtext": "Not that one",
-            "clueGroup": 0,
-            "style": {
-              "width": "calc(33% - 10px)"
-            },
-            "dependsOn": [],
-            "solutionInfo": {
-              "type": "text",
-              "possibleSolutions": [],
-              "solvedText": ""
-            }
-          },
-          {
-            "id": "a1157075-0a40-4b3c-a43f-abc5197fc4a9",
-            "clueValues": [
-              {
-                "id": "cc953570-da69-4d1e-91c1-cd894c473013",
-                "value": "Globe",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              }
-            ],
-            "helperText": "It's a building in London.",
-            "subtext": "Not the map thingy",
-            "clueGroup": 0,
-            "style": {
-              "width": "calc(33% - 10px)"
-            },
-            "dependsOn": [],
-            "solutionInfo": {
-              "type": "text",
-              "possibleSolutions": [],
-              "solvedText": ""
-            }
-          },
-          {
-            "id": "186c1182-d355-41aa-9e05-ccef11e51eac",
-            "clueValues": [
-              {
-                "id": "a98460a9-f583-4771-92d2-b15ef7bbe2a2",
-                "value": "Julius Caesar",
-                "type": "text",
-                "subtext": "",
-                "style": {
-                  "width": "calc(100% - 10px)"
-                }
-              }
-            ],
-            "helperText": "It's a play.",
-            "subtext": "Not the person",
-            "clueGroup": 0,
-            "style": {
-              "width": "calc(33% - 10px)"
-            },
-            "dependsOn": [],
-            "solutionInfo": {
-              "type": "text",
-              "possibleSolutions": [],
-              "solvedText": ""
-            }
-          }
-        ],
-        "style": {},
-        "solutionInfo": {
-          "type": "text",
-          "possibleSolutions": [
-            {
-              "id": "bf9532c5-4332-4aff-aee1-1cee4c9dc968",
-              "value": "William Shakespeare"
-            },
-            {
-              "id": "a7b18f8f-5daf-4b72-8891-02b5adb56bc1",
-              "value": "Shakespeare"
-            }
-          ],
-          "solvedText": "William Shakespeare"
-        }
+        "solvedText": "Edgar Allan Poe"
       }
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    },
+    {
+      "id": "8a0328a8-s3c-411e-ae44-e46b25ab1eb6",
+      "clues": [
+        {
+          "id": "0cdcabe3c48ba9df827",
+          "clueValues": [
+            {
+              "id": "4a85fc08-08cb-4177-aa83-c8e6d1738fed",
+              "value": "EdgarCryptogram",
+              "type": "customComponent",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "F M L = T H E",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(100% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        }
+      ],
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "id": "815dbdb7-01a5-446a-b599-574d83926169",
+            "value": "Edgar Allan Poe"
+          }
+        ],
+        "solvedText": "Edgar Allan Poe"
+      }
+    }
   ]
 }

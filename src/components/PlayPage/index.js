@@ -19,7 +19,6 @@ const PlayPage = () => {
     <>
       <LoginCorner />
       <Container>
-        
         {upgradedUser.isOn ? (
           <>
             <Link to="/play/puzzles" style={{ marginBottom: "40px" }}>
@@ -34,12 +33,12 @@ const PlayPage = () => {
           </>
         ) : (
           <>
-          <Link
-          to={`/play/puzzles/${FREE_RIDDLE_ID}`}
-          style={{ marginBottom: "40px" }}
-        >
-          <Button style={{ maxWidth: "100%" }}>Play a Free Riddle</Button>
-        </Link>
+            <Link
+              to={`/play/puzzles/${FREE_RIDDLE_ID}`}
+              style={{ marginBottom: "40px" }}
+            >
+              <Button style={{ maxWidth: "100%" }}>Play a Free Riddle</Button>
+            </Link>
             <Button
               onClick={upgradeModal.setOn}
               style={{ maxWidth: "100%", marginBottom: "40px" }}

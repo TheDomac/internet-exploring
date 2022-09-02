@@ -135,9 +135,9 @@ const PictureSlider = ({
 
   useEffect(() => {
     if (isSolvedBySlider) {
-      onFinish(); 
+      onFinish();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSolvedBySlider]);
 
   const isSolved = isSolvedBySlider || isMarkedAsSolved;

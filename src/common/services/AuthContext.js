@@ -22,8 +22,7 @@ const AuthProvider = ({ children }) => {
   const [registrationStatus, setRegistrationStatus] = useState(statuses.IDLE);
   const [logInStatus, setLogInStatus] = useState(statuses.IDLE);
   const [passwordResetStatus, setPasswordResetStatus] = useState(statuses.IDLE);
-  const upgradedUser = useToggle()
-
+  const upgradedUser = useToggle();
 
   useEffect(() => {
     onAuthStateChanged(auth, async (currentUser) => {
@@ -39,10 +38,10 @@ const AuthProvider = ({ children }) => {
           }
         } catch (err) {}
       } else {
-        upgradedUser.setOff()
+        upgradedUser.setOff();
       }
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleGoogleLoginClick = async () => {
@@ -51,7 +50,6 @@ const AuthProvider = ({ children }) => {
 
   const handleLogOutClick = async () => {
     await signOut(auth);
-    
   };
 
   const registerUser = async (email, password) => {

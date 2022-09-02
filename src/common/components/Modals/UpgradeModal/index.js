@@ -8,7 +8,7 @@ import { Button } from "../../Button.styled";
 import { AuthContext } from "../../../services/AuthContext";
 import { PaymentContext } from "../../../services/PaymentContext";
 import LoginForm from "../../LoginForm";
-import {env, statuses} from "../../../consts"
+import { env, statuses } from "../../../consts";
 
 const UpgradeModal = () => {
   const [upgradeStatus, setUpgradeStatus] = useState(statuses.IDLE);
@@ -20,12 +20,15 @@ const UpgradeModal = () => {
     setUpgradeStatus(statuses.LOADING);
     try {
       const functions = getFunctions();
-      const createStripeCheckout = httpsCallable(functions, 'createStripeCheckout');
-      const response = await createStripeCheckout({ env, userId: user.uid })
-      setUpgradeStatus(statuses.SUCCESS)
-      window.location.href = response.data.url
+      const createStripeCheckout = httpsCallable(
+        functions,
+        "createStripeCheckout"
+      );
+      const response = await createStripeCheckout({ env, userId: user.uid });
+      setUpgradeStatus(statuses.SUCCESS);
+      window.location.href = response.data.url;
     } catch (error) {
-      setUpgradeStatus(statuses.ERROR)
+      setUpgradeStatus(statuses.ERROR);
     }
   };
 
@@ -66,7 +69,9 @@ const UpgradeModal = () => {
                 onClick={handlePaymentClick}
                 disabled={upgradeStatus === statuses.LOADING}
               >
-                {upgradeStatus === statuses.LOADING ? "Loading..." : "Upgrade ($3.90)"}
+                {upgradeStatus === statuses.LOADING
+                  ? "Loading..."
+                  : "Upgrade ($3.90)"}
               </Button>
             ) : (
               <Button
