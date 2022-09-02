@@ -52,13 +52,13 @@ const UpgradeModal = () => {
           <>
             <img src={upgradeImage} alt="upgrade_img" />
 
-            <p>By upgrading ($3.90) you get the following:</p>
+            <p>Buying the full game ($3.90) gives you access to the following:</p>
             <p>
-              Access to all existing riddles (20 at the moment) as well as all
+              All existing riddles (20 at the moment) as well as all
               future riddles that will be added to the list.
             </p>
             <p>
-              Access to Workshop where you can play riddles made by other
+              Workshop where you can play riddles made by other
               players or create your own.
             </p>
 

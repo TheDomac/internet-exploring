@@ -18,6 +18,7 @@ exports.createStripeCheckout = functions.https.onCall(async (data, context) => {
         unit_amount: 390, // 3.90$
         product_data: {
           name: "Internet Exploring",
+          description: "What if the Internet was your escape room?",
         },
       },
     }],
@@ -53,6 +54,7 @@ exports.stripeWebhook = functions.https.onRequest(async (req, res) => {
         email: dataObject.customer_details.email,
         name: dataObject.customer_details.name,
       });
+  return res.sendStatus(200);
 });
 
 

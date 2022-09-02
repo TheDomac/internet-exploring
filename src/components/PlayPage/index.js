@@ -45,12 +45,12 @@ const PlayPage = () => {
             >
               Riddles
               <br />
-              <span style={{ fontSize: "14px" }}>Upgrade to Play</span>
+              <span style={{ fontSize: "14px" }}>Unlock to Play</span>
             </Button>
             <Button onClick={upgradeModal.setOn} style={{ maxWidth: "100%" }}>
               Workshop
               <br />
-              <span style={{ fontSize: "14px" }}>Upgrade to Play</span>
+              <span style={{ fontSize: "14px" }}>Unlock to Play</span>
             </Button>
             <Link to="/">
               <ArrowBack />
