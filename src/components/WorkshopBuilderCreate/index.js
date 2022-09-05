@@ -73,6 +73,10 @@ const WorkshopBuilderCreate = () => {
     setUserSocialMediaURL(e.target.value);
   };
 
+  // const handleSave = () => {
+  //   console.log(puzzle)
+  // }
+
   const handleSave = async (e) => {
     const isDraft = e.target.name === "draft";
     const status = isDraft

@@ -18,6 +18,7 @@ import shapeOfLife from "./riDvoNI07SYuGhTIxFV1.json";
 import theBoundariesOfMystery from "./uXN8AXD4ca7sdiddPIGn.json";
 import aJourneyNeverFinished from "./9Dd2s3501IysbdlZvjvO.json";
 import doYouSpeakEnglish from "./EFJ2DZMuJMsudY8xSejM.json";
+import aChunkOfEvil from "./b3jJlrAjob4z64dyYRsB.json";
 
 const puzzles = [
   littleRedRunningThrough,
@@ -40,6 +41,7 @@ const puzzles = [
   theBoundariesOfMystery,
   aJourneyNeverFinished,
   doYouSpeakEnglish,
+  aChunkOfEvil
 ];
 
 export default puzzles;
