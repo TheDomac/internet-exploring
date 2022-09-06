@@ -195,7 +195,7 @@
           }
         },
         {
-          "clueGroup": 0,
+          "clueGroup": 1,
           "dependsOn": [
             {
               "id": "8996d5db-43a6-4f6d-a58f-c3aa580e2e50",
@@ -244,7 +244,7 @@
             "width": "calc(33% - 10px)"
           },
           "id": "e4ba9069-9b60-484d-9662-2c907fdca2fc",
-          "clueGroup": 0,
+          "clueGroup": 2,
           "dependsOn": [
             {
               "id": "08defa0a-06da-4654-aeae-876197665e7e",
@@ -303,7 +303,7 @@
           ],
           "helperText": "",
           "id": "872b2aad-9f5c-4504-af30-ccfc72fc33c1",
-          "clueGroup": 0,
+          "clueGroup": 3,
           "subtext": "",
           "solutionInfo": {
             "solvedText": "",

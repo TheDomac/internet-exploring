@@ -114,8 +114,6 @@ const EdgarCryptogram = ({
   const [selectedHashedLetter, setSelectedHashLetter] = useState(null);
   const finished = useToggle(solved);
 
-  console.log(solved);
-
   useEffect(() => {
     const test = solutionAsSymbols.map((symbol) =>
       hash[symbol] !== undefined ? letters[hash[symbol]] : symbol
@@ -157,6 +155,7 @@ const EdgarCryptogram = ({
         style={{ maxWidth: "30%", textAlign: "center", margin: "0 auto" }}
       >
         <CopyableText text={SOLUTION} />
+        <CopyableText fontSize="16px" text="Quote author" />
       </motion.div>
     );
   }

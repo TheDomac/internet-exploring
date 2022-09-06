@@ -10,6 +10,7 @@ import LoginCorner from "../../common/components/LoginCorner";
 import { PaymentContext } from "../../common/services/PaymentContext";
 import { AuthContext } from "../../common/services/AuthContext";
 import { FREE_RIDDLE_ID } from "../../common/consts";
+import puzzles from "../../common/data/puzzles";
 
 const PlayPage = () => {
   const { upgradeModal } = useContext(PaymentContext);
@@ -43,7 +44,7 @@ const PlayPage = () => {
               onClick={upgradeModal.setOn}
               style={{ maxWidth: "100%", marginBottom: "40px" }}
             >
-              Riddles
+              Riddles ({puzzles.length})
               <br />
               <span style={{ fontSize: "14px" }}>Unlock to Play</span>
             </Button>

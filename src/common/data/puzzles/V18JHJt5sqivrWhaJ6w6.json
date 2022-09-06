@@ -4,131 +4,6 @@
   "name": "Little red running through",
   "rebuses": [
     {
-      "clues": [
-        {
-          "helperText": "What do you get when you subtract the birthday of an actor playing John Rambo from a birthday of 43rd US president?",
-          "clueValues": [
-            {
-              "type": "image",
-              "value": "stalloneBirthday.png",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "id": "6311cfaf-cb41-4806-b8f4-167f5e633b29"
-            }
-          ],
-          "clueGroup": 0,
-          "dependsOn": [],
-          "id": "2eb98f58-fd33-45b7-8d61-25c5652d7359",
-          "solutionInfo": {
-            "type": "date",
-            "possibleSolutions": [
-              {
-                "value": {
-                  "place": "",
-                  "day": "6",
-                  "second": "",
-                  "minute": "",
-                  "hour": "",
-                  "year": "1946",
-                  "month": "July"
-                },
-                "id": "f2667b40-a7e8-42bd-8581-c3bdf6b7ec3b"
-              }
-            ],
-            "solvedText": "6 July 1946"
-          },
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "subtext": ""
-        },
-        {
-          "clueValues": [
-            {
-              "type": "text",
-              "style": {
-                "fontSize": "35px",
-                "width": "calc(100% - 10px)"
-              },
-              "subtext": "",
-              "id": "8a193f7f-13a8-40f3-808e-f4da9ea701a1",
-              "value": "-"
-            }
-          ],
-          "id": "8bba16e2-f0b7-4d68-9c30-5488934ae59c",
-          "subtext": "",
-          "style": {
-            "width": "calc(10% - 10px)"
-          },
-          "dependsOn": [],
-          "clueGroup": 0,
-          "solutionInfo": {
-            "possibleSolutions": [],
-            "type": "text",
-            "solvedText": ""
-          },
-          "helperText": ""
-        },
-        {
-          "helperText": "What do you get when you subtract the birthday of an actor playing John Rambo from a birthday of 43rd US president?",
-          "dependsOn": [],
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "solutionInfo": {
-            "type": "date",
-            "solvedText": "6 July 1946",
-            "possibleSolutions": [
-              {
-                "id": "b67092e4-fe1e-42e0-ba29-6b23eb09f21d",
-                "value": {
-                  "second": "",
-                  "year": "1946",
-                  "minute": "",
-                  "month": "July",
-                  "place": "",
-                  "day": "6",
-                  "hour": ""
-                }
-              }
-            ]
-          },
-          "subtext": "",
-          "clueGroup": 0,
-          "clueValues": [
-            {
-              "subtext": "",
-              "value": "bushBirthday.png",
-              "id": "9618894c-56d5-4f57-a634-1ced0f66bc21",
-              "type": "image",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "id": "a6f75c76-cf72-4d03-b6e2-0cc74e5f7bcc"
-        }
-      ],
-      "id": "abd176a3-2143-40b8-978c-88d153c212aa",
-      "style": {},
-      "solutionInfo": {
-        "solvedText": "0",
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "value": "0",
-            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
-          },
-          {
-            "id": "7e6f00c6-1317-4f5a-98bb-567260d8bfb1",
-            "value": "Zero"
-          }
-        ]
-      }
-    },
-    {
       "solutionInfo": {
         "possibleSolutions": [],
         "solvedText": "A",
@@ -233,6 +108,131 @@
       ]
     },
     {
+      "clues": [
+        {
+          "helperText": "What do you get when you subtract the birthday of an actor playing John Rambo from a birthday of 43rd US president?",
+          "clueValues": [
+            {
+              "type": "image",
+              "value": "stalloneBirthday.png",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "6311cfaf-cb41-4806-b8f4-167f5e633b29"
+            }
+          ],
+          "clueGroup": 0,
+          "dependsOn": [],
+          "id": "2eb98f58-fd33-45b7-8d61-25c5652d7359",
+          "solutionInfo": {
+            "type": "date",
+            "possibleSolutions": [
+              {
+                "value": {
+                  "place": "",
+                  "day": "6",
+                  "second": "",
+                  "minute": "",
+                  "hour": "",
+                  "year": "1946",
+                  "month": "July"
+                },
+                "id": "f2667b40-a7e8-42bd-8581-c3bdf6b7ec3b"
+              }
+            ],
+            "solvedText": "6 July 1946"
+          },
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "subtext": ""
+        },
+        {
+          "clueValues": [
+            {
+              "type": "text",
+              "style": {
+                "fontSize": "70px",
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": "",
+              "id": "8a193f7f-13a8-40f3-808e-f4da9ea701a1",
+              "value": "-"
+            }
+          ],
+          "id": "8bba16e2-f0b7-4d68-9c30-5488934ae59c",
+          "subtext": "",
+          "style": {
+            "width": "calc(10% - 10px)"
+          },
+          "dependsOn": [],
+          "clueGroup": 0,
+          "solutionInfo": {
+            "possibleSolutions": [],
+            "type": "text",
+            "solvedText": ""
+          },
+          "helperText": ""
+        },
+        {
+          "helperText": "What do you get when you subtract the birthday of an actor playing John Rambo from a birthday of 43rd US president?",
+          "dependsOn": [],
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "solutionInfo": {
+            "type": "date",
+            "solvedText": "6 July 1946",
+            "possibleSolutions": [
+              {
+                "id": "b67092e4-fe1e-42e0-ba29-6b23eb09f21d",
+                "value": {
+                  "second": "",
+                  "year": "1946",
+                  "minute": "",
+                  "month": "July",
+                  "place": "",
+                  "day": "6",
+                  "hour": ""
+                }
+              }
+            ]
+          },
+          "subtext": "",
+          "clueGroup": 0,
+          "clueValues": [
+            {
+              "subtext": "",
+              "value": "bushBirthday.png",
+              "id": "9618894c-56d5-4f57-a634-1ced0f66bc21",
+              "type": "image",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "id": "a6f75c76-cf72-4d03-b6e2-0cc74e5f7bcc"
+        }
+      ],
+      "id": "abd176a3-2143-40b8-978c-88d153c212aa",
+      "style": {},
+      "solutionInfo": {
+        "solvedText": "0",
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "value": "0",
+            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
+          },
+          {
+            "id": "7e6f00c6-1317-4f5a-98bb-567260d8bfb1",
+            "value": "Zero"
+          }
+        ]
+      }
+    },
+    {
       "style": {},
       "id": "bdf44d74-fde1-411e-b407-74f2d3a0abda",
       "solutionInfo": {
@@ -298,33 +298,6 @@
       "clues": [
         {
           "dependsOn": [],
-          "helperText": "It's one of the types of the red liquid we're looking for.",
-          "clueValues": [
-            {
-              "value": "0",
-              "type": "text",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "fontSize": "35px"
-              },
-              "id": "1e65a617-181a-49ed-87dd-47a4b929ddb8",
-              "subtext": ""
-            }
-          ],
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "id": "1e37b4ff-406b-48b1-b3c9-b68b1d994def",
-          "solutionInfo": {
-            "solvedText": "",
-            "possibleSolutions": [],
-            "type": "text"
-          },
-          "subtext": ""
-        },
-        {
-          "dependsOn": [],
           "clueGroup": 0,
           "clueValues": [
             {
@@ -349,6 +322,33 @@
             "solvedText": "",
             "possibleSolutions": []
           }
+        },
+        {
+          "dependsOn": [],
+          "helperText": "It's one of the types of the red liquid we're looking for.",
+          "clueValues": [
+            {
+              "value": "0",
+              "type": "text",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "35px"
+              },
+              "id": "1e65a617-181a-49ed-87dd-47a4b929ddb8",
+              "subtext": ""
+            }
+          ],
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "id": "1e37b4ff-406b-48b1-b3c9-b68b1d994def",
+          "solutionInfo": {
+            "solvedText": "",
+            "possibleSolutions": [],
+            "type": "text"
+          },
+          "subtext": ""
         },
         {
           "dependsOn": [],
