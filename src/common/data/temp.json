@@ -3,7 +3,7 @@
 {
   "id": "b3jJlrAjob4z64dyYRsB",
   "name": "A chunk of evil",
-  "order": 1900,
+  "order": 115,
   "rebuses": [
     {
       "id": "8a0328a8-163c-411e-ae44-e46b25ab1eb6",
@@ -55,97 +55,42 @@
           "clueValues": [
             {
               "id": "a48c9602-6b3a-4578-a5f9-efce05d780fd",
-              "value": "C D# G",
-              "type": "text",
+              "value": "bigBen.png",
+              "type": "image",
               "subtext": "",
               "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
-              }
-            },
-            {
-              "id": "e91430b9-97fd-427b-870d-d5214e3e9d53",
-              "value": "F# D# C",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
-              }
-            },
-            {
-              "id": "e0737a49-73e2-4db1-8240-8ee86c8a3a8c",
-              "value": "C D# G G# G F# D# C",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
-              }
-            },
-            {
-              "id": "40c30358-54fe-4bbe-87b6-f55057a93b28",
-              "value": "F G# C",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
-              }
-            },
-            {
-              "id": "6d8108fb-e911-4a47-9ef8-b9657b6c6388",
-              "value": "B G# F",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
-              }
-            },
-            {
-              "id": "f3b92193-570d-44a5-9bbf-4986961ef699",
-              "value": "C D# G",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
-              }
-            },
-            {
-              "id": "94f33495-e53a-4da9-a528-1cb821d1cc5d",
-              "value": "F# D# C",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
-              }
-            },
-            {
-              "id": "88b1ee0b-e423-443e-8c56-e3c035304eb1",
-              "value": "G# G",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
-              }
-            },
-            {
-              "id": "cf47e896-8db9-4edc-9439-a875ac96ef74",
-              "value": "G F D# F D# C",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "margin": "0px"
+                "width": "calc(100% - 10px)"
               }
             }
           ],
-          "helperText": "Find these notes on a piano and play them (use some online piano player). You'll get a famous superhero's ringtone.",
-          "subtext": "Piano",
+          "helperText": "Find the name of a famous bell inside of this tower in London.",
+          "subtext": "Uncle",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "11111-3d9d-4108-ad53-2c83a78f96be",
+          "clueValues": [
+            {
+              "id": "a48c9652-6b3a-4578-a5f9-efce05d780fd",
+              "value": "may.png",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "Name of the 5th month.",
+          "subtext": "Aunt",
           "clueGroup": 0,
           "style": {
             "width": "calc(33% - 10px)"
@@ -165,6 +110,10 @@
           {
             "id": "4d84dbcb-c000-4d50-87bb-b8272bd8e81e",
             "value": "Spiderman"
+          },
+          {
+            "id": "45454cb-c000-4d50-87bb-b8272bd8e81e",
+            "value": "Peter Parker"
           },
           {
             "id": "2866b4da-b22b-4d76-8455-40f9c5265976",
