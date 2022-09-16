@@ -9,7 +9,7 @@ import { AuthContext } from "../../../services/AuthContext";
 import { PaymentContext } from "../../../services/PaymentContext";
 import LoginForm from "../../LoginForm";
 import { env, statuses } from "../../../consts";
-import puzzles from "../../../data/puzzles"
+import puzzles from "../../../data/puzzles";
 const UpgradeModal = () => {
   const [upgradeStatus, setUpgradeStatus] = useState(statuses.IDLE);
   const { user, upgradedUser } = useContext(AuthContext);
@@ -52,14 +52,16 @@ const UpgradeModal = () => {
           <>
             <img src={upgradeImage} alt="upgrade_img" />
 
-            <p>Buying the full game ($3.90) gives you access to the following:</p>
             <p>
-              All existing riddles ({puzzles.length}) as well as all
-              future riddles that will be added to the list.
+              Buying the full game ($3.90) gives you access to the following:
             </p>
             <p>
-              Workshop where you can play riddles made by other
-              players or create your own.
+              All existing riddles ({puzzles.length}) as well as all future
+              riddles that will be added to the list.
+            </p>
+            <p>
+              Workshop where you can play riddles made by other players or
+              create your own.
             </p>
 
             {user ? (

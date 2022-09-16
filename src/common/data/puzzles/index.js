@@ -41,7 +41,7 @@ const puzzles = [
   theBoundariesOfMystery,
   aJourneyNeverFinished,
   doYouSpeakEnglish,
-  aChunkOfEvil
+  aChunkOfEvil,
 ];
 
 export default puzzles;
