@@ -1,4 +1,5 @@
 import React, { useState, createContext, useEffect } from "react";
+
 import { doc, getDoc } from "firebase/firestore";
 import {
   signInWithPopup,
@@ -23,7 +24,6 @@ const AuthProvider = ({ children }) => {
   const [logInStatus, setLogInStatus] = useState(statuses.IDLE);
   const [passwordResetStatus, setPasswordResetStatus] = useState(statuses.IDLE);
   const upgradedUser = useToggle();
-
   useEffect(() => {
     onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);

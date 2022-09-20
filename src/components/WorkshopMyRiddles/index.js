@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { Button } from "../../common/components/Button.styled";
-import { AuthContext } from "../../common/services/AuthContext";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import { Wrapper } from "../../common/components/PuzzleList.styled";
 
@@ -14,7 +13,6 @@ import Alert from "../../common/components/Alert.styled";
 import List from "./List";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 import LoginCorner from "../../common/components/LoginCorner";
-import { PaymentContext } from "../../common/services/PaymentContext";
 
 const successAlertText = {
   [RIDDLE_STATUSES.DRAFT]: "Riddle saved successfully.",
@@ -23,8 +21,6 @@ const successAlertText = {
 };
 
 const WorkshopMyRiddles = () => {
-  const { user } = useContext(AuthContext);
-  const { loginModal } = useContext(PaymentContext);
   const { initPuzzle } = useContext(WorkshopContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -83,15 +79,7 @@ const WorkshopMyRiddles = () => {
             {successAlertText[successAlertStatus]}
           </Alert>
         )}
-        {user ? (
           <List />
-        ) : (
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button onClick={loginModal.setOn} style={{ maxWidth: "100%" }}>
-              Sign in to see your riddles
-            </Button>
-          </div>
-        )}
       </Wrapper>
     </>
   );

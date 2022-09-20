@@ -24,7 +24,7 @@ const Puzzle = () => {
     if (upgradedUser.isOn) {
       navigate("/play/puzzles");
     } else {
-      navigate("/play");
+      navigate("/");
     }
   };
 

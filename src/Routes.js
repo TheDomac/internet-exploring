@@ -43,9 +43,9 @@ const RoutesGroup = () => {
               path="/play/workshop/:riddleId"
               element={<WorkshopPlayPage />}
             />
+            <Route path="/play" element={<PlayPage />} />
           </>
         )}
-        <Route path="/play" element={<PlayPage />} />
         <Route path="/tutorial" element={<TutorialPage />} />
         <Route path="/temp" element={<TempPage />} />
         <Route path="/" element={<Home />} />

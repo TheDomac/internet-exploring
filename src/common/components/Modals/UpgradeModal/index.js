@@ -25,7 +25,6 @@ const UpgradeModal = () => {
         "createStripeCheckout"
       );
       const response = await createStripeCheckout({ env, userId: user.uid });
-      setUpgradeStatus(statuses.SUCCESS);
       window.location.href = response.data.url;
     } catch (error) {
       setUpgradeStatus(statuses.ERROR);
@@ -56,7 +55,7 @@ const UpgradeModal = () => {
               Buying the full game ($3.90) gives you access to the following:
             </p>
             <p>
-              All existing riddles ({puzzles.length}) as well as all future
+            {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as well as all future
               riddles that will be added to the list.
             </p>
             <p>
@@ -73,7 +72,7 @@ const UpgradeModal = () => {
               >
                 {upgradeStatus === statuses.LOADING
                   ? "Loading..."
-                  : "Upgrade ($3.90)"}
+                  : "Buy ($3.90)"}
               </Button>
             ) : (
               <Button
@@ -81,7 +80,7 @@ const UpgradeModal = () => {
                 style={{ maxWidth: "100%", width: "100%", marginBottom: 20 }}
                 onClick={loginStep.setOn}
               >
-                Log in to continue
+                Sign in to continue
               </Button>
             )}
           </>
@@ -93,7 +92,7 @@ const UpgradeModal = () => {
         >
           Close
         </Button>
-      </div>{" "}
+      </div>
     </Modal>
   );
 };
