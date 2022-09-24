@@ -56,15 +56,22 @@ const Home = () => {
 
         {upgradedUser.isOn ? (
           <Link to="/play" style={{ marginBottom: "20px", maxWidth: "80%" }}>
-          <Button style={{ maxWidth: "100%" }}>Play</Button>
-        </Link>
-      ) : (
-          <>
-          <Link to={`/play/puzzles/${FREE_RIDDLE_ID}`} style={{ marginBottom: "20px", maxWidth: "80%" }}>
-            <Button style={{ maxWidth: "100%" }}>Play a Free Riddle</Button>
+            <Button style={{ maxWidth: "100%" }}>Play</Button>
           </Link>
-            <Button onClick={upgradeModal.setOn} style={{ maxWidth: "100%", marginBottom: "20px" }}>Riddles ({puzzles.length * 4})</Button>
-
+        ) : (
+          <>
+            <Link
+              to={`/play/puzzles/${FREE_RIDDLE_ID}`}
+              style={{ marginBottom: "20px", maxWidth: "80%" }}
+            >
+              <Button style={{ maxWidth: "100%" }}>Play a Free Riddle</Button>
+            </Link>
+            <Button
+              onClick={upgradeModal.setOn}
+              style={{ maxWidth: "100%", marginBottom: "20px" }}
+            >
+              Riddles ({puzzles.length * 4})
+            </Button>
           </>
         )}
         <Link to="/tutorial" style={{ marginBottom: "20px", maxWidth: "80%" }}>
@@ -75,7 +82,11 @@ const Home = () => {
             rel="noreferrer"
             href={REDDIT_URL}
             target="_blank"
-            style={{ display: "inline-block", width: "100%", marginBottom: "25px" }}
+            style={{
+              display: "inline-block",
+              width: "100%",
+              marginBottom: "25px",
+            }}
           >
             <Button
               style={{ width: "100%", maxWidth: "100%", padding: "12px 20px" }}
@@ -102,10 +113,16 @@ const Home = () => {
             </Button>
           </a>
         </div>
-        <div style={{ display: "flex", fontSize: 12, paddingBottom: 20}}>
-
-        <div style={{ cursor: "pointer", marginRight: 40 }} onClick={termsModal.setOn}>Terms of Service</div>
-        <div style={{ cursor: "pointer" }} onClick={privacyPolicyModal.setOn}>Privacy Policy</div>
+        <div style={{ display: "flex", fontSize: 12, paddingBottom: 20 }}>
+          <div
+            style={{ cursor: "pointer", marginRight: 40 }}
+            onClick={termsModal.setOn}
+          >
+            Terms of Service
+          </div>
+          <div style={{ cursor: "pointer" }} onClick={privacyPolicyModal.setOn}>
+            Privacy Policy
+          </div>
         </div>
       </Container>
     </>

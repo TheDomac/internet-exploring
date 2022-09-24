@@ -55,8 +55,8 @@ const UpgradeModal = () => {
               Buying the full game ($3.90) gives you access to the following:
             </p>
             <p>
-            {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as well as all future
-              riddles that will be added to the list.
+              {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as well
+              as all future riddles that will be added to the list.
             </p>
             <p>
               Workshop where you can play riddles made by other players or

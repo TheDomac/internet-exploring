@@ -24,14 +24,14 @@ const shortenString = (string) =>
 const LoginCorner = ({ redirectAfterLogout = true }) => {
   const { handleLogOutClick, user } = useContext(AuthContext);
   const { loginModal } = useContext(PaymentContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = () => {
     if (redirectAfterLogout) {
-      navigate("/")
+      navigate("/");
     }
-    handleLogOutClick()
-  }
+    handleLogOutClick();
+  };
 
   return user ? (
     <Button title={user.email} onClick={handleClick}>

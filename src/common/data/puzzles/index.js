@@ -19,6 +19,7 @@ import theBoundariesOfMystery from "./theBoundariesOfMystery.json";
 import aJourneyNeverFinished from "./aJourneyNeverFinished.json";
 import doYouSpeakEnglish from "./doYouSpeakEnglish.json";
 import aChunkOfEvil from "./aChunkOfEvil.json";
+import healthyTimeOnTV from "./healthyTimeOnTV.json";
 
 const puzzles = [
   littleRedRunningThrough,
@@ -42,6 +43,7 @@ const puzzles = [
   aJourneyNeverFinished,
   doYouSpeakEnglish,
   aChunkOfEvil,
+  healthyTimeOnTV,
 ];
 
 export default puzzles;

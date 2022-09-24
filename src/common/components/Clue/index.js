@@ -52,7 +52,7 @@ const Clue = ({ clue, clueIndex }) => {
       $helpClicked={clue.helperText && helpClicked.isOn}
       $clueGroup={clue.clueGroup}
       $isHiddenClue={isHiddenClue}
-      style={clue.style}
+      style={{ ...clue.style, ...(isHiddenClue ? {} : { filter: "none" }) }}
     >
       {isHiddenClue && <BlockArea />}
       {clue.helperText && (

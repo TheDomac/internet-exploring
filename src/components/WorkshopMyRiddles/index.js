@@ -79,7 +79,7 @@ const WorkshopMyRiddles = () => {
             {successAlertText[successAlertStatus]}
           </Alert>
         )}
-          <List />
+        <List />
       </Wrapper>
     </>
   );
