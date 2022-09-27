@@ -26,7 +26,7 @@ export const projects = {
 
 export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
 
-export const FREE_RIDDLE_ID = "V18JHJt5sqivrWhaJ6w6"; // Little red running through
+export const FREE_RIDDLE_ID = "Kn3yls643KRUrov3SFSm"; // Same place different time
 
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",

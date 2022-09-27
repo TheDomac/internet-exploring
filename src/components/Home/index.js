@@ -8,7 +8,6 @@ import { Button } from "../../common/components/Button.styled";
 import { Container } from "../../common/components/Container.styled";
 import LoginCorner from "../../common/components/LoginCorner";
 import { REDDIT_URL } from "../../common/consts";
-import puzzles from "../../common/data/puzzles";
 
 import Logo from "../../images/Logo.png";
 import redditLogo from "../../images/redditLogo.png";
@@ -70,7 +69,7 @@ const Home = () => {
               onClick={upgradeModal.setOn}
               style={{ maxWidth: "100%", marginBottom: "20px" }}
             >
-              Riddles ({puzzles.length * 4})
+              Riddles
             </Button>
           </>
         )}
@@ -99,7 +98,7 @@ const Home = () => {
                   marginRight: "-20px",
                 }}
               >
-                <span>Join on Reddit</span>
+                <span>View latest news</span>
                 <img
                   style={{
                     display: "inline-block",

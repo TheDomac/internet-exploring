@@ -564,8 +564,8 @@
               }
             }
           ],
-          "helperText": "",
-          "subtext": "Autumn / Winter",
+          "helperText": "Autumn / Winter mostly",
+          "subtext": "",
           "clueGroup": 0,
           "style": {
             "width": "calc(33% - 10px)"
@@ -590,8 +590,8 @@
               }
             }
           ],
-          "helperText": "",
-          "subtext": "Quarter",
+          "helperText": "Quarter of a year",
+          "subtext": "",
           "clueGroup": 0,
           "style": {
             "width": "calc(33% - 10px)"
@@ -616,8 +616,8 @@
               }
             }
           ],
-          "helperText": "",
-          "subtext": "Group",
+          "helperText": "Group of episodes",
+          "subtext": "",
           "clueGroup": 0,
           "style": {
             "width": "calc(33% - 10px)"

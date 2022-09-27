@@ -3,56 +3,6 @@
   "name": "Celebratory Chemistry",
   "rebuses": [
     {
-      "solutionInfo": {
-        "possibleSolutions": [
-          {
-            "id": "1137f53e-cd6c-4a8c-8174-23565d9e6edd",
-            "value": {
-              "second": "",
-              "day": "4",
-              "year": "",
-              "minute": "",
-              "month": "July",
-              "hour": "",
-              "place": ""
-            }
-          }
-        ],
-        "type": "date",
-        "solvedText": "4th of July"
-      },
-      "id": "2f2e7d3a-1e03-44ca-9022-a4b65042ddbf",
-      "clues": [
-        {
-          "solutionInfo": {
-            "solvedText": "4th of July",
-            "possibleSolutions": [],
-            "type": "date"
-          },
-          "helperText": "Same thing happened to all three of these US presidents on the same date.",
-          "clueValues": [
-            {
-              "id": "551980d6-b4ea-4b77-a4dc-9ffa86f787f3",
-              "value": "usPresidents.png",
-              "style": {
-                "width": "calc(70% - 10px)"
-              },
-              "type": "image",
-              "subtext": ""
-            }
-          ],
-          "dependsOn": [],
-          "subtext": "",
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "id": "4d27e5a1-14ee-471f-aa3b-b021cd50dab6",
-          "clueGroup": 0
-        }
-      ],
-      "style": {}
-    },
-    {
       "id": "8bea0ea9-f085-439f-bd66-d5d3afe90876",
       "style": {},
       "clues": [
@@ -162,6 +112,56 @@
       }
     },
     {
+      "solutionInfo": {
+        "possibleSolutions": [
+          {
+            "id": "1137f53e-cd6c-4a8c-8174-23565d9e6edd",
+            "value": {
+              "second": "",
+              "day": "4",
+              "year": "",
+              "minute": "",
+              "month": "July",
+              "hour": "",
+              "place": ""
+            }
+          }
+        ],
+        "type": "date",
+        "solvedText": "4th of July"
+      },
+      "id": "2f2e7d3a-1e03-44ca-9022-a4b65042ddbf",
+      "clues": [
+        {
+          "solutionInfo": {
+            "solvedText": "4th of July",
+            "possibleSolutions": [],
+            "type": "date"
+          },
+          "helperText": "Same thing happened to all three of these US presidents on the same date.",
+          "clueValues": [
+            {
+              "id": "551980d6-b4ea-4b77-a4dc-9ffa86f787f3",
+              "value": "usPresidents.png",
+              "style": {
+                "width": "calc(70% - 10px)"
+              },
+              "type": "image",
+              "subtext": ""
+            }
+          ],
+          "dependsOn": [],
+          "subtext": "",
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "id": "4d27e5a1-14ee-471f-aa3b-b021cd50dab6",
+          "clueGroup": 0
+        }
+      ],
+      "style": {}
+    },
+    {
       "clues": [
         {
           "style": {
@@ -263,32 +263,6 @@
       },
       "clues": [
         {
-          "id": "313bab3e-480c-40b3-8283-94aafde328f0",
-          "dependsOn": [],
-          "helperText": "It's a tradition happening mostly at night on 4th of July.",
-          "clueValues": [
-            {
-              "type": "text",
-              "subtext": "Tradition",
-              "value": "4th of July",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "id": "3ed5edad-6cad-4577-a424-00f5b719706d"
-            }
-          ],
-          "clueGroup": 0,
-          "subtext": "",
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "solutionInfo": {
-            "solvedText": "",
-            "type": "text",
-            "possibleSolutions": []
-          }
-        },
-        {
           "clueValues": [
             {
               "value": "Katy Perry",
@@ -313,6 +287,32 @@
           },
           "id": "7526d637-0891-45eb-b6a7-7750ae4f0f6c",
           "clueGroup": 0
+        },
+        {
+          "id": "313bab3e-480c-40b3-8283-94aafde328f0",
+          "dependsOn": [],
+          "helperText": "It's a tradition happening mostly at night on 4th of July.",
+          "clueValues": [
+            {
+              "type": "text",
+              "subtext": "Tradition",
+              "value": "4th of July",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "3ed5edad-6cad-4577-a424-00f5b719706d"
+            }
+          ],
+          "clueGroup": 0,
+          "subtext": "",
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "solutionInfo": {
+            "solvedText": "",
+            "type": "text",
+            "possibleSolutions": []
+          }
         },
         {
           "id": "cfad9092-b1a6-4d71-9791-09bb8df8cde5",

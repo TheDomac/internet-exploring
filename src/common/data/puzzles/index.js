@@ -22,11 +22,11 @@ import aChunkOfEvil from "./aChunkOfEvil.json";
 import healthyTimeOnTV from "./healthyTimeOnTV.json";
 
 const puzzles = [
-  littleRedRunningThrough,
-  celebratoryChemistry,
-  lookingForASpy,
   samePlaceDifferentTime,
+  lookingForASpy,
+  celebratoryChemistry,
   theIconsOfStrategy,
+  littleRedRunningThrough,
   littleYellowRunningThrough,
   takeADeepBreath,
   ancientAccounting,

@@ -89,6 +89,7 @@ const NextOrFinishButton = ({ isSolved, handleFinishClick }) => {
       key={isSolved}
       as={motion.button}
       disabled={isDisabled}
+      title={isDisabled ? "Solve other riddles first" : ""}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       type="button"

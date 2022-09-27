@@ -73,6 +73,7 @@ const Circle = ({ rebusIndex }) => {
     <StyledCircledButton
       onClick={handleClick}
       disabled={isDisabled}
+      title={isDisabled ? "Solve other riddles first" : ""}
       $isSelected={rebusIndex === selectedRebusIndex}
       $isSolved={Boolean(
         isSolved.cluesSolvedSolution || isSolved.rebusSolvedSolution
