@@ -13,7 +13,7 @@ import {
   Wrapper,
   PuzzleLink,
 } from "../../common/components/PuzzleList.styled";
-import workshopPuzzles from "../../common/data/workshopPuzzles.json";
+import workshopPuzzles from "../../common/data/workshopPuzzles.js";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
 import LoginCorner from "../../common/components/LoginCorner";
 

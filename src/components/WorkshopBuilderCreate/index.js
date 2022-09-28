@@ -11,7 +11,6 @@ import { db } from "../../common/firebase";
 import {
   LOCAL_STORAGE_KEYS,
   RIDDLE_STATUSES,
-  CATEGORIES,
   workshopCollectionName,
   clueTypes,
 } from "../../common/consts";
@@ -102,7 +101,6 @@ const WorkshopBuilderCreate = () => {
         userNickname,
         userSocialMediaURL,
         message: "",
-        category: CATEGORIES.GENERAL,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp(),
         rebuses: puzzle.rebuses.map((r) => ({

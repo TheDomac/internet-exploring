@@ -1,5 +1,4 @@
-[
-  {
+{
     "id": "muWUrHfxMSJVEUt00fug",
     "rebuses": [
       {
@@ -411,7 +410,6 @@
     ],
     "name": "A note of achievement",
     "userNickname": "TheDomac",
-    "category": "general",
     "status": "done",
     "message": "",
     "userSocialMediaURL": "https://www.reddit.com/user/TheDomac",
@@ -419,4 +417,3 @@
     "uid": "9O2G5r2t9BYVPRqjhXQlwaCNPyE2",
     "createdAt": { "seconds": 1658243588, "nanoseconds": 268000000 }
   }
-]
