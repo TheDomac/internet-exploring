@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import Image from "../../Image";
-
 import { SolvedBox } from "../../SolvedBox.styled";
 import Check from "../../Check";
 
@@ -16,6 +14,7 @@ import img5 from "./images/5.png";
 import img6 from "./images/6.png";
 import img8 from "./images/8.png";
 import img9 from "./images/9.png";
+import finalPicture from "./images/finalPicture.png";
 
 const collection = [img1, img2, img3, img4, img5, img6, img8, img9];
 
@@ -57,7 +56,6 @@ const initialSlider = [
 const initialHoleLocation = [0, 2];
 
 const FirstPictureSlider = ({
-  imageOptions: { hasOnClick },
   id,
   markAsSolved,
   solved,
@@ -82,7 +80,7 @@ const FirstPictureSlider = ({
       id={id}
       finishedScreen={
         <>
-          <Image fileName="FootballPictureSlider/finalPicture.png" />
+          <img src={finalPicture} alt="finished_image" />
           <SolvedBox
             as={motion.div}
             initial={{ opacity: 0 }}

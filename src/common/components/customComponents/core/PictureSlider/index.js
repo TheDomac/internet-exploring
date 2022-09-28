@@ -8,6 +8,7 @@ const Wrapper = styled.div`
       $show ? "visible" : "hidden"
     }; display: ${$show ? "block" : "none"};`}
   ${({ $height, $width }) => `width: ${$width}px; height: ${$height}px`};
+  margin: 0 auto;
   margin-bottom: 45px;
 `;
 

@@ -219,7 +219,6 @@ const PuzzleContextProvider = ({ children }) => {
     rebus: puzzle?.rebuses[selectedRebusIndex],
     handleCopyClick,
     setCopyNotification,
-    project: process.env.REACT_APP_PROJECT,
     puzzlesSolvingSync,
     setPuzzlesSolvingSync,
     stateMaintenance,

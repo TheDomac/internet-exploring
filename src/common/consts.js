@@ -19,11 +19,6 @@ export const solutionTypes = {
   CUSTOM_COMPONENT: "customComponent",
 };
 
-export const projects = {
-  PROMO: "promo",
-  ELECTRON: "electron",
-};
-
 export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
 
 export const FREE_RIDDLE_ID = "Kn3yls643KRUrov3SFSm"; // Same place different time

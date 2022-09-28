@@ -11,7 +11,7 @@ import {
 } from "./index.styled";
 import CopyableText from "./CopyableText";
 import TextInput from "../TextInput";
-import { clueTypes, projects, solutionTypes } from "../../consts";
+import { clueTypes, solutionTypes } from "../../consts";
 import DateInput from "../DateInput";
 import Image from "../Image";
 import { PuzzleContext } from "../../services/PuzzleContext";
@@ -24,7 +24,6 @@ const Clue = ({ clue, clueIndex }) => {
     helpClicked,
     puzzleSolvingState,
     selectedRebusIndex,
-    project,
     stateMaintenance,
     updateClueMaintenance,
   } = useContext(PuzzleContext);
@@ -95,9 +94,6 @@ const Clue = ({ clue, clueIndex }) => {
                     stateMaintenance[selectedRebusIndex].clues[clue.id]
                   }
                   updateMaintenance={updateClueMaintenance}
-                  imageOptions={{
-                    hasOnClick: project === projects.ELECTRON,
-                  }}
                 />
               )}
               {clueValue.subtext && (
