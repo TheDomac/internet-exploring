@@ -1,6 +1,5 @@
 {
   "id": "DWAFgWYPsJeU8qtoSqkJ",
-  "name": "Celebratory Chemistry",
   "rebuses": [
     {
       "id": "8bea0ea9-f085-439f-bd66-d5d3afe90876",
@@ -344,6 +343,5 @@
       "style": {},
       "id": "7fc1a5de-7ba1-4446-8f3b-a45818a61773"
     }
-  ],
-  "order": 30
+  ]
 }

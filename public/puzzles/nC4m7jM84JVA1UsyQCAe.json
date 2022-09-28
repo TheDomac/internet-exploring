@@ -1,6 +1,5 @@
 {
   "id": "nC4m7jM84JVA1UsyQCAe",
-  "order": 80,
   "rebuses": [
     {
       "clues": [
@@ -563,6 +562,5 @@
       ],
       "id": "f531e714-430a-461b-8e0a-7bf531c61895"
     }
-  ],
-  "name": "Ancient Accounting"
+  ]
 }

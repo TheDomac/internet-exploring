@@ -1,6 +1,5 @@
 {
   "id": "b1yyDNXZk2FZ4jQ2M8CX",
-  "order": 100,
   "rebuses": [
     {
       "solutionInfo": {
@@ -455,6 +454,5 @@
       },
       "id": "bb2f668c-c7d6-47da-96a3-1e51c08b4077"
     }
-  ],
-  "name": "Acing the carbs"
+  ]
 }

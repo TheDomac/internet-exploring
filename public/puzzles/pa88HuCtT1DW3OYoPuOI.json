@@ -1,6 +1,5 @@
 {
   "id": "pa88HuCtT1DW3OYoPuOI",
-  "order": 110,
   "rebuses": [
     {
       "clues": [
@@ -430,6 +429,5 @@
         }
       ]
     }
-  ],
-  "name": "Dribble those tiles"
+  ]
 }

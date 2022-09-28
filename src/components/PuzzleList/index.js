@@ -16,11 +16,9 @@ import { PuzzleRow, PuzzleTitle, TextLink } from "./index.styled";
 const PuzzleList = () => {
   const { puzzlesSolvingSync } = useContext(PuzzleContext);
 
-  const sortedPuzzles = puzzles.sort((a, b) => (a.order > b.order ? 1 : -1));
-
   return (
     <Wrapper as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      {sortedPuzzles.map((puzzle) => (
+      {puzzles.map((puzzle) => (
         <PuzzleRow key={puzzle.id}>
           <PuzzleTitle>{puzzle.name}</PuzzleTitle>
           {puzzle.rebuses.map((rebus, rebusIndex) => {

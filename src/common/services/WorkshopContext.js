@@ -10,7 +10,6 @@ const initialRebusId = uuidv4();
 
 const initialPuzzle = {
   name: "",
-  order: 0,
   rebuses: [
     {
       id: initialRebusId,

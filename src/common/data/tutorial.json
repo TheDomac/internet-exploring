@@ -1,6 +1,5 @@
 {
-  "name": "Tutorial",
-  "order": 0,
+  "id": "tutorial",
   "rebuses": [
     {
       "id": "480c7522-9b03-4967-97ad-b7a03aa49271",

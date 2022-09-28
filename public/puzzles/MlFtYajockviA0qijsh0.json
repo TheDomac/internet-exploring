@@ -1,7 +1,5 @@
 {
   "id": "MlFtYajockviA0qijsh0",
-  "order": 50,
-  "name": "The Icons of Strategy",
   "rebuses": [
     {
       "style": {},
@@ -13,6 +11,10 @@
           {
             "id": "242abe7a-d743-46c9-9a8d-1b10d4377952",
             "value": "Bishop"
+          },
+          {
+            "id": "242555be7a-d743-46c9-9a8d-1b10d4377952",
+            "value": "Bishops"
           }
         ]
       },
