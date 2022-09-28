@@ -231,7 +231,8 @@
             "solvedText": ""
           },
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(33% - 10px)",
+            "filter": "blur(27px)"
           },
           "id": "63e471d8-5db1-4381-b801-c2b7ad419e85"
         }

@@ -121,7 +121,8 @@
           "subtext": "",
           "clueGroup": 0,
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(33% - 10px)",
+            "filter": "blur(27px)"
           },
           "clueValues": [
             {
@@ -182,7 +183,8 @@
             }
           ],
           "style": {
-            "width": "calc(35% - 10px)"
+            "width": "calc(35% - 10px)",
+            "filter": "blur(27px)"
           },
           "id": "0065c057-a041-44be-b55b-4256121057c6",
           "clueValues": [
@@ -205,7 +207,8 @@
             }
           ],
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(33% - 10px)",
+            "filter": "blur(27px)"
           },
           "clueGroup": 0,
           "subtext": "",
