@@ -75,7 +75,7 @@ const puzzles = [
       },
       {
         id: "abd176a3-2143-40b8-978c-88d153c212aa",
-        solutionInfo: { solvedText: "0" },
+        solutionInfo: { solvedText: "O" },
       },
       {
         id: "bdf44d74-fde1-411e-b407-74f2d3a0abda",
@@ -106,6 +106,28 @@ const puzzles = [
       {
         id: "6cd4c47d-79f2-4513-a04b-2ae324e371ac",
         solutionInfo: { solvedText: "Chess" },
+      },
+    ],
+  },
+  {
+    id: "RUKNIR8XiXJObzWb185K",
+    name: "Take a deep breath",
+    rebuses: [
+      {
+        id: "523325dc-ffb0-480b-9fbe-ee7b921bf71b",
+        solutionInfo: { solvedText: "8" },
+      },
+      {
+        id: "1c11edf9-f67e-4d23-9a69-cc5c75ba3746",
+        solutionInfo: { solvedText: "15.999" },
+      },
+      {
+        id: "ccbcca2f-db4b-4baf-ac7c-9bcdb7bf2130",
+        solutionInfo: { solvedText: "21" },
+      },
+      {
+        id: "11fb90a3-504f-47ef-a2ca-5d55c30a561a",
+        solutionInfo: { solvedText: "Oxygen" },
       },
     ],
   },
@@ -172,28 +194,6 @@ const puzzles = [
       {
         id: "c71e013c-25fb-4d71-b025-dc9ac005d2b3",
         solutionInfo: { solvedText: "William Shakespeare" },
-      },
-    ],
-  },
-  {
-    id: "RUKNIR8XiXJObzWb185K",
-    name: "Take a deep breath",
-    rebuses: [
-      {
-        id: "523325dc-ffb0-480b-9fbe-ee7b921bf71b",
-        solutionInfo: { solvedText: "O" },
-      },
-      {
-        id: "1c11edf9-f67e-4d23-9a69-cc5c75ba3746",
-        solutionInfo: { solvedText: "8" },
-      },
-      {
-        id: "ccbcca2f-db4b-4baf-ac7c-9bcdb7bf2130",
-        solutionInfo: { solvedText: "21" },
-      },
-      {
-        id: "11fb90a3-504f-47ef-a2ca-5d55c30a561a",
-        solutionInfo: { solvedText: "Oxygen" },
       },
     ],
   },

@@ -2,73 +2,9 @@
   "id": "RUKNIR8XiXJObzWb185K",
   "rebuses": [
     {
-      "style": {},
-      "solutionInfo": {
-        "solvedText": "O",
-        "possibleSolutions": [
-          {
-            "id": "641599cf-5bde-48e3-bd7b-7c6ba01c8771",
-            "value": "O"
-          },
-          {
-            "value": "Letter O",
-            "id": "c5fb7726-4399-45eb-8e8e-cd896f26ee60"
-          }
-        ],
-        "type": "text"
-      },
-      "id": "523325dc-ffb0-480b-9fbe-ee7b921bf71b",
       "clues": [
         {
-          "dependsOn": [],
-          "helperText": "Find a letter whose signal flag looks the same to the semaphore flag. It's morse code is three dashes.",
-          "subtext": "",
-          "clueValues": [
-            {
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "id": "97dcf9f7-3406-4577-8a47-714b9226cc8d",
-              "type": "text",
-              "value": "Signal flag",
-              "subtext": ""
-            },
-            {
-              "subtext": "",
-              "id": "eb42b389-a7ef-4a46-b7b7-98cb6b8a372c",
-              "value": "=",
-              "type": "text",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            },
-            {
-              "type": "text",
-              "subtext": "",
-              "id": "bd63a96e-9501-4d43-89f5-03a7fdd69321",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "value": "Semaphore flag"
-            }
-          ],
-          "id": "c5744998-e0ac-4947-951c-e79251c7cd05",
-          "style": {
-            "width": "calc(70% - 10px)"
-          },
-          "clueGroup": 0,
-          "solutionInfo": {
-            "possibleSolutions": [],
-            "type": "text",
-            "solvedText": ""
-          }
-        }
-      ]
-    },
-    {
-      "clues": [
-        {
-          "helperText": "Find the countries and get the sum of result.",
+          "helperText": "8 July 2014",
           "solutionInfo": {
             "type": "text",
             "solvedText": "",
@@ -105,7 +41,8 @@
             {
               "subtext": "",
               "style": {
-                "width": "calc(100% - 10px)"
+                "width": "calc(100% - 10px)",
+                "fontSize": "70px"
               },
               "id": "00a6b14d-8701-4758-9652-475c2e1966e1",
               "value": "+",
@@ -143,33 +80,7 @@
               "type": "image"
             }
           ],
-          "helperText": "Find the countries and get the sum of result."
-        },
-        {
-          "solutionInfo": {
-            "solvedText": "",
-            "possibleSolutions": [],
-            "type": "text"
-          },
-          "id": "1d79573c-8a27-4cac-9a8b-9e8ba5d9d2db",
-          "clueValues": [
-            {
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "id": "76a7c7b1-79d8-4b4e-a295-5e4e834ef87a",
-              "subtext": "",
-              "value": "8 July 2014",
-              "type": "text"
-            }
-          ],
-          "subtext": "",
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "clueGroup": 0,
-          "dependsOn": [],
-          "helperText": ""
+          "helperText": "8 July 2014"
         }
       ],
       "solutionInfo": {
@@ -184,6 +95,82 @@
       },
       "id": "1c11edf9-f67e-4d23-9a69-cc5c75ba3746",
       "style": {}
+    },
+    {
+      "style": {},
+      "solutionInfo": {
+        "solvedText": "15.999",
+        "possibleSolutions": [],
+        "type": "text"
+      },
+      "id": "523325dc-ffb0-480b-9fbe-ee7b921bf71b",
+      "clues": [
+        {
+          "dependsOn": [],
+          "helperText": "Find the list of numbers that frequently occur in TV series Lost.",
+          "subtext": "x = __",
+          "clueValues": [
+            {
+              "style": {
+                "width": "calc(100% - 10px)",
+                "marginBottom": "51px"
+              },
+              "id": "97dcf9f7-3406-4577-8a47-714b9226cc8d",
+              "type": "text",
+              "value": "3rd Lost number",
+              "subtext": ""
+            }
+          ],
+          "id": "c5744998-e0ac-4947-951c-e79251c7cd05",
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "clueGroup": 0,
+          "solutionInfo": {
+            "possibleSolutions": [
+              {
+                "id": "641599cf-5bde-48e3-bd7b-7c6ba01c8771",
+                "value": "15"
+              }
+              
+            ],
+            "type": "text",
+            "solvedText": "15"
+          }
+        },
+        {
+          "dependsOn": [],
+          "helperText": "Find a Youtube video with that ID. At the start of the video you'll hear something that sounds like some numbers.",
+          "subtext": "x = ___",
+          "clueValues": [
+            {
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "97dcf9f7-3406-4577-8a47-714b9226cc8d",
+              "type": "text",
+              "value": "?v=OwFj9EO2_1k",
+              "subtext": "0:00"
+            }
+          ],
+          "id": "c15438-e0ac-4947-951c-e79251c7cd05",
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "clueGroup": 0,
+          "solutionInfo": {
+            "possibleSolutions": [
+              {
+                "id": "641599cf-5bde-48e3-bd7b-7c6ba01c8771",
+                "value": "999"
+              }
+              
+            ],
+            "type": "text",
+            "solvedText": "999"
+          }
+        }
+      ]
     },
     {
       "style": {},
@@ -267,32 +254,6 @@
       "style": {},
       "clues": [
         {
-          "subtext": "",
-          "dependsOn": [],
-          "helperText": "It's symbol is O.",
-          "clueGroup": 1,
-          "solutionInfo": {
-            "solvedText": "",
-            "possibleSolutions": [],
-            "type": "text"
-          },
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "clueValues": [
-            {
-              "subtext": "",
-              "value": "O",
-              "id": "dc672185-d512-452c-a434-cba451340dfc",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "type": "text"
-            }
-          ],
-          "id": "27d70e03-bf3b-47fe-abff-8f37deda8820"
-        },
-        {
           "id": "ea1600ad-f4ef-498d-b2be-e57df3ac9376",
           "dependsOn": [],
           "clueGroup": 1,
@@ -318,6 +279,33 @@
             "possibleSolutions": []
           }
         },
+        {
+          "subtext": "",
+          "dependsOn": [],
+          "helperText": "It's atomic mass is 15.999.",
+          "clueGroup": 1,
+          "solutionInfo": {
+            "solvedText": "",
+            "possibleSolutions": [],
+            "type": "text"
+          },
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "clueValues": [
+            {
+              "subtext": "",
+              "value": "15.999",
+              "id": "dc672185-d512-452c-a434-cba451340dfc",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "type": "text"
+            }
+          ],
+          "id": "27d70e03-bf3b-47fe-abff-8f37deda8820"
+        },
+        
         {
           "clueGroup": 1,
           "helperText": "There is 21% of it in the air.",
