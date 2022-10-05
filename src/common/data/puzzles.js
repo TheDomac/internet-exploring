@@ -154,6 +154,28 @@ const puzzles = [
     ],
   },
   {
+    id: "3452Gvd6vYDKiHJ73",
+    name: "Subtracting to the other side",
+    rebuses: [
+      {
+        id: "tt376a3-5978-4e09-9ef6-88d153c212aa",
+        solutionInfo: { solvedText: "Y" },
+      },
+      {
+        id: "ggh6245a-5978-4143-40b8-978c-88d153c212aa",
+        solutionInfo: { solvedText: "0" },
+      },
+      {
+        id: "3bd6245a-5973-40b8-978c-88d153c212aa",
+        solutionInfo: { solvedText: "X" },
+      },
+      {
+        id: "4e09-9ef6-32be2-40b8-978c-88d153c212aa",
+        solutionInfo: { solvedText: "Point reflection" },
+      },
+    ],
+  },
+  {
     id: "wpcQpBgIAGToEsmSwPfo",
     name: "Little yellow running through",
     rebuses: [

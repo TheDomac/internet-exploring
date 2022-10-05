@@ -1,6 +1,101 @@
 {
-  "id": "temp",
+  "id": "3452Gvd6vYDKiHJ73",
   "rebuses": [
+    {
+      "clues": [
+        {
+          "id": "417daf3a-073f-461f-9d82-e69a4d1c98b6",
+          "clueValues": [
+            {
+              "id": "aac3e3ab-9d42-467e-9877-3dcf9ea35930",
+              "value": "billyMurray.png",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "Voice actor playing John Price (Call of Duty Modern Warfare)",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "76a11d5b-6dbb-46fc-a358-4d9fd415f4f2",
+          "clueValues": [
+            {
+              "id": "99af4c21-ad73-4dc4-916c-4ac94b466ca3",
+              "value": "-",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "70px"
+              }
+            }
+          ],
+          "helperText": "",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(10% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "1728fde1-3122-445d-b274-07d840296427",
+          "clueValues": [
+            {
+              "id": "cbc2d93f-4201-4dd5-9388-72d2c948f1ea",
+              "value": "billMurray.png",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "Actor playing Phil Connors (Groundhog Day)",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        }
+      ],
+      "id": "tt376a3-5978-4e09-9ef6-88d153c212aa",
+      "style": {},
+      "solutionInfo": {
+        "solvedText": "Y",
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "value": "Y",
+            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
+          }
+        ]
+      }
+    },
     {
       "clues": [
         {
@@ -109,7 +204,7 @@
           "id": "a6f75c76-cf72-4d03-b6e2-0cc74e5f7bcc"
         }
       ],
-      "id": "abd176a3-2143-40b8-978c-88d153c212aa",
+      "id": "ggh6245a-5978-4143-40b8-978c-88d153c212aa",
       "style": {},
       "solutionInfo": {
         "solvedText": "0",
@@ -125,6 +220,150 @@
           }
         ]
       }
+    },
+    {
+      "clues": [
+        {
+          "id": "60bbff3c-a26c-46b7-a79d-e964b8e68c3f",
+          "clueValues": [
+            {
+              "id": "f62c5bb4-e7bc-4264-a886-8d1f80042f60",
+              "value": "L",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "70px"
+              }
+            }
+          ],
+          "helperText": "Convert to Roman numerals and subtract",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "172055fd-175b-4cea-ba2f-f1db0eeceda3",
+          "clueValues": [
+            {
+              "id": "bb8bb746-8b1d-4ddf-916c-e645a490ac45",
+              "value": "-",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "70px"
+              }
+            }
+          ],
+          "helperText": "",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(10% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "832f2509-9dc6-4e86-9fa4-4737c84c85de",
+          "clueValues": [
+            {
+              "id": "3c686f7a-6888-4f8f-9f2e-9a08fe5dcb1a",
+              "value": "XL",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "70px"
+              }
+            }
+          ],
+          "helperText": "Convert to Roman numerals and subtract",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        }
+      ],
+      "id": "3bd6245a-5973-40b8-978c-88d153c212aa",
+      "style": {},
+      "solutionInfo": {
+        "solvedText": "X",
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "value": "X",
+            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
+          }
+        ]
+      }
+    },
+    {
+      "clues": [
+        {
+          "id": "8a52cef6-d03c-4acc-bf8e-01398ae7dfdd",
+          "clueValues": [
+            {
+              "id": "0f246363-7ba2-40c0-9c63-d76ec2c1613e",
+              "value": "pointReflection.png",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "How do you call this type of symmetry?",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(50% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        }
+      ],
+      "id": "4e09-9ef6-32be2-40b8-978c-88d153c212aa",
+      "style": {},
+      "solutionInfo": {
+        "solvedText": "Point reflection",
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "value": "Point reflection",
+            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
+          },
+          {
+            "id": "b7b50bf2-33d8-48a3-b548-2ccdbee2ce45",
+            "value": "Central symmetry"
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "name": "Subtracting to the other side"
 }

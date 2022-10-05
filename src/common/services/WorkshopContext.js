@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import { solutionTypes } from "../consts";
 
-// import initialPuzzle from "../data/tutorial.json"
+// import initialPuzzle from "../data/temp.json"
 // const initialRebusId = initialPuzzle.rebuses[0].id;
 
 const initialRebusId = uuidv4();
