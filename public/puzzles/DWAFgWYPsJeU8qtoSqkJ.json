@@ -197,16 +197,17 @@
           "clueValues": [
             {
               "style": {
-                "width": "calc(100% - 10px)"
+                "width": "calc(100% - 10px)",
+                "fontSize": "30px"
               },
               "subtext": "",
               "type": "text",
               "id": "9e24b05e-b7fb-4ec2-b456-fb449523b1de",
-              "value": "Tea lights, Pillars, Votives, Taper"
+              "value": "Tall when it's young, short when it's old"
             }
           ],
           "dependsOn": [],
-          "helperText": "Tea lights, Pillars, Votives and Taper are all types of what?",
+          "helperText": "It's made of wax.",
           "subtext": "",
           "style": {
             "width": "calc(33% - 10px)"
@@ -219,18 +220,6 @@
               {
                 "value": "Candle",
                 "id": "8ceef84b-681b-4587-89a3-da96d062fa22"
-              },
-              {
-                "value": "Candles",
-                "id": "d48bb5af-5665-49ac-8cd3-a01772e6cead"
-              },
-              {
-                "value": "Wax candle",
-                "id": "ed340778-292e-4ac3-ac20-ad5e94b4a4f5"
-              },
-              {
-                "value": "Wax candles",
-                "id": "7b420709-4448-4f20-bdfc-d4bd09a214bd"
               }
             ]
           },
