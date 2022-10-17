@@ -6,13 +6,19 @@ import CommonPuzzle from "../../common/components/Puzzle";
 
 import ArrowBack from "../../common/components/ArrowBack";
 import { AuthContext } from "../../common/services/AuthContext";
+import { PaymentContext } from "../../common/services/PaymentContext";
 import { FREE_RIDDLE_ID } from "../../common/consts";
 import { useToggle } from "../../common/services/useToggle";
+import Loading from "../../common/components/Loading.styled";
+import { Container } from "../../common/components/Container.styled";
+import Alert from "../../common/components/Alert.styled";
 
 const Puzzle = () => {
   const params = useParams();
   const navigate = useNavigate();
   const { upgradedUser } = useContext(AuthContext);
+  const { upgradeModal } = useContext(PaymentContext);
+
   const [puzzle, setPuzzle] = useState(null);
   const error = useToggle();
   const loading = useToggle();
@@ -47,23 +53,32 @@ const Puzzle = () => {
       navigate("/play/puzzles");
     } else {
       navigate("/");
+      upgradeModal.setOn();
     }
   };
 
   const upgradedUserCheck =
-    !upgradedUser.isOn && params.puzzleId !== FREE_RIDDLE_ID;
-
-  if (upgradedUserCheck || !puzzle) {
-    return null;
-  }
+    upgradedUser.isOn || params.puzzleId === FREE_RIDDLE_ID;
 
   return (
     <>
       <ArrowBack onClick={handleRedirect} />
-      <CommonPuzzle
-        selectedPuzzle={puzzle}
-        handleFinishClick={handleRedirect}
-      />
+      {loading.isOn && (
+        <Container style={{ height: "100vh" }}>
+          <Loading />
+        </Container>
+      )}
+      {(error.isOn || !upgradedUserCheck) && (
+        <Container style={{ height: "100vh" }}>
+          <Alert>Sorry, something went wrong while fetching the riddle.</Alert>
+        </Container>
+      )}
+      {upgradedUserCheck && puzzle && (
+        <CommonPuzzle
+          selectedPuzzle={puzzle}
+          handleFinishClick={handleRedirect}
+        />
+      )}
     </>
   );
 };

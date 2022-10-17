@@ -113,7 +113,20 @@
           "dependsOn": []
         },
         {
-          "dependsOn": [],
+          "dependsOn": [
+            {
+              "value": "62b2818b-01d0-4fdd-b5ef-fa67da961cb2",
+              "id": "1111-1b34-47bc-b487-9538c026f668"
+            },
+            {
+              "value": "739e268b-0a06-4ab4-b060-4e105749834b",
+              "id": "2222-1b34-47bc-b487-9538c026f668"
+            },
+            {
+              "value": "d0f2ebeb-66a0-4b91-a4c1-21e481404fe2",
+              "id": "3333-1b34-47bc-b487-9538c026f668"
+            }
+          ],
           "clueValues": [
             {
               "style": {
@@ -126,7 +139,8 @@
             }
           ],
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(33% - 10px)",
+            "filter": "blur(27px)"
           },
           "solutionInfo": {
             "possibleSolutions": [],

@@ -7,9 +7,7 @@ import ArrowBack from "../../common/components/ArrowBack";
 import { useToggle } from "../../common/services/useToggle";
 
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import {
-  LOCAL_STORAGE_KEYS,
-} from "../../common/consts";
+import { LOCAL_STORAGE_KEYS } from "../../common/consts";
 import workshopPuzzles from "../../common/data/workshopPuzzles.js";
 
 const WorkshopPlayPage = () => {
@@ -38,8 +36,7 @@ const WorkshopPlayPage = () => {
       error.setOn();
       loading.setOff();
     }
-    
-  }
+  };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const publishedPuzzle = useMemo(
@@ -50,7 +47,7 @@ const WorkshopPlayPage = () => {
 
   useEffect(() => {
     const isCorrectWorkshopPlayPuzzle = workshopPlayPuzzle?.id === riddleId;
-  
+
     if (publishedPuzzle && !isCorrectWorkshopPlayPuzzle) {
       fetchPuzzle();
     }
