@@ -7,13 +7,33 @@
             "id": "417daf3a-073f-461f-9d82-e69a4d1c98b6",
             "clueValues": [
               {
-                "id": "aac3e3ab-9d42-467e-9877-3dcf9ea35930",
-                "value": "billyMurray.png",
+                "value": "billyRole.png",
+                "id": "56860815-4bff-4909-9efe-95c23a327a5e",
                 "type": "image",
-                "subtext": "",
                 "style": {
-                  "width": "calc(100% - 10px)"
-                }
+                  "width": "calc(50% - 10px)",
+                  "marginRight": "-10px"
+                },
+                "subtext": ""
+              },
+              {
+                "style": {
+                  "width": "calc(50% - 10px)",
+                  "marginLeft": "-10px"
+                },
+                "value": "billyActor.png",
+                "type": "image",
+                "id": "eb051392-7f41-4e5b-8314-55edcdeb9127",
+                "subtext": ""
+              },
+              {
+                "style": {
+                  "width": "calc(80% - 10px)"
+                },
+                "subtext": "",
+                "value": "actor.png",
+                "type": "image",
+                "id": "16237f29-7065-4a1c-9f98-b693e7d1a174"
               }
             ],
             "helperText": "Voice actor playing John Price (Call of Duty Modern Warfare)",
@@ -60,13 +80,33 @@
             "id": "1728fde1-3122-445d-b274-07d840296427",
             "clueValues": [
               {
-                "id": "cbc2d93f-4201-4dd5-9388-72d2c948f1ea",
-                "value": "billMurray.png",
+                "value": "billRole.png",
+                "id": "56860815-4bff-4909-9efe-95c23a327a5e",
                 "type": "image",
-                "subtext": "",
                 "style": {
-                  "width": "calc(100% - 10px)"
-                }
+                  "width": "calc(50% - 10px)",
+                  "marginRight": "-10px"
+                },
+                "subtext": ""
+              },
+              {
+                "style": {
+                  "width": "calc(50% - 10px)",
+                  "marginLeft": "-10px"
+                },
+                "value": "billActor.png",
+                "type": "image",
+                "id": "eb051392-7f41-4e5b-8314-55edcdeb9127",
+                "subtext": ""
+              },
+              {
+                "style": {
+                  "width": "calc(80% - 10px)"
+                },
+                "subtext": "",
+                "value": "actor.png",
+                "type": "image",
+                "id": "16237f29-7065-4a1c-9f98-b693e7d1a174"
               }
             ],
             "helperText": "Actor playing Phil Connors (Groundhog Day)",
