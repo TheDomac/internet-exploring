@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { TouchBackend } from "react-dnd-touch-backend";
@@ -21,6 +21,7 @@ import {
   RightWeighWrapper,
   LeftWeighWrapper,
 } from "./index.styled";
+import { FadeInDiv } from "../../FadeIn";
 
 const isTouchDevice =
   "ontouchstart" in window ||
@@ -115,13 +116,11 @@ const RichPortWeighingScale = ({
 
   if (firstSolution && secondSolution) {
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+      <FadeInDiv
         style={{ fontSize: "50px", height: "100px" }}
       >
         Rich port
-      </motion.div>
+      </FadeInDiv>
     );
   }
 

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+
 
 import TextInput from "../TextInput";
 import DateInput from "../DateInput";
@@ -10,8 +10,9 @@ import getIsSolved from "../../services/getIsSolved";
 import NextOrFinishButton from "./NextOrFinishButton";
 import { SolvedBox } from "../SolvedBox.styled";
 import Check from "../Check";
+import { FadeInDiv } from "../FadeIn";
 
-const RebusSolutionFormWrapper = styled.div`
+const RebusSolutionFormWrapper = styled(FadeInDiv)`
   width: 500px;
   max-width: 500px;
 `;
@@ -38,13 +39,8 @@ const SolutionForm = ({ handleFinishClick }) => {
   return (
     <RebusSolutionFormWrapper
       key={rebus.id}
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: {
-          delay: rebus.clues.length * 0.5,
-        },
+      style={{
+        animationDelay: `${rebus.clues.length * 0.5}s`
       }}
     >
       <SolutionInputWrapper>
@@ -81,9 +77,6 @@ const SolutionForm = ({ handleFinishClick }) => {
         {rebus.solutionInfo.possibleSolutions.length === 0 &&
           cluesSolvedSolution && (
             <SolvedBox
-              as={motion.div}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
             >
               {rebus.solutionInfo.solvedText}
               <Check />

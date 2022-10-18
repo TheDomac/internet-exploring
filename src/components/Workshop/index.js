@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useContext, Fragment } from "react";
 
-import { motion } from "framer-motion";
+
 
 import { Button } from "../../common/components/Button.styled";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
@@ -46,9 +46,6 @@ const Workshop = () => {
       </Link>
       <LoginCorner />
       <Wrapper
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
       >
         <div
           style={{

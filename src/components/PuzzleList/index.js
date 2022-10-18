@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
 
 import ArrowBack from "../../common/components/ArrowBack";
 import puzzles from "../../common/data/puzzles";
@@ -17,7 +17,7 @@ const PuzzleList = () => {
   const { puzzlesSolvingSync } = useContext(PuzzleContext);
 
   return (
-    <Wrapper as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <Wrapper>
       {puzzles.map((puzzle) => (
         <PuzzleRow key={puzzle.id}>
           <PuzzleTitle>{puzzle.name}</PuzzleTitle>

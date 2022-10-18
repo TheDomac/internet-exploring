@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useContext } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+
 import getIsLastRebusAvailable from "../../services/getIsLastRebusAvailable";
 import { PuzzleContext } from "../../services/PuzzleContext";
 import { LOCAL_STORAGE_KEYS } from "../../consts";
+import { FadeInButton } from "../FadeIn";
 
-const StyledNextOrFinishButton = styled.button`
+const StyledNextOrFinishButton = styled(FadeInButton)`
   color: #082347;
   border: 2px solid #082347;
   width: 50%;
@@ -87,11 +88,8 @@ const NextOrFinishButton = ({ isSolved, handleFinishClick }) => {
   return (
     <StyledNextOrFinishButton
       key={isSolved}
-      as={motion.button}
       disabled={isDisabled}
       title={isDisabled ? "Solve other riddles first" : ""}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
       type="button"
       ref={buttonRef}
       $isSolved={isSolved}

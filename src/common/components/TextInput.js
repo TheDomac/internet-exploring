@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+
 
 import { Form } from "./Form.styled";
 import { Input } from "./Input.styled";
@@ -53,9 +53,6 @@ const TextInput = ({
   if (isSolved) {
     return (
       <SolvedBox
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
         $small={small}
       >
         {solvedText}

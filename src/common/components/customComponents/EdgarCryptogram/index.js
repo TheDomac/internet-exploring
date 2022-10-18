@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+
 
 import { useToggle } from "../../../services/useToggle";
 import CopyableText from "../../Clue/CopyableText";
 import Sentence from "./Sentence";
 import Keyboard from "./Keyboard";
+import { FadeInDiv } from "../../FadeIn";
 
 const SOLUTION =
   "There is no exquisite beauty without some strangeness in the proportion.";
@@ -149,14 +150,12 @@ const EdgarCryptogram = ({
 
   if (finished.isOn) {
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+      <FadeInDiv
         style={{ maxWidth: "30%", textAlign: "center", margin: "0 auto" }}
       >
         <CopyableText text={SOLUTION} />
         <CopyableText fontSize="16px" text="Quote author" />
-      </motion.div>
+      </FadeInDiv>
     );
   }
 

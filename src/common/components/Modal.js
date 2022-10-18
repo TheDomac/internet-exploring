@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+
 
 import { Button } from "./Button.styled";
+import { FadeInDiv } from "./FadeIn";
 
-const StyledModal = styled.div`
+const StyledModal = styled(FadeInDiv)`
   position: fixed;
   z-index: 2;
   top: 0;
@@ -43,10 +44,7 @@ const Modal = ({ isModalShown, children, widthLimit = true }) => {
   }
   return (
     <StyledModal
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+
     >
       <ModalContent $widthLimit={widthLimit}>{children}</ModalContent>
     </StyledModal>

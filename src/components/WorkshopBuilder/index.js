@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { motion } from "framer-motion";
+
 
 import { solutionTypes } from "../../common/consts";
 import Modal, { ModalConfirm, ModalInfo } from "../../common/components/Modal";
@@ -153,9 +153,6 @@ const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
         </ModalInfo>
       </Modal>
       <Container
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
       >
         <Content>
           <RebusTabsWrapper>

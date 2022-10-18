@@ -175,11 +175,11 @@ const WorkshopBuilderEdit = () => {
   if (preview.isOn) {
     return (
       <>
-        <ArrowBack onClick={preview.setOff} />
         <CommonPuzzle
           selectedPuzzle={puzzle}
           handleFinishClick={preview.setOff}
         />
+        <ArrowBack onClick={preview.setOff} />
       </>
     );
   }

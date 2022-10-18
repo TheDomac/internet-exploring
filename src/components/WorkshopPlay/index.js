@@ -100,11 +100,11 @@ const WorkshopPlayPage = () => {
   return (
     puzzle && (
       <>
-        <ArrowBack onClick={handleRedirect} />
         <CommonPuzzle
           selectedPuzzle={puzzle}
           handleFinishClick={handleFinish}
         />
+        <ArrowBack onClick={handleRedirect} />
       </>
     )
   );

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { FadeInDiv } from "./FadeIn";
 
-const StyledContainer = styled.div`
+const StyledContainer = styled(FadeInDiv)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,10 +15,6 @@ const StyledContainer = styled.div`
 
 export const Container = ({ children, style }) => (
   <StyledContainer
-    as={motion.div}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
     style={style}
   >
     {children}

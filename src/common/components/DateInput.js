@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+
 
 import { useToggle } from "../services/useToggle";
 import { Input } from "./Input.styled";
@@ -117,9 +117,6 @@ const DateInput = ({
   if (isSolved) {
     return (
       <SolvedBox
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
         $small={small}
       >
         {solvedText}

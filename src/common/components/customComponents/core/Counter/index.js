@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+
 import {
   RowWrapper,
   WrapperForm,
@@ -115,9 +115,6 @@ const Counter = ({
         <RowWrapper>
           {solved ? (
             <SolvedBox
-              as={motion.div}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
               $small
             >
               <span>

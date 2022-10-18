@@ -21,7 +21,7 @@ const Puzzle = () => {
 
   const [puzzle, setPuzzle] = useState(null);
   const error = useToggle();
-  const loading = useToggle();
+  const loading = useToggle(true);
 
   const fetchPuzzle = async () => {
     try {
@@ -44,9 +44,11 @@ const Puzzle = () => {
   };
 
   useEffect(() => {
-    fetchPuzzle();
+    if (upgradedUser.isOn || params.puzzleId === FREE_RIDDLE_ID) {
+      fetchPuzzle();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [upgradedUser.isOn]);
 
   const handleRedirect = () => {
     if (upgradedUser.isOn) {
@@ -57,28 +59,26 @@ const Puzzle = () => {
     }
   };
 
-  const upgradedUserCheck =
-    upgradedUser.isOn || params.puzzleId === FREE_RIDDLE_ID;
 
   return (
     <>
-      <ArrowBack onClick={handleRedirect} />
       {loading.isOn && (
         <Container style={{ height: "100vh" }}>
           <Loading />
         </Container>
       )}
-      {(error.isOn || !upgradedUserCheck) && (
+      {(error.isOn) && (
         <Container style={{ height: "100vh" }}>
           <Alert>Sorry, something went wrong while fetching the riddle.</Alert>
         </Container>
       )}
-      {upgradedUserCheck && puzzle && (
+      {puzzle && (
         <CommonPuzzle
           selectedPuzzle={puzzle}
           handleFinishClick={handleRedirect}
         />
       )}
+      <ArrowBack onClick={handleRedirect} />
     </>
   );
 };

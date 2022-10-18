@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+
 
 import { SolvedBox } from "../../../SolvedBox.styled";
 import Check from "../../../Check";
@@ -89,9 +89,6 @@ const Sudoku = ({ initialGame, onFinish, solved, solution }) => {
       </PuzzleWrapper>
       {solved ? (
         <SolvedBox
-          as={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
           $small
         >
           {solution}

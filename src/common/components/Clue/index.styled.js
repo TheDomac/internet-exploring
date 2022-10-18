@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes} from "styled-components";
 
 const clueGroupColors = [
   "transparent",
@@ -16,6 +16,17 @@ export const ClueValuesWrapper = styled.div`
   align-items: center;
 `;
 
+const appear = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 export const StyledClue = styled.div`
   margin: 5px;
   text-align: center;
@@ -24,6 +35,8 @@ export const StyledClue = styled.div`
   box-sizing: border-box;
   transition: 300ms;
   position: relative;
+  opacity: 0;
+animation: ${appear} 0.7s ease-out forwards;
 
   ${({ $isHiddenClue }) =>
     $isHiddenClue

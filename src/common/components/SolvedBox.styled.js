@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { FadeInDiv } from "./FadeIn";
 
-export const SolvedBox = styled.div`
+export const SolvedBox = styled(FadeInDiv)`
   background: #309d6d;
   color: white;
   border: 2px solid #fff;

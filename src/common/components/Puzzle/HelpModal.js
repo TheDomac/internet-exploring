@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
+
 import React, { useContext } from "react";
 
 import { Button } from "../Button.styled";
@@ -24,10 +24,6 @@ const HelpModal = () => {
   return (
     <Modal
       isModalShown={Boolean(helpModalText)}
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
     >
       <Text>{helpModalText}</Text>
       <ButtonsWrapper>

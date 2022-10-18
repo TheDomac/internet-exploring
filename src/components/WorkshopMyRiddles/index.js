@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useLocation } from "react-router";
 import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+
 
 import { Button } from "../../common/components/Button.styled";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
@@ -34,14 +34,8 @@ const WorkshopMyRiddles = () => {
 
   return (
     <>
-      <Link to="/play">
-        <ArrowBack />
-      </Link>
       <LoginCorner />
       <Wrapper
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
         style={{ maxWidth: 900 }}
       >
         <div
@@ -81,6 +75,9 @@ const WorkshopMyRiddles = () => {
         )}
         <List />
       </Wrapper>
+      <Link to="/play">
+        <ArrowBack />
+      </Link>
     </>
   );
 };

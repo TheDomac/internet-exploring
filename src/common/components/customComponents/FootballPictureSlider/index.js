@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+
 
 import { SolvedBox } from "../../SolvedBox.styled";
 import Check from "../../Check";
@@ -82,9 +82,6 @@ const FirstPictureSlider = ({
         <>
           <img src={finalPicture} alt="finished_image" />
           <SolvedBox
-            as={motion.div}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             $centeredCheck
             $small
           >

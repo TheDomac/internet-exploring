@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { motion } from "framer-motion";
+
 import { useLocation } from "react-router";
 
 import { PuzzleWrapper, HelpButton } from "./index.styled";
@@ -8,6 +8,7 @@ import CopyNotification from "./CopyNotification";
 import { PuzzleContext } from "../../services/PuzzleContext";
 import Breadcrumbs from "../Breadcrumbs";
 import Rebus from "../Rebus";
+import { FadeInDiv, FadeInP } from "../FadeIn";
 
 const Puzzle = ({ selectedPuzzle, handleFinishClick }) => {
   const location = useLocation();
@@ -26,9 +27,6 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick }) => {
 
   return (
     <PuzzleWrapper
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
       style={rebus.style}
     >
       <Breadcrumbs />
@@ -37,13 +35,13 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick }) => {
       <CopyNotification />
       <HelpButton onClick={helpClicked.toggle}>
         {helpClicked.isOn ? (
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <FadeInP>
             X
-          </motion.p>
+          </FadeInP>
         ) : (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <FadeInDiv>
             <p>?</p>
-          </motion.div>
+          </FadeInDiv>
         )}
       </HelpButton>
     </PuzzleWrapper>

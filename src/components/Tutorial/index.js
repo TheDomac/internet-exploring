@@ -15,11 +15,11 @@ const Tutorial = () => {
 
   return (
     <>
-      <ArrowBack onClick={handleRedirect} />
       <CommonPuzzle
         selectedPuzzle={tutorial}
         handleFinishClick={handleRedirect}
       />
+      <ArrowBack onClick={handleRedirect} />
     </>
   );
 };

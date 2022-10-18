@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { FadeInDiv } from "../FadeIn";
 
-export const PuzzleWrapper = styled.div`
+export const PuzzleWrapper = styled(FadeInDiv)`
   height: 100vh;
   display: flex;
   flex-direction: column;

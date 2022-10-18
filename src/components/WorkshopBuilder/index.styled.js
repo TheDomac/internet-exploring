@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { FadeInDiv } from "../../common/components/FadeIn";
 
-export const Container = styled.div`
+export const Container = styled(FadeInDiv)`
   display: flex;
   flex-direction: row;
 `;

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { motion } from "framer-motion";
+
 
 import customComponentsArray from "../customComponents";
 import {
@@ -43,15 +43,17 @@ const Clue = ({ clue, clueIndex }) => {
     }
   };
 
+
   return (
     <StyledClue
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: clueIndex * 0.5 } }}
       $helpClicked={clue.helperText && helpClicked.isOn}
       $clueGroup={clue.clueGroup}
       $isHiddenClue={isHiddenClue}
-      style={{ ...clue.style, ...(isHiddenClue ? {} : { filter: "none" }) }}
+      style={{
+        ...clue.style,
+        ...(isHiddenClue ? {} : { filter: "none" }),
+        animationDelay: `${clueIndex * 0.7}s`,
+        }}
     >
       {isHiddenClue && <BlockArea />}
       {clue.helperText && (
