@@ -24,6 +24,8 @@ const AuthProvider = ({ children }) => {
   const [logInStatus, setLogInStatus] = useState(statuses.IDLE);
   const [passwordResetStatus, setPasswordResetStatus] = useState(statuses.IDLE);
   const upgradedUser = useToggle();
+  const loadedAuth = useToggle();
+
   useEffect(() => {
     onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
@@ -40,6 +42,8 @@ const AuthProvider = ({ children }) => {
       } else {
         upgradedUser.setOff();
       }
+
+      loadedAuth.setOn()
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -93,6 +97,7 @@ const AuthProvider = ({ children }) => {
     registrationStatus,
     resetPassword,
     passwordResetStatus,
+    loadedAuth
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
