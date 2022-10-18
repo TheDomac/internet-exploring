@@ -99,30 +99,12 @@
           "clueValues": [
             {
               "id": "7f574549-f212-43db-8d9a-6c616d3263c8",
-              "type": "text",
+              "type": "image",
               "style": {
                 "width": "calc(100% - 10px)"
               },
               "subtext": "",
-              "value": "School"
-            },
-            {
-              "subtext": "",
-              "value": "Earth",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "type": "text",
-              "id": "7db10c61-b890-4d29-8658-90be1c0e0aa3"
-            },
-            {
-              "type": "text",
-              "value": "East",
-              "id": "b63f25bb-ad98-40a4-8941-94702c3218e5",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
+              "value": "middle.png"
             }
           ],
           "solutionInfo": {
