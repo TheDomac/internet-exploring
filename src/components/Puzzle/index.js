@@ -9,9 +9,6 @@ import { AuthContext } from "../../common/services/AuthContext";
 import { PaymentContext } from "../../common/services/PaymentContext";
 import { FREE_RIDDLE_ID } from "../../common/consts";
 import { useToggle } from "../../common/services/useToggle";
-import Loading from "../../common/components/Loading.styled";
-import { Container } from "../../common/components/Container.styled";
-import Alert from "../../common/components/Alert.styled";
 
 const Puzzle = () => {
   const params = useParams();
@@ -59,23 +56,14 @@ const Puzzle = () => {
     }
   };
 
-
   return (
     <>
-      {loading.isOn && (
-        <Container style={{ height: "100vh" }}>
-          <Loading />
-        </Container>
-      )}
-      {(error.isOn) && (
-        <Container style={{ height: "100vh" }}>
-          <Alert>Sorry, something went wrong while fetching the riddle.</Alert>
-        </Container>
-      )}
       {puzzle && (
         <CommonPuzzle
           selectedPuzzle={puzzle}
           handleFinishClick={handleRedirect}
+          loading={loading.isOn}
+          error={error.isOn}
         />
       )}
       <ArrowBack onClick={handleRedirect} />

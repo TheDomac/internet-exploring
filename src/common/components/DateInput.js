@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React, { useState } from "react";
 
-
 import { useToggle } from "../services/useToggle";
 import { Input } from "./Input.styled";
 import { Form } from "./Form.styled";
@@ -116,9 +115,7 @@ const DateInput = ({
 
   if (isSolved) {
     return (
-      <SolvedBox
-        $small={small}
-      >
+      <SolvedBox $small={small}>
         {solvedText}
         <Check />
       </SolvedBox>

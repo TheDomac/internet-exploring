@@ -14,9 +14,5 @@ const StyledContainer = styled(FadeInDiv)`
 `;
 
 export const Container = ({ children, style }) => (
-  <StyledContainer
-    style={style}
-  >
-    {children}
-  </StyledContainer>
+  <StyledContainer style={style}>{children}</StyledContainer>
 );

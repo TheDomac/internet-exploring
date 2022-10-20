@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 import { useToggle } from "../../../services/useToggle";
 import CopyableText from "../../Clue/CopyableText";
 import Sentence from "./Sentence";

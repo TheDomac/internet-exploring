@@ -116,9 +116,7 @@ const RichPortWeighingScale = ({
 
   if (firstSolution && secondSolution) {
     return (
-      <FadeInDiv
-        style={{ fontSize: "50px", height: "100px" }}
-      >
+      <FadeInDiv style={{ fontSize: "50px", height: "100px" }}>
         Rich port
       </FadeInDiv>
     );

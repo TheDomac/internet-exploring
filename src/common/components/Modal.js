@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 import { Button } from "./Button.styled";
 import { FadeInDiv } from "./FadeIn";
 
@@ -43,9 +42,7 @@ const Modal = ({ isModalShown, children, widthLimit = true }) => {
     return null;
   }
   return (
-    <StyledModal
-
-    >
+    <StyledModal>
       <ModalContent $widthLimit={widthLimit}>{children}</ModalContent>
     </StyledModal>
   );

@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-
 import { solutionTypes } from "../../common/consts";
 import Modal, { ModalConfirm, ModalInfo } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
@@ -152,8 +151,7 @@ const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
           </div>
         </ModalInfo>
       </Modal>
-      <Container
-      >
+      <Container>
         <Content>
           <RebusTabsWrapper>
             {puzzle.rebuses.map((rebus, i) => (

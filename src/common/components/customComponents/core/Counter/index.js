@@ -114,9 +114,7 @@ const Counter = ({
         </RowWrapper>
         <RowWrapper>
           {solved ? (
-            <SolvedBox
-              $small
-            >
+            <SolvedBox $small>
               <span>
                 {isNegative && "-"}
                 {solution.slice(0, dotIndex).join("")}.

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-
 import { SolvedBox } from "../../../SolvedBox.styled";
 import Check from "../../../Check";
 
@@ -88,9 +87,7 @@ const Sudoku = ({ initialGame, onFinish, solved, solution }) => {
         ))}
       </PuzzleWrapper>
       {solved ? (
-        <SolvedBox
-          $small
-        >
+        <SolvedBox $small>
           {solution}
           <Check />
         </SolvedBox>

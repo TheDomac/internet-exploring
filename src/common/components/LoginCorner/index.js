@@ -28,7 +28,7 @@ const spin = keyframes`
 `;
 
 const LoginLoading = styled.div`
-position: fixed;
+  position: fixed;
   top: 25px;
   right: 45px;
   border: 7px solid #f3f3f3;
@@ -38,7 +38,6 @@ position: fixed;
   height: 10px;
   animation: ${spin} 1s linear infinite;
 `;
-
 
 const shortenString = (string) =>
   string.length > 10 ? `${string.slice(0, 10)}...` : string;
@@ -56,7 +55,7 @@ const LoginCorner = ({ redirectAfterLogout = true }) => {
   };
 
   if (!loadedAuth.isOn) {
-    return <LoginLoading />
+    return <LoginLoading />;
   }
 
   return user ? (

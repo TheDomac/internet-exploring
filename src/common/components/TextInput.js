@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import { Form } from "./Form.styled";
 import { Input } from "./Input.styled";
 import { useToggle } from "../services/useToggle";
@@ -52,9 +51,7 @@ const TextInput = ({
 
   if (isSolved) {
     return (
-      <SolvedBox
-        $small={small}
-      >
+      <SolvedBox $small={small}>
         {solvedText}
         <Check />
       </SolvedBox>

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import { SolvedBox } from "../../SolvedBox.styled";
 import Check from "../../Check";
 
@@ -81,10 +80,7 @@ const FirstPictureSlider = ({
       finishedScreen={
         <>
           <img src={finalPicture} alt="finished_image" />
-          <SolvedBox
-            $centeredCheck
-            $small
-          >
+          <SolvedBox $centeredCheck $small>
             <span />
             <Check />
           </SolvedBox>

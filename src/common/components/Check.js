@@ -1,12 +1,11 @@
-
 import React from "react";
-import { FadeInSvg } from "./FadeIn"
+import { FadeInSvg } from "./FadeIn";
 
 const Check = () => {
   return (
     <FadeInSvg
       style={{
-        animationDelay: "0.5s"
+        animationDelay: "0.5s",
       }}
       focusable="false"
       aria-hidden="true"

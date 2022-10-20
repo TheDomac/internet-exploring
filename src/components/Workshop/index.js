@@ -2,8 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useContext, Fragment } from "react";
 
-
-
 import { Button } from "../../common/components/Button.styled";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import ArrowBack from "../../common/components/ArrowBack";
@@ -45,8 +43,7 @@ const Workshop = () => {
         <ArrowBack />
       </Link>
       <LoginCorner />
-      <Wrapper
-      >
+      <Wrapper>
         <div
           style={{
             display: "flex",

@@ -22,9 +22,7 @@ const HelpModal = () => {
   const { closeHelpModal, helpModalText } = useContext(PuzzleContext);
 
   return (
-    <Modal
-      isModalShown={Boolean(helpModalText)}
-    >
+    <Modal isModalShown={Boolean(helpModalText)}>
       <Text>{helpModalText}</Text>
       <ButtonsWrapper>
         <Button onClick={closeHelpModal}>OK</Button>

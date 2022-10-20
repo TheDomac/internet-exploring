@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 
-
 import customComponentsArray from "../customComponents";
 import {
   StyledClue,
@@ -43,7 +42,6 @@ const Clue = ({ clue, clueIndex }) => {
     }
   };
 
-
   return (
     <StyledClue
       $helpClicked={clue.helperText && helpClicked.isOn}
@@ -53,7 +51,7 @@ const Clue = ({ clue, clueIndex }) => {
         ...clue.style,
         ...(isHiddenClue ? {} : { filter: "none" }),
         animationDelay: `${clueIndex * 0.7}s`,
-        }}
+      }}
     >
       {isHiddenClue && <BlockArea />}
       {clue.helperText && (

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-
 import TextInput from "../TextInput";
 import DateInput from "../DateInput";
 import { solutionTypes } from "../../consts";
@@ -40,7 +39,7 @@ const SolutionForm = ({ handleFinishClick }) => {
     <RebusSolutionFormWrapper
       key={rebus.id}
       style={{
-        animationDelay: `${rebus.clues.length * 0.5}s`
+        animationDelay: `${rebus.clues.length * 0.5}s`,
       }}
     >
       <SolutionInputWrapper>
@@ -76,8 +75,7 @@ const SolutionForm = ({ handleFinishClick }) => {
           )}
         {rebus.solutionInfo.possibleSolutions.length === 0 &&
           cluesSolvedSolution && (
-            <SolvedBox
-            >
+            <SolvedBox>
               {rebus.solutionInfo.solvedText}
               <Check />
             </SolvedBox>

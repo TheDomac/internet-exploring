@@ -1,4 +1,4 @@
-import styled, { keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const clueGroupColors = [
   "transparent",
@@ -36,7 +36,7 @@ export const StyledClue = styled.div`
   transition: 300ms;
   position: relative;
   opacity: 0;
-animation: ${appear} 0.7s ease-out forwards;
+  animation: ${appear} 0.7s ease-out forwards;
 
   ${({ $isHiddenClue }) =>
     $isHiddenClue

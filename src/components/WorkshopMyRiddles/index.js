@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { useLocation } from "react-router";
 import { Link, useNavigate } from "react-router-dom";
 
-
 import { Button } from "../../common/components/Button.styled";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import { Wrapper } from "../../common/components/PuzzleList.styled";
@@ -35,9 +34,7 @@ const WorkshopMyRiddles = () => {
   return (
     <>
       <LoginCorner />
-      <Wrapper
-        style={{ maxWidth: 900 }}
-      >
+      <Wrapper style={{ maxWidth: 900 }}>
         <div
           style={{
             display: "flex",

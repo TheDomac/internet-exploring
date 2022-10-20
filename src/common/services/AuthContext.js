@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
         upgradedUser.setOff();
       }
 
-      loadedAuth.setOn()
+      loadedAuth.setOn();
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -97,7 +97,7 @@ const AuthProvider = ({ children }) => {
     registrationStatus,
     resetPassword,
     passwordResetStatus,
-    loadedAuth
+    loadedAuth,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
