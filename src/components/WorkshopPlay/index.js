@@ -103,6 +103,8 @@ const WorkshopPlayPage = () => {
         <CommonPuzzle
           selectedPuzzle={puzzle}
           handleFinishClick={handleFinish}
+          loading={loading.isOn}
+          error={error.isOn}
         />
         <ArrowBack onClick={handleRedirect} />
       </>

@@ -133,6 +133,7 @@ const DateInput = ({
           type="text"
           name="place"
           placeholder="Place"
+          autoComplete="off"
           onChange={handleChange}
           value={date.place}
           $small={small}
@@ -178,6 +179,7 @@ const DateInput = ({
       {possibleSolutions[0].value.year && (
         <Input
           type="text"
+          autoComplete="off"
           name="year"
           placeholder="Year"
           onChange={handleChange}
@@ -189,6 +191,7 @@ const DateInput = ({
         <Input
           type="text"
           name="hour"
+          autoComplete="off"
           placeholder="Hour"
           onChange={handleChange}
           value={date.hour}
@@ -198,6 +201,7 @@ const DateInput = ({
       {possibleSolutions[0].value.minute && (
         <Input
           type="text"
+          autoComplete="off"
           name="minute"
           placeholder="Minute"
           onChange={handleChange}
@@ -208,6 +212,7 @@ const DateInput = ({
       {possibleSolutions[0].value.second && (
         <Input
           type="text"
+          autoComplete="off"
           name="second"
           placeholder="Second"
           onChange={handleChange}
