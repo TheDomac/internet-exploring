@@ -16,6 +16,7 @@ const Button = styled.button`
   padding: 10px;
   font-family: "Fredoka";
   box-sizing: border-box;
+  z-index: 1;
 `;
 
 const spin = keyframes`
