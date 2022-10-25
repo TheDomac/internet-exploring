@@ -15,7 +15,7 @@ exports.createStripeCheckout = functions.https.onCall(async (data, context) => {
       quantity: 1,
       price_data: {
         currency: "usd",
-        unit_amount: 390, // 3.90$
+        unit_amount: 349, // 3.49$
         product_data: {
           name: "Internet Exploring",
           description: "What if the Internet was your escape room?",

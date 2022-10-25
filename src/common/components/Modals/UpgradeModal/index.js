@@ -52,7 +52,7 @@ const UpgradeModal = () => {
             <img src={upgradeImage} alt="upgrade_img" />
 
             <p>
-              Buying the full game ($3.90) gives you access to the following:
+              Buying the full game ($3.49) gives you access to the following:
             </p>
             <p>
               {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as well
@@ -72,7 +72,7 @@ const UpgradeModal = () => {
               >
                 {upgradeStatus === statuses.LOADING
                   ? "Loading..."
-                  : "Buy ($3.90)"}
+                  : "Buy ($3.49)"}
               </Button>
             ) : (
               <Button
