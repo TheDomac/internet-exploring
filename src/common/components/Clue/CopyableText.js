@@ -19,7 +19,12 @@ const CopySpan = styled.span`
   ${({ fontSize }) => `font-size: ${fontSize};`}
 `;
 
-const CopyableText = ({ text, displayText = text, fontSize = "25px" }) => {
+const CopyableText = ({
+  text,
+  displayText = text,
+  fontSize = "25px",
+  style,
+}) => {
   const { handleCopyClick } = useContext(PuzzleContext);
 
   const handleClick = async () => {
@@ -30,7 +35,7 @@ const CopyableText = ({ text, displayText = text, fontSize = "25px" }) => {
   };
 
   return (
-    <div>
+    <div style={style}>
       <CopySpan onClick={handleClick} fontSize={fontSize}>
         {displayText}
       </CopySpan>

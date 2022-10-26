@@ -550,84 +550,38 @@
       "id": "32beef7a-e2c1-41ce-a337-2bef8337c2f9",
       "clues": [
         {
-          "id": "a3c690b1-1a1e-4735-a51c-00aa4cd917bb",
+          "clueGroup": 0,
+          "subtext": "",
+          "style": {
+            "width": "calc(41% - 10px)"
+          },
           "clueValues": [
             {
-              "id": "7ccd332c-2697-4eb9-9cf2-c7352dcf827f",
-              "value": "Flu",
-              "type": "text",
+              "value": "SeasonVennDiagram",
+              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
               "subtext": "",
+              "type": "customComponent",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
-          "helperText": "Autumn / Winter mostly",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
+          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "helperText": "Episodes - group of episodes. Year - quarter of a year. Flu - Autumn / Winter mostly.",
           "dependsOn": [],
           "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "6bd42751-80c6-467f-a86d-4868a289f0d3",
-          "clueValues": [
-            {
-              "id": "b8e33b19-4ff4-488d-ac8c-514092af988f",
-              "value": "Year",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
+            "solvedText": "",
+            "type": "customComponent",
+            "possibleSolutions": [
+              {
+                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
+                "value": ""
               }
-            }
-          ],
-          "helperText": "Quarter of a year",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "1327e391-0347-493f-9c44-e14a4476d099",
-          "clueValues": [
-            {
-              "id": "e3804a51-c38e-4cd3-af57-b5c4eb01563b",
-              "value": "Episodes",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Group of episodes",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
+            ]
           }
         }
       ],
+
       "style": {},
       "solutionInfo": {
         "type": "text",

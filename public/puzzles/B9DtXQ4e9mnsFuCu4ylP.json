@@ -37,7 +37,7 @@
               "style": {
                 "width": "calc(100% - 10px)"
               },
-              "subtext": "Country",
+              "subtext": "",
               "type": "image"
             }
           ],
@@ -67,7 +67,7 @@
           "clueGroup": 2,
           "clueValues": [
             {
-              "subtext": "City",
+              "subtext": "",
               "id": "c148ef28-eebd-4625-b697-b248b07e1bdf",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -85,7 +85,7 @@
           "subtext": "",
           "clueValues": [
             {
-              "subtext": "Place",
+              "subtext": "",
               "id": "b138d08b-da27-4566-a5f1-3d187dbae149",
               "value": "wembley.png",
               "type": "image",

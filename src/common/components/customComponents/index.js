@@ -9,6 +9,12 @@ import GuitarCounterYCoordinate from "./GuitarCounterYCoordinate";
 import RichPortWeighingScale from "./RichPortWeighingScale";
 import HollywoodWeighingScale from "./HollywoodWeighingScale";
 import EdgarCryptogram from "./EdgarCryptogram";
+import ElectricVennDiagram from "./ElectricVennDiagram";
+import CesarVennDiagram from "./CesarVennDiagram";
+import MapVennDiagram from "./MapVennDiagram";
+import StarVennDiagram from "./StarVennDiagram";
+import MiddleVennDiagram from "./MiddleVennDiagram";
+import SeasonVennDiagram from "./SeasonVennDiagram";
 
 const customComponentsArray = [
   { name: "PawnWordSearch", Component: PawnWordSearch },
@@ -22,6 +28,12 @@ const customComponentsArray = [
   { name: "RichPortWeighingScale", Component: RichPortWeighingScale },
   { name: "HollywoodWeighingScale", Component: HollywoodWeighingScale },
   { name: "EdgarCryptogram", Component: EdgarCryptogram },
+  { name: "ElectricVennDiagram", Component: ElectricVennDiagram },
+  { name: "CesarVennDiagram", Component: CesarVennDiagram },
+  { name: "MapVennDiagram", Component: MapVennDiagram },
+  { name: "StarVennDiagram", Component: StarVennDiagram },
+  { name: "MiddleVennDiagram", Component: MiddleVennDiagram },
+  { name: "SeasonVennDiagram", Component: SeasonVennDiagram },
 ];
 
 export default customComponentsArray;

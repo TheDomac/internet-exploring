@@ -24,34 +24,36 @@
           },
           "clueValues": [
             {
-              "id": "d0178579-071c-4701-aa20-fd10ab9a5876",
-              "subtext": "",
-              "type": "image",
               "value": "evaMendesRole.png",
+              "id": "56860815-4bff-4909-9efe-95c23a327a5e",
+              "type": "image",
               "style": {
-                "width": "calc(50% - 10px)"
-              }
+                "width": "calc(50% - 10px)",
+                "marginRight": "-5px"
+              },
+              "subtext": ""
             },
             {
-              "subtext": "",
-              "type": "image",
+              "style": {
+                "width": "calc(50% - 10px)",
+                "marginLeft": "-5px"
+              },
               "value": "evaMendesActor.png",
-              "style": {
-                "width": "calc(50% - 10px)"
-              },
-              "id": "73e46729-bd0e-446d-9eb1-aa60dbe4395d"
+              "type": "image",
+              "id": "eb051392-7f41-4e5b-8314-55edcdeb9127",
+              "subtext": ""
             },
             {
-              "type": "image",
               "style": {
-                "width": "calc(100% - 10px)"
+                "width": "calc(80% - 10px)"
               },
-              "id": "8f1038cf-b21b-499d-ac5d-fbade634107a",
               "subtext": "",
-              "value": "actor.png"
+              "value": "actor.png",
+              "type": "image",
+              "id": "16237f29-7065-4a1c-9f98-b693e7d1a174"
             }
           ],
-          "clueGroup": 0
+        "clueGroup": 0
         },
         {
           "style": {
@@ -61,31 +63,33 @@
           "dependsOn": [],
           "clueValues": [
             {
-              "type": "image",
               "value": "williamHMacyRole.png",
-              "id": "4148dfb8-cff1-4fb7-bafc-8fd34b65a627",
-              "style": {
-                "width": "calc(50% - 10px)"
-              },
-              "subtext": ""
-            },
-            {
-              "value": "williamHMacyActor.png",
-              "id": "59c0d425-46d4-4b5f-a57c-bde1b24556e4",
+              "id": "56860815-4bff-4909-9efe-95c23a327a5e",
               "type": "image",
               "style": {
-                "width": "calc(50% - 10px)"
+                "width": "calc(50% - 10px)",
+                "marginRight": "-5px"
               },
               "subtext": ""
             },
             {
-              "id": "a616fd4f-ac94-4e2e-afc1-922c87ce6d9a",
+              "style": {
+                "width": "calc(50% - 10px)",
+                "marginLeft": "-5px"
+              },
+              "value": "williamHMacyActor.png",
+              "type": "image",
+              "id": "eb051392-7f41-4e5b-8314-55edcdeb9127",
+              "subtext": ""
+            },
+            {
+              "style": {
+                "width": "calc(80% - 10px)"
+              },
+              "subtext": "",
               "value": "actor.png",
               "type": "image",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "subtext": ""
+              "id": "16237f29-7065-4a1c-9f98-b693e7d1a174"
             }
           ],
           "solutionInfo": {
@@ -135,13 +139,15 @@
               "id": "56860815-4bff-4909-9efe-95c23a327a5e",
               "type": "image",
               "style": {
-                "width": "calc(50% - 10px)"
+                "width": "calc(50% - 10px)",
+                "marginRight": "-5px"
               },
               "subtext": ""
             },
             {
               "style": {
-                "width": "calc(50% - 10px)"
+                "width": "calc(50% - 10px)",
+                "marginLeft": "-5px"
               },
               "value": "anyaTaylorJoyActor.png",
               "type": "image",
@@ -150,7 +156,7 @@
             },
             {
               "style": {
-                "width": "calc(100% - 10px)"
+                "width": "calc(80% - 10px)"
               },
               "subtext": "",
               "value": "actor.png",

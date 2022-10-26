@@ -255,10 +255,10 @@
           "clueGroup": 0,
           "helperText": "Convert Roman numerals to Arabic numerals and find which letters are in that position in alphabet.",
           "id": "4cff4771-4539-4973-ab98-c5b0abb5268b",
-          "subtext": "____",
+          "subtext": "_ _ _ _",
           "clueValues": [
             {
-              "value": "II=2=B",
+              "value": "A, B, C...Z",
               "id": "210ad522-70f2-4ad4-bdd1-1509ba927076",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -269,7 +269,7 @@
             {
               "type": "text",
               "subtext": "",
-              "value": "XX=20=T",
+              "value": "I, II, III...XXVI",
               "style": {
                 "width": "calc(100% - 10px)"
               },
@@ -281,7 +281,7 @@
               "style": {
                 "width": "calc(100% - 10px)"
               },
-              "value": "X  V  I  XIV",
+              "value": "X   V   I   XIV",
               "subtext": ""
             }
           ]

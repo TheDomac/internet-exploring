@@ -88,34 +88,34 @@
           }
         },
         {
+          "clueGroup": 0,
+          "subtext": "",
           "style": {
             "width": "calc(33% - 10px)"
           },
-          "clueGroup": 0,
-          "subtext": "",
-          "dependsOn": [],
-          "id": "d25a88c9-3edb-4830-a819-8ac1868e1f39",
-          "helperText": "Between left and right. You'll find Malcolm there.",
           "clueValues": [
             {
-              "id": "7f574549-f212-43db-8d9a-6c616d3263c8",
-              "type": "image",
+              "value": "MiddleVennDiagram",
+              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
+              "subtext": "",
+              "type": "customComponent",
               "style": {
                 "width": "calc(100% - 10px)"
-              },
-              "subtext": "",
-              "value": "middle.png"
+              }
             }
           ],
+          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "helperText": "Between left and right. You'll find Malcolm there.",
+          "dependsOn": [],
           "solutionInfo": {
+            "solvedText": "Middle",
+            "type": "text",
             "possibleSolutions": [
               {
-                "id": "44c6397f-3816-4532-8194-d4f912378577",
+                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
                 "value": "Middle"
               }
-            ],
-            "solvedText": "Middle",
-            "type": "text"
+            ]
           }
         }
       ],

@@ -66,28 +66,6 @@ const puzzles = [
     ],
   },
   {
-    id: "V18JHJt5sqivrWhaJ6w6",
-    name: "Little red running through",
-    rebuses: [
-      {
-        id: "f9163a37-0be3-46a9-8f23-b14a4a178a25",
-        solutionInfo: { solvedText: "A" },
-      },
-      {
-        id: "abd176a3-2143-40b8-978c-88d153c212aa",
-        solutionInfo: { solvedText: "O" },
-      },
-      {
-        id: "bdf44d74-fde1-411e-b407-74f2d3a0abda",
-        solutionInfo: { solvedText: "B" },
-      },
-      {
-        id: "ebfff3ed-c581-4621-8625-8701e26562cb",
-        solutionInfo: { solvedText: "Blood" },
-      },
-    ],
-  },
-  {
     id: "MlFtYajockviA0qijsh0",
     name: "The Icons of Strategy",
     rebuses: [
@@ -110,24 +88,24 @@ const puzzles = [
     ],
   },
   {
-    id: "RUKNIR8XiXJObzWb185K",
-    name: "Take a deep breath",
+    id: "nC4m7jM84JVA1UsyQCAe",
+    name: "Ancient Accounting",
     rebuses: [
       {
-        id: "523325dc-ffb0-480b-9fbe-ee7b921bf71b",
-        solutionInfo: { solvedText: "8" },
+        id: "e86ff98c-b3c5-444b-9cbf-953201ea203c",
+        solutionInfo: { solvedText: "Finger" },
       },
       {
-        id: "1c11edf9-f67e-4d23-9a69-cc5c75ba3746",
-        solutionInfo: { solvedText: "15.999" },
+        id: "72e9bfc0-0ab7-43b0-9af4-98702eaa1d89",
+        solutionInfo: { solvedText: "Tadpole" },
       },
       {
-        id: "ccbcca2f-db4b-4baf-ac7c-9bcdb7bf2130",
-        solutionInfo: { solvedText: "21" },
+        id: "a529e767-73ee-4d62-8bef-e6286253e218",
+        solutionInfo: { solvedText: "Rope" },
       },
       {
-        id: "11fb90a3-504f-47ef-a2ca-5d55c30a561a",
-        solutionInfo: { solvedText: "Oxygen" },
+        id: "f531e714-430a-461b-8e0a-7bf531c61895",
+        solutionInfo: { solvedText: "Egyptian numbers" },
       },
     ],
   },
@@ -199,7 +177,7 @@ const puzzles = [
   },
   {
     id: "EFJ2DZMuJMsudY8xSejM",
-    name: "Do you speak english?",
+    name: "Do you speak English?",
     rebuses: [
       {
         id: "8a0328a8-163c-411e-ae44-e46b25ab1eb6",
@@ -216,28 +194,6 @@ const puzzles = [
       {
         id: "c71e013c-25fb-4d71-b025-dc9ac005d2b3",
         solutionInfo: { solvedText: "William Shakespeare" },
-      },
-    ],
-  },
-  {
-    id: "nC4m7jM84JVA1UsyQCAe",
-    name: "Ancient Accounting",
-    rebuses: [
-      {
-        id: "e86ff98c-b3c5-444b-9cbf-953201ea203c",
-        solutionInfo: { solvedText: "Finger" },
-      },
-      {
-        id: "72e9bfc0-0ab7-43b0-9af4-98702eaa1d89",
-        solutionInfo: { solvedText: "Tadpole" },
-      },
-      {
-        id: "a529e767-73ee-4d62-8bef-e6286253e218",
-        solutionInfo: { solvedText: "Rope" },
-      },
-      {
-        id: "f531e714-430a-461b-8e0a-7bf531c61895",
-        solutionInfo: { solvedText: "Egyptian numbers" },
       },
     ],
   },
@@ -260,28 +216,6 @@ const puzzles = [
       {
         id: "6d5ba430-5d67-4b47-9907-2e81004fc1cc",
         solutionInfo: { solvedText: "DVD Video" },
-      },
-    ],
-  },
-  {
-    id: "b1yyDNXZk2FZ4jQ2M8CX",
-    name: "Acing the carbs",
-    rebuses: [
-      {
-        id: "0be7e264-4cdd-4d69-9d43-84d8e7612784",
-        solutionInfo: { solvedText: "Wendy's" },
-      },
-      {
-        id: "c08bb10a-cc57-4753-951f-c0e2f347f549",
-        solutionInfo: { solvedText: "Test" },
-      },
-      {
-        id: "1262bd30-2c3d-4650-870c-dc1d721146b8",
-        solutionInfo: { solvedText: "Burger" },
-      },
-      {
-        id: "bb2f668c-c7d6-47da-96a3-1e51c08b4077",
-        solutionInfo: { solvedText: "Wendy Testaburger" },
       },
     ],
   },

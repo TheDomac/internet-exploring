@@ -1,0 +1,84 @@
+{
+  "id": "3452Gvd6vYDKiHJ73",
+  "name": "",
+  "rebuses": [
+    {
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "solvedText": "21",
+        "possibleSolutions": [
+          {
+            "id": "78a96101-a842-4e70-a67c-e6b8c6f4f457",
+            "value": "21"
+          }
+        ]
+      },
+      "clues": [
+        {
+          "dependsOn": [],
+          "subtext": "x > 1",
+          "clueValues": [
+            {
+              "type": "text",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": "",
+              "id": "a24ec7ca-9359-453a-aa4f-10ef0dc41587",
+              "value": "Triangular number"
+            },
+            {
+              "subtext": "",
+              "type": "text",
+              "id": "61ea0265-0bb1-4099-9a6a-8cb2033c669f",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "and"
+            },
+            {
+              "subtext": "",
+              "type": "text",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "baf80762-3794-4596-aa05-384670f01325",
+              "value": "Fibonacci number"
+            },
+            {
+              "value": "and",
+              "type": "text",
+              "id": "c469a2d6-fed1-4163-8bd0-c9f5fe9f2c80",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": ""
+            },
+            {
+              "type": "text",
+              "subtext": "",
+              "id": "2efb81ec-2aea-4d70-bfda-883d672eac7d",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "Octagonal number"
+            }
+          ],
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "clueGroup": 0,
+          "solutionInfo": {
+            "solvedText": "",
+            "type": "text",
+            "possibleSolutions": []
+          },
+          "id": "d8d1c182-30fe-4c9f-a984-3a898f08ef7b",
+          "helperText": "Which number (larger than 1) is triangular, fibonacci and octagonal?"
+        }
+      ],
+      "id": "ccbcca2f-db4b-4baf-ac7c-9bcdb7bf2130"
+    }
+  ]
+}

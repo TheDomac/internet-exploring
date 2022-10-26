@@ -36,38 +36,38 @@
           }
         },
         {
-          "id": "860d316f-e5b3-45c4-ad90-3c632955fd33",
+          "clueGroup": 0,
+          "subtext": "",
+          "style": {
+            "width": "calc(41% - 10px)"
+          },
           "clueValues": [
             {
-              "id": "4417f627-742e-46c3-8b9f-0c46a50c2a72",
-              "value": "star.png",
-              "type": "image",
+              "value": "StarVennDiagram",
+              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
               "subtext": "",
+              "type": "customComponent",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
+          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
           "helperText": "",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
           "dependsOn": [],
           "solutionInfo": {
+            "solvedText": "Star",
             "type": "text",
             "possibleSolutions": [
               {
-                "id": "d37e4a78-f013-46a9-8078-20f8672d1f09",
+                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
                 "value": "Star"
               },
               {
-                "id": "d37e4a78-f013-46a9-8078-20f8ttttf09",
+                "id": "7124c79b-4e54-4369-91d1-820f9c32c1b4",
                 "value": "Stars"
               }
-            ],
-            "solvedText": "Star"
+            ]
           }
         },
         {
@@ -123,34 +123,34 @@
       "id": "3f5164ae-ecc5-49cb-b54b-4130cbbd0455",
       "clues": [
         {
-          "id": "3d820824-5e03-4908-9281-97917fb91008",
+          "clueGroup": 0,
+          "subtext": "",
+          "style": {
+            "width": "calc(41% - 10px)"
+          },
           "clueValues": [
             {
-              "id": "daac667c-7f8b-4b64-af2b-d33c2940f532",
-              "value": "map.png",
-              "type": "image",
+              "value": "MapVennDiagram",
+              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
               "subtext": "",
+              "type": "customComponent",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
+          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
           "helperText": "Butterfly type - Araschnia levana, Painting by Jasper Johns - Made in 1961.",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
           "dependsOn": [],
           "solutionInfo": {
+            "solvedText": "Map",
             "type": "text",
             "possibleSolutions": [
               {
-                "id": "16acece4-8e10-4381-804f-2afa74f95811",
+                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
                 "value": "Map"
               }
-            ],
-            "solvedText": "Map"
+            ]
           }
         },
         {
@@ -214,6 +214,7 @@
             "solvedText": "Sphere"
           }
         }
+
       ],
       "style": {},
       "solutionInfo": {
@@ -235,81 +236,34 @@
       "id": "29b5495f-c6fc-43bd-800e-7008d91a8a8e",
       "clues": [
         {
-          "id": "88309cde-3e3d-44ba-b657-6692a193f9f2",
+          "clueGroup": 0,
+          "subtext": "",
+          "style": {
+            "width": "calc(41% - 10px)"
+          },
           "clueValues": [
             {
-              "id": "71e9b8a4-a241-4190-b725-34eb9a3e9cc5",
-              "value": "July",
-              "type": "text",
+              "value": "CesarVennDiagram",
+              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
               "subtext": "",
+              "type": "customComponent",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
-          "helperText": "Who is July named after?",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
+          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "helperText": "Origin of these words is the same (person).",
           "dependsOn": [],
           "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "b7ce8a30-bb6f-481c-8375-d82827d89adf",
-          "clueValues": [
-            {
-              "id": "fb1b9ad5-b448-408a-b423-e42bfb932fb1",
-              "value": "C-section",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
+            "solvedText": "",
+            "type": "customComponent",
+            "possibleSolutions": [
+              {
+                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
+                "value": ""
               }
-            }
-          ],
-          "helperText": "Who is C-section named after?",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "af687bff-1695-4452-a6d6-54560a8cb0fd",
-          "clueValues": [
-            {
-              "id": "915e4292-9125-4313-9454-61db3ef5fcb2",
-              "value": "Tsar",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Where does the origin of the word Tsar come from?",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
+            ]
           }
         }
       ],

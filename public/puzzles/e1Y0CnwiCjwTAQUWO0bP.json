@@ -87,65 +87,96 @@
       "clues": [
         {
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(50% - 10px)"
           },
+          "clueValues": [
+            {
+              "subtext": "",
+              "type": "text",
+              "id": "84680419-a831-4b2e-96d6-91f4ca7278c6",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "James Monroe"
+            },
+            {
+              "value": "Dying Hercules",
+              "type": "text",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "653b55ac-4620-490c-88dd-f15b9d7d77c1",
+              "subtext": ""
+            },
+            {
+              "subtext": "",
+              "id": "e58f6bc4-92d2-4ff3-8bac-2ac4fb946d26",
+              "type": "text",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "The Judgment of Jupiter"
+            }
+          ],
+          "dependsOn": [],
           "solutionInfo": {
-            "solvedText": "Christoph",
+            "type": "text",
+            "solvedText": "Morse",
             "possibleSolutions": [
               {
-                "value": "Christoph",
-                "id": "dee3c2c0-acd7-40aa-aa01-a48c93010756"
+                "id": "3cb131b8-7328-4a16-ab9e-3f140bd4c7c6",
+                "value": "Morse"
+              },
+              {
+                "value": "Samuel Morse",
+                "id": "6cc8bba8-99bf-4b29-b69f-2fa2546b42f8"
+              },
+              {
+                "value": "Samuel Finley Breese Morse",
+                "id": "94273010-24df-47fb-a419-67cc77141642"
+              }
+            ]
+          },
+          "subtext": "",
+          "id": "3d4369bc-0bd3-44b8-b109-3fec905850b6",
+          "clueGroup": 0,
+          "helperText": "These are all names of paintings. Who painted them?"
+        },
+        {
+          "solutionInfo": {
+            "possibleSolutions": [
+              {
+                "id": "ea32f211-bdb4-477c-9ba5-4c777e3e1353",
+                "value": "Christoph Waltz"
               }
             ],
-            "type": "text"
+            "type": "text",
+            "solvedText": "Christoph Waltz"
           },
-          "helperText": "Famous boy from Winnie-the-Pooh. Lose his last name and the \"er\" at the end of his first name.",
-          "dependsOn": [],
-          "id": "9e3af741-85a7-45d7-b87b-a54c1ef9e65c",
+          "style": {
+            "width": "calc(50% - 10px)"
+          },
           "clueGroup": 0,
           "clueValues": [
             {
-              "type": "image",
-              "id": "7e82ad78-5f38-4d4c-93fe-07dafdec5ee1",
-              "subtext": "",
-              "value": "ChristopherRobin.png",
+              "type": "text",
+              "value": ".- -.-. - --- .-. / .-- .... --- / .--. .-.. .- -.-- . -.. / .... .- -. ... / .-.. .- -. -.. .- / .. -. / .. -. --. .-.. --- ..- .-. .. --- ..- ... / -... .- ... - . .-. -.. ...",
               "style": {
                 "width": "calc(100% - 10px)"
-              }
+              },
+              "id": "566695b9-62e7-4559-8d16-149d2eae350c",
+              "subtext": ""
             }
           ],
-          "subtext": ""
-        },
-        {
-          "helperText": "A popular dance associated with Vienna.",
-          "subtext": "Vienna",
-          "id": "a65bb52b-5e8b-45a7-87bd-0bd252668dff",
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "clueValues": [
+          "id": "6d2abfe8-e934-4e6d-81ea-3dafb092e6dd",
+          "dependsOn": [
             {
-              "id": "ffdda8ba-760e-47c4-9708-3fec4f375799",
-              "value": "waltz.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
+              "id": "d1999ee4-5ac9-45d3-b468-40e20d371992",
+              "value": "3d4369bc-0bd3-44b8-b109-3fec905850b6"
             }
           ],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [
-              {
-                "value": "Waltz",
-                "id": "b7678eab-3973-431c-804b-12f097aa76a7"
-              }
-            ],
-            "solvedText": "Waltz"
-          },
-          "clueGroup": 0
+          "helperText": "Try to translate this Morse code, see what you get.",
+          "subtext": ""
         }
       ],
       "style": {},
@@ -208,12 +239,24 @@
               "value": "Cake.png"
             },
             {
+              "id": "a6n76672-c113-422d-b339-e9447ff69d2",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "14px",
+                "marginTop": "-20px"
+              },
+              "type": "text",
+              "value": "1968."
+            },
+            {
               "id": "69d0c61e-95c0-4247-a532-16a9705a7d5c",
               "subtext": "",
               "value": "007",
               "type": "text",
               "style": {
-                "width": "calc(100% - 10px)"
+                "width": "calc(100% - 10px)",
+                "fontSize": "50px"
               }
             }
           ],

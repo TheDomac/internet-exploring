@@ -1,369 +1,158 @@
 {
-  "id": "3452Gvd6vYDKiHJ73",
+  "id": "pa88HuCtT1DW3OYoPuOI",
   "rebuses": [
     {
-      "clues": [
-        {
-          "id": "417daf3a-073f-461f-9d82-e69a4d1c98b6",
-          "clueValues": [
-            {
-              "id": "aac3e3ab-9d42-467e-9877-3dcf9ea35930",
-              "value": "billyMurray.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Voice actor playing John Price (Call of Duty Modern Warfare)",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "76a11d5b-6dbb-46fc-a358-4d9fd415f4f2",
-          "clueValues": [
-            {
-              "id": "99af4c21-ad73-4dc4-916c-4ac94b466ca3",
-              "value": "-",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "fontSize": "70px"
-              }
-            }
-          ],
-          "helperText": "",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(10% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "1728fde1-3122-445d-b274-07d840296427",
-          "clueValues": [
-            {
-              "id": "cbc2d93f-4201-4dd5-9388-72d2c948f1ea",
-              "value": "billMurray.png",
-              "type": "image",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Actor playing Phil Connors (Groundhog Day)",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        }
-      ],
-      "id": "tt376a3-5978-4e09-9ef6-88d153c212aa",
       "style": {},
+      "id": "3c1d0b0e-ebcb-4d03-9c05-7906b22eadce",
       "solutionInfo": {
-        "solvedText": "Y",
-        "type": "text",
+        "solvedText": "Football",
         "possibleSolutions": [
           {
-            "value": "Y",
-            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
+            "id": "1e60b188-c757-4314-8094-f2e4c2c3bd79",
+            "value": "Football"
+          },
+          {
+            "value": "Foot-ball",
+            "id": "7d83db42-a320-4212-8a3e-82f5e38d413e"
+          },
+          {
+            "value": "The Foot-ball Play",
+            "id": "7e61a4b7-24a5-43e8-9610-e6b5175ce44a"
           }
-        ]
-      }
-    },
-    {
+        ],
+        "type": "text"
+      },
       "clues": [
         {
-          "helperText": "What do you get when you subtract the birthday of an actor playing John Rambo from a birthday of 43rd US president?",
-          "clueValues": [
-            {
-              "type": "image",
-              "value": "stalloneBirthday.png",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "id": "6311cfaf-cb41-4806-b8f4-167f5e633b29"
-            }
-          ],
           "clueGroup": 0,
-          "dependsOn": [],
-          "id": "2eb98f58-fd33-45b7-8d61-25c5652d7359",
-          "solutionInfo": {
-            "type": "date",
-            "possibleSolutions": [
-              {
-                "value": {
-                  "place": "",
-                  "day": "6",
-                  "second": "",
-                  "minute": "",
-                  "hour": "",
-                  "year": "1946",
-                  "month": "July"
-                },
-                "id": "f2667b40-a7e8-42bd-8581-c3bdf6b7ec3b"
-              }
-            ],
-            "solvedText": "6 July 1946"
-          },
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "subtext": ""
-        },
-        {
-          "clueValues": [
-            {
-              "type": "text",
-              "style": {
-                "fontSize": "70px",
-                "width": "calc(100% - 10px)"
-              },
-              "subtext": "",
-              "id": "8a193f7f-13a8-40f3-808e-f4da9ea701a1",
-              "value": "-"
-            }
-          ],
-          "id": "8bba16e2-f0b7-4d68-9c30-5488934ae59c",
           "subtext": "",
           "style": {
-            "width": "calc(10% - 10px)"
+            "width": "calc(66% - 10px)"
           },
+          "clueValues": [
+            {
+              "value": "ElectricVennDiagram",
+              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
+              "subtext": "Type",
+              "type": "customComponent",
+              "style": {
+                "width": "calc(61% - 10px)"
+              }
+            }
+          ],
+          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "helperText": "Car - these types of cars are getting more and more popular. Guitar - Find out what types of guitar there are. Toothbrush - it uses a battery. ",
           "dependsOn": [],
-          "clueGroup": 0,
           "solutionInfo": {
-            "possibleSolutions": [],
-            "type": "text",
-            "solvedText": ""
-          },
-          "helperText": ""
-        },
-        {
-          "helperText": "What do you get when you subtract the birthday of an actor playing John Rambo from a birthday of 43rd US president?",
-          "dependsOn": [],
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "solutionInfo": {
-            "type": "date",
-            "solvedText": "6 July 1946",
+            "solvedText": "",
+            "type": "customComponent",
             "possibleSolutions": [
               {
-                "id": "b67092e4-fe1e-42e0-ba29-6b23eb09f21d",
-                "value": {
-                  "second": "",
-                  "year": "1946",
-                  "minute": "",
-                  "month": "July",
-                  "place": "",
-                  "day": "6",
-                  "hour": ""
-                }
+                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
+                "value": ""
               }
             ]
-          },
-          "subtext": "",
-          "clueGroup": 0,
-          "clueValues": [
-            {
-              "subtext": "",
-              "value": "bushBirthday.png",
-              "id": "9618894c-56d5-4f57-a634-1ced0f66bc21",
-              "type": "image",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "id": "a6f75c76-cf72-4d03-b6e2-0cc74e5f7bcc"
-        }
-      ],
-      "id": "ggh6245a-5978-4143-40b8-978c-88d153c212aa",
-      "style": {},
-      "solutionInfo": {
-        "solvedText": "0",
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "value": "0",
-            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
-          },
-          {
-            "id": "7e6f00c6-1317-4f5a-98bb-567260d8bfb1",
-            "value": "Zero"
           }
-        ]
-      }
+        }
+      ]
     },
     {
+      "id": "c3203a36-4e4f-4d72-9c80-32eded927821",
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "solvedText": "Maradona",
+        "possibleSolutions": [
+          {
+            "id": "994f3cdb-5237-4723-bbd7-b6c9c29cba11",
+            "value": "Maradona"
+          },
+          {
+            "id": "c8834676-0925-4022-a35a-5f83c86051a3",
+            "value": "Diego Maradona"
+          }
+        ]
+      },
       "clues": [
         {
-          "id": "60bbff3c-a26c-46b7-a79d-e964b8e68c3f",
+          "clueGroup": 1,
+          "id": "b2a1b074-c35c-47b1-871b-66699a55b7a1",
           "clueValues": [
             {
-              "id": "f62c5bb4-e7bc-4264-a886-8d1f80042f60",
-              "value": "L",
-              "type": "text",
-              "subtext": "",
+              "value": "Argentina",
               "style": {
-                "width": "calc(100% - 10px)",
-                "fontSize": "70px"
-              }
+                "width": "calc(100% - 10px)"
+              },
+              "id": "6243658a-ed6c-416a-82ac-2727baa3f4b1",
+              "type": "text",
+              "subtext": ""
             }
           ],
-          "helperText": "Convert to Roman numerals and subtract",
+          "solutionInfo": {
+            "possibleSolutions": [],
+            "solvedText": "",
+            "type": "text"
+          },
           "subtext": "",
-          "clueGroup": 0,
+          "helperText": "We're looking for a football player born in Argentina.",
           "style": {
             "width": "calc(33% - 10px)"
           },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
+          "dependsOn": []
         },
         {
-          "id": "172055fd-175b-4cea-ba2f-f1db0eeceda3",
           "clueValues": [
             {
-              "id": "bb8bb746-8b1d-4ddf-916c-e645a490ac45",
-              "value": "-",
               "type": "text",
-              "subtext": "",
+              "id": "86e92d0a-97ee-402a-a600-c79ba7c97d53",
+              "value": "Napoli",
               "style": {
-                "width": "calc(100% - 10px)",
-                "fontSize": "70px"
-              }
+                "width": "calc(100% - 10px)"
+              },
+              "subtext": ""
             }
           ],
-          "helperText": "",
+          "id": "01b91051-8860-4ce1-845b-5d49b3404bad",
+          "helperText": "We're looking for a football player who played in Napoli.",
           "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(10% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "832f2509-9dc6-4e86-9fa4-4737c84c85de",
-          "clueValues": [
-            {
-              "id": "3c686f7a-6888-4f8f-9f2e-9a08fe5dcb1a",
-              "value": "XL",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "fontSize": "70px"
-              }
-            }
-          ],
-          "helperText": "Convert to Roman numerals and subtract",
-          "subtext": "",
-          "clueGroup": 0,
+          "clueGroup": 1,
           "style": {
             "width": "calc(33% - 10px)"
           },
-          "dependsOn": [],
           "solutionInfo": {
-            "type": "text",
             "possibleSolutions": [],
-            "solvedText": ""
-          }
-        }
-      ],
-      "id": "3bd6245a-5973-40b8-978c-88d153c212aa",
-      "style": {},
-      "solutionInfo": {
-        "solvedText": "X",
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "value": "X",
-            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
-          }
-        ]
-      }
-    },
-    {
-      "clues": [
+            "solvedText": "",
+            "type": "text"
+          },
+          "dependsOn": []
+        },
         {
-          "id": "8a52cef6-d03c-4acc-bf8e-01398ae7dfdd",
+          "dependsOn": [],
+          "clueGroup": 1,
           "clueValues": [
             {
-              "id": "0f246363-7ba2-40c0-9c63-d76ec2c1613e",
-              "value": "pointReflection.png",
-              "type": "image",
               "subtext": "",
+              "type": "text",
+              "id": "145ba89a-2181-42ff-be97-46595fb8891a",
               "style": {
                 "width": "calc(100% - 10px)"
-              }
+              },
+              "value": "Football"
             }
           ],
-          "helperText": "How do you call this type of symmetry?",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
-          "dependsOn": [],
+          "helperText": "We're looking for a famous football legend.",
           "solutionInfo": {
             "type": "text",
             "possibleSolutions": [],
             "solvedText": ""
-          }
-        }
-      ],
-      "id": "4e09-9ef6-32be2-40b8-978c-88d153c212aa",
-      "style": {},
-      "solutionInfo": {
-        "solvedText": "Point reflection",
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "value": "Point reflection",
-            "id": "3bd6245a-5978-4e09-9ef6-32be2eca1b28"
           },
-          {
-            "id": "b7b50bf2-33d8-48a3-b548-2ccdbee2ce45",
-            "value": "Central symmetry"
-          }
-        ]
-      }
+          "style": {
+            "width": "calc(33% - 10px)"
+          },
+          "subtext": "",
+          "id": "ebfb0943-2e5a-4acf-8fc9-18620c1fc31a"
+        }
+      ]
     }
-  ],
-  "name": "Subtracting to the other side"
+  ]
 }

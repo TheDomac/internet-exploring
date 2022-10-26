@@ -12,14 +12,14 @@
                 "type": "image",
                 "style": {
                   "width": "calc(50% - 10px)",
-                  "marginRight": "-10px"
+                  "marginRight": "-5px"
                 },
                 "subtext": ""
               },
               {
                 "style": {
                   "width": "calc(50% - 10px)",
-                  "marginLeft": "-10px"
+                  "marginLeft": "-5px"
                 },
                 "value": "billyActor.png",
                 "type": "image",
@@ -85,14 +85,14 @@
                 "type": "image",
                 "style": {
                   "width": "calc(50% - 10px)",
-                  "marginRight": "-10px"
+                  "marginRight": "-5px"
                 },
                 "subtext": ""
               },
               {
                 "style": {
                   "width": "calc(50% - 10px)",
-                  "marginLeft": "-10px"
+                  "marginLeft": "-5px"
                 },
                 "value": "billActor.png",
                 "type": "image",
@@ -142,13 +142,42 @@
             "helperText": "What do you get when you subtract the birthday of an actor playing John Rambo from a birthday of 43rd US president?",
             "clueValues": [
               {
+                "value": "stalloneRole.png",
+                "id": "56860815-4bff-4909-9efe-95c23a327a5e",
                 "type": "image",
-                "value": "stalloneBirthday.png",
-                "subtext": "",
                 "style": {
-                  "width": "calc(100% - 10px)"
+                  "width": "calc(50% - 10px)",
+                  "marginRight": "-5px"
                 },
-                "id": "6311cfaf-cb41-4806-b8f4-167f5e633b29"
+                "subtext": ""
+              },
+              {
+                "style": {
+                  "width": "calc(50% - 10px)",
+                  "marginLeft": "-5px"
+                },
+                "value": "stalloneActor.png",
+                "type": "image",
+                "id": "eb051392-7f41-4e5b-8314-55edcdeb9127",
+                "subtext": ""
+              },
+              {
+                "style": {
+                  "width": "calc(80% - 10px)"
+                },
+                "subtext": "",
+                "value": "actor.png",
+                "type": "image",
+                "id": "16237f29-7065-4a1c-9f98-b693e7d1a174"
+              },
+              {
+                "style": {
+                  "width": "calc(25% - 10px)"
+                },
+                "subtext": "",
+                "value": "Cake.png",
+                "type": "image",
+                "id": "3k08f29-7065-4a1c-9f98-b693e7d1a174"
               }
             ],
             "clueGroup": 0,

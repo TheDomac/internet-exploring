@@ -58,12 +58,9 @@ const WordWrapper = styled.div`
 const generateLettersClickedArray = (array) =>
   new Array(array.length).fill(new Array(array[0].length).fill(false));
 
-const WordSearch = ({ letters, words }) => {
+const WordSearch = ({ letters, words, strikeThroughTracking }) => {
   const [circledLetters, setCircledLetters] = useState(
     generateLettersClickedArray(letters)
-  );
-  const [doneWords, setDoneWords] = useState(
-    new Array(words.length).fill(false)
   );
 
   const handleLetterClick = (i, j) => () => {
@@ -76,13 +73,6 @@ const WordSearch = ({ letters, words }) => {
     );
 
     setCircledLetters(newCircledLetters);
-  };
-
-  const handleWordClick = (i) => () => {
-    const newDoneWords = doneWords.map((isDone, wordIndex) =>
-      i === wordIndex ? !isDone : isDone
-    );
-    setDoneWords(newDoneWords);
   };
 
   return (
@@ -98,11 +88,16 @@ const WordSearch = ({ letters, words }) => {
         )}
       </Grid>
       <WordWrapper>
-        {words.map((word, i) => (
-          <Word onClick={handleWordClick(i)} done={doneWords[i]} key={word}>
-            {word}
-          </Word>
-        ))}
+        {words.map((word, i) => {
+          const isDone = strikeThroughTracking[word].every(
+            ([y, x]) => circledLetters[y][x]
+          );
+          return (
+            <Word done={isDone} key={word}>
+              {word}
+            </Word>
+          );
+        })}
       </WordWrapper>
     </Wrapper>
   );

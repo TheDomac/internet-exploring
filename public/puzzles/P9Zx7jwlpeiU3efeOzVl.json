@@ -121,19 +121,19 @@
     {
       "clues": [
         {
-          "helperText": "6 letter word that you can do with a rocket. Happens in the video titled \"The Greatest Shot In Television\". Rhymes with meal between breakfast and dinner.",
+          "helperText": "Find international maritime signal flags and corresponding letters.",
           "dependsOn": [],
           "style": {
-            "width": "calc(50% - 10px)"
+            "width": "calc(33% - 10px)"
           },
           "clueValues": [
             {
-              "subtext": "Synonims: throw, eject, fire",
-              "type": "text",
+              "subtext": "",
+              "type": "image",
               "style": {
                 "width": "calc(100% - 10px)"
               },
-              "value": "The Greatest Shot In Television (1:00)",
+              "value": "launchSignalFlags.png",
               "id": "100bb61e-b34a-4132-8deb-db237669b10c"
             }
           ],
@@ -163,7 +163,7 @@
             ]
           },
           "style": {
-            "width": "calc(50% - 10px)"
+            "width": "calc(33% - 10px)"
           },
           "id": "c78d9571-c507-4080-8084-c6b28fe2eb32",
           "subtext": "",

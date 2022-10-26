@@ -38,7 +38,7 @@ const initialPositions = {
   left: [],
 };
 
-const RichPortWeighingScale = ({
+const HollywoodWeighingScale = ({
   id,
   stateMaintenanceValue,
   updateMaintenance,
@@ -108,4 +108,4 @@ const RichPortWeighingScale = ({
   );
 };
 
-export default RichPortWeighingScale;
+export default HollywoodWeighingScale;

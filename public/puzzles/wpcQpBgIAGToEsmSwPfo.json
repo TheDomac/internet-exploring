@@ -121,7 +121,7 @@
           "subtext": "",
           "id": "4a1b532c-d767-4d6d-8334-0abc25d7eb1e",
           "style": {
-            "width": "calc(100% - 10px)"
+            "width": "calc(77% - 10px)"
           },
           "helperText": "Connect all lightbulbs.",
           "clueValues": [
@@ -218,81 +218,34 @@
       "clues": [
         {
           "clueGroup": 0,
+          "subtext": "",
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(41% - 10px)"
           },
           "clueValues": [
             {
-              "subtext": "type",
+              "value": "ElectricVennDiagram",
+              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
+              "subtext": "Type",
+              "type": "customComponent",
               "style": {
                 "width": "calc(100% - 10px)"
-              },
-              "value": "Car",
-              "type": "text",
-              "id": "841039d5-d508-485c-a636-96b7d336597a"
+              }
             }
           ],
+          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "helperText": "Car - these types of cars are getting more and more popular. Guitar - Find out what types of guitar there are. Toothbrush - it uses a battery. ",
           "dependsOn": [],
           "solutionInfo": {
-            "possibleSolutions": [],
-            "type": "text",
-            "solvedText": ""
-          },
-          "subtext": "",
-          "helperText": "These types of cars are getting more and more popular.",
-          "id": "c5b0687c-d72f-44fd-85f6-3422ba9bdfb7"
-        },
-        {
-          "clueValues": [
-            {
-              "type": "text",
-              "subtext": "type",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "id": "67e58e58-14ca-4459-9a87-a9ebaa1631c4",
-              "value": "Guitar"
-            }
-          ],
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "subtext": "",
-          "dependsOn": [],
-          "helperText": "Find out what types of guitar there are.",
-          "solutionInfo": {
-            "possibleSolutions": [],
-            "type": "text",
-            "solvedText": ""
-          },
-          "id": "d470f4c4-cacc-432e-9b1c-1eed0b644d98",
-          "clueGroup": 0
-        },
-        {
-          "clueGroup": 0,
-          "subtext": "",
-          "clueValues": [
-            {
-              "id": "f47f0998-ebea-4dd4-b6b1-30fa1ad78e0f",
-              "subtext": "type",
-              "type": "text",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "value": "Toothbrush"
-            }
-          ],
-          "dependsOn": [],
-          "helperText": "It uses a battery.",
-          "solutionInfo": {
-            "type": "text",
             "solvedText": "",
-            "possibleSolutions": []
-          },
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "id": "f2725582-3655-4ac5-bb51-88a333918aae"
+            "type": "customComponent",
+            "possibleSolutions": [
+              {
+                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
+                "value": ""
+              }
+            ]
+          }
         }
       ]
     }
