@@ -229,7 +229,7 @@ const puzzles = [
       },
       {
         id: "f142d421-9c38-4df9-a274-367e92bc1ec5",
-        solutionInfo: { solvedText: "Napoli" },
+        solutionInfo: { solvedText: "FIFA" },
       },
       {
         id: "3c1d0b0e-ebcb-4d03-9c05-7906b22eadce",

@@ -181,7 +181,7 @@
           "subtext": "",
           "clueGroup": 1,
           "id": "d8763c67-eb3c-48d3-9756-9854b2cd9e78",
-          "helperText": "Just a part of a human body (Three letter word)",
+          "helperText": "Look up a flag semaphore and find corresponding letters.",
           "solutionInfo": {
             "type": "text",
             "possibleSolutions": [
@@ -300,7 +300,10 @@
     {
       "style": {},
       "solutionInfo": {
-        "possibleSolutions": [],
+        "possibleSolutions": [{
+          "id": "d55b2568-f9e9-430a-bb35-4dcc2883efee",
+          "value": "Wood"
+        }],
         "type": "text",
         "solvedText": "Wood"
       },
@@ -325,60 +328,14 @@
           },
           "solutionInfo": {
             "type": "text",
-            "solvedText": "Elijah Wood",
+            "solvedText": "",
             "possibleSolutions": [
-              {
-                "id": "d55b2568-f9e9-430a-bb35-4dcc2883efee",
-                "value": "Elijah Wood"
-              },
-              {
-                "id": "d55b555-f9e9-430a-bb35-4dcc2883efee",
-                "value": "Elijah"
-              }
+              
             ]
           },
           "clueGroup": 0,
-          "helperText": "It's the ring bearer from The Lord of the Rings.",
+          "helperText": "It's the last name of an actor playing a ring bearer from The Lord of the Rings.",
           "id": "ecb5743a-a450-4b56-b752-8471bd19de38"
-        },
-        {
-          "id": "37b9d6c8-ffbd-4363-a158-807e68658e15",
-          "clueValues": [
-            {
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "type": "image",
-              "id": "b2fb4789-c445-4122-8904-a77baab4b246",
-              "subtext": "",
-              "value": "ronWood.png"
-            }
-          ],
-          "style": {
-            "width": "calc(32% - 10px)"
-          },
-          "solutionInfo": {
-            "solvedText": "Ron Wood",
-            "type": "text",
-            "possibleSolutions": [
-              {
-                "id": "93225a1b-10c4-4a48-8254-fae0a00ecd93",
-                "value": "Ron Wood"
-              },
-              {
-                "value": "Ronnie Wood",
-                "id": "9aab7fc8-fddd-4265-b782-f6df98e16dcc"
-              },
-              {
-                "id": "770a84f5-5f66-4dd3-8c1a-eb48c0b87d7a",
-                "value": "Ronald Wood"
-              }
-            ]
-          },
-          "dependsOn": [],
-          "helperText": "Member of The Rolling Stones.",
-          "clueGroup": 0,
-          "subtext": ""
         }
       ]
     },

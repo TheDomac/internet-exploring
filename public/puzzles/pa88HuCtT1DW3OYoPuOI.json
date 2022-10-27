@@ -84,167 +84,39 @@
       "clues": [
         {
           "dependsOn": [],
-          "clueGroup": 0,
           "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "id": "9711af87-adf2-4455-b295-a0799e906ef2",
-          "solutionInfo": {
-            "possibleSolutions": [
-              {
-                "id": "54d223af-8c4e-4172-817b-1029b057cc49",
-                "value": "How I Met Your Mother"
-              },
-              {
-                "id": "79df788c-4351-4bbd-b38b-4648c8e7246c",
-                "value": "HIMYM"
-              }
-            ],
-            "solvedText": "How I Met Your Mother",
-            "type": "text"
-          },
-          "subtext": "",
-          "helperText": "Famous sitcom created by Craig Thomas and Carter Bays.",
-          "clueValues": [
-            {
-              "id": "c469b054-1f4e-48ea-ab15-cf3b6fdaecb6",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "subtext": "",
-              "value": "Ted, Marshall, Lily, Barney, Robin",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(33% - 10px)",
-            "filter": "blur(27px)"
-          },
-          "clueValues": [
-            {
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "value": "redCowboy.png",
-              "id": "e5d11214-7eb2-472e-9d4a-6fe99128ff5e",
-              "type": "image"
-            }
-          ],
-          "helperText": "A particular type of footwear mentioned in the show How I Met Your Mother. Same color as top left part of Windows logo and worn by people who manage cattle.",
-          "dependsOn": [
-            {
-              "value": "9711af87-adf2-4455-b295-a0799e906ef2",
-              "id": "2e0b8bb7-2b6d-4dd2-8015-b676a8c8ae20"
-            }
-          ],
-          "id": "0f99ba2e-4137-4942-bb01-3aed11be0ead",
-          "solutionInfo": {
-            "possibleSolutions": [
-              {
-                "id": "8f259b8d-591c-49da-8080-9c84cd621aa6",
-                "value": "Boots"
-              },
-              {
-                "id": "11924625-5cf9-4a9e-bf8b-843b203f320d",
-                "value": "Red cowboy boots"
-              },
-              {
-                "id": "38d4ccc7-b384-46af-8799-10b4923841f0",
-                "value": "Boot"
-              }
-            ],
-            "solvedText": "Boots",
-            "type": "text"
-          }
-        },
-        {
-          "clueGroup": 0,
-          "subtext": "",
-          "helperText": "Which country looks like a boot?",
-          "solutionInfo": {
-            "possibleSolutions": [
-              {
-                "id": "9a200aa7-0fae-4f78-8adc-c55f10f9fea9",
-                "value": "Italy"
-              }
-            ],
-            "type": "text",
-            "solvedText": "Italy"
-          },
-          "dependsOn": [
-            {
-              "id": "44554c9c-ba46-4c9e-8925-b3b754cbcce9",
-              "value": "0f99ba2e-4137-4942-bb01-3aed11be0ead"
-            }
-          ],
-          "style": {
-            "width": "calc(35% - 10px)",
-            "filter": "blur(27px)"
-          },
-          "id": "0065c057-a041-44be-b55b-4256121057c6",
-          "clueValues": [
-            {
-              "id": "46a8b446-1240-46eb-8ee7-a2a2948225dc",
-              "type": "image",
-              "subtext": "Butan, Sri Lanka, ?",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "value": "italy.png"
-            }
-          ]
-        },
-        {
-          "dependsOn": [
-            {
-              "id": "657250ba-345e-427b-a865-cbcf381a45f0",
-              "value": "0065c057-a041-44be-b55b-4256121057c6"
-            }
-          ],
-          "style": {
-            "width": "calc(33% - 10px)",
+            "width": "calc(100% - 10px)",
             "filter": "blur(27px)"
           },
           "clueGroup": 0,
           "subtext": "",
-          "helperText": "A city in Italy. Famous for its football club that starts with letter N.",
+          "helperText": "Solve the minesweeper and copy the letters.",
           "id": "9d120b63-cd86-40d1-b67d-f2ea442d8a31",
           "solutionInfo": {
-            "solvedText": "Napoli",
+            "solvedText": "",
             "type": "text",
-            "possibleSolutions": [
-              {
-                "value": "Napoli",
-                "id": "f8f714d2-76d6-40dd-b540-455d56491c45"
-              },
-              {
-                "value": "Naples",
-                "id": "4405f380-5ba1-4712-9885-c0f0f29b0246"
-              }
-            ]
+            "possibleSolutions": []
           },
           "clueValues": [
             {
               "subtext": "",
-              "value": "napoli.png",
+              "value": "FIFAMinesweeper",
               "style": {
                 "width": "calc(100% - 10px)"
               },
               "id": "2375a763-9bfc-44a2-9e66-2e1d6845d985",
-              "type": "image"
+              "type": "customComponent"
             }
           ]
         }
       ],
       "solutionInfo": {
-        "possibleSolutions": [],
+        "possibleSolutions": [{
+          "value": "FIFA",
+          "id": "f8f714d2-76d6-40dd-b540-455d56491c45"
+        }],
         "type": "text",
-        "solvedText": "Napoli"
+        "solvedText": "FIFA"
       },
       "style": {}
     },
@@ -383,15 +255,15 @@
             {
               "type": "text",
               "id": "86e92d0a-97ee-402a-a600-c79ba7c97d53",
-              "value": "Napoli",
+              "value": "FIFA",
               "style": {
                 "width": "calc(100% - 10px)"
               },
-              "subtext": ""
+              "subtext": "Player of the century"
             }
           ],
           "id": "01b91051-8860-4ce1-845b-5d49b3404bad",
-          "helperText": "We're looking for a football player who played in Napoli.",
+          "helperText": "",
           "subtext": "",
           "clueGroup": 1,
           "style": {

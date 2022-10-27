@@ -54,14 +54,15 @@ const UpgradeModal = () => {
             <p>
               Buying the full game ($3.49) gives you access to the following:
             </p>
-            <p>
+            <p style={{ padding: "10px",  border: "1px solid #1a744a", borderRadius: "5px"}}>
               {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as well
               as all future riddles that will be added to the list.
             </p>
-            <p>
+            <p style={{ padding: "10px",  border: "1px solid #1a744a", borderRadius: "5px"}}>
               Workshop where you can play riddles made by other players or
               create your own.
             </p>
+            
 
             {user ? (
               <Button
@@ -75,13 +76,18 @@ const UpgradeModal = () => {
                   : "Buy ($3.49)"}
               </Button>
             ) : (
+              <>
+              <p>
+              In order to buy, you must sign in first.
+            </p>
               <Button
                 type="button"
                 style={{ maxWidth: "100%", width: "100%", marginBottom: 20 }}
                 onClick={loginStep.setOn}
               >
-                Sign in to continue
+                Sign in
               </Button>
+              </>
             )}
           </>
         )}

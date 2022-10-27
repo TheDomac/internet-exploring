@@ -21,9 +21,11 @@ const PuzzleList = () => {
         <PuzzleRow key={puzzle.id}>
           <PuzzleTitle>{puzzle.name}</PuzzleTitle>
           {puzzle.rebuses.map((rebus, rebusIndex) => {
-            const isSolved =
-              puzzlesSolvingSync[puzzle.id] &&
-              puzzlesSolvingSync[puzzle.id].includes(rebus.id);
+            // const isSolved =
+            //   puzzlesSolvingSync[puzzle.id] &&
+            //   puzzlesSolvingSync[puzzle.id].includes(rebus.id);
+
+            const isSolved = false
 
             const areAllPreviousRebusesSolved = puzzle.rebuses.every((r, i) => {
               if (i === puzzle.rebuses.length - 1) {

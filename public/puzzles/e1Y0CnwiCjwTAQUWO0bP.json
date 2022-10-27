@@ -5,49 +5,13 @@
       "style": {},
       "clues": [
         {
-          "subtext": "",
-          "solutionInfo": {
-            "possibleSolutions": [
-              {
-                "value": "Ralph",
-                "id": "f8650a27-5e21-4860-b88b-453fab05fd10"
-              }
-            ],
-            "type": "text",
-            "solvedText": "Ralph"
-          },
-          "id": "1f342b7b-f026-4bf6-80db-57a35bab1aee",
-          "helperText": "Famous 2012 American computer-animated comedy film.",
-          "clueValues": [
-            {
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "value": "Wreck-it _____",
-              "type": "text",
-              "id": "818df8e2-0e8c-4eb5-849e-9e227a5ecae3"
-            }
-          ],
-          "dependsOn": [],
-          "style": {
-            "width": "calc(32% - 10px)"
-          },
-          "clueGroup": 1
-        },
-        {
           "style": {
             "width": "calc(32% - 10px)"
           },
           "dependsOn": [],
           "solutionInfo": {
-            "possibleSolutions": [
-              {
-                "value": "Voldemort",
-                "id": "b4f84441-b636-430a-aa72-8a596c88aa38"
-              }
-            ],
-            "solvedText": "Voldemort",
+            "possibleSolutions": [],
+            "solvedText": "",
             "type": "text"
           },
           "clueValues": [
@@ -58,13 +22,13 @@
               "id": "1e87a593-20bb-480a-a136-b434d1b827b4",
               "type": "image",
               "subtext": "",
-              "value": "voldemort.png"
+              "value": "ralphFiennes.png"
             }
           ],
           "subtext": "",
           "id": "8dacbbdd-e687-4e39-a98a-63835c9b9ee9",
-          "helperText": "Lightsaber means Star Wars, ring means Lord of the Rings and wand means Harry Potter. Angel means good guy, devil means bad guy. Follow the circled images.",
-          "clueGroup": 1
+          "helperText": "Lightsaber means Star Wars, ring means Lord of the Rings and wand means Harry Potter. Angel means good guy, devil means bad guy. Role or actor. Follow the circled images.",
+          "clueGroup": 0
         }
       ],
       "id": "08320c59-80e5-4816-ad86-b2ebcd608309",
@@ -144,14 +108,9 @@
         },
         {
           "solutionInfo": {
-            "possibleSolutions": [
-              {
-                "id": "ea32f211-bdb4-477c-9ba5-4c777e3e1353",
-                "value": "Christoph Waltz"
-              }
-            ],
+            "possibleSolutions": [],
             "type": "text",
-            "solvedText": "Christoph Waltz"
+            "solvedText": ""
           },
           "style": {
             "width": "calc(50% - 10px)"
@@ -182,7 +141,12 @@
       "style": {},
       "id": "bb40bdc0-3294-45b7-92ba-a17ee0ff982c",
       "solutionInfo": {
-        "possibleSolutions": [],
+        "possibleSolutions": [
+          {
+            "id": "ea32f211-bdb4-477c-9ba5-4c777e3e1353",
+            "value": "Christoph Waltz"
+          }
+        ],
         "solvedText": "Christoph Waltz",
         "type": "text"
       }
