@@ -7,7 +7,7 @@ const ImagesLoader = ({ imagesToLoad, setLoadedImages, loadedImages }) => {
   return (
     <div style={{ display: "none" }}>
       {imagesToLoad.map((img, i) => {
-        const file = require(`../../../images/${img}`);
+        const file = img.startsWith("http") || img.startsWith("blob") ? img : require(`../../../images/${img}`);
         return (
           <img
             src={file}
