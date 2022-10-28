@@ -35,7 +35,6 @@ const customComponentsArray = [
   { name: "StarVennDiagram", Component: StarVennDiagram },
   { name: "MiddleVennDiagram", Component: MiddleVennDiagram },
   { name: "SeasonVennDiagram", Component: SeasonVennDiagram },
-  { name: "SeasonVennDiagram", Component: SeasonVennDiagram },
   { name: "_1932VennDiagram", Component: _1932VennDiagram },
 ];
 

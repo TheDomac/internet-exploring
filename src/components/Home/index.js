@@ -15,6 +15,7 @@ import { FREE_RIDDLE_ID } from "../../common/consts";
 
 import TermsOfService from "./TermsOfService";
 import PrivacyPolicy from "./PrivacyPolicy";
+import WhyInternetExploring from "./WhyInternetExploring";
 import {
   Subtitle1,
   Subtitle2,
@@ -27,11 +28,21 @@ import {
 const Home = () => {
   const termsModal = useToggle();
   const privacyPolicyModal = useToggle();
+  const whyInternetExploringModal = useToggle();
   const { upgradeModal } = useContext(PaymentContext);
   const { upgradedUser } = useContext(AuthContext);
 
   return (
     <>
+      <Modal
+        isModalShown={whyInternetExploringModal.isOn}
+        widthLimit={false}
+        onClose={whyInternetExploringModal.setOff}
+      >
+        <ModalInfo onClose={whyInternetExploringModal.setOff}>
+          <WhyInternetExploring />
+        </ModalInfo>
+      </Modal>
       <Modal
         isModalShown={termsModal.isOn}
         widthLimit={false}
@@ -60,8 +71,8 @@ const Home = () => {
         </Subtitle2>
 
         {upgradedUser.isOn ? (
-          <StyledLink to="/play" style={{ marginBottom: "20px", backgroundColor: "#309d6d" }}>
-            <HomeButton>Play</HomeButton>
+          <StyledLink to="/play" style={{ marginBottom: "20px" }}>
+            <HomeButton $primary>Play</HomeButton>
           </StyledLink>
         ) : (
           <>
@@ -69,7 +80,7 @@ const Home = () => {
               to={`/play/puzzles/${FREE_RIDDLE_ID}`}
               style={{ marginBottom: "20px" }}
             >
-              <HomeButton style={{ maxWidth: "100%", backgroundColor: "#309d6d"  }}>
+              <HomeButton $primary style={{ maxWidth: "100%" }}>
                 Play a Free Riddle
               </HomeButton>
             </StyledLink>
@@ -105,9 +116,29 @@ const Home = () => {
             />
           </HomeButton>
         </StyledA>
-        <div style={{ display: "flex", fontSize: 12, paddingBottom: 20 }}>
+        <div
+          style={{
+            display: "flex",
+            fontSize: 12,
+            paddingBottom: 20,
+            justifyContent: "space-around",
+            width: "500px",
+            maxWidth: "100%",
+            flexWrap: "wrap",
+          }}
+        >
           <div
-            style={{ cursor: "pointer", marginRight: 40 }}
+            style={{
+              cursor: "pointer",
+              marginRight: "10px",
+              marginBottom: "10px",
+            }}
+            onClick={whyInternetExploringModal.setOn}
+          >
+            Why Internet Exploring?
+          </div>
+          <div
+            style={{ cursor: "pointer", marginRight: "10px" }}
             onClick={termsModal.setOn}
           >
             Terms of Service

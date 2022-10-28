@@ -1,17 +1,8 @@
+import { ScrollDiv } from "./index.styled";
+
 const TermsOfService = () => {
   return (
-    <div
-      style={{
-        height: 500,
-        boxSizing: "border-box",
-        overflowY: "scroll",
-        marginBottom: 30,
-        padding: 20,
-        border: "2px solid #CCC",
-        borderRadius: 5,
-        width: 700,
-      }}
-    >
+    <ScrollDiv>
       <h1>Terms and Conditions</h1>
 
       <h2>1. Terms</h2>
@@ -124,7 +115,7 @@ const TermsOfService = () => {
         Any claim related to Internet Exploring's Website shall be governed by
         the laws of hr without regards to its conflict of law provisions.
       </p>
-    </div>
+    </ScrollDiv>
   );
 };
 

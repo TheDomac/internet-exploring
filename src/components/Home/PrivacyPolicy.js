@@ -1,17 +1,8 @@
+import { ScrollDiv } from "./index.styled";
+
 const PrivacyPolicy = () => {
   return (
-    <div
-      style={{
-        height: 500,
-        boxSizing: "border-box",
-        overflowY: "scroll",
-        marginBottom: 30,
-        padding: 20,
-        border: "2px solid #CCC",
-        borderRadius: 5,
-        width: 700,
-      }}
-    >
+    <ScrollDiv>
       <h1>Privacy Policy</h1>
 
       <p>
@@ -223,7 +214,7 @@ const PrivacyPolicy = () => {
         strongly encourage you to contact us immediately and we will do our best
         efforts to promptly remove such information from our records.
       </p>
-    </div>
+    </ScrollDiv>
   );
 };
 

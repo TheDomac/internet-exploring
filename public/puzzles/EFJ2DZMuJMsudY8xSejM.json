@@ -2,13 +2,13 @@
   "id": "EFJ2DZMuJMsudY8xSejM",
   "rebuses": [
     {
-      "id": "8a0328a8-163c-411e-ae44-e46b25ab1eb6",
+      "id": "8abb28a8-163c-411e-ae44-e4cc5ab1eb6",
       "clues": [
         {
-          "id": "0cdcabe3-7887-4b3a-a82b-f348ba9df827",
+          "id": "0cdcabe3-7887-4b3a-a82b-f348babdf827",
           "clueValues": [
             {
-              "id": "4a85fc08-08cb-4177-aa83-c8e6d1738fed",
+              "id": "4a85fc08-0cdcb-4177-aa83-1",
               "value": "HollywoodWeighingScale",
               "type": "customComponent",
               "subtext": "",
@@ -28,7 +28,7 @@
             "type": "text",
             "possibleSolutions": [
               {
-                "id": "412445e0-c433-48c5-a8ba-7baf3d868bcd",
+                "id": "4124htre0-c433-48c5-a8ba-2",
                 "value": "2663"
               }
             ],
@@ -44,7 +44,7 @@
           "clueValues": [
             {
               "value": "StarVennDiagram",
-              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
+              "id": "56d4frwec2-ba54-44ea-b04d-3",
               "subtext": "",
               "type": "customComponent",
               "style": {
@@ -52,7 +52,7 @@
               }
             }
           ],
-          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "id": "2-714f-4f126-b682-4",
           "helperText": "",
           "dependsOn": [],
           "solutionInfo": {
@@ -60,21 +60,21 @@
             "type": "text",
             "possibleSolutions": [
               {
-                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
+                "id": "7ec3mnba79b-4e54-4369-91d1-5",
                 "value": "Star"
               },
               {
-                "id": "7124c79b-4e54-4369-91d1-820f9c32c1b4",
+                "id": "7124c79b-4e54-4369-91d1-6",
                 "value": "Stars"
               }
             ]
           }
         },
         {
-          "id": "6c65b125-e96d-4179-8e1d-31cc6fe2022c",
+          "id": "6hhhb125-e96d-4179-8e1d-7",
           "clueValues": [
             {
-              "id": "3a606b2a-3c99-4bfe-a0cc-46b9f772450e",
+              "id": "3a606b2a-3c99-4bfe-a0cc-8",
               "value": "actor.png",
               "type": "image",
               "subtext": "Hollywood",
@@ -91,12 +91,12 @@
           },
           "dependsOn": [
             {
-              "id": "15a1a19a-0ce1-474b-b4d9-333b3837a610",
-              "value": "0cdcabe3-7887-4b3a-a82b-f348ba9df827"
+              "id": "154yya19a-0ce1-474b-b4d9-9",
+              "value": "0cdcabe3-7887-4b3a-a82b-10"
             },
             {
-              "id": "e637d8c9-9824-402f-aa27-8c29bf092a37",
-              "value": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6"
+              "id": "e637d8c9-9824-402f-aa27-11",
+              "value": "13-714f-4fe8-b682-12"
             }
           ],
           "solutionInfo": {
@@ -111,7 +111,7 @@
         "type": "text",
         "possibleSolutions": [
           {
-            "id": "815dbdb7-01a5-446a-b599-574d83926169",
+            "id": "815ybdb7-01a5-446a-b599-13",
             "value": "Anne Hathaway"
           }
         ],
@@ -120,7 +120,7 @@
     },
 
     {
-      "id": "3f5164ae-ecc5-49cb-b54b-4130cbbd0455",
+      "id": "3f51cvbae-ecc5-49cb-b54b-14",
       "clues": [
         {
           "clueGroup": 0,
@@ -131,7 +131,7 @@
           "clueValues": [
             {
               "value": "MapVennDiagram",
-              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
+              "id": "2",
               "subtext": "",
               "type": "customComponent",
               "style": {
@@ -139,7 +139,7 @@
               }
             }
           ],
-          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "id": "19a4f-714f-4fe8-b682-15",
           "helperText": "Butterfly type - Araschnia levana, Painting by Jasper Johns - Made in 1961.",
           "dependsOn": [],
           "solutionInfo": {
@@ -147,17 +147,17 @@
             "type": "text",
             "possibleSolutions": [
               {
-                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
+                "id": "7ec3c79b-4e54-4369-91d1-16",
                 "value": "Map"
               }
             ]
           }
         },
         {
-          "id": "5224433b-8737-49b4-96dc-eef2a1c0e464",
+          "id": "5224433b-8737-49b4-96dc-17",
           "clueValues": [
             {
-              "id": "e5dbd155-002b-4d84-872a-a6714b8bd803",
+              "id": "e5dbd155-002b-4d84-872a-18",
               "value": "60°10'13.9\"N 24°56'28.7\"E",
               "type": "text",
               "subtext": "",
@@ -166,7 +166,7 @@
               }
             },
             {
-              "id": "694287f8-2b74-44dd-879c-68c8409a16ed",
+              "id": "694287f8-2b74-44dd-879c-19",
               "value": "48°51'50.4\"N 2°20'13.7\"E",
               "type": "text",
               "subtext": "",
@@ -175,7 +175,7 @@
               }
             },
             {
-              "id": "14e767ad-f540-4294-b4df-c3f9a63a8c8c",
+              "id": "14e767ad-f540-4294-b4df-20",
               "value": "40°45'31.9\"N 73°58'37.1\"W",
               "type": "text",
               "subtext": "",
@@ -195,19 +195,19 @@
             "type": "text",
             "possibleSolutions": [
               {
-                "id": "be96d4e3-4853-4d59-b213-7d3763d611ea",
+                "id": "be96d4e3-4853-4d59-b213-21",
                 "value": "Sphere"
               },
               {
-                "id": "0dc9af08-724b-49ec-aa41-0d4a3beccc05",
+                "id": "0dc9af08-724b-49ec-aa41-22",
                 "value": "Spheres"
               },
               {
-                "id": "bf427051-48fe-47f1-95ea-a698d1536a66",
+                "id": "bf427051-48fe-47f1-95ea-23",
                 "value": "Ball"
               },
               {
-                "id": "818a513c-9a11-4dc7-8cfd-785cfd967e29",
+                "id": "818a513c-9a11-4dc7-8cfd-24",
                 "value": "Balls"
               }
             ],
@@ -221,11 +221,11 @@
         "type": "text",
         "possibleSolutions": [
           {
-            "id": "d115cb85-f12a-451b-ac84-9427116606eb",
+            "id": "d115clkj-f12a-451b-ac84-25",
             "value": "Globe"
           },
           {
-            "id": "b37d0f84-9d12-473b-81ba-79aa8c2a3271",
+            "id": "b37d0f84-9d12-473b-81ba-26",
             "value": "Globus"
           }
         ],
@@ -233,7 +233,7 @@
       }
     },
     {
-      "id": "29b5495f-c6fc-43bd-800e-7008d91a8a8e",
+      "id": "29bfgf-c6fc-43bd-800e-27",
       "clues": [
         {
           "clueGroup": 0,
@@ -244,7 +244,7 @@
           "clueValues": [
             {
               "value": "CesarVennDiagram",
-              "id": "56d4ffc2-ba54-44ea-b04d-08a6384cdb77",
+              "id": "1",
               "subtext": "",
               "type": "customComponent",
               "style": {
@@ -252,7 +252,7 @@
               }
             }
           ],
-          "id": "19a3b33f-714f-4fe8-b682-beb2cbeac4c6",
+          "id": "1-714f-4fe8-b682-beb2cbeac4c6",
           "helperText": "Origin of these words is the same (person).",
           "dependsOn": [],
           "solutionInfo": {
@@ -260,7 +260,7 @@
             "type": "customComponent",
             "possibleSolutions": [
               {
-                "id": "7ec3c79b-4e54-4369-91d1-820f9c32c1b4",
+                "id": "7ec3c79b-4e54-4369-91d1-28",
                 "value": ""
               }
             ]
@@ -272,19 +272,19 @@
         "type": "text",
         "possibleSolutions": [
           {
-            "id": "56b46776-2683-4bf8-b204-cbffbfeb4ba8",
+            "id": "56b46776-2683-4bf8-b2114-29",
             "value": "Julius Caesar"
           },
           {
-            "id": "4cd0fdff-33a1-40f3-9483-71f8233b20b4",
+            "id": "4cd0fdff-33a1-40f3-9483-30",
             "value": "Caesar"
           },
           {
-            "id": "bdeb8c4c-3891-47fd-a402-67a5f0529b24",
+            "id": "bdeb8c4c-3891-47fd-a402-31",
             "value": "Cesar"
           },
           {
-            "id": "54981ae2-595e-4bf4-a210-bb947b741d55",
+            "id": "54981ae2-595e-4bf4-a2120-32",
             "value": "Cezar"
           }
         ],
@@ -292,13 +292,13 @@
       }
     },
     {
-      "id": "c71e013c-25fb-4d71-b025-dc9ac005d2b3",
+      "id": "c71e013c-25fb-4d71-b025-33",
       "clues": [
         {
-          "id": "81ed8fa8-054b-4d4a-9e6b-c2034082eb50",
+          "id": "81ed8fa8-054b-4d4a-9e6b-34",
           "clueValues": [
             {
-              "id": "fceda035-a4f5-4739-ae28-0f2c712d0b87",
+              "id": "fceda035-a4f5-4739-ae28-35",
               "value": "Anne Hathaway",
               "type": "text",
               "subtext": "",
@@ -321,7 +321,7 @@
           }
         },
         {
-          "id": "a1157075-0a40-4b3c-a43f-abc5197fc4a9",
+          "id": "a1155535-0a40-4b3c-a43f-abc5197fc4a9",
           "clueValues": [
             {
               "id": "cc953570-da69-4d1e-91c1-cd894c473013",
@@ -347,7 +347,7 @@
           }
         },
         {
-          "id": "186c1182-d355-41aa-9e05-ccef11e51eac",
+          "id": "181182-d355-41aa-9e05-ccef11346eac",
           "clueValues": [
             {
               "id": "a98460a9-f583-4771-92d2-b15ef7bbe2a2",
@@ -378,11 +378,11 @@
         "type": "text",
         "possibleSolutions": [
           {
-            "id": "bf9532c5-4332-4aff-aee1-1cee4c9dc968",
+            "id": "bf91632c5-4332-4aff-aee1-1cee4c9dgfh68",
             "value": "William Shakespeare"
           },
           {
-            "id": "a7b18f8f-5daf-4b72-8891-02b5adb56bc1",
+            "id": "a7b1c8f8f-5daf-4b72-8891-02b5acb6bc1",
             "value": "Shakespeare"
           }
         ],

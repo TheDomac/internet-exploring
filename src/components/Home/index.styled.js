@@ -45,6 +45,7 @@ export const Logo = styled.img`
 
 export const HomeButton = styled(Button)`
   max-width: 100%;
+  ${({ $primary }) => ($primary ? "background-color: #309d6d;" : "")}
   @media (max-height: 732px) {
     max-width: 300px;
   }
@@ -68,5 +69,20 @@ export const StyledA = styled.a`
   }
   @media (max-width: 625px) {
     max-width: 300px;
+  }
+`;
+
+export const ScrollDiv = styled.div`
+  height: 515px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 700px;
+
+  @media (max-height: 732px) {
+    height: 300px;
   }
 `;
