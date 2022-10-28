@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
+import useClickOutside from "../services/useClickOutside";
 import { Button } from "./Button.styled";
 import { FadeInDiv } from "./FadeIn";
 
@@ -37,13 +38,23 @@ export const Text = styled.p`
   text-align: center;
 `;
 
-const Modal = ({ isModalShown, children, widthLimit = true }) => {
+const Modal = ({
+  isModalShown,
+  children,
+  widthLimit = true,
+  onClose = () => {},
+}) => {
+  const wrapperRef = useRef(null);
+  useClickOutside(wrapperRef, onClose);
+
   if (!isModalShown) {
     return null;
   }
   return (
     <StyledModal>
-      <ModalContent $widthLimit={widthLimit}>{children}</ModalContent>
+      <ModalContent $widthLimit={widthLimit} ref={wrapperRef}>
+        {children}
+      </ModalContent>
     </StyledModal>
   );
 };

@@ -1,15 +1,13 @@
 /* eslint-disable no-restricted-globals */
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 
 import { PaymentContext } from "../../common/services/PaymentContext";
 import { AuthContext } from "../../common/services/AuthContext";
-import { Button } from "../../common/components/Button.styled";
 import { Container } from "../../common/components/Container.styled";
 import LoginCorner from "../../common/components/LoginCorner";
 import { REDDIT_URL } from "../../common/consts";
 
-import Logo from "../../images/Logo.png";
+import LogoImg from "../../images/Logo.png";
 import redditLogo from "../../images/redditLogo.png";
 import Modal, { ModalInfo } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
@@ -17,6 +15,14 @@ import { FREE_RIDDLE_ID } from "../../common/consts";
 
 import TermsOfService from "./TermsOfService";
 import PrivacyPolicy from "./PrivacyPolicy";
+import {
+  Subtitle1,
+  Subtitle2,
+  Logo,
+  HomeButton,
+  StyledLink,
+  StyledA,
+} from "./index.styled";
 
 const Home = () => {
   const termsModal = useToggle();
@@ -26,12 +32,20 @@ const Home = () => {
 
   return (
     <>
-      <Modal isModalShown={termsModal.isOn} widthLimit={false}>
+      <Modal
+        isModalShown={termsModal.isOn}
+        widthLimit={false}
+        onClose={termsModal.setOff}
+      >
         <ModalInfo onClose={termsModal.setOff}>
           <TermsOfService />
         </ModalInfo>
       </Modal>
-      <Modal isModalShown={privacyPolicyModal.isOn} widthLimit={false}>
+      <Modal
+        isModalShown={privacyPolicyModal.isOn}
+        widthLimit={false}
+        onClose={privacyPolicyModal.setOff}
+      >
         <ModalInfo onClose={privacyPolicyModal.setOff}>
           <PrivacyPolicy />
         </ModalInfo>
@@ -39,79 +53,58 @@ const Home = () => {
 
       <Container>
         <LoginCorner redirectAfterLogout={false} />
-        <img
-          src={Logo}
-          alt="logo"
-          style={{ marginBottom: "10px", maxWidth: "100%" }}
-        />
-        <p
-          style={{ marginTop: "-20px", marginBottom: "7px", fontSize: "28px" }}
-        >
-          What if the Internet was your escape room?
-        </p>
-        <p style={{ marginTop: "0", fontSize: "18px", marginBottom: 40 }}>
+        <Logo src={LogoImg} alt="logo" />
+        <Subtitle1>What if the Internet was your escape room?</Subtitle1>
+        <Subtitle2>
           Solve riddles whose clues and answers are hidden online.
-        </p>
+        </Subtitle2>
 
         {upgradedUser.isOn ? (
-          <Link to="/play" style={{ marginBottom: "20px", maxWidth: "80%" }}>
-            <Button style={{ maxWidth: "100%" }}>Play</Button>
-          </Link>
+          <StyledLink to="/play" style={{ marginBottom: "20px", backgroundColor: "#309d6d" }}>
+            <HomeButton>Play</HomeButton>
+          </StyledLink>
         ) : (
           <>
-            <Link
+            <StyledLink
               to={`/play/puzzles/${FREE_RIDDLE_ID}`}
-              style={{ marginBottom: "20px", maxWidth: "80%" }}
+              style={{ marginBottom: "20px" }}
             >
-              <Button style={{ maxWidth: "100%" }}>Play a Free Riddle</Button>
-            </Link>
-            <Button
+              <HomeButton style={{ maxWidth: "100%", backgroundColor: "#309d6d"  }}>
+                Play a Free Riddle
+              </HomeButton>
+            </StyledLink>
+            <HomeButton
               onClick={upgradeModal.setOn}
-              style={{ maxWidth: "100%", marginBottom: "20px" }}
+              style={{ marginBottom: "20px" }}
             >
               Riddles
-            </Button>
+            </HomeButton>
           </>
         )}
-        <Link to="/tutorial" style={{ marginBottom: "20px", maxWidth: "80%" }}>
-          <Button style={{ maxWidth: "100%" }}>Tutorial</Button>
-        </Link>
-        <div style={{ display: "flex", width: "500px", maxWidth: "500px" }}>
-          <a
-            rel="noreferrer"
-            href={REDDIT_URL}
-            target="_blank"
+        <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
+          <HomeButton>Tutorial</HomeButton>
+        </StyledLink>
+        <StyledA rel="noreferrer" href={REDDIT_URL} target="_blank">
+          <HomeButton
             style={{
-              display: "inline-block",
-              width: "100%",
-              marginBottom: "25px",
+              padding: "12px 20px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <Button
-              style={{ width: "100%", maxWidth: "100%", padding: "12px 20px" }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginRight: "-20px",
-                }}
-              >
-                <span>View latest news</span>
-                <img
-                  style={{
-                    display: "inline-block",
-                    marginLeft: 7,
-                    marginRight: 3,
-                  }}
-                  src={redditLogo}
-                  alt="reddit"
-                />
-              </div>
-            </Button>
-          </a>
-        </div>
+            <span>View latest news</span>
+            <img
+              style={{
+                display: "inline-block",
+                marginLeft: 7,
+                marginRight: 3,
+              }}
+              src={redditLogo}
+              alt="reddit"
+            />
+          </HomeButton>
+        </StyledA>
         <div style={{ display: "flex", fontSize: 12, paddingBottom: 20 }}>
           <div
             style={{ cursor: "pointer", marginRight: 40 }}

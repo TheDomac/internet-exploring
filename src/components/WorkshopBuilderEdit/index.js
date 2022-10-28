@@ -187,7 +187,7 @@ const WorkshopBuilderEdit = () => {
   return (
     <>
       {saveModal.isOn && (
-        <Modal isModalShown={saveModal.isOn}>
+        <Modal isModalShown={saveModal.isOn} onClose={saveModal.setOff}>
           <Text>{!user && "Please sign in first to save your riddle."}</Text>
           {saveError.isOn ? (
             <Alert>Sorry, something went wrong.</Alert>

@@ -95,7 +95,12 @@ const Rebus = ({
 
   return (
     <>
-      <Modal isModalShown={Boolean(deleteClueId)}>
+      <Modal
+        isModalShown={Boolean(deleteClueId)}
+        onClose={() => {
+          setDeleteClueId(null);
+        }}
+      >
         <ModalConfirm
           text="Are you sure you want to delete this clue?"
           onClose={() => {

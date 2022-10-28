@@ -15,6 +15,7 @@ import MapVennDiagram from "./MapVennDiagram";
 import StarVennDiagram from "./StarVennDiagram";
 import MiddleVennDiagram from "./MiddleVennDiagram";
 import SeasonVennDiagram from "./SeasonVennDiagram";
+import _1932VennDiagram from "./_1932VennDiagram";
 
 const customComponentsArray = [
   { name: "PawnWordSearch", Component: PawnWordSearch },
@@ -34,6 +35,8 @@ const customComponentsArray = [
   { name: "StarVennDiagram", Component: StarVennDiagram },
   { name: "MiddleVennDiagram", Component: MiddleVennDiagram },
   { name: "SeasonVennDiagram", Component: SeasonVennDiagram },
+  { name: "SeasonVennDiagram", Component: SeasonVennDiagram },
+  { name: "_1932VennDiagram", Component: _1932VennDiagram },
 ];
 
 export default customComponentsArray;

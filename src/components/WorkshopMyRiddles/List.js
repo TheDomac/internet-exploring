@@ -145,7 +145,10 @@ const List = () => {
 
   return (
     <>
-      <Modal isModalShown={Boolean(selectedPuzzle)}>
+      <Modal
+        isModalShown={Boolean(selectedPuzzle)}
+        onClose={() => setSelectedPuzzle(null)}
+      >
         <Text style={{ margin: 0, marginBottom: 7 }}>
           {selectedPuzzle?.name}
         </Text>

@@ -26,6 +26,11 @@ export const HelpButton = styled.button`
   color: white;
   font-family: "Fredoka";
   transition: 300ms;
+  border: 2px solid;
+  border-bottom-color: #999;
+  border-right-color: #999;
+  border-top-color: white;
+  border-left-color: white;
 
   & p {
     font-size: 44px;

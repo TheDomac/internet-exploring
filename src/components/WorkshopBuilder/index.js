@@ -118,33 +118,46 @@ const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
 
   return (
     <>
-      <Modal isModalShown={exitModal.isOn}>
+      <Modal isModalShown={exitModal.isOn} onClose={exitModal.setOff}>
         <ModalConfirm
           text="Are you sure you want to exit? Any unsaved changes will be lost."
           onClose={exitModal.setOff}
           onConfirm={handleExitModalConfirm}
         />
       </Modal>
-      <Modal isModalShown={Boolean(deleteRebusId)}>
+      <Modal
+        isModalShown={Boolean(deleteRebusId)}
+        onClose={handleDeleteRebusCancel}
+      >
         <ModalConfirm
           text="Are you sure you want to delete this riddle?"
           onClose={handleDeleteRebusCancel}
           onConfirm={handleDeleteRebusConfirm}
         />
       </Modal>
-      <Modal isModalShown={Boolean(validationModal)}>
+      <Modal
+        isModalShown={Boolean(validationModal)}
+        onClose={() => setValidationModal(null)}
+      >
         <ModalInfo
           text={`Validation error: ${validationModal}`}
           onClose={() => setValidationModal(null)}
         />
       </Modal>
-      <Modal isModalShown={imageSizeErrorModal.isOn}>
+      <Modal
+        isModalShown={imageSizeErrorModal.isOn}
+        onClose={imageSizeErrorModal.setOff}
+      >
         <ModalInfo
           text="Image size too large (max 1MB)."
           onClose={imageSizeErrorModal.setOff}
         />
       </Modal>
-      <Modal widthLimit={false} isModalShown={Boolean(helpModal)}>
+      <Modal
+        widthLimit={false}
+        isModalShown={Boolean(helpModal)}
+        onClose={() => setHelpModal(null)}
+      >
         <ModalInfo onClose={() => setHelpModal(null)}>
           <div style={{ marginBottom: "10px", textAlign: "center" }}>
             {helpModalContents[helpModal]}

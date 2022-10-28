@@ -7,9 +7,8 @@ import { PaymentContext } from "../../../services/PaymentContext";
 
 const LoginModal = () => {
   const { loginModal } = useContext(PaymentContext);
-
   return (
-    <Modal isModalShown>
+    <Modal isModalShown onClose={loginModal.setOff}>
       <LoginForm />
 
       <Button

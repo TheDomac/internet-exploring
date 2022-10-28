@@ -267,58 +267,6 @@
       },
       "clues": [
         {
-          "clueGroup": 0,
-          "dependsOn": [],
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "id": "36867971-dbbe-478d-b48a-f679ea231d03",
-          "clueValues": [
-            {
-              "type": "text",
-              "subtext": "",
-              "id": "6b451c80-a6c0-484d-9d83-98dca0ac3323",
-              "value": "John Galsworthy",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          },
-          "helperText": "What year does this Nobel prize winner have in common with the other two people?",
-          "subtext": ""
-        },
-        {
-          "solutionInfo": {
-            "possibleSolutions": [],
-            "solvedText": "",
-            "type": "text"
-          },
-          "subtext": "",
-          "style": {
-            "width": "calc(33% - 10px)"
-          },
-          "clueGroup": 0,
-          "clueValues": [
-            {
-              "style": {
-                "width": "calc(100% - 10px)"
-              },
-              "type": "text",
-              "subtext": "",
-              "id": "649a4be9-065f-4c48-8524-4c74e9c2407a",
-              "value": "Werner Heisenberg"
-            }
-          ],
-          "dependsOn": [],
-          "id": "f3a2d389-e4f8-455f-8cb7-ec0f29f9ecdb",
-          "helperText": "What year does this Nobel prize winner have in common with the other two people?"
-        },
-        {
           "subtext": "",
           "solutionInfo": {
             "type": "text",
@@ -326,7 +274,7 @@
             "possibleSolutions": []
           },
           "style": {
-            "width": "calc(33% - 10px)"
+            "width": "calc(43% - 10px)"
           },
           "clueGroup": 0,
           "dependsOn": [],
@@ -334,15 +282,15 @@
             {
               "subtext": "",
               "id": "192cb1d1-c71d-426d-8391-077ef109485d",
-              "type": "text",
-              "value": "Irving Langmuir",
+              "type": "customComponent",
+              "value": "_1932VennDiagram",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             }
           ],
           "id": "37b878a1-a2a0-4471-8b40-770f3f61af0a",
-          "helperText": "What year does this Nobel prize winner have in common with the other two people?"
+          "helperText": "What year do these Nobel prize winners have in common?"
         }
       ],
       "id": "3bb2c826-6408-4fe6-92a6-799ac5704266",
