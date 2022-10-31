@@ -166,6 +166,15 @@
               "id": "284251fa-f60b-4be1-9534-12e15f027915",
               "value": "curriculumVitae.png",
               "subtext": "52°30'28.3N 13°26'08.0E"
+            },
+            {
+              "type": "image",
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "333251fa-f60b-4be1-9534-12e1333315",
+              "value": "streetView.png",
+              "subtext": ""
             }
           ],
           "dependsOn": [],
