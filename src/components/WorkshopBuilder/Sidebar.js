@@ -654,7 +654,7 @@ const Sidebar = ({
       )}
       {selectedClueValue && (
         <div>
-          <p style={{ fontSize: "20px" }}>Clue value settings</p>
+          <p style={{ fontSize: "20px" }}>Subclue settings</p>
           <div
             style={{
               display: "flex",

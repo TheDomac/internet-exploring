@@ -26,7 +26,7 @@ const WhyInternetExploring = () => {
         I grew up on the Internet, made a professional career out of it and
         spectated while public discourse became a mess. So why Internet Exploring? I'm just nostalgic and
         had an idea that (I believe) has value and turned it into reality. I
-        really hope you like it.
+        hope you like it.
       </p>
       <p style={{ textIndent: "25px" }}>
         

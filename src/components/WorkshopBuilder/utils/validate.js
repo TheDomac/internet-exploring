@@ -23,7 +23,7 @@ const validate = (puzzle) => {
   if (
     !puzzle.rebuses.every((r) => r.clues.every((c) => c.clueValues.length > 0))
   )
-    return "Every clue needs to have at least one clue value.";
+    return "Every clue needs to have at least one subclue.";
   if (
     !puzzle.rebuses.every((r) =>
       r.clues.every(

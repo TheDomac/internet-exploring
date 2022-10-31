@@ -109,7 +109,7 @@ const Clue = ({
         </DeleteButton>
       )}
       <ClueValuesWrapper>
-        {clue.clueValues.map((clueValue) => (
+        {clue.clueValues.map((clueValue, i) => (
           <ClueValue
             key={clueValue.id}
             clueValue={clueValue}
@@ -118,6 +118,7 @@ const Clue = ({
             updateClue={updateClue}
             clue={clue}
             rebusId={rebus.id}
+            i={i}
             imageSizeErrorModal={imageSizeErrorModal}
             isSelected={
               selectedClueValueId === clueValue.id && selectedClueId === clue.id
