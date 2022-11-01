@@ -176,6 +176,28 @@ const puzzles = [
     ],
   },
   {
+    id: "kxj1dnUb1m0Xfwp6VE2F",
+    name: "It's a Marvelous world",
+    rebuses: [
+      {
+        id: "4914597c-0562-44ba-8f94-a7c293f2ecd7",
+        solutionInfo: { solvedText: "Arizona" },
+      },
+      {
+        id: "72e078c3-59f7-4b50-9c1f-c2fda604ae9c",
+        solutionInfo: { solvedText: "Ash" },
+      },
+      {
+        id: "93385571-f283-487b-a67e-59858f6a0a49",
+        solutionInfo: { solvedText: "Jean Grey" },
+      },
+      {
+        id: "dacc7700-7c36-45cf-a639-51963f4b2bf5",
+        solutionInfo: { solvedText: "Phoenix" },
+      },
+    ],
+  },
+  {
     id: "EFJ2DZMuJMsudY8xSejM",
     name: "Do you speak English?",
     rebuses: [
@@ -220,28 +242,6 @@ const puzzles = [
     ],
   },
   {
-    id: "pa88HuCtT1DW3OYoPuOI",
-    name: "Dribble those tiles",
-    rebuses: [
-      {
-        id: "82df311f-26d2-4760-9576-dc00fbeb84ab",
-        solutionInfo: { solvedText: "Argentina" },
-      },
-      {
-        id: "f142d421-9c38-4df9-a274-367e92bc1ec5",
-        solutionInfo: { solvedText: "FIFA" },
-      },
-      {
-        id: "3c1d0b0e-ebcb-4d03-9c05-7906b22eadce",
-        solutionInfo: { solvedText: "Football" },
-      },
-      {
-        id: "c3203a36-4e4f-4d72-9c80-32eded927821",
-        solutionInfo: { solvedText: "Maradona" },
-      },
-    ],
-  },
-  {
     id: "b3jJlrAjob4z64dyYRsB",
     name: "A chunk of evil",
     rebuses: [
@@ -260,28 +260,6 @@ const puzzles = [
       {
         id: "48f2f7e8-28b3-46d1-af31-c0c42390c6e7",
         solutionInfo: { solvedText: "Black Cat" },
-      },
-    ],
-  },
-  {
-    id: "kxj1dnUb1m0Xfwp6VE2F",
-    name: "It's a Marvelous world",
-    rebuses: [
-      {
-        id: "4914597c-0562-44ba-8f94-a7c293f2ecd7",
-        solutionInfo: { solvedText: "Arizona" },
-      },
-      {
-        id: "72e078c3-59f7-4b50-9c1f-c2fda604ae9c",
-        solutionInfo: { solvedText: "Ash" },
-      },
-      {
-        id: "93385571-f283-487b-a67e-59858f6a0a49",
-        solutionInfo: { solvedText: "Jean Grey" },
-      },
-      {
-        id: "dacc7700-7c36-45cf-a639-51963f4b2bf5",
-        solutionInfo: { solvedText: "Phoenix" },
       },
     ],
   },
@@ -436,6 +414,28 @@ const puzzles = [
       {
         id: "01ebc4a5-0ca0-4a66-8f65-284492bdaf30",
         solutionInfo: { solvedText: "Titanic" },
+      },
+    ],
+  },
+  {
+    id: "pa88HuCtT1DW3OYoPuOI",
+    name: "Dribble those tiles",
+    rebuses: [
+      {
+        id: "82df311f-26d2-4760-9576-dc00fbeb84ab",
+        solutionInfo: { solvedText: "Argentina" },
+      },
+      {
+        id: "3c1d0b0e-ebcb-4d03-9c05-7906b22eadce",
+        solutionInfo: { solvedText: "Football" },
+      },
+      {
+        id: "f142d421-9c38-4df9-a274-367e92bc1ec5",
+        solutionInfo: { solvedText: "Napoli" },
+      },
+      {
+        id: "c3203a36-4e4f-4d72-9c80-32eded927821",
+        solutionInfo: { solvedText: "Maradona" },
       },
     ],
   },

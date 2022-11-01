@@ -8,39 +8,47 @@ const minesLocations = [
   [2, 5],
   [2, 4],
   [2, 3],
-  [2, 2],
   [3, 2],
-  [4, 2],
   [3, 4],
+  [4, 3],
   [4, 4],
-  [6, 2],
-  [6, 3],
-  [6, 4],
-  [6, 5],
-  [6, 6],
-  [8, 2],
-  [8, 3],
-  [8, 4],
-  [8, 5],
+  [4, 5],
+  [4, 6],
+  [7, 6],
   [8, 6],
-  [9, 2],
-  [10, 2],
+  [9, 6],
+  [9, 5],
   [9, 4],
-  [10, 4],
-  [12, 6],
-  [12, 5],
-  [12, 4],
-  [12, 3],
+  [8, 4],
+  [7, 4],
+  [7, 3],
+  [7, 2],
+  [8, 2],
+  [9, 2],
+  [12, 2],
   [13, 2],
-  [14, 3],
-  [14, 4],
-  [14, 5],
+  [14, 2],
+  [12, 3],
+  [12, 4],
+  [12, 5],
+  [12, 6],
+  [13, 6],
   [14, 6],
-  [13, 4],
+  [17, 2],
+  [17, 3],
+  [17, 4],
+  [17, 5],
+  [17, 6],
+  [20, 2],
+  [20, 3],
+  [20, 4],
+  [20, 5],
+  [20, 6],
 ];
 
 const ROWS = 9;
-const COLUMNS = 17;
+const COLUMNS = 23;
+
 
 const EMPTY_BOARD = Array(ROWS).fill(Array(COLUMNS).fill(CODES.NOTHING));
 
@@ -52,7 +60,7 @@ const initialBoard = EMPTY_BOARD.map((row, i) =>
   )
 );
 
-const FIFAMinesweeper = () => {
+const ASCIIMinesweeper = () => {
   return (
     <Minesweeper
       initialBoard={initialBoard}
@@ -63,4 +71,4 @@ const FIFAMinesweeper = () => {
   );
 };
 
-export default FIFAMinesweeper;
+export default ASCIIMinesweeper;

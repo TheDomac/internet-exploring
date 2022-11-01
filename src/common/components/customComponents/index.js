@@ -2,7 +2,7 @@ import PawnWordSearch from "./PawnWordSearch";
 import FootballPictureSlider from "./FootballPictureSlider";
 import OfficeCounterXCoordinate from "./OfficeCounterXCoordinate";
 import OfficeYCoordinateSudoku from "./OfficeYCoordinateSudoku";
-import FIFAMinesweeper from "./FIFAMinesweeper";
+import ASCIIMinesweeper from "./ASCIIMinesweeper";
 import CarCircuits from "./CarCircuits";
 import GuitarCounterXCoordinate from "./GuitarCounterXCoordinate";
 import GuitarCounterYCoordinate from "./GuitarCounterYCoordinate";
@@ -22,7 +22,7 @@ const customComponentsArray = [
   { name: "FootballPictureSlider", Component: FootballPictureSlider },
   { name: "OfficeCounterXCoordinate", Component: OfficeCounterXCoordinate },
   { name: "OfficeYCoordinateSudoku", Component: OfficeYCoordinateSudoku },
-  { name: "FIFAMinesweeper", Component: FIFAMinesweeper },
+  { name: "ASCIIMinesweeper", Component: ASCIIMinesweeper },
   { name: "CarCircuits", Component: CarCircuits },
   { name: "GuitarCounterXCoordinate", Component: GuitarCounterXCoordinate },
   { name: "GuitarCounterYCoordinate", Component: GuitarCounterYCoordinate },
