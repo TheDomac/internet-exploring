@@ -60,7 +60,7 @@ const UpgradeModal = () => {
         ) : (
           <>
             <p>
-              Buying the full game ($3.49) gives you access to the following:
+              Buying the full game ($2.99) gives you access to the following:
             </p>
             <p
               style={{
