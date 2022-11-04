@@ -19,9 +19,9 @@ export const solutionTypes = {
   CUSTOM_COMPONENT: "customComponent",
 };
 
-export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
+export const NUMBER_OF_FREE_RIDDLES = 4;
 
-export const FREE_RIDDLE_ID = "Kn3yls643KRUrov3SFSm"; // Same place different time
+export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
 
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",

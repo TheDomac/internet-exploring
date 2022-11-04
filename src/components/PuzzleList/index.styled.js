@@ -22,3 +22,7 @@ export const TextLink = styled.span`
   color: #309d6d;
   -webkit-text-stroke: 0.5px white;
 `;
+
+export const BlurredWrapper = styled.div`
+filter: blur(20px);
+`

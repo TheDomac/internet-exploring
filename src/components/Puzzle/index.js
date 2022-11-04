@@ -6,15 +6,14 @@ import CommonPuzzle from "../../common/components/Puzzle";
 
 import ArrowBack from "../../common/components/ArrowBack";
 import { AuthContext } from "../../common/services/AuthContext";
-import { PaymentContext } from "../../common/services/PaymentContext";
-import { FREE_RIDDLE_ID } from "../../common/consts";
+import  puzzles  from "../../common/data/puzzles";
+import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { useToggle } from "../../common/services/useToggle";
 
 const Puzzle = () => {
   const params = useParams();
   const navigate = useNavigate();
   const { upgradedUser } = useContext(AuthContext);
-  const { upgradeModal } = useContext(PaymentContext);
 
   const [puzzle, setPuzzle] = useState(null);
   const error = useToggle();
@@ -41,19 +40,15 @@ const Puzzle = () => {
   };
 
   useEffect(() => {
-    if (upgradedUser.isOn || params.puzzleId === FREE_RIDDLE_ID) {
+    const availablePuzzlesIds = puzzles.slice(0, NUMBER_OF_FREE_RIDDLES).map(p => p.id)
+    if (upgradedUser.isOn || availablePuzzlesIds.includes(params.puzzleId)) {
       fetchPuzzle();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [upgradedUser.isOn]);
 
   const handleRedirect = () => {
-    if (upgradedUser.isOn) {
-      navigate("/play/puzzles");
-    } else {
-      navigate("/");
-      upgradeModal.setOn();
-    }
+    navigate("/play/puzzles");
   };
 
   return (

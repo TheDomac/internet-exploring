@@ -1,8 +1,5 @@
-/* eslint-disable no-restricted-globals */
-import React, { useContext } from "react";
+import React from "react";
 
-import { PaymentContext } from "../../common/services/PaymentContext";
-import { AuthContext } from "../../common/services/AuthContext";
 import { Container } from "../../common/components/Container.styled";
 import LoginCorner from "../../common/components/LoginCorner";
 import { REDDIT_URL } from "../../common/consts";
@@ -11,7 +8,6 @@ import LogoImg from "../../images/Logo.png";
 import redditLogo from "../../images/redditLogo.png";
 import Modal, { ModalInfo } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
-import { FREE_RIDDLE_ID } from "../../common/consts";
 
 import TermsOfService from "./TermsOfService";
 import PrivacyPolicy from "./PrivacyPolicy";
@@ -29,8 +25,6 @@ const Home = () => {
   const termsModal = useToggle();
   const privacyPolicyModal = useToggle();
   const whyInternetExploringModal = useToggle();
-  const { upgradeModal } = useContext(PaymentContext);
-  const { upgradedUser } = useContext(AuthContext);
 
   return (
     <>
@@ -70,28 +64,11 @@ const Home = () => {
           Solve riddles whose clues and answers are hidden online.
         </Subtitle2>
 
-        {upgradedUser.isOn ? (
-          <StyledLink to="/play" style={{ marginBottom: "20px" }}>
+        
+        <StyledLink to="/play" style={{ marginBottom: "20px" }}>
             <HomeButton $primary>Play</HomeButton>
           </StyledLink>
-        ) : (
-          <>
-            <StyledLink
-              to={`/play/puzzles/${FREE_RIDDLE_ID}`}
-              style={{ marginBottom: "20px" }}
-            >
-              <HomeButton $primary style={{ maxWidth: "100%" }}>
-                Play a Free Riddle
-              </HomeButton>
-            </StyledLink>
-            <HomeButton
-              onClick={upgradeModal.setOn}
-              style={{ marginBottom: "20px" }}
-            >
-              Riddles
-            </HomeButton>
-          </>
-        )}
+        
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>

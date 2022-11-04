@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { getFunctions, httpsCallable } from "firebase/functions";
 import Modal from "../../Modal";
 
-import upgradeImage from "./upgradeImage.png";
 import { useToggle } from "../../../services/useToggle";
 import { Button } from "../../Button.styled";
 import { AuthContext } from "../../../services/AuthContext";
@@ -60,8 +59,6 @@ const UpgradeModal = () => {
           <LoginForm />
         ) : (
           <>
-            <img src={upgradeImage} alt="upgrade_img" />
-
             <p>
               Buying the full game ($3.49) gives you access to the following:
             </p>
@@ -72,7 +69,7 @@ const UpgradeModal = () => {
                 borderRadius: "5px",
               }}
             >
-              {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as well
+              All {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as well
               as all future riddles that will be added to the list.
             </p>
             <p
