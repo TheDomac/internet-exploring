@@ -22,28 +22,6 @@ const puzzles = [
     ],
   },
   {
-    id: "e1Y0CnwiCjwTAQUWO0bP",
-    name: "Looking for a spy",
-    rebuses: [
-      {
-        id: "08320c59-80e5-4816-ad86-b2ebcd608309",
-        solutionInfo: { solvedText: "Ralph Fiennes" },
-      },
-      {
-        id: "bb40bdc0-3294-45b7-92ba-a17ee0ff982c",
-        solutionInfo: { solvedText: "Christoph Waltz" },
-      },
-      {
-        id: "a19d75a5-42f8-46e7-a146-9bed690a84d5",
-        solutionInfo: { solvedText: "Daniel Craig" },
-      },
-      {
-        id: "403fc750-1417-4a05-8aa2-58ab0ed6b7aa",
-        solutionInfo: { solvedText: "Spectre" },
-      },
-    ],
-  },
-  {
     id: "DWAFgWYPsJeU8qtoSqkJ",
     name: "Celebratory Chemistry",
     rebuses: [
@@ -66,24 +44,24 @@ const puzzles = [
     ],
   },
   {
-    id: "MlFtYajockviA0qijsh0",
-    name: "The Icons of Strategy",
+    id: "e1Y0CnwiCjwTAQUWO0bP",
+    name: "Looking for a spy",
     rebuses: [
       {
-        id: "555bc3de-e243-48a5-879b-ac8eff4c1702",
-        solutionInfo: { solvedText: "Bishop" },
+        id: "08320c59-80e5-4816-ad86-b2ebcd608309",
+        solutionInfo: { solvedText: "Ralph Fiennes" },
       },
       {
-        id: "447d7cf6-2af6-44f6-8178-491efffd5f43",
-        solutionInfo: { solvedText: "Pawn" },
+        id: "bb40bdc0-3294-45b7-92ba-a17ee0ff982c",
+        solutionInfo: { solvedText: "Christoph Waltz" },
       },
       {
-        id: "669721c3-4148-4b12-9d5c-cf4fac2a113b",
-        solutionInfo: { solvedText: "Knight" },
+        id: "a19d75a5-42f8-46e7-a146-9bed690a84d5",
+        solutionInfo: { solvedText: "Daniel Craig" },
       },
       {
-        id: "6cd4c47d-79f2-4513-a04b-2ae324e371ac",
-        solutionInfo: { solvedText: "Chess" },
+        id: "403fc750-1417-4a05-8aa2-58ab0ed6b7aa",
+        solutionInfo: { solvedText: "Spectre" },
       },
     ],
   },
@@ -106,6 +84,28 @@ const puzzles = [
       {
         id: "f531e714-430a-461b-8e0a-7bf531c61895",
         solutionInfo: { solvedText: "Egyptian numbers" },
+      },
+    ],
+  },
+  {
+    id: "MlFtYajockviA0qijsh0",
+    name: "The Icons of Strategy",
+    rebuses: [
+      {
+        id: "555bc3de-e243-48a5-879b-ac8eff4c1702",
+        solutionInfo: { solvedText: "Bishop" },
+      },
+      {
+        id: "447d7cf6-2af6-44f6-8178-491efffd5f43",
+        solutionInfo: { solvedText: "Pawn" },
+      },
+      {
+        id: "669721c3-4148-4b12-9d5c-cf4fac2a113b",
+        solutionInfo: { solvedText: "Knight" },
+      },
+      {
+        id: "6cd4c47d-79f2-4513-a04b-2ae324e371ac",
+        solutionInfo: { solvedText: "Chess" },
       },
     ],
   },
