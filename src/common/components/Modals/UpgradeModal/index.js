@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
+import { logEvent } from "firebase/analytics";
 
 import { getFunctions, httpsCallable } from "firebase/functions";
 import Modal from "../../Modal";
@@ -11,6 +12,7 @@ import { PaymentContext } from "../../../services/PaymentContext";
 import LoginForm from "../../LoginForm";
 import { env, statuses } from "../../../consts";
 import puzzles from "../../../data/puzzles";
+import { analytics } from "../../../firebase";
 
 export const Wrapper = styled.div`
   text-align: center;
@@ -40,6 +42,11 @@ const UpgradeModal = () => {
       setUpgradeStatus(statuses.ERROR);
     }
   };
+
+  useEffect(() => {
+    logEvent(analytics, 'upgrade_modal_shown');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (user) {

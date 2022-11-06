@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { logEvent } from "firebase/analytics";
 
 import ArrowBack from "../../common/components/ArrowBack";
 import puzzles from "../../common/data/puzzles";
@@ -16,11 +17,17 @@ import {
 import { PuzzleRow, PuzzleTitle, TextLink, BlurredWrapper, } from "./index.styled";
 import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { HomeButton } from "../Home/index.styled";
+import { analytics } from "../../common/firebase";
 
 const PuzzleList = () => {
   const { puzzlesSolvingSync } = useContext(PuzzleContext);
   const { upgradedUser } = useContext(AuthContext);
   const { upgradeModal } = useContext(PaymentContext);
+
+  useEffect(() => {
+    logEvent(analytics, 'puzzle_list_shown');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const renderPuzzle = (puzzle) => (
     <PuzzleRow key={puzzle.id}>

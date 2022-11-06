@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
+import { logEvent } from "firebase/analytics";
 
 import { Button } from "../Button.styled";
 import { AuthContext } from "../../services/AuthContext";
@@ -8,7 +9,7 @@ import { CheckboxButton } from "../CheckboxButton.styled";
 import { Input } from "../Input.styled";
 import Alert from "../Alert.styled";
 import { statuses } from "../../consts";
-
+import { analytics } from "../../firebase";
 import googleLogo from "../../../images/googleLogo.svg";
 
 const ForgotPasswordButton = styled.button`
@@ -46,6 +47,12 @@ const LoginForm = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
+
+  useEffect(() => {
+    logEvent(analytics, 'login_form_shown');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
 
   const [step, setStep] = useState(steps.SIGN_IN);
   const handleStepChange = (e) => {

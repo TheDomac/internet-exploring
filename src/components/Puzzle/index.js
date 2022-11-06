@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
+import { logEvent } from "firebase/analytics";
 
 import CommonPuzzle from "../../common/components/Puzzle";
 
@@ -9,12 +10,12 @@ import { AuthContext } from "../../common/services/AuthContext";
 import  puzzles  from "../../common/data/puzzles";
 import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { useToggle } from "../../common/services/useToggle";
+import { analytics } from "../../common/firebase";
 
 const Puzzle = () => {
   const params = useParams();
   const navigate = useNavigate();
   const { upgradedUser } = useContext(AuthContext);
-
   const [puzzle, setPuzzle] = useState(null);
   const error = useToggle();
   const loading = useToggle(true);
@@ -40,6 +41,8 @@ const Puzzle = () => {
   };
 
   useEffect(() => {
+    const foundRiddle = puzzles.find(p => p.id === params.puzzleId)
+    logEvent(analytics, 'fetching_riddle', { riddle: foundRiddle?.name});
     const availablePuzzlesIds = puzzles.slice(0, NUMBER_OF_FREE_RIDDLES).map(p => p.id)
     if (upgradedUser.isOn || availablePuzzlesIds.includes(params.puzzleId)) {
       fetchPuzzle();
