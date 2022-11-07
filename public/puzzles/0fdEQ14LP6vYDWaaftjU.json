@@ -45,15 +45,22 @@
     },
     {
       "solutionInfo": {
-        "possibleSolutions": [{
-          "id": "3e0d5f08-4905-4906-9c84-5e21f3523501",
-          "value": "2019"
-        }, {
-          "id": "1058308-4905-4906-9c84-5e21f3523501",
-          "value": "2019."
-        }],
+        "possibleSolutions": [
+          {
+            "id": "c8b2f07a-2e86-4582-bc51-ece327ea970a",
+            "value": {
+              "minute": "",
+              "hour": "",
+              "place": "",
+              "second": "",
+              "year": "2019",
+              "day": "",
+              "month": ""
+            }
+          }
+        ],
         "solvedText": "2019.",
-        "type": "text"
+        "type": "date"
       },
       "clues": [
         {

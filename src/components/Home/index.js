@@ -7,7 +7,9 @@ import { REDDIT_URL } from "../../common/consts";
 import LogoImg from "../../images/Logo.png";
 import redditLogo from "../../images/redditLogo.png";
 import Modal, { ModalInfo } from "../../common/components/Modal";
+import Alert from "../../common/components/Alert.styled";
 import { useToggle } from "../../common/services/useToggle";
+import isMobile from "../../common/services/isMobile";
 
 import TermsOfService from "./TermsOfService";
 import PrivacyPolicy from "./PrivacyPolicy";
@@ -58,6 +60,7 @@ const Home = () => {
 
       <Container>
         <LoginCorner redirectAfterLogout={false} />
+        {isMobile && <Alert>This game is not recommended to play on mobile device.</Alert>}
         <Logo src={LogoImg} alt="logo" />
         <Subtitle1>What if the Internet was your escape room?</Subtitle1>
         <Subtitle2>
