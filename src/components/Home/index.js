@@ -60,7 +60,7 @@ const Home = () => {
 
       <Container>
         <LoginCorner redirectAfterLogout={false} />
-        {isMobile && <Alert>This game is not recommended to play on mobile device.</Alert>}
+        {isMobile && <Alert>This game is not recommended for mobile devices.</Alert>}
         <Logo src={LogoImg} alt="logo" />
         <Subtitle1>What if the Internet was your escape room?</Subtitle1>
         <Subtitle2>
