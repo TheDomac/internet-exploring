@@ -11,7 +11,6 @@ import { RIDDLE_STATUSES } from "../../common/consts";
 import Alert from "../../common/components/Alert.styled";
 import List from "./List";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import LoginCorner from "../../common/components/LoginCorner";
 
 const successAlertText = {
   [RIDDLE_STATUSES.DRAFT]: "Riddle saved successfully.",
@@ -33,7 +32,6 @@ const WorkshopMyRiddles = () => {
 
   return (
     <>
-      <LoginCorner />
       <Wrapper style={{ maxWidth: 900 }}>
         <div
           style={{

@@ -13,7 +13,6 @@ import {
 } from "../../common/components/PuzzleList.styled";
 import workshopPuzzles from "../../common/data/workshopPuzzles.js";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
-import LoginCorner from "../../common/components/LoginCorner";
 
 export const TextLink = styled.a`
   color: #309d6d;
@@ -42,7 +41,6 @@ const Workshop = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
-      <LoginCorner />
       <Wrapper>
         <div
           style={{

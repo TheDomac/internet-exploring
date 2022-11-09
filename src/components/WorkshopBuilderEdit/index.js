@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router";
 import { doc, getDoc } from "firebase/firestore";
 
-import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
+import Modal, { ButtonsWrapper } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import { db } from "../../common/firebase";
 import {
@@ -15,7 +15,6 @@ import {
   clueTypes,
 } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
-import { AuthContext } from "../../common/services/AuthContext";
 import Alert from "../../common/components/Alert.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import CommonPuzzle from "../../common/components/Puzzle";
@@ -24,7 +23,6 @@ import { WorkshopContext } from "../../common/services/WorkshopContext";
 import getImageClueValues from "../../common/services/getImageClueValues";
 import uploadImages from "../../common/services/uploadImages";
 import deleteImages from "../../common/services/deleteImages";
-import { PaymentContext } from "../../common/services/PaymentContext";
 
 const StyledInput = styled.input`
   background: transparent;
@@ -47,11 +45,11 @@ const initialUserSocialMediaURL = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
 
+const MOCKED_USER_ID = "mockedUserId"
+
 const WorkshopBuilderEdit = () => {
   const navigate = useNavigate();
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user } = useContext(AuthContext);
-  const { loginModal } = useContext(PaymentContext);
   const params = useParams();
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -114,7 +112,7 @@ const WorkshopBuilderEdit = () => {
     try {
       saveLoading.setOn();
       saveError.setOff();
-      const uploadedImages = await uploadImages(imagesToUpload, user.uid);
+      const uploadedImages = await uploadImages(imagesToUpload, MOCKED_USER_ID);
 
       const newPuzzle = {
         ...puzzle,
@@ -145,7 +143,7 @@ const WorkshopBuilderEdit = () => {
       };
 
       await setDoc(doc(db, workshopCollectionName, puzzle.id), newPuzzle);
-      await deleteImages(imagesToDelete, user.uid);
+      await deleteImages(imagesToDelete, MOCKED_USER_ID);
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {
@@ -188,13 +186,11 @@ const WorkshopBuilderEdit = () => {
     <>
       {saveModal.isOn && (
         <Modal isModalShown={saveModal.isOn} onClose={saveModal.setOff}>
-          <Text>{!user && "Please sign in first to save your riddle."}</Text>
           {saveError.isOn ? (
             <Alert>Sorry, something went wrong.</Alert>
           ) : (
             <>
-              {user && (
-                <>
+
                   <StyledInput
                     type="text"
                     value={userNickname}
@@ -207,11 +203,8 @@ const WorkshopBuilderEdit = () => {
                     onChange={handleUserSocialMediaURLChange}
                     placeholder="Your social media link"
                   />
-                </>
-              )}
-              <ButtonsWrapper>
-                {user ? (
-                  <>
+                            <ButtonsWrapper>
+
                     <Button
                       disabled={saveLoading.isOn || !userNickname}
                       name="draft"
@@ -227,16 +220,7 @@ const WorkshopBuilderEdit = () => {
                     >
                       Save for review
                     </Button>
-                  </>
-                ) : (
-                  <Button
-                    style={{ marginRight: "10px", fontSize: 16 }}
-                    onClick={loginModal.setOn}
-                  >
-                    Sign in
-                  </Button>
-                )}
-                <Button
+                                <Button
                   style={{ fontSize: 16 }}
                   disabled={saveLoading.isOn}
                   onClick={saveModal.setOff}

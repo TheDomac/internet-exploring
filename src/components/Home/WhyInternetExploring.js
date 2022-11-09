@@ -1,9 +1,6 @@
-import { useEffect } from "react";
 import styled from "styled-components";
-import { logEvent } from "firebase/analytics";
 
 import { ScrollDiv } from "./index.styled";
-import { analytics } from "../../common/firebase";
 
 export const TextLink = styled.a`
   color: #309d6d;
@@ -12,11 +9,6 @@ export const TextLink = styled.a`
 `;
 
 const WhyInternetExploring = () => {
-  useEffect(() => {
-    logEvent(analytics, 'why_internet_exploring_modal_shown');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <ScrollDiv>
       <h1>Dear visitor,</h1>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
+import Modal, { ButtonsWrapper } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import getImageClueValues from "../../common/services/getImageClueValues";
 import uploadImages from "../../common/services/uploadImages";
@@ -15,13 +15,11 @@ import {
   clueTypes,
 } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
-import { AuthContext } from "../../common/services/AuthContext";
 import Alert from "../../common/components/Alert.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import CommonPuzzle from "../../common/components/Puzzle";
 import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import { PaymentContext } from "../../common/services/PaymentContext";
 
 const StyledInput = styled.input`
   background: transparent;
@@ -44,10 +42,10 @@ const initialUserSocialMediaURL = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
 
+const MOCKED_USER_ID = "mockedUserId"
+
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
-  const { user } = useContext(AuthContext);
-  const { loginModal } = useContext(PaymentContext);
 
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -93,10 +91,10 @@ const WorkshopBuilderCreate = () => {
       saveError.setOff();
 
       const imageClueValues = getImageClueValues(puzzle.rebuses);
-      const uploadedImages = await uploadImages(imageClueValues, user.uid);
+      const uploadedImages = await uploadImages(imageClueValues, MOCKED_USER_ID);
       const newPuzzle = {
         ...puzzle,
-        uid: user.uid,
+        uid: MOCKED_USER_ID,
         status,
         userNickname,
         userSocialMediaURL,
@@ -157,7 +155,6 @@ const WorkshopBuilderCreate = () => {
     <>
       {saveModal.isOn && (
         <Modal isModalShown={saveModal.isOn} onClose={handleCloseModal}>
-          <Text>{!user && "Please sign in first to save your riddle."}</Text>
           {saveError.isOn ? (
             <>
               <Alert style={{ marginBottom: "7px" }}>
@@ -172,13 +169,13 @@ const WorkshopBuilderCreate = () => {
             </>
           ) : (
             <>
-              {user && (
-                <>
+              
+              <>
                   <StyledInput
                     type="text"
                     value={userNickname}
                     onChange={handleUserNicknameChange}
-                    placeholder="Sign your riddle (nickame)"
+                    placeholder="Your nickname"
                   />
                   <StyledInput
                     type="text"
@@ -187,10 +184,7 @@ const WorkshopBuilderCreate = () => {
                     placeholder="Your social media link"
                   />
                 </>
-              )}
               <ButtonsWrapper>
-                {user ? (
-                  <>
                     <Button
                       disabled={saveLoading.isOn || !userNickname}
                       onClick={handleSave}
@@ -207,16 +201,7 @@ const WorkshopBuilderCreate = () => {
                     >
                       Save as draft
                     </Button>
-                  </>
-                ) : (
-                  <Button
-                    style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
-                    onClick={loginModal.setOn}
-                  >
-                    Sign in
-                  </Button>
-                )}
-                <Button
+                                <Button
                   style={{ fontSize: 16, flex: 1 }}
                   disabled={saveLoading.isOn}
                   onClick={handleCloseModal}

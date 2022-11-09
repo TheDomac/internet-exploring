@@ -15,7 +15,6 @@ import {
 
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 import { db } from "../../common/firebase";
-import { AuthContext } from "../../common/services/AuthContext";
 import { useToggle } from "../../common/services/useToggle";
 import { PuzzleBox } from "../../common/components/PuzzleList.styled";
 import Loading from "../../common/components/Loading.styled";
@@ -44,6 +43,9 @@ const statusIcons = {
 
 const LIMIT = 15;
 
+
+const MOCKED_USER_ID = "mockedUserId"
+
 const List = () => {
   const navigate = useNavigate();
   const [myWorkshopPuzzles, setMyWorkshopPuzzles] = useState(null);
@@ -51,7 +53,6 @@ const List = () => {
   const myWorkshopPuzzlesError = useToggle();
   const [page, setPage] = useState(0);
   const myWorkshopPuzzlesLastRef = useRef(null);
-  const { user } = useContext(AuthContext);
 
   const [selectedPuzzle, setSelectedPuzzle] = useState(null);
   const isLoadMoreButtonShown = useToggle(true);
@@ -68,14 +69,14 @@ const List = () => {
       const q = myWorkshopPuzzlesLastRef.current
         ? query(
             collection(db, workshopCollectionName),
-            where("uid", "==", user.uid),
+            where("uid", "==", MOCKED_USER_ID),
             orderBy("updatedAt", "desc"),
             startAfter(myWorkshopPuzzlesLastRef.current),
             limit(LIMIT)
           )
         : query(
             collection(db, workshopCollectionName),
-            where("uid", "==", user.uid),
+            where("uid", "==", MOCKED_USER_ID),
             orderBy("updatedAt", "desc"),
             limit(LIMIT)
           );
