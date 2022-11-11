@@ -49,10 +49,9 @@ const LoginForm = () => {
   }, [user]);
 
   useEffect(() => {
-    logEvent(analytics, 'login_form_shown');
+    logEvent(analytics, "login_form_shown");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
 
   const [step, setStep] = useState(steps.SIGN_IN);
   const handleStepChange = (e) => {

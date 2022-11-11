@@ -60,18 +60,19 @@ const Home = () => {
 
       <Container>
         <LoginCorner redirectAfterLogout={false} />
-        {isMobile && <Alert>This game is not recommended for mobile devices.</Alert>}
+        {isMobile && (
+          <Alert>This game is not recommended for mobile devices.</Alert>
+        )}
         <Logo src={LogoImg} alt="logo" />
         <Subtitle1>What if the Internet was your escape room?</Subtitle1>
         <Subtitle2>
           Solve riddles whose clues and answers are hidden online.
         </Subtitle2>
 
-        
         <StyledLink to="/play" style={{ marginBottom: "20px" }}>
-            <HomeButton $primary>Play</HomeButton>
-          </StyledLink>
-        
+          <HomeButton $primary>Play</HomeButton>
+        </StyledLink>
+
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>

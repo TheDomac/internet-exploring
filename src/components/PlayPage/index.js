@@ -12,7 +12,6 @@ import ArrowBack from "../../common/components/ArrowBack";
 import LoginCorner from "../../common/components/LoginCorner";
 
 const PlayPage = () => {
-
   const { upgradeModal } = useContext(PaymentContext);
   const { upgradedUser } = useContext(AuthContext);
 
@@ -20,18 +19,21 @@ const PlayPage = () => {
     <>
       <LoginCorner />
       <Container style={{ height: "100vh" }}>
-          <Link to="/play/puzzles" style={{ marginBottom: "40px" }}>
-            <Button style={{ maxWidth: "100%" }}>Riddles</Button>
-          </Link>
-          {upgradedUser.isOn ? (
+        <Link to="/play/puzzles" style={{ marginBottom: "40px" }}>
+          <Button style={{ maxWidth: "100%" }}>Riddles</Button>
+        </Link>
+        {upgradedUser.isOn ? (
           <Link to="/play/workshop">
             <Button style={{ maxWidth: "100%" }}>Workshop</Button>
           </Link>
-          ) : <Button onClick={upgradeModal.setOn} style={{ maxWidth: "100%"}}>Workshop</Button>
-          }
-          <Link to="/">
-            <ArrowBack />
-          </Link>
+        ) : (
+          <Button onClick={upgradeModal.setOn} style={{ maxWidth: "100%" }}>
+            Workshop
+          </Button>
+        )}
+        <Link to="/">
+          <ArrowBack />
+        </Link>
       </Container>
     </>
   );

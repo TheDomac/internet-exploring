@@ -7,7 +7,7 @@ import CommonPuzzle from "../../common/components/Puzzle";
 
 import ArrowBack from "../../common/components/ArrowBack";
 import { AuthContext } from "../../common/services/AuthContext";
-import  puzzles  from "../../common/data/puzzles";
+import puzzles from "../../common/data/puzzles";
 import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { useToggle } from "../../common/services/useToggle";
 import { analytics } from "../../common/firebase";
@@ -41,9 +41,11 @@ const Puzzle = () => {
   };
 
   useEffect(() => {
-    const foundRiddle = puzzles.find(p => p.id === params.puzzleId)
-    logEvent(analytics, 'fetching_riddle', { riddle: foundRiddle?.name});
-    const availablePuzzlesIds = puzzles.slice(0, NUMBER_OF_FREE_RIDDLES).map(p => p.id)
+    const foundRiddle = puzzles.find((p) => p.id === params.puzzleId);
+    logEvent(analytics, "fetching_riddle", { riddle: foundRiddle?.name });
+    const availablePuzzlesIds = puzzles
+      .slice(0, NUMBER_OF_FREE_RIDDLES)
+      .map((p) => p.id);
     if (upgradedUser.isOn || availablePuzzlesIds.includes(params.puzzleId)) {
       fetchPuzzle();
     }

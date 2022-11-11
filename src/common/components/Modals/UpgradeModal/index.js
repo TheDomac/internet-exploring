@@ -44,7 +44,7 @@ const UpgradeModal = () => {
   };
 
   useEffect(() => {
-    logEvent(analytics, 'upgrade_modal_shown');
+    logEvent(analytics, "upgrade_modal_shown");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -76,8 +76,8 @@ const UpgradeModal = () => {
                 borderRadius: "5px",
               }}
             >
-              All {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as well
-              as all future riddles that will be added to the list.
+              All {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as
+              well as all future riddles that will be added to the list.
             </p>
             <p
               style={{

@@ -11,10 +11,14 @@ import {
   Wrapper,
   PuzzleBox,
   PuzzleLink,
-  
 } from "../../common/components/PuzzleList.styled";
 
-import { PuzzleRow, PuzzleTitle, TextLink, BlurredWrapper, } from "./index.styled";
+import {
+  PuzzleRow,
+  PuzzleTitle,
+  TextLink,
+  BlurredWrapper,
+} from "./index.styled";
 import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { HomeButton } from "../Home/index.styled";
 import { analytics } from "../../common/firebase";
@@ -25,7 +29,7 @@ const PuzzleList = () => {
   const { upgradeModal } = useContext(PaymentContext);
 
   useEffect(() => {
-    logEvent(analytics, 'puzzle_list_shown');
+    logEvent(analytics, "puzzle_list_shown");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -67,41 +71,57 @@ const PuzzleList = () => {
         );
       })}
     </PuzzleRow>
-  )
+  );
 
   return (
     <Wrapper>
       {upgradedUser.isOn ? (
         <>
-        {puzzles.map(renderPuzzle)}
-      <p style={{ textAlign: "center" }}>
-        This list is frequently getting updated. Check out{" "}
-        <Link style={{ textDecoration: "none" }} to="/play/workshop">
-          <TextLink>workshop</TextLink>
-        </Link>{" "}
-        for more!
-        <br /> You can send your suggestions and ideas to
-        contact@internetexploring.io
-        <br />
-      </p>
+          {puzzles.map(renderPuzzle)}
+          <p style={{ textAlign: "center" }}>
+            This list is frequently getting updated. Check out{" "}
+            <Link style={{ textDecoration: "none" }} to="/play/workshop">
+              <TextLink>workshop</TextLink>
+            </Link>{" "}
+            for more!
+            <br /> You can send your suggestions and ideas to
+            contact@internetexploring.io
+            <br />
+          </p>
         </>
-        
       ) : (
         <>
-        { puzzles.slice(0, NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
-        <div style={{ position: "relative"}}>
-        <HomeButton style={{ position: "absolute", top: 30, left: "50%", transform: "translateX(-50%)", zIndex: 3}} onClick={upgradeModal.setOn}>Unlock all riddles</HomeButton>
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 2}} />
-        <BlurredWrapper>
-        { puzzles.slice(NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
-        </BlurredWrapper>
-
-        </div>
-
+          {puzzles.slice(0, NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
+          <div style={{ position: "relative" }}>
+            <HomeButton
+              style={{
+                position: "absolute",
+                top: 30,
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 3,
+              }}
+              onClick={upgradeModal.setOn}
+            >
+              Unlock all riddles
+            </HomeButton>
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                zIndex: 2,
+              }}
+            />
+            <BlurredWrapper>
+              {puzzles.slice(NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
+            </BlurredWrapper>
+          </div>
         </>
       )}
-      
-      
+
       <Link to="/play">
         <ArrowBack />
       </Link>

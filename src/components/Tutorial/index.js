@@ -10,7 +10,7 @@ import { analytics } from "../../common/firebase";
 
 const Tutorial = () => {
   useEffect(() => {
-    logEvent(analytics, 'tutorial_shown');
+    logEvent(analytics, "tutorial_shown");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

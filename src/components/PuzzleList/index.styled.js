@@ -24,5 +24,5 @@ export const TextLink = styled.span`
 `;
 
 export const BlurredWrapper = styled.div`
-filter: blur(20px);
-`
+  filter: blur(20px);
+`;

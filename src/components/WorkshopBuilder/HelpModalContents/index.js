@@ -57,8 +57,8 @@ const helpModalContents = {
   ),
   clueValueWidth: (
     <p>
-      Set the width of a subclue. For example, a value of 100% would take up
-      a whole row of a clue.{" "}
+      Set the width of a subclue. For example, a value of 100% would take up a
+      whole row of a clue.{" "}
     </p>
   ),
   dependencies: (

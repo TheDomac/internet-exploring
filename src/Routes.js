@@ -13,6 +13,7 @@ import WorkshopPage from "./components/Workshop";
 import WorkshopMyRiddlesPage from "./components/WorkshopMyRiddles";
 import WorkshopBuilderCreatePage from "./components/WorkshopBuilderCreate";
 import WorkshopBuilderEditPage from "./components/WorkshopBuilderEdit";
+import ImageSearchPage from "./components/ImageSearch";
 
 import TutorialPage from "./components/Tutorial";
 import TempPage from "./components/Temp";
@@ -53,6 +54,7 @@ const RoutesGroup = () => {
         <Route path="/play" element={<PlayPage />} />
         <Route path="/tutorial" element={<TutorialPage />} />
         <Route path="/temp" element={<TempPage />} />
+        <Route path="/image/:imageId" element={<ImageSearchPage />} />
         <Route path="/" element={<Home />} />
         {loadedAuth.isOn && (
           <Route path="*" element={<Navigate to="/" replace />} />
