@@ -178,7 +178,7 @@ const WorkshopBuilderCreate = () => {
                     type="text"
                     value={userNickname}
                     onChange={handleUserNicknameChange}
-                    placeholder="Sign your riddle (nickame)"
+                    placeholder="Your nickname"
                   />
                   <StyledInput
                     type="text"

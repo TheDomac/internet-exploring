@@ -5,41 +5,99 @@
       "id": "480c7522-9b03-4967-97ad-b7a03aa49271",
       "clues": [
         {
-          "id": "a9d41f04-eb0f-45dc-8db9-8475d706c6be",
+          "id": "a9d41f04-eb0f-45dc-8db9-1a3g",
           "clueValues": [
             {
-              "id": "d4059f43-e359-4abd-a7ea-296e644108db",
+              "id": "d4059f43-e359-4abd-a7ea-scd44",
               "value": "Welcome to Internet Exploring!",
               "type": "text",
-              "subtext": "What you see below is an example of a riddle.",
+              "subtext": "This tutorial will quickly guide you through game rules.",
               "style": {
                 "width": "calc(100% - 10px)"
               }
             },
             {
-              "id": "d4059f43-e359-4abd-a7ea-296e644loldb",
-              "value": "You can click on the numbers above to switch between riddles.",
+              "id": "d4059f43-e359-4abd-a7ea-111",
+              "value": "What you see below is an example of a riddle.",
               "type": "text",
-              "subtext": "The final one will be available once you solve all previous ones.",
+              "subtext": "",
               "style": {
-                "width": "calc(100% - 10px)"
+                "width": "calc(100% - 10px)",
+                "fontSize": "16px"
               }
             },
             {
-              "id": "fd382902-8a02-4f90-87c7-65f095fae587",
-              "value": "Try to solve the riddle below to move to the next one.",
+              "id": "d4059f43-e359-4abd-a7ea-333",
+              "value": "Go ahead and try to solve it.",
               "type": "text",
-              "subtext": "Always remember to use help (bottom right corner) if you get stuck.",
+              "subtext": "",
               "style": {
-                "width": "calc(100% - 10px)"
+                "width": "calc(100% - 10px)",
+                "fontSize": "16px"
               }
             }
           ],
           "helperText": "",
-          "subtext": "You can click on a text to copy it.",
+          "subtext": "",
           "clueGroup": 0,
           "style": {
-            "width": "calc(100% - 10px)"
+            "width": "calc(50% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "a9d41f04-eb0f-45dc-8db9-8475d706c6be",
+          "clueValues": [
+            {
+              "id": "d4059f43-e359-4abd-a7ea-296e644108db",
+              "value": "Here are some tips:",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            },
+            {
+              "id": "d4059f43-e359-4abd-a7ea-111",
+              "value": "You can click on the numbers above to switch between riddles. ",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "16px"
+              }
+            },
+            {
+              "id": "d4059f43-e359-4abd-a7ea-222",
+              "value": "The final riddle will be available once you solve all previous ones.",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "16px"
+              }
+            },
+            {
+              "id": "fd382902-8a02-4f90-87c7-2222",
+              "value": "You can click on a text to copy it.",
+              "type": "text",
+              "subtext": "Always remember to use help (bottom right corner) if you get stuck.",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "16px"
+              }
+            }
+          ],
+          "helperText": "",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(50% - 10px)"
           },
           "dependsOn": [],
           "solutionInfo": {
@@ -122,7 +180,7 @@
             }
           ],
           "helperText": "",
-          "subtext": "Remember, this is not about already knowing the solution. It's about knowing how to find one.",
+          "subtext": "Remember, this is not about already knowing the solution. It's about finding it.",
           "clueGroup": 0,
           "style": {
             "width": "calc(100% - 10px)"
