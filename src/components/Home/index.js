@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect} from "react";
+import { ipcRenderer } from "electron";
 
 import { Container } from "../../common/components/Container.styled";
 import { REDDIT_URL } from "../../common/consts";
@@ -24,6 +25,34 @@ const Home = () => {
   const termsModal = useToggle();
   const privacyPolicyModal = useToggle();
   const whyInternetExploringModal = useToggle();
+  const fullScreen = useToggle();
+
+  const checkForFullScrenChange = () => {
+    const isFullScreen =
+      // eslint-disable-next-line no-restricted-globals
+      window.innerHeight === screen.height &&
+      // eslint-disable-next-line no-restricted-globals
+      window.innerWidth === screen.width;
+    fullScreen.set(isFullScreen)
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", checkForFullScrenChange);
+
+    return () => {
+      window.removeEventListener("resize", checkForFullScrenChange);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleQuitClick = () => {
+    ipcRenderer.send("close-me");
+  };
+  const handleFullScreenClick = () => {
+    ipcRenderer.send("fullscreen-click");
+  };
+
+  console.log(fullScreen.isOn)
 
   return (
     <>
@@ -70,6 +99,8 @@ const Home = () => {
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
+          <HomeButton $primary={fullScreen.isOn} onClick={handleFullScreenClick} style={{ marginBottom: "20px" }}>Fullscreen</HomeButton>
+          <HomeButton  onClick={handleQuitClick} style={{ marginBottom: "20px" }}>Exit game</HomeButton>
         <StyledA rel="noreferrer" href={REDDIT_URL} target="_blank">
           <HomeButton
             style={{

@@ -17,3 +17,24 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(26, 117, 74);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #082347;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0a2d5a;
+}
