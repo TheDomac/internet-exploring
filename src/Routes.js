@@ -54,7 +54,7 @@ const RoutesGroup = () => {
         <Route path="/play" element={<PlayPage />} />
         <Route path="/tutorial" element={<TutorialPage />} />
         <Route path="/temp" element={<TempPage />} />
-        <Route path="/image/:imageId" element={<ImageSearchPage />} />
+        <Route path="/images/:imageId" element={<ImageSearchPage />} />
         <Route path="/" element={<Home />} />
         {loadedAuth.isOn && (
           <Route path="*" element={<Navigate to="/" replace />} />

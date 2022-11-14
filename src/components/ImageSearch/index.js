@@ -6,26 +6,28 @@ import { Container } from "../../common/components/Container.styled";
 import Loading from "../../common/components/Loading.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import { useToggle } from "../../common/services/useToggle";
+import Alert from "../../common/components/Alert.styled";
 
 const ImageSearch = () => {
   const { imageId } = useParams();
-  const loadedImage = useToggle();
+  const loading = useToggle(true);
+  const error = useToggle();
 
   return (
     <Container>
       <Link to="/">
         <ArrowBack />
       </Link>
-      {loadedImage.isOn ? (
-        <p style={{ fontSize: "24px", textAlign: "center" }}>
+        
+      <p style={{ fontSize: "24px", textAlign: "center" }}>
           Use image search in your browser.
         </p>
-      ) : (
-        <Loading />
-      )}
+        {error.isOn && <Alert>Sorry, something went wrong.</Alert>}
+      {loading.isOn && <Loading />}
       <img
-        style={{ display: loadedImage.isOn ? "block" : "none" }}
-        onLoad={loadedImage.setOn}
+        style={{ display: loading.isOn || error.isOn ? "none" : "block" }}
+        onLoad={loading.setOff}
+        onError={error.setOn}
         src={`${INTERNET_EXPLORING_URL}/static/media/${imageId}`}
         alt={imageId}
       />
