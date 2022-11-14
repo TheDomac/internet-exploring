@@ -8,10 +8,9 @@ import {
   Wrapper,
   PuzzleBox,
   PuzzleLink,
-  
 } from "../../common/components/PuzzleList.styled";
 
-import { PuzzleRow, PuzzleTitle, TextLink, } from "./index.styled";
+import { PuzzleRow, PuzzleTitle, TextLink } from "./index.styled";
 
 const PuzzleList = () => {
   const { puzzlesSolvingSync } = useContext(PuzzleContext);
@@ -54,11 +53,11 @@ const PuzzleList = () => {
         );
       })}
     </PuzzleRow>
-  )
+  );
 
   return (
     <Wrapper>
-        {puzzles.map(renderPuzzle)}
+      {puzzles.map(renderPuzzle)}
       <p style={{ textAlign: "center" }}>
         This list is frequently getting updated. Check out{" "}
         <Link style={{ textDecoration: "none" }} to="/play/workshop">

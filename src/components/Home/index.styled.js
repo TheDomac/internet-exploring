@@ -61,16 +61,6 @@ export const StyledLink = styled(Link)`
     max-width: 300px;
   }
 `;
-export const StyledA = styled.a`
-  margin-bottom: 25px;
-  text-decoration: none;
-  @media (max-height: 732px) {
-    max-width: 300px;
-  }
-  @media (max-width: 625px) {
-    max-width: 300px;
-  }
-`;
 
 export const ScrollDiv = styled.div`
   height: 515px;

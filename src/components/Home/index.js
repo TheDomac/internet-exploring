@@ -1,5 +1,5 @@
-import React, { useEffect} from "react";
-import { ipcRenderer } from "electron";
+import React, { useEffect } from "react";
+import { ipcRenderer, shell } from "electron";
 
 import { Container } from "../../common/components/Container.styled";
 import { REDDIT_URL } from "../../common/consts";
@@ -18,7 +18,6 @@ import {
   Logo,
   HomeButton,
   StyledLink,
-  StyledA,
 } from "./index.styled";
 
 const Home = () => {
@@ -33,7 +32,7 @@ const Home = () => {
       window.innerHeight === screen.height &&
       // eslint-disable-next-line no-restricted-globals
       window.innerWidth === screen.width;
-    fullScreen.set(isFullScreen)
+    fullScreen.set(isFullScreen);
   };
 
   useEffect(() => {
@@ -42,7 +41,7 @@ const Home = () => {
     return () => {
       window.removeEventListener("resize", checkForFullScrenChange);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleQuitClick = () => {
@@ -51,8 +50,9 @@ const Home = () => {
   const handleFullScreenClick = () => {
     ipcRenderer.send("fullscreen-click");
   };
-
-  console.log(fullScreen.isOn)
+  const handleRedditClick = () => {
+    shell.openExternal(REDDIT_URL);
+  };
 
   return (
     <>
@@ -91,37 +91,44 @@ const Home = () => {
           Solve riddles whose clues and answers are hidden online.
         </Subtitle2>
 
-        
         <StyledLink to="/play" style={{ marginBottom: "20px" }}>
-            <HomeButton $primary>Play</HomeButton>
-          </StyledLink>
-        
+          <HomeButton $primary>Play</HomeButton>
+        </StyledLink>
+
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
-          <HomeButton $primary={fullScreen.isOn} onClick={handleFullScreenClick} style={{ marginBottom: "20px" }}>Fullscreen</HomeButton>
-          <HomeButton  onClick={handleQuitClick} style={{ marginBottom: "20px" }}>Exit game</HomeButton>
-        <StyledA rel="noreferrer" href={REDDIT_URL} target="_blank">
-          <HomeButton
+        <HomeButton
+          $primary={fullScreen.isOn}
+          onClick={handleFullScreenClick}
+          style={{ marginBottom: "20px" }}
+        >
+          Fullscreen
+        </HomeButton>
+        <HomeButton onClick={handleQuitClick} style={{ marginBottom: "20px" }}>
+          Exit game
+        </HomeButton>
+        <HomeButton
+          onClick={handleRedditClick}
+          style={{
+            padding: "12px 20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: "25px",
+          }}
+        >
+          <span>View latest news</span>
+          <img
             style={{
-              padding: "12px 20px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              display: "inline-block",
+              marginLeft: 7,
+              marginRight: 3,
             }}
-          >
-            <span>View latest news</span>
-            <img
-              style={{
-                display: "inline-block",
-                marginLeft: 7,
-                marginRight: 3,
-              }}
-              src={redditLogo}
-              alt="reddit"
-            />
-          </HomeButton>
-        </StyledA>
+            src={redditLogo}
+            alt="reddit"
+          />
+        </HomeButton>
         <div
           style={{
             display: "flex",

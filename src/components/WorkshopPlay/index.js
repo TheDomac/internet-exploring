@@ -1,4 +1,4 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 
@@ -41,10 +41,11 @@ const WorkshopPlayPage = () => {
     navigate("/play/workshop");
   };
 
-
   const publishedPuzzle = workshopPuzzles.find((p) => p.id === riddleId);
 
-  const puzzle = publishedPuzzle ? require(`../../common/data/workshopPuzzles/${publishedPuzzle.id}.json`) : workshopPlayPuzzle;
+  const puzzle = publishedPuzzle
+    ? require(`../../common/data/workshopPuzzles/${publishedPuzzle.id}.json`)
+    : workshopPlayPuzzle;
 
   return (
     puzzle && (

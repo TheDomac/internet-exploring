@@ -20,6 +20,7 @@ export const solutionTypes = {
 };
 
 export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
+export const REDDIT_MY_PROFILE = "https://www.reddit.com/user/TheDomac";
 
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",

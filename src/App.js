@@ -6,11 +6,11 @@ import Routes from "./Routes";
 
 const App = () => {
   return (
-        <WorkshopContextProvider>
-          <PuzzleContextProvider>
-            <Routes />
-          </PuzzleContextProvider>
-        </WorkshopContextProvider>
+    <WorkshopContextProvider>
+      <PuzzleContextProvider>
+        <Routes />
+      </PuzzleContextProvider>
+    </WorkshopContextProvider>
   );
 };
 

@@ -49,7 +49,6 @@ const minesLocations = [
 const ROWS = 9;
 const COLUMNS = 23;
 
-
 const EMPTY_BOARD = Array(ROWS).fill(Array(COLUMNS).fill(CODES.NOTHING));
 
 const initialBoard = EMPTY_BOARD.map((row, i) =>

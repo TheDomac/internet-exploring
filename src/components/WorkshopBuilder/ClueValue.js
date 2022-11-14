@@ -13,7 +13,7 @@ const ClueValue = ({
   setSelectedClueValueId,
   isSelected,
   imageSizeErrorModal,
-  i
+  i,
 }) => {
   const handleSubtextChange = (e) => {
     const newClue = {
@@ -76,7 +76,9 @@ const ClueValue = ({
       style={clueValue.style}
       onClick={handleClueValueClick}
     >
-      <div style={{ marginBottom: "5px", fontSize: "12px" }}>Subclue {i + 1}</div>
+      <div style={{ marginBottom: "5px", fontSize: "12px" }}>
+        Subclue {i + 1}
+      </div>
       {clueValue.type === clueTypes.NONE && (
         <>
           <Button

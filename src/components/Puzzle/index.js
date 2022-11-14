@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import CommonPuzzle from "../../common/components/Puzzle";
 
 import ArrowBack from "../../common/components/ArrowBack";
-import  puzzles  from "../../common/data/puzzles";
+import puzzles from "../../common/data/puzzles";
 
 const Puzzle = () => {
   const params = useParams();
@@ -15,8 +15,9 @@ const Puzzle = () => {
     navigate("/play/puzzles");
   };
 
-  const foundPuzzle = puzzles.find(p => p.id === params.puzzleId)
-  const puzzle = foundPuzzle && require(`../../common/data/puzzles/${foundPuzzle.id}.json`) 
+  const foundPuzzle = puzzles.find((p) => p.id === params.puzzleId);
+  const puzzle =
+    foundPuzzle && require(`../../common/data/puzzles/${foundPuzzle.id}.json`);
   return (
     <>
       {puzzle && (

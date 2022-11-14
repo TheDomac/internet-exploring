@@ -45,7 +45,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
 
-const MOCKED_USER_ID = "mockedUserId"
+const MOCKED_USER_ID = "mockedUserId";
 
 const WorkshopBuilderEdit = () => {
   const navigate = useNavigate();
@@ -190,37 +190,35 @@ const WorkshopBuilderEdit = () => {
             <Alert>Sorry, something went wrong.</Alert>
           ) : (
             <>
-
-                  <StyledInput
-                    type="text"
-                    value={userNickname}
-                    onChange={handleUserNicknameChange}
-                    placeholder="Your nickname"
-                  />
-                  <StyledInput
-                    type="text"
-                    value={userSocialMediaURL}
-                    onChange={handleUserSocialMediaURLChange}
-                    placeholder="Your social media link"
-                  />
-                            <ButtonsWrapper>
-
-                    <Button
-                      disabled={saveLoading.isOn || !userNickname}
-                      name="draft"
-                      onClick={handleSave}
-                      style={{ marginRight: "10px", fontSize: 16 }}
-                    >
-                      Save as draft
-                    </Button>
-                    <Button
-                      disabled={saveLoading.isOn || !userNickname}
-                      onClick={handleSave}
-                      style={{ marginRight: "10px", fontSize: 16 }}
-                    >
-                      Save for review
-                    </Button>
-                                <Button
+              <StyledInput
+                type="text"
+                value={userNickname}
+                onChange={handleUserNicknameChange}
+                placeholder="Your nickname"
+              />
+              <StyledInput
+                type="text"
+                value={userSocialMediaURL}
+                onChange={handleUserSocialMediaURLChange}
+                placeholder="Your social media link"
+              />
+              <ButtonsWrapper>
+                <Button
+                  disabled={saveLoading.isOn || !userNickname}
+                  name="draft"
+                  onClick={handleSave}
+                  style={{ marginRight: "10px", fontSize: 16 }}
+                >
+                  Save as draft
+                </Button>
+                <Button
+                  disabled={saveLoading.isOn || !userNickname}
+                  onClick={handleSave}
+                  style={{ marginRight: "10px", fontSize: 16 }}
+                >
+                  Save for review
+                </Button>
+                <Button
                   style={{ fontSize: 16 }}
                   disabled={saveLoading.isOn}
                   onClick={saveModal.setOff}

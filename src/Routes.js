@@ -20,28 +20,24 @@ import TempPage from "./components/Temp";
 import WorkshopPlayPage from "./components/WorkshopPlay";
 
 const RoutesGroup = () => {
-
   return (
     <Router>
       <Routes>
-            <Route
-              path="/play/workshop/new"
-              element={<WorkshopBuilderCreatePage />}
-            />
-            <Route
-              path="/play/workshop/edit/:riddleId"
-              element={<WorkshopBuilderEditPage />}
-            />
-            <Route path="/play/workshop" element={<WorkshopPage />} />
-            <Route
-              path="/play/workshop/my-riddles"
-              element={<WorkshopMyRiddlesPage />}
-            />
-            <Route
-              path="/play/workshop/:riddleId"
-              element={<WorkshopPlayPage />}
-            />
-        
+        <Route
+          path="/play/workshop/new"
+          element={<WorkshopBuilderCreatePage />}
+        />
+        <Route
+          path="/play/workshop/edit/:riddleId"
+          element={<WorkshopBuilderEditPage />}
+        />
+        <Route path="/play/workshop" element={<WorkshopPage />} />
+        <Route
+          path="/play/workshop/my-riddles"
+          element={<WorkshopMyRiddlesPage />}
+        />
+        <Route path="/play/workshop/:riddleId" element={<WorkshopPlayPage />} />
+
         <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
         <Route path="/play/puzzles" element={<PuzzleList />} />
         <Route path="/play" element={<PlayPage />} />

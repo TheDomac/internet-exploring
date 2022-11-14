@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useContext, Fragment } from "react";
+import { shell } from "electron";
 
 import { Button } from "../../common/components/Button.styled";
 import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
@@ -14,10 +15,10 @@ import {
 import workshopPuzzles from "../../common/data/workshopPuzzles.js";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
 
-export const TextLink = styled.a`
+export const TextLink = styled.span`
   color: #309d6d;
   -webkit-text-stroke: 0.5px white;
-  text-decoration: none;
+  cursor: pointer;
 `;
 
 const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
@@ -29,6 +30,9 @@ const Workshop = () => {
   const handleCreateNewRiddleClick = () => {
     initPuzzle();
     navigate("/play/workshop/new");
+  };
+  const handleUsernameClick = (userSocialMediaURL) => () => {
+    shell.openExternal(addHttps(userSocialMediaURL));
   };
 
   const workshopSolvedPuzzlesIDs =
@@ -100,9 +104,7 @@ const Workshop = () => {
                 By{" "}
                 {puzzle.userSocialMediaURL ? (
                   <TextLink
-                    href={addHttps(puzzle.userSocialMediaURL)}
-                    target="_blank"
-                    rel="noreferrer"
+                    onClick={handleUsernameClick(puzzle.userSocialMediaURL)}
                   >
                     {puzzle.userNickname.length > 30
                       ? `${puzzle.userNickname.slice(0, 30)}...`

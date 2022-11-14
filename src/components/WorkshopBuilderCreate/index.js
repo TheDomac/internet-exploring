@@ -42,7 +42,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
 
-const MOCKED_USER_ID = "mockedUserId"
+const MOCKED_USER_ID = "mockedUserId";
 
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
@@ -91,7 +91,10 @@ const WorkshopBuilderCreate = () => {
       saveError.setOff();
 
       const imageClueValues = getImageClueValues(puzzle.rebuses);
-      const uploadedImages = await uploadImages(imageClueValues, MOCKED_USER_ID);
+      const uploadedImages = await uploadImages(
+        imageClueValues,
+        MOCKED_USER_ID
+      );
       const newPuzzle = {
         ...puzzle,
         uid: MOCKED_USER_ID,
@@ -169,39 +172,38 @@ const WorkshopBuilderCreate = () => {
             </>
           ) : (
             <>
-              
               <>
-                  <StyledInput
-                    type="text"
-                    value={userNickname}
-                    onChange={handleUserNicknameChange}
-                    placeholder="Your nickname"
-                  />
-                  <StyledInput
-                    type="text"
-                    value={userSocialMediaURL}
-                    onChange={handleUserSocialMediaURLChange}
-                    placeholder="Your social media link"
-                  />
-                </>
+                <StyledInput
+                  type="text"
+                  value={userNickname}
+                  onChange={handleUserNicknameChange}
+                  placeholder="Your nickname"
+                />
+                <StyledInput
+                  type="text"
+                  value={userSocialMediaURL}
+                  onChange={handleUserSocialMediaURLChange}
+                  placeholder="Your social media link"
+                />
+              </>
               <ButtonsWrapper>
-                    <Button
-                      disabled={saveLoading.isOn || !userNickname}
-                      onClick={handleSave}
-                      style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
-                    >
-                      Save for review
-                    </Button>
+                <Button
+                  disabled={saveLoading.isOn || !userNickname}
+                  onClick={handleSave}
+                  style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
+                >
+                  Save for review
+                </Button>
 
-                    <Button
-                      disabled={saveLoading.isOn || !userNickname}
-                      name="draft"
-                      onClick={handleSave}
-                      style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
-                    >
-                      Save as draft
-                    </Button>
-                                <Button
+                <Button
+                  disabled={saveLoading.isOn || !userNickname}
+                  name="draft"
+                  onClick={handleSave}
+                  style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
+                >
+                  Save as draft
+                </Button>
+                <Button
                   style={{ fontSize: 16, flex: 1 }}
                   disabled={saveLoading.isOn}
                   onClick={handleCloseModal}

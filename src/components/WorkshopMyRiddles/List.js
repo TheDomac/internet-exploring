@@ -43,8 +43,7 @@ const statusIcons = {
 
 const LIMIT = 15;
 
-
-const MOCKED_USER_ID = "mockedUserId"
+const MOCKED_USER_ID = "mockedUserId";
 
 const List = () => {
   const navigate = useNavigate();
