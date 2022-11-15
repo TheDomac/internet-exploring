@@ -28,7 +28,7 @@ const ImageSearch = () => {
         style={{ display: loading.isOn || error.isOn ? "none" : "block" }}
         onLoad={loading.setOff}
         onError={error.setOn}
-        src={`${INTERNET_EXPLORING_URL}/static/media/${imageId}`}
+        src={decodeURIComponent(imageId)}
         alt={imageId}
       />
     </Container>
