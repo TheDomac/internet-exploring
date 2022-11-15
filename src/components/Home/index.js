@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { ipcRenderer, shell } from "electron";
-
 import { Container } from "../../common/components/Container.styled";
 import { REDDIT_URL } from "../../common/consts";
 
@@ -19,6 +18,7 @@ import {
   HomeButton,
   StyledLink,
 } from "./index.styled";
+
 
 const Home = () => {
   const termsModal = useToggle();

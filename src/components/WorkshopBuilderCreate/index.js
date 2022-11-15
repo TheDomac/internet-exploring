@@ -20,6 +20,7 @@ import ArrowBack from "../../common/components/ArrowBack";
 import CommonPuzzle from "../../common/components/Puzzle";
 import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
+import {AuthContext} from "../../common/services/AuthContext";
 
 const StyledInput = styled.input`
   background: transparent;
@@ -35,9 +36,6 @@ const StyledInput = styled.input`
   text-align: center;
 `;
 
-const initialUserNickname = localStorage.getItem(
-  LOCAL_STORAGE_KEYS.USER_NICKNAME
-);
 const initialUserSocialMediaURL = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
@@ -46,6 +44,7 @@ const MOCKED_USER_ID = "mockedUserId";
 
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
+  const { user } = useContext(AuthContext);
 
   const saveModal = useToggle();
   const saveLoading = useToggle();
@@ -53,7 +52,7 @@ const WorkshopBuilderCreate = () => {
   const preview = useToggle();
   const navigate = useNavigate();
 
-  const [userNickname, setUserNickname] = useState(initialUserNickname || "");
+  const [userNickname, setUserNickname] = useState(user.nickname);
   const [userSocialMediaURL, setUserSocialMediaURL] = useState(
     initialUserSocialMediaURL || ""
   );

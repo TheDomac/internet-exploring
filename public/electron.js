@@ -1,9 +1,10 @@
 const path = require("path");
-
+const steamworks = require("steamworks.js")
 const { app, BrowserWindow, ipcMain } = require("electron");
 const isDev = require("electron-is-dev");
 
 let mainWindow;
+let client;
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling
 if (require("electron-squirrel-startup")) {
@@ -67,4 +68,16 @@ ipcMain.on("close-me", (evt, arg) => {
 
 ipcMain.on("fullscreen-click", (evt, arg) => {
   mainWindow.setFullScreen(!mainWindow.isFullScreen());
+});
+
+ipcMain.on("fetch-user", (evt, arg) => {
+  try {
+    client = steamworks.init(2050870)
+    evt.reply("fetch-user-reply", {
+      id: client.localplayer.getSteamId().accountId,
+      nickname: client.localplayer.getName(),
+    })
+  } catch (error) {
+    evt.reply("fetch-user-reply", null)
+  }
 });
