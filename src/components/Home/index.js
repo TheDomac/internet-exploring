@@ -36,6 +36,7 @@ const Home = () => {
   };
 
   useEffect(() => {
+    checkForFullScrenChange()
     window.addEventListener("resize", checkForFullScrenChange);
 
     return () => {
@@ -105,9 +106,6 @@ const Home = () => {
         >
           Fullscreen
         </HomeButton>
-        <HomeButton onClick={handleQuitClick} style={{ marginBottom: "20px" }}>
-          Exit game
-        </HomeButton>
         <HomeButton
           onClick={handleRedditClick}
           style={{
@@ -115,7 +113,7 @@ const Home = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            marginBottom: "25px",
+            marginBottom: "20px",
           }}
         >
           <span>View latest news</span>
@@ -128,6 +126,9 @@ const Home = () => {
             src={redditLogo}
             alt="reddit"
           />
+        </HomeButton>
+        <HomeButton onClick={handleQuitClick} style={{ marginBottom: "25px" }}>
+          Exit game
         </HomeButton>
         <div
           style={{
