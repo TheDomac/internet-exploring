@@ -24,7 +24,7 @@
       },
       "clues": [
         {
-          "helperText": "Use image search to find the name of this American model.",
+          "helperText": "Vanity fair, 100th anniversary",
           "subtext": "",
           "clueValues": [
             {
@@ -81,7 +81,7 @@
             "possibleSolutions": [],
             "solvedText": ""
           },
-          "helperText": "Use image search to find the name of this member of the royal family.",
+          "helperText": "A member of a royal family.",
           "clueGroup": 0,
           "clueValues": [
             {
@@ -177,7 +177,7 @@
           },
           "dependsOn": [],
           "clueGroup": 0,
-          "helperText": "Use image search to find this actor born in 1979.",
+          "helperText": "He climbs into his own chair. He climbs out of his own bathtub.",
           "style": {
             "width": "calc(50% - 10px)"
           },
@@ -204,7 +204,7 @@
             "type": "text",
             "possibleSolutions": []
           },
-          "helperText": "Use image search to find this actress born in 1978.",
+          "helperText": "He's just not that into you (2009)",
           "style": {
             "width": "calc(50% - 10px)"
           }
