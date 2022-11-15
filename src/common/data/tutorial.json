@@ -41,63 +41,7 @@
           "subtext": "",
           "clueGroup": 0,
           "style": {
-            "width": "calc(50% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "a9d41f04-eb0f-45dc-8db9-8475d706c6be",
-          "clueValues": [
-            {
-              "id": "d4059f43-e359-4abd-a7ea-296e644108db",
-              "value": "Here are some tips:",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            },
-            {
-              "id": "d4059f43-e359-4abd-a7ea-111",
-              "value": "You can click on the numbers above to switch between riddles. ",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "fontSize": "16px"
-              }
-            },
-            {
-              "id": "d4059f43-e359-4abd-a7ea-222",
-              "value": "The final riddle will be available once you solve all previous ones.",
-              "type": "text",
-              "subtext": "",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "fontSize": "16px"
-              }
-            },
-            {
-              "id": "fd382902-8a02-4f90-87c7-2222",
-              "value": "You can click on a text to copy it.",
-              "type": "text",
-              "subtext": "Always remember to use help (bottom right corner) if you get stuck.",
-              "style": {
-                "width": "calc(100% - 10px)",
-                "fontSize": "16px"
-              }
-            }
-          ],
-          "helperText": "",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(50% - 10px)"
+            "width": "calc(60% - 10px)"
           },
           "dependsOn": [],
           "solutionInfo": {
@@ -154,6 +98,127 @@
         "solvedText": "Kiwi"
       }
     },
+    {
+      "id": "22222-9b03-4967-97ad-b7a03aa49271",
+      "clues": [
+        {
+          "id": "7777-eb0f-45dc-8db9-8475d706c6be",
+          "clueValues": [
+            {
+              "id": "88888-e359-4abd-a7ea-296e644108db",
+              "value": "Here are some tips:",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            },
+            {
+              "id": "999999-e359-4abd-a7ea-111",
+              "value": "You can click on the numbers above to switch between riddles. ",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "16px"
+              }
+            },
+            {
+              "id": "10101010-e359-4abd-a7ea-222",
+              "value": "The final riddle will be available once you solve all previous ones.",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "16px"
+              }
+            },
+            {
+              "id": "fd382902-8a02-4f90-87c7-2222",
+              "value": "You can click on a text to copy it.",
+              "type": "text",
+              "subtext": "Always remember to use help (bottom right corner) if you get stuck.",
+              "style": {
+                "width": "calc(100% - 10px)",
+                "fontSize": "16px"
+              }
+            }
+          ],
+          "helperText": "",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(60% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        },
+        {
+          "id": "351647a9-7cbe-4c12-8ed4-3a80d766e0cb",
+          "clueValues": [
+            {
+              "id": "b6a80d8c-bf9a-4678-9560-01e03f59f88f",
+              "value": "gandalf.png",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(50% - 10px)"
+              }
+            },
+            {
+              "id": "14777330-0013-491e-8025-710a8ac0b856",
+              "value": "frodo.png",
+              "type": "image",
+              "subtext": "",
+              "style": {
+                "width": "calc(50% - 10px)"
+              }
+            },
+            {
+              "id": "vb9asm3-0013-491e-8025-710a8ac0b856",
+              "value": "Trilogy",
+              "type": "text",
+              "subtext": "",
+              "style": {
+                "width": "calc(100% - 10px)"
+              }
+            }
+          ],
+          "helperText": "Which famous trilogy are these characters from?",
+          "subtext": "",
+          "clueGroup": 0,
+          "style": {
+            "width": "calc(50% - 10px)"
+          },
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          }
+        }
+      ],
+      "style": {},
+      "solutionInfo": {
+        "type": "text",
+        "possibleSolutions": [
+          {
+            "id": "3e429c02-77e1-44bc-95e8-e16ec26eee3a",
+            "value": "Lord of the Rings"
+          },
+          {
+            "id": "eb8e1ab7-8d6d-4d4b-9083-938664c75f91",
+            "value": "LOTR"
+          }
+        ],
+        "solvedText": "Lord of the Rings"
+      }
+    },
+
     {
       "id": "a49d191c-dcf5-4f85-a0ba-090d378b8405",
       "clues": [
@@ -265,122 +330,6 @@
         "type": "text",
         "possibleSolutions": [],
         "solvedText": "Abel Tasman"
-      }
-    },
-    {
-      "id": "eef45497-f478-46d3-b0fb-f098a46cc38b",
-      "clues": [
-        {
-          "id": "a0e7446b-7506-4ded-9fc8-d7219cf985f1",
-          "clueValues": [
-            {
-              "id": "44e9d590-3c4f-485d-bb0f-1ffda56abb5b",
-              "value": "Find out how to use image search in your browser.",
-              "type": "text",
-              "subtext": "It's a very useful tool and it only takes a minute.",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "",
-          "subtext": "Once you find the names of the characters, type in the name of the trilogy they're from.",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(100% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [],
-            "solvedText": ""
-          }
-        },
-        {
-          "id": "3e0d0535-f895-40f8-b342-c859ae560f45",
-          "clueValues": [
-            {
-              "id": "b6a80d8c-bf9a-4678-9560-01e03f59f88f",
-              "value": "gandalf.png",
-              "type": "image",
-              "subtext": "Try using image search on this picture.",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Use image search. It's a wizard from a trilogy we're looking for.",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [
-              {
-                "id": "1184c396-1484-4ca0-b67b-7aeaa7559b82",
-                "value": "Gandalf"
-              },
-              {
-                "id": "e2d80e2d-f0ee-4cc3-a382-b709c552280f",
-                "value": "Gandalf the Grey"
-              }
-            ],
-            "solvedText": "Gandalf"
-          }
-        },
-        {
-          "id": "351647a9-7cbe-4c12-8ed4-3a80d766e0cb",
-          "clueValues": [
-            {
-              "id": "14777330-0013-491e-8025-710a8ac0b856",
-              "value": "frodo.png",
-              "type": "image",
-              "subtext": "Try using image search on this picture.",
-              "style": {
-                "width": "calc(100% - 10px)"
-              }
-            }
-          ],
-          "helperText": "Use image search. It's a main character from a trilogy we're looking for.",
-          "subtext": "",
-          "clueGroup": 0,
-          "style": {
-            "width": "calc(50% - 10px)"
-          },
-          "dependsOn": [],
-          "solutionInfo": {
-            "type": "text",
-            "possibleSolutions": [
-              {
-                "id": "8d3ba778-cfee-4b7a-8569-4c28116f88de",
-                "value": "Frodo"
-              },
-              {
-                "id": "ce2744a8-c105-4d0d-8e58-4f5c66fcf3d0",
-                "value": "Frodo Baggins"
-              }
-            ],
-            "solvedText": "Frodo"
-          }
-        }
-      ],
-      "style": {},
-      "solutionInfo": {
-        "type": "text",
-        "possibleSolutions": [
-          {
-            "id": "3e429c02-77e1-44bc-95e8-e16ec26eee3a",
-            "value": "Lord of the Rings"
-          },
-          {
-            "id": "eb8e1ab7-8d6d-4d4b-9083-938664c75f91",
-            "value": "LOTR"
-          }
-        ],
-        "solvedText": "Lord of the Rings"
       }
     },
     {

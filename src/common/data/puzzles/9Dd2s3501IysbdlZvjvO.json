@@ -147,7 +147,7 @@
           "style": {
             "width": "calc(33% - 10px)"
           },
-          "helperText": "Use image search. It is located at the northern tip of the Cotentin Peninsula",
+          "helperText": "Northern tip of the Cotentin Peninsula",
           "dependsOn": [],
           "solutionInfo": {
             "type": "text",
