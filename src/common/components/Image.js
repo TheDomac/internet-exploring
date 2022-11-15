@@ -1,17 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { shell } from "electron";
 
 const StyledImage = styled.img`
   display: block;
   margin: 0 auto;
   max-width: 100%;
   transition: 300ms;
-  cursor: pointer;
-
-  &:hover {
-    filter: brightness(120%);
-  }
 `;
 
 const Image = ({ fileName, className }) => {
@@ -24,16 +18,7 @@ const Image = ({ fileName, className }) => {
     } catch (e) {}
   }
 
-  const handleClick = () => {
-    const isLocalImage = image.startsWith("/static") // set in require statement
-    const isLink = image.startsWith("https")
-    
-    if (isLocalImage || isLink) {
-      shell.openExternal(`https://internetexploring.io/images/${encodeURIComponent(image)}`);
-
-    }
-  }
-  return <StyledImage className={className} onClick={handleClick} src={image} alt="No Image" />;
+  return <StyledImage className={className} src={image} alt="No Image" />;
 };
 
 export default Image;
