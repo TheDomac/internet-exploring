@@ -1,7 +1,6 @@
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
-import { INTERNET_EXPLORING_URL } from "../../common/consts";
 import { Container } from "../../common/components/Container.styled";
 import Loading from "../../common/components/Loading.styled";
 import ArrowBack from "../../common/components/ArrowBack";

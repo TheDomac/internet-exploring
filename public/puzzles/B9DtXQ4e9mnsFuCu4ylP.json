@@ -218,7 +218,16 @@
                 "width": "calc(100% - 10px)"
               },
               "id": "8d9568e0-fcdd-4514-b445-8d50acdd20c2",
-              "value": "July 20 (1944.), Gunpowder (1605.)",
+              "value": "July 20 (1944.)",
+              "subtext": "",
+              "type": "text"
+            },
+            {
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "22222-fcdd-4514-b445-8d50acdd20c2",
+              "value": "Gunpowder (1605.)",
               "subtext": "",
               "type": "text"
             }
