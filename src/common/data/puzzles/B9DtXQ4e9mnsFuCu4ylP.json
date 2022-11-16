@@ -218,7 +218,16 @@
                 "width": "calc(100% - 10px)"
               },
               "id": "8d9568e0-fcdd-4514-b445-8d50acdd20c2",
-              "value": "July 20 (1944.), Gunpowder (1605.)",
+              "value": "July 20 (1944.)",
+              "subtext": "",
+              "type": "text"
+            },
+            {
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "id": "22222-fcdd-4514-b445-8d50acdd20c2",
+              "value": "Gunpowder (1605.)",
               "subtext": "",
               "type": "text"
             }
@@ -300,12 +309,10 @@
     {
       "style": {},
       "solutionInfo": {
-        "possibleSolutions": [
-          {
-            "id": "d55b2568-f9e9-430a-bb35-4dcc2883efee",
-            "value": "Wood"
-          }
-        ],
+        "possibleSolutions": [{
+          "id": "d55b2568-f9e9-430a-bb35-4dcc2883efee",
+          "value": "Wood"
+        }],
         "type": "text",
         "solvedText": "Wood"
       },
@@ -331,7 +338,9 @@
           "solutionInfo": {
             "type": "text",
             "solvedText": "",
-            "possibleSolutions": []
+            "possibleSolutions": [
+              
+            ]
           },
           "clueGroup": 0,
           "helperText": "It's the last name of an actor playing a ring bearer from The Lord of the Rings.",
