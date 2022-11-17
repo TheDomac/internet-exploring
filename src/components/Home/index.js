@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { ipcRenderer, shell } from "electron";
+import { shell } from "electron";
 import { Container } from "../../common/components/Container.styled";
 import { REDDIT_URL } from "../../common/consts";
 
@@ -45,12 +45,6 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleQuitClick = () => {
-    ipcRenderer.send("close-me");
-  };
-  const handleFullScreenClick = () => {
-    ipcRenderer.send("fullscreen-click");
-  };
   const handleRedditClick = () => {
     shell.openExternal(REDDIT_URL);
   };
@@ -100,13 +94,6 @@ const Home = () => {
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
         <HomeButton
-          $primary={fullScreen.isOn}
-          onClick={handleFullScreenClick}
-          style={{ marginBottom: "20px" }}
-        >
-          Fullscreen
-        </HomeButton>
-        <HomeButton
           onClick={handleRedditClick}
           style={{
             padding: "12px 20px",
@@ -126,9 +113,6 @@ const Home = () => {
             src={redditLogo}
             alt="reddit"
           />
-        </HomeButton>
-        <HomeButton onClick={handleQuitClick} style={{ marginBottom: "25px" }}>
-          Exit game
         </HomeButton>
         <div
           style={{

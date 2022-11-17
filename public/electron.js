@@ -15,9 +15,9 @@ function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
     autoHideMenuBar: true,
-    fullscreen: true,
     webPreferences: { nodeIntegration: true, contextIsolation: false },
   });
+  win.maximize();
 
   // and load the index.html of the app.
   win.loadURL(
@@ -60,15 +60,6 @@ app.on("activate", () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-
-
-ipcMain.on("close-me", (evt, arg) => {
-  app.quit();
-});
-
-ipcMain.on("fullscreen-click", (evt, arg) => {
-  mainWindow.setFullScreen(!mainWindow.isFullScreen());
-});
 
 ipcMain.on("fetch-user", (evt, arg) => {
   try {
