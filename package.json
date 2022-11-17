@@ -1,5 +1,5 @@
 {
-  "name": "internet-exploring",
+  "name": "Internet Exploring",
   "description": "What if the Internet was your escape room?",
   "version": "0.1.0",
   "main": "public/electron.js",
