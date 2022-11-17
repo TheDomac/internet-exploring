@@ -43,8 +43,6 @@ const initialUserSocialMediaURL = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
 
-const MOCKED_USER_ID = "mockedUserId";
-
 const WorkshopBuilderEdit = () => {
   const navigate = useNavigate();
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
@@ -111,7 +109,9 @@ const WorkshopBuilderEdit = () => {
     try {
       saveLoading.setOn();
       saveError.setOff();
-      const uploadedImages = await uploadImages(imagesToUpload, MOCKED_USER_ID);
+      console.log("1111", imagesToUpload)
+      const uploadedImages = await uploadImages(imagesToUpload, user.id);
+      console.log("2222", uploadedImages)
 
       const newPuzzle = {
         ...puzzle,
@@ -142,10 +142,12 @@ const WorkshopBuilderEdit = () => {
       };
 
       await setDoc(doc(db, workshopCollectionName, puzzle.id), newPuzzle);
-      await deleteImages(imagesToDelete, MOCKED_USER_ID);
+      await deleteImages(imagesToDelete, user.id);
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {
+      console.log("error")
+      console.log(error)
       saveError.setOn();
       saveLoading.setOff();
     }

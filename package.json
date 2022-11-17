@@ -27,7 +27,7 @@
   "scripts": {
     "electron": "wait-on tcp:3000 && electron-forge start",
     "start:dev": "REACT_APP_STAGE=dev concurrently -k \"BROWSER=none react-app-rewired start\" \"npm:electron\"",
-    "start:prod": "REACT_APP_STAGE=prod react-app-rewired start",
+    "start:prod": "REACT_APP_STAGE=prod concurrently -k \"BROWSER=none react-app-rewired start\" \"npm:electron\"",
     "build:prod": "REACT_APP_STAGE=prod react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",

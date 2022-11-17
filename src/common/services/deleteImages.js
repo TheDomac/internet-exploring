@@ -3,7 +3,7 @@ import { storage } from "../firebase";
 
 const deleteImages = async (imageClueValues, userId) => {
   for (const imageClueValue of imageClueValues) {
-    const imageRef = ref(storage, `images/${userId}/${imageClueValue.id}`);
+    const imageRef = ref(storage, `imagesSteam/${userId}/${imageClueValue.id}`);
     await deleteObject(imageRef);
   }
 };

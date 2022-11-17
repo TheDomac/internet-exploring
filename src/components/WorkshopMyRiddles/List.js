@@ -33,6 +33,7 @@ import clockSVG from "./clock.svg";
 import closeSVG from "./close.svg";
 import checkSVG from "./check.svg";
 import draftSVG from "./draft.svg";
+import { AuthContext } from "../../common/services/AuthContext";
 
 const statusIcons = {
   [RIDDLE_STATUSES.DRAFT]: <img src={draftSVG} alt="draft" />,
@@ -42,8 +43,6 @@ const statusIcons = {
 };
 
 const LIMIT = 15;
-
-const MOCKED_USER_ID = "mockedUserId";
 
 const List = () => {
   const navigate = useNavigate();
@@ -60,6 +59,7 @@ const List = () => {
   const deleteError = useToggle();
 
   const { setWorkshopPlayPuzzle } = useContext(WorkshopContext);
+  const { user } = useContext(AuthContext);
 
   const fetchMyWorkshopPuzzles = async (initialPuzzles = []) => {
     try {
@@ -68,14 +68,14 @@ const List = () => {
       const q = myWorkshopPuzzlesLastRef.current
         ? query(
             collection(db, workshopCollectionName),
-            where("uid", "==", MOCKED_USER_ID),
+            where("uid", "==", user.id),
             orderBy("updatedAt", "desc"),
             startAfter(myWorkshopPuzzlesLastRef.current),
             limit(LIMIT)
           )
         : query(
             collection(db, workshopCollectionName),
-            where("uid", "==", MOCKED_USER_ID),
+            where("uid", "==", user.id),
             orderBy("updatedAt", "desc"),
             limit(LIMIT)
           );

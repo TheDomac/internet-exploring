@@ -7,7 +7,7 @@ const uploadImages = async (imageClueValues, userId) => {
   for (const imageClueValue of imageClueValues) {
     const file = await fetch(imageClueValue.value);
     const fileBlob = await file.blob();
-    const imageRef = ref(storage, `images/${userId}/${imageClueValue.id}`);
+    const imageRef = ref(storage, `imagesSteam/${userId}/${imageClueValue.id}`);
     await uploadBytes(imageRef, fileBlob);
     const downloadURL = await getDownloadURL(imageRef);
     uploadedImages.push({ id: imageClueValue.id, downloadURL });

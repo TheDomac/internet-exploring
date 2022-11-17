@@ -4,6 +4,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import { useContext } from "react";
 
 import Home from "./components/Home";
 import Puzzle from "./components/Puzzle";
@@ -18,12 +19,15 @@ import TutorialPage from "./components/Tutorial";
 import TempPage from "./components/Temp";
 
 import WorkshopPlayPage from "./components/WorkshopPlay";
+import { AuthContext } from "./common/services/AuthContext";
 
 const RoutesGroup = () => {
+  const { user, loadedAuth } = useContext(AuthContext)
   return (
     <Router>
       <Routes>
-        <Route
+        {user?.id && 
+         <><Route
           path="/play/workshop/new"
           element={<WorkshopBuilderCreatePage />}
         />
@@ -36,7 +40,7 @@ const RoutesGroup = () => {
           path="/play/workshop/my-riddles"
           element={<WorkshopMyRiddlesPage />}
         />
-        <Route path="/play/workshop/:riddleId" element={<WorkshopPlayPage />} />
+        <Route path="/play/workshop/:riddleId" element={<WorkshopPlayPage />} /></>}
 
         <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
         <Route path="/play/puzzles" element={<PuzzleList />} />
@@ -44,7 +48,7 @@ const RoutesGroup = () => {
         <Route path="/tutorial" element={<TutorialPage />} />
         <Route path="/temp" element={<TempPage />} />
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {loadedAuth.isOn && <Route path="*" element={<Navigate to="/" replace />} />}
       </Routes>
     </Router>
   );

@@ -1,7 +1,7 @@
 export const env = process.env.REACT_APP_STAGE.toUpperCase();
 
 export const workshopCollectionName =
-  process.env[`REACT_APP_COLLECTION_${env}`];
+  process.env[`REACT_APP_COLLECTION_STEAM_${env}`];
 
 export const toBeDeletedCollectionName =
   process.env[`REACT_APP_TO_BE_DELETED_${env}`];

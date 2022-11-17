@@ -40,8 +40,6 @@ const initialUserSocialMediaURL = localStorage.getItem(
   LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
 
-const MOCKED_USER_ID = "mockedUserId";
-
 const WorkshopBuilderCreate = () => {
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
   const { user } = useContext(AuthContext);
@@ -92,11 +90,11 @@ const WorkshopBuilderCreate = () => {
       const imageClueValues = getImageClueValues(puzzle.rebuses);
       const uploadedImages = await uploadImages(
         imageClueValues,
-        MOCKED_USER_ID
+        user.id
       );
       const newPuzzle = {
         ...puzzle,
-        uid: MOCKED_USER_ID,
+        uid: user.id,
         status,
         userNickname,
         userSocialMediaURL,
