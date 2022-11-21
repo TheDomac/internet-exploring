@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
 import { shell } from "electron";
 import { Container } from "../../common/components/Container.styled";
+import Alert from "../../common/components/Alert.styled";
 import { REDDIT_URL } from "../../common/consts";
 
 import LogoImg from "../../images/Logo.png";
 import redditLogo from "../../images/redditLogo.png";
 import Modal, { ModalInfo } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
+import { AuthContext } from "../../common/services/AuthContext";
 
 import TermsOfService from "./TermsOfService";
 import PrivacyPolicy from "./PrivacyPolicy";
@@ -24,26 +26,7 @@ const Home = () => {
   const termsModal = useToggle();
   const privacyPolicyModal = useToggle();
   const whyInternetExploringModal = useToggle();
-  const fullScreen = useToggle();
-
-  const checkForFullScrenChange = () => {
-    const isFullScreen =
-      // eslint-disable-next-line no-restricted-globals
-      window.innerHeight === screen.height &&
-      // eslint-disable-next-line no-restricted-globals
-      window.innerWidth === screen.width;
-    fullScreen.set(isFullScreen);
-  };
-
-  useEffect(() => {
-    checkForFullScrenChange()
-    window.addEventListener("resize", checkForFullScrenChange);
-
-    return () => {
-      window.removeEventListener("resize", checkForFullScrenChange);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const { user, loadedAuth } = useContext(AuthContext)
 
   const handleRedditClick = () => {
     shell.openExternal(REDDIT_URL);
@@ -80,6 +63,9 @@ const Home = () => {
       </Modal>
 
       <Container>
+      {loadedAuth.isOn && !user && (
+          <Alert>Sign in to Steam to get full access.</Alert>
+        )}
         <Logo src={LogoImg} alt="logo" />
         <Subtitle1>What if the Internet was your escape room?</Subtitle1>
         <Subtitle2>

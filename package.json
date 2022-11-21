@@ -2,7 +2,7 @@
   "name": "internet-exploring",
   "description": "What if the Internet was your escape room?",
   "homepage": "./",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "public/electron.js",
   "author": "Domagoj Zganec",
   "private": true,
@@ -26,14 +26,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
+    "dev": "REACT_APP_STAGE=dev concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
     "electron": "wait-on tcp:3000 && electron-forge start",
     "build": "react-app-rewired build",
     "start": "react-app-rewired start",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "package": "react-app-rewired build && electron-forge package",
-    "make": "react-app-rewired build && electron-forge make",
+    "make": "REACT_APP_STAGE=prod react-app-rewired build && electron-forge make",
     "prettier": "npx prettier --write ./src"
   },
   "eslintConfig": {

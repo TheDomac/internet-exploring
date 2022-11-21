@@ -16,6 +16,7 @@ function createWindow() {
   const win = new BrowserWindow({
     autoHideMenuBar: true,
     webPreferences: { nodeIntegration: true, contextIsolation: false },
+    icon: path.join(__dirname, "../build/game_icon_linux.png")
   });
   win.maximize();
 
