@@ -1,7 +1,8 @@
 {
   "name": "internet-exploring",
   "description": "What if the Internet was your escape room?",
-  "version": "0.1.0",
+  "homepage": "./",
+  "version": "1.1.0",
   "main": "public/electron.js",
   "author": "Domagoj Zganec",
   "private": true,
@@ -25,12 +26,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
     "electron": "wait-on tcp:3000 && electron-forge start",
-    "start:dev": "REACT_APP_STAGE=dev concurrently -k \"BROWSER=none react-app-rewired start\" \"npm:electron\"",
-    "start:prod": "REACT_APP_STAGE=prod concurrently -k \"BROWSER=none react-app-rewired start\" \"npm:electron\"",
-    "build:prod": "REACT_APP_STAGE=prod react-app-rewired build",
+    "build": "react-app-rewired build",
+    "start": "react-app-rewired start",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
+    "package": "react-app-rewired build && electron-forge package",
+    "make": "react-app-rewired build && electron-forge make",
     "prettier": "npx prettier --write ./src"
   },
   "eslintConfig": {
@@ -53,8 +56,12 @@
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.1",
+    "@electron-forge/maker-deb": "^6.0.3",
+    "@electron-forge/maker-rpm": "^6.0.3",
+    "@electron-forge/maker-squirrel": "^6.0.3",
+    "@electron-forge/maker-zip": "^6.0.3",
     "concurrently": "^7.5.0",
-    "electron": "^21.2.3",
+    "electron": "^21.3.0",
     "react-app-rewired": "^2.2.1",
     "wait-on": "^6.0.1"
   },
