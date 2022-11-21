@@ -3,6 +3,18 @@ const steamworks = require("steamworks.js")
 const { app, BrowserWindow, ipcMain } = require("electron");
 const isDev = require("electron-is-dev");
 
+const firebaseApp = require("firebase/app");
+const firebaseConfig = require("../src/common/firebaseConfig");
+
+firebaseApp.initializeApp(firebaseConfig)
+const firebaseStorage = require("firebase/storage")
+const getStorage = firebaseStorage.getStorage
+const storage = getStorage()
+
+const ref = firebaseStorage.ref
+const uploadBytes = firebaseStorage.uploadBytes
+const getDownloadURL = firebaseStorage.getDownloadURL
+
 let mainWindow;
 let client;
 
@@ -72,4 +84,21 @@ ipcMain.on("fetch-user", (evt, arg) => {
   } catch (error) {
     evt.reply("fetch-user-reply", null)
   }
+});
+
+ipcMain.on("upload-images", async (evt, arg) => {
+  try {
+
+    const imageRef = ref(storage, `imagesSteam/TEST_USER_ID/TEST_CLUE_VALUE`);
+    const bytes = new Uint8Array([0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x2c, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21]);
+  
+    await uploadBytes(imageRef, bytes);
+    const downloadURL = await getDownloadURL(imageRef);
+    console.log("UPLOADED")
+    console.log(downloadURL)
+  } catch (error) {
+    console.log("SOME ERROR")
+    console.log("SOME ERROR")
+  }
+
 });
