@@ -21,12 +21,11 @@ import {
   StyledLink,
 } from "./index.styled";
 
-
 const Home = () => {
   const termsModal = useToggle();
   const privacyPolicyModal = useToggle();
   const whyInternetExploringModal = useToggle();
-  const { user, loadedAuth } = useContext(AuthContext)
+  const { user, loadedAuth } = useContext(AuthContext);
 
   const handleRedditClick = () => {
     shell.openExternal(REDDIT_URL);
@@ -63,7 +62,7 @@ const Home = () => {
       </Modal>
 
       <Container>
-      {loadedAuth.isOn && !user && (
+        {loadedAuth.isOn && !user && (
           <Alert>Sign in to Steam to get full access.</Alert>
         )}
         <Logo src={LogoImg} alt="logo" />

@@ -21,7 +21,7 @@ import ArrowBack from "../../common/components/ArrowBack";
 import CommonPuzzle from "../../common/components/Puzzle";
 import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import {AuthContext} from "../../common/services/AuthContext";
+import { AuthContext } from "../../common/services/AuthContext";
 import getImageClueValues from "../../common/services/getImageClueValues";
 import deleteImages from "../../common/services/deleteImages";
 
@@ -109,54 +109,57 @@ const WorkshopBuilderEdit = () => {
 
     saveLoading.setOn();
     saveError.setOff();
-    ipcRenderer.send("upload-images", {imagesToUpload, status, imagesToDelete});
+    ipcRenderer.send("upload-images", {
+      imagesToUpload,
+      status,
+      imagesToDelete,
+    });
   };
 
-  ipcRenderer.on("upload-images-complete", async (event, {uploadedImages, status, imagesToDelete}) => {
-
-    try {
-
-      const newPuzzle = {
-        ...puzzle,
-        status,
-        userNickname,
-        userSocialMediaURL,
-        updatedAt: serverTimestamp(),
-        rebuses: puzzle.rebuses.map((r) => ({
-          ...r,
-          clues: r.clues.map((c) => ({
-            ...c,
-            clueValues: c.clueValues.map((cv) => {
-              if (cv.type !== clueTypes.IMAGE) {
-                return cv;
-              }
-              const foundUploadedImage = uploadedImages.find(
-                (icv) => icv.id === cv.id
-              );
-              return foundUploadedImage?.downloadURL
-                ? {
-                    ...cv,
-                    value: foundUploadedImage.downloadURL,
-                  }
-                : cv;
-            }),
+  ipcRenderer.on(
+    "upload-images-complete",
+    async (event, { uploadedImages, status, imagesToDelete }) => {
+      try {
+        const newPuzzle = {
+          ...puzzle,
+          status,
+          userNickname,
+          userSocialMediaURL,
+          updatedAt: serverTimestamp(),
+          rebuses: puzzle.rebuses.map((r) => ({
+            ...r,
+            clues: r.clues.map((c) => ({
+              ...c,
+              clueValues: c.clueValues.map((cv) => {
+                if (cv.type !== clueTypes.IMAGE) {
+                  return cv;
+                }
+                const foundUploadedImage = uploadedImages.find(
+                  (icv) => icv.id === cv.id
+                );
+                return foundUploadedImage?.downloadURL
+                  ? {
+                      ...cv,
+                      value: foundUploadedImage.downloadURL,
+                    }
+                  : cv;
+              }),
+            })),
           })),
-        })),
-      };
+        };
 
-      await setDoc(doc(db, workshopCollectionName, puzzle.id), newPuzzle);
-      await deleteImages(imagesToDelete);
-      saveLoading.setOff();
-      navigate(`/play/workshop/my-riddles?successStatus=${status}`);
-    } catch (error) {
-      console.log("error")
-      console.log(error)
-      saveError.setOn();
-      saveLoading.setOff();
+        await setDoc(doc(db, workshopCollectionName, puzzle.id), newPuzzle);
+        await deleteImages(imagesToDelete);
+        saveLoading.setOff();
+        navigate(`/play/workshop/my-riddles?successStatus=${status}`);
+      } catch (error) {
+        console.log("error");
+        console.log(error);
+        saveError.setOn();
+        saveLoading.setOff();
+      }
     }
-    
-    });
-
+  );
 
   if (!puzzle) {
     return null;

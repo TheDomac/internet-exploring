@@ -8,11 +8,11 @@ import Routes from "./Routes";
 const App = () => {
   return (
     <AuthProvider>
-    <WorkshopContextProvider>
-      <PuzzleContextProvider>
-        <Routes />
-      </PuzzleContextProvider>
-    </WorkshopContextProvider>
+      <WorkshopContextProvider>
+        <PuzzleContextProvider>
+          <Routes />
+        </PuzzleContextProvider>
+      </WorkshopContextProvider>
     </AuthProvider>
   );
 };

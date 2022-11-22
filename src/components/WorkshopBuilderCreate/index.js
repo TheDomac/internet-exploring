@@ -20,7 +20,7 @@ import ArrowBack from "../../common/components/ArrowBack";
 import CommonPuzzle from "../../common/components/Puzzle";
 import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import {AuthContext} from "../../common/services/AuthContext";
+import { AuthContext } from "../../common/services/AuthContext";
 
 const StyledInput = styled.input`
   background: transparent;
@@ -87,53 +87,55 @@ const WorkshopBuilderCreate = () => {
     saveError.setOff();
     const imagesToUpload = getImageClueValues(puzzle.rebuses);
 
-    ipcRenderer.send("upload-images", {imagesToUpload, status, imagesToDelete: []});
-
+    ipcRenderer.send("upload-images", {
+      imagesToUpload,
+      status,
+      imagesToDelete: [],
+    });
   };
 
-
-  ipcRenderer.on("upload-images-complete", async (event, {uploadedImages, status}) => {
-    try {
-
-      const newPuzzle = {
-        ...puzzle,
-        uid: user.id,
-        status,
-        userNickname,
-        userSocialMediaURL,
-        message: "",
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp(),
-        rebuses: puzzle.rebuses.map((r) => ({
-          ...r,
-          clues: r.clues.map((c) => ({
-            ...c,
-            clueValues: c.clueValues.map((cv) => {
-              if (cv.type !== clueTypes.IMAGE) {
-                return cv;
-              }
-              const foundUploadedImage = uploadedImages.find(
-                (icv) => icv.id === cv.id
-              ).downloadURL;
-              return {
-                ...cv,
-                value: foundUploadedImage,
-              };
-            }),
+  ipcRenderer.on(
+    "upload-images-complete",
+    async (event, { uploadedImages, status }) => {
+      try {
+        const newPuzzle = {
+          ...puzzle,
+          uid: user.id,
+          status,
+          userNickname,
+          userSocialMediaURL,
+          message: "",
+          createdAt: serverTimestamp(),
+          updatedAt: serverTimestamp(),
+          rebuses: puzzle.rebuses.map((r) => ({
+            ...r,
+            clues: r.clues.map((c) => ({
+              ...c,
+              clueValues: c.clueValues.map((cv) => {
+                if (cv.type !== clueTypes.IMAGE) {
+                  return cv;
+                }
+                const foundUploadedImage = uploadedImages.find(
+                  (icv) => icv.id === cv.id
+                ).downloadURL;
+                return {
+                  ...cv,
+                  value: foundUploadedImage,
+                };
+              }),
+            })),
           })),
-        })),
-      };
+        };
 
-      await addDoc(collection(db, workshopCollectionName), newPuzzle);
-      saveLoading.setOff();
-      navigate(`/play/workshop/my-riddles?successStatus=${status}`);
-    } catch (error) {
-      saveError.setOn();
-      saveLoading.setOff();
+        await addDoc(collection(db, workshopCollectionName), newPuzzle);
+        saveLoading.setOff();
+        navigate(`/play/workshop/my-riddles?successStatus=${status}`);
+      } catch (error) {
+        saveError.setOn();
+        saveLoading.setOff();
+      }
     }
-    
-    });
-
+  );
 
   const handleCloseModal = () => {
     saveModal.setOff();

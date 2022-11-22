@@ -4,7 +4,7 @@ import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 import { GoogleAuthProvider } from "firebase/auth";
 
-import firebaseConfig from "./firebaseConfig"
+import firebaseConfig from "./firebaseConfig";
 
 export const provider = new GoogleAuthProvider();
 

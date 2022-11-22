@@ -22,25 +22,31 @@ import WorkshopPlayPage from "./components/WorkshopPlay";
 import { AuthContext } from "./common/services/AuthContext";
 
 const RoutesGroup = () => {
-  const { user, loadedAuth } = useContext(AuthContext)
+  const { user, loadedAuth } = useContext(AuthContext);
   return (
     <Router>
       <Routes>
-        {user?.id && 
-         <><Route
-          path="/play/workshop/new"
-          element={<WorkshopBuilderCreatePage />}
-        />
-        <Route
-          path="/play/workshop/edit/:riddleId"
-          element={<WorkshopBuilderEditPage />}
-        />
-        <Route path="/play/workshop" element={<WorkshopPage />} />
-        <Route
-          path="/play/workshop/my-riddles"
-          element={<WorkshopMyRiddlesPage />}
-        />
-        <Route path="/play/workshop/:riddleId" element={<WorkshopPlayPage />} /></>}
+        {user?.id && (
+          <>
+            <Route
+              path="/play/workshop/new"
+              element={<WorkshopBuilderCreatePage />}
+            />
+            <Route
+              path="/play/workshop/edit/:riddleId"
+              element={<WorkshopBuilderEditPage />}
+            />
+            <Route path="/play/workshop" element={<WorkshopPage />} />
+            <Route
+              path="/play/workshop/my-riddles"
+              element={<WorkshopMyRiddlesPage />}
+            />
+            <Route
+              path="/play/workshop/:riddleId"
+              element={<WorkshopPlayPage />}
+            />
+          </>
+        )}
 
         <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
         <Route path="/play/puzzles" element={<PuzzleList />} />
@@ -48,7 +54,9 @@ const RoutesGroup = () => {
         <Route path="/tutorial" element={<TutorialPage />} />
         <Route path="/temp" element={<TempPage />} />
         <Route path="/" element={<Home />} />
-        {loadedAuth.isOn && <Route path="*" element={<Navigate to="/" replace />} />}
+        {loadedAuth.isOn && (
+          <Route path="*" element={<Navigate to="/" replace />} />
+        )}
       </Routes>
     </Router>
   );
