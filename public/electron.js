@@ -86,19 +86,21 @@ ipcMain.on("fetch-user", (evt, arg) => {
   }
 });
 
-ipcMain.on("upload-images", async (evt, arg) => {
-  try {
+ipcMain.on("upload-images", async (evt, args) => {
+  const { imagesToUpload, status, imagesToDelete } = args;
+  const userId = client.localplayer.getSteamId().accountId;
+  const uploadedImages = [];
 
-    const imageRef = ref(storage, `imagesSteam/TEST_USER_ID/TEST_CLUE_VALUE`);
-    const bytes = new Uint8Array([0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x2c, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21]);
-  
-    await uploadBytes(imageRef, bytes);
+   for (const imageToUpload of imagesToUpload) {
+    const file = await fetch(imageToUpload.value);
+    const fileBlob = await file.blob();
+    const imageRef = ref(storage, `imagesSteam/${userId}/${imageToUpload.id}`);
+    await uploadBytes(imageRef, fileBlob);
     const downloadURL = await getDownloadURL(imageRef);
-    console.log("UPLOADED")
-    console.log(downloadURL)
-  } catch (error) {
-    console.log("SOME ERROR")
-    console.log("SOME ERROR")
+    uploadedImages.push({ id: imageToUpload.id, downloadURL });
   }
+
+  console.log("UPLOADED IMAGES", JSON.stringify(uploadedImages))
+  evt.reply("upload-images-complete", {uploadedImages, status, imagesToDelete})
 
 });

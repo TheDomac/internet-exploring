@@ -2,11 +2,11 @@ import { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import { ipcRenderer } from "electron";
 
 import Modal, { ButtonsWrapper } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import getImageClueValues from "../../common/services/getImageClueValues";
-import uploadImages from "../../common/services/uploadImages";
 import { db } from "../../common/firebase";
 import {
   LOCAL_STORAGE_KEYS,
@@ -83,15 +83,18 @@ const WorkshopBuilderCreate = () => {
       userSocialMediaURL
     );
 
-    try {
-      saveLoading.setOn();
-      saveError.setOff();
+    saveLoading.setOn();
+    saveError.setOff();
+    const imagesToUpload = getImageClueValues(puzzle.rebuses);
 
-      const imageClueValues = getImageClueValues(puzzle.rebuses);
-      const uploadedImages = await uploadImages(
-        imageClueValues,
-        user.id
-      );
+    ipcRenderer.send("upload-images", {imagesToUpload, status, imagesToDelete: []});
+
+  };
+
+
+  ipcRenderer.on("upload-images-complete", async (event, {uploadedImages, status}) => {
+    try {
+
       const newPuzzle = {
         ...puzzle,
         uid: user.id,
@@ -128,7 +131,9 @@ const WorkshopBuilderCreate = () => {
       saveError.setOn();
       saveLoading.setOff();
     }
-  };
+    
+    });
+
 
   const handleCloseModal = () => {
     saveModal.setOff();

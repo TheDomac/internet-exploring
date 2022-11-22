@@ -4,6 +4,7 @@ import { setDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router";
 import { doc, getDoc } from "firebase/firestore";
+import { ipcRenderer } from "electron";
 
 import Modal, { ButtonsWrapper } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
@@ -22,7 +23,6 @@ import WorkshopBuilder from "../WorkshopBuilder";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
 import {AuthContext} from "../../common/services/AuthContext";
 import getImageClueValues from "../../common/services/getImageClueValues";
-import uploadImages from "../../common/services/uploadImages";
 import deleteImages from "../../common/services/deleteImages";
 
 const StyledInput = styled.input`
@@ -106,12 +106,15 @@ const WorkshopBuilderEdit = () => {
     const imagesToDelete = oldImageClueValues.filter(
       (ocv) => !imageClueValues.find((cv) => cv.id === ocv.id)
     );
+
+    saveLoading.setOn();
+    saveError.setOff();
+    ipcRenderer.send("upload-images", {imagesToUpload, status, imagesToDelete});
+  };
+
+  ipcRenderer.on("upload-images-complete", async (event, {uploadedImages, status, imagesToDelete}) => {
+
     try {
-      saveLoading.setOn();
-      saveError.setOff();
-      console.log("1111", imagesToUpload)
-      const uploadedImages = await uploadImages(imagesToUpload, user.id);
-      console.log("2222", uploadedImages)
 
       const newPuzzle = {
         ...puzzle,
@@ -142,7 +145,7 @@ const WorkshopBuilderEdit = () => {
       };
 
       await setDoc(doc(db, workshopCollectionName, puzzle.id), newPuzzle);
-      await deleteImages(imagesToDelete, user.id);
+      await deleteImages(imagesToDelete);
       saveLoading.setOff();
       navigate(`/play/workshop/my-riddles?successStatus=${status}`);
     } catch (error) {
@@ -151,7 +154,9 @@ const WorkshopBuilderEdit = () => {
       saveError.setOn();
       saveLoading.setOff();
     }
-  };
+    
+    });
+
 
   if (!puzzle) {
     return null;
