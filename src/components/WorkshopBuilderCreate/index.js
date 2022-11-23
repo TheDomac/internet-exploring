@@ -1,18 +1,11 @@
 import { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
-import { ipcRenderer } from "electron";
 
 import Modal, { ButtonsWrapper } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
-import getImageClueValues from "../../common/services/getImageClueValues";
-import { db } from "../../common/firebase";
 import {
   LOCAL_STORAGE_KEYS,
   RIDDLE_STATUSES,
-  workshopCollectionName,
-  clueTypes,
 } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import Alert from "../../common/components/Alert.styled";
@@ -48,7 +41,6 @@ const WorkshopBuilderCreate = () => {
   const saveLoading = useToggle();
   const saveError = useToggle();
   const preview = useToggle();
-  const navigate = useNavigate();
 
   const [userNickname, setUserNickname] = useState(user.nickname);
   const [userSocialMediaURL, setUserSocialMediaURL] = useState(
@@ -67,10 +59,6 @@ const WorkshopBuilderCreate = () => {
     setUserSocialMediaURL(e.target.value);
   };
 
-  // const handleSave = () => {
-  //   console.log(puzzle)
-  // }
-
   const handleSave = async (e) => {
     const isDraft = e.target.name === "draft";
     const status = isDraft
@@ -83,59 +71,19 @@ const WorkshopBuilderCreate = () => {
       userSocialMediaURL
     );
 
-    saveLoading.setOn();
-    saveError.setOff();
-    const imagesToUpload = getImageClueValues(puzzle.rebuses);
-
-    ipcRenderer.send("upload-images", {
-      imagesToUpload,
+    const newPuzzle = {
+      ...puzzle,
+      uid: user.id,
       status,
-      imagesToDelete: [],
-    });
+      userNickname,
+      userSocialMediaURL,
+      message: "",
+    };
+
+    console.log("newPuzzle")
+    console.log(newPuzzle)
   };
 
-  ipcRenderer.on(
-    "upload-images-complete",
-    async (event, { uploadedImages, status }) => {
-      try {
-        const newPuzzle = {
-          ...puzzle,
-          uid: user.id,
-          status,
-          userNickname,
-          userSocialMediaURL,
-          message: "",
-          createdAt: serverTimestamp(),
-          updatedAt: serverTimestamp(),
-          rebuses: puzzle.rebuses.map((r) => ({
-            ...r,
-            clues: r.clues.map((c) => ({
-              ...c,
-              clueValues: c.clueValues.map((cv) => {
-                if (cv.type !== clueTypes.IMAGE) {
-                  return cv;
-                }
-                const foundUploadedImage = uploadedImages.find(
-                  (icv) => icv.id === cv.id
-                ).downloadURL;
-                return {
-                  ...cv,
-                  value: foundUploadedImage,
-                };
-              }),
-            })),
-          })),
-        };
-
-        await addDoc(collection(db, workshopCollectionName), newPuzzle);
-        saveLoading.setOff();
-        navigate(`/play/workshop/my-riddles?successStatus=${status}`);
-      } catch (error) {
-        saveError.setOn();
-        saveLoading.setOff();
-      }
-    }
-  );
 
   const handleCloseModal = () => {
     saveModal.setOff();

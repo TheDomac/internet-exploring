@@ -1,12 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useContext, Fragment } from "react";
+import { Fragment } from "react";
 import { shell } from "electron";
 
-import { Button } from "../../common/components/Button.styled";
-import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import ArrowBack from "../../common/components/ArrowBack";
-import { WorkshopContext } from "../../common/services/WorkshopContext";
+import { Button } from "../../common/components/Button.styled";
 import {
   PuzzleBox,
   Wrapper,
@@ -24,13 +22,6 @@ export const TextLink = styled.span`
 const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
 
 const Workshop = () => {
-  const navigate = useNavigate();
-  const { initPuzzle } = useContext(WorkshopContext);
-
-  const handleCreateNewRiddleClick = () => {
-    initPuzzle();
-    navigate("/play/workshop/new");
-  };
   const handleUsernameClick = (userSocialMediaURL) => () => {
     shell.openExternal(addHttps(userSocialMediaURL));
   };
@@ -40,13 +31,17 @@ const Workshop = () => {
     "[]";
   const workshopSolvedPuzzlesIDsParsed = JSON.parse(workshopSolvedPuzzlesIDs);
 
+  const handleCreateNewRiddleClick = () => {
+
+  }
+
   return (
     <>
       <Link to="/play">
         <ArrowBack />
       </Link>
       <Wrapper>
-        <div
+      <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -59,22 +54,6 @@ const Workshop = () => {
           >
             Create new riddle
           </Button>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: 15,
-          }}
-        >
-          <Link to="/play/workshop">
-            <CheckboxButton $isChecked style={{ width: 245 }}>
-              Workshop
-            </CheckboxButton>
-          </Link>
-          <Link to="/play/workshop/my-riddles">
-            <CheckboxButton style={{ width: 245 }}>My riddles</CheckboxButton>
-          </Link>
         </div>
 
         <div style={{ display: "flex", flexWrap: "wrap" }}>

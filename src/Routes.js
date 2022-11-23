@@ -11,15 +11,15 @@ import Puzzle from "./components/Puzzle";
 import PuzzleList from "./components/PuzzleList";
 import PlayPage from "./components/PlayPage";
 import WorkshopPage from "./components/Workshop";
-import WorkshopMyRiddlesPage from "./components/WorkshopMyRiddles";
 import WorkshopBuilderCreatePage from "./components/WorkshopBuilderCreate";
-import WorkshopBuilderEditPage from "./components/WorkshopBuilderEdit";
 
 import TutorialPage from "./components/Tutorial";
 import TempPage from "./components/Temp";
 
 import WorkshopPlayPage from "./components/WorkshopPlay";
 import { AuthContext } from "./common/services/AuthContext";
+
+import { env } from "./common/consts";
 
 const RoutesGroup = () => {
   const { user, loadedAuth } = useContext(AuthContext);
@@ -28,19 +28,11 @@ const RoutesGroup = () => {
       <Routes>
         {user?.id && (
           <>
-            <Route
+            {env === "dev" && <Route
               path="/play/workshop/new"
               element={<WorkshopBuilderCreatePage />}
-            />
-            <Route
-              path="/play/workshop/edit/:riddleId"
-              element={<WorkshopBuilderEditPage />}
-            />
+            />}
             <Route path="/play/workshop" element={<WorkshopPage />} />
-            <Route
-              path="/play/workshop/my-riddles"
-              element={<WorkshopMyRiddlesPage />}
-            />
             <Route
               path="/play/workshop/:riddleId"
               element={<WorkshopPlayPage />}

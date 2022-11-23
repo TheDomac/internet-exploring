@@ -3,18 +3,6 @@ const steamworks = require("steamworks.js")
 const { app, BrowserWindow, ipcMain } = require("electron");
 const isDev = require("electron-is-dev");
 
-const firebaseApp = require("firebase/app");
-const firebaseConfig = require("../src/common/firebaseConfig");
-
-firebaseApp.initializeApp(firebaseConfig)
-const firebaseStorage = require("firebase/storage")
-const getStorage = firebaseStorage.getStorage
-const storage = getStorage()
-
-const ref = firebaseStorage.ref
-const uploadBytes = firebaseStorage.uploadBytes
-const getDownloadURL = firebaseStorage.getDownloadURL
-
 let mainWindow;
 let client;
 
@@ -84,23 +72,4 @@ ipcMain.on("fetch-user", (evt, arg) => {
   } catch (error) {
     evt.reply("fetch-user-reply", null)
   }
-});
-
-ipcMain.on("upload-images", async (evt, args) => {
-  const { imagesToUpload, status, imagesToDelete } = args;
-  const userId = client.localplayer.getSteamId().accountId;
-  const uploadedImages = [];
-
-   for (const imageToUpload of imagesToUpload) {
-    const file = await fetch(imageToUpload.value);
-    const fileBlob = await file.blob();
-    const imageRef = ref(storage, `imagesSteam/${userId}/${imageToUpload.id}`);
-    await uploadBytes(imageRef, fileBlob);
-    const downloadURL = await getDownloadURL(imageRef);
-    uploadedImages.push({ id: imageToUpload.id, downloadURL });
-  }
-
-  console.log("UPLOADED IMAGES", JSON.stringify(uploadedImages))
-  evt.reply("upload-images-complete", {uploadedImages, status, imagesToDelete})
-
 });
