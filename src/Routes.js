@@ -11,7 +11,6 @@ import PuzzleList from "./components/PuzzleList";
 import PlayPage from "./components/PlayPage";
 import WorkshopPage from "./components/Workshop";
 import WorkshopBuilderCreatePage from "./components/WorkshopBuilderCreate";
-import ImageSearchPage from "./components/ImageSearch";
 
 import TutorialPage from "./components/Tutorial";
 import TempPage from "./components/Temp";
@@ -19,8 +18,6 @@ import TempPage from "./components/Temp";
 import WorkshopPlayPage from "./components/WorkshopPlay";
 import { useContext } from "react";
 import { AuthContext } from "./common/services/AuthContext";
-import { env } from "./common/consts";
-
 
 
 const RoutesGroup = () => {
@@ -31,10 +28,10 @@ const RoutesGroup = () => {
       <Routes>
         {upgradedUser.isOn && (
           <>
-            {env === "dev" && <Route
+            <Route
               path="/play/workshop/new"
               element={<WorkshopBuilderCreatePage />}
-            />}
+            />
             <Route path="/play/workshop" element={<WorkshopPage />} />
             <Route
               path="/play/workshop/:riddleId"
@@ -47,7 +44,6 @@ const RoutesGroup = () => {
         <Route path="/play" element={<PlayPage />} />
         <Route path="/tutorial" element={<TutorialPage />} />
         <Route path="/temp" element={<TempPage />} />
-        <Route path="/images/:imageId" element={<ImageSearchPage />} />
         <Route path="/" element={<Home />} />
         {loadedAuth.isOn && (
           <Route path="*" element={<Navigate to="/" replace />} />

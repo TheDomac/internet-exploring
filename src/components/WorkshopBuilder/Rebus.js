@@ -32,7 +32,7 @@ const Rebus = ({
         {
           id: newClueValueId,
           value: "",
-          type: clueTypes.NONE,
+          type: clueTypes.TEXT,
           subtext: "",
           style: { width: "calc(100% - 10px)" },
         },

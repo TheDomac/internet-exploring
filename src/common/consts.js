@@ -1,5 +1,6 @@
-export const env = process.env.REACT_APP_STAGE;
+export const env = process.env.REACT_APP_STAGE.toUpperCase();
 
+export const workshopCollectionName = "workshopPuzzles"
 export const clueTypes = {
   TEXT: "text",
   IMAGE: "image",

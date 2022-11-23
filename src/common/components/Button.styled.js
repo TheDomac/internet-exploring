@@ -5,7 +5,6 @@ export const Button = styled.button`
   width: 500px;
   max-width: 80%;
   padding: 20px;
-  background: transparent;
   border-radius: 5px;
   border: 2px solid white;
   color: white;
@@ -16,7 +15,7 @@ export const Button = styled.button`
     rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
   font-family: "Fredoka";
   box-sizing: border-box;
-
+  background: ${({ $primary }) => ($primary ? "#309d6d" : "transparent")};
   ${({ marginBottom }) =>
     marginBottom ? `margin-bottom: ${marginBottom};` : ""}
 
@@ -32,5 +31,6 @@ export const Button = styled.button`
     color: #666;
     border: 2px solid #666;
     cursor: not-allowed;
+    background: transparent;
   }
 `;
