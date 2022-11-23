@@ -86,7 +86,7 @@
                 "style": { "width": "calc(100% - 10px)" },
                 "id": "8df4c054-50a3-4c29-aa7e-66aac83e4fc1",
                 "subtext": "",
-                "value": "https://firebasestorage.googleapis.com/v0/b/rebus-5141f.appspot.com/o/images%2F9O2G5r2t9BYVPRqjhXQlwaCNPyE2%2F8df4c054-50a3-4c29-aa7e-66aac83e4fc1?alt=media&token=030d225d-232d-42ef-9a79-4615ee46514e",
+                "value": "workshop/muWUrHfxMSJVEUt00fug/whichBodyPart.png",
                 "type": "image"
               }
             ]
@@ -125,7 +125,7 @@
             "clueValues": [
               {
                 "style": { "width": "calc(100% - 10px)" },
-                "value": "https://firebasestorage.googleapis.com/v0/b/rebus-5141f.appspot.com/o/images%2F9O2G5r2t9BYVPRqjhXQlwaCNPyE2%2Ffc3eb370-ffd2-473a-93bb-04b6acfd2f53?alt=media&token=4b7dae41-e971-4590-8953-a2ee61d3f520",
+                "value": "workshop/muWUrHfxMSJVEUt00fug/water.png",
                 "subtext": "",
                 "type": "image",
                 "id": "fc3eb370-ffd2-473a-93bb-04b6acfd2f53"
@@ -193,7 +193,7 @@
                 "type": "image",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "value": "https://firebasestorage.googleapis.com/v0/b/rebus-5141f.appspot.com/o/images%2F9O2G5r2t9BYVPRqjhXQlwaCNPyE2%2F78820156-918f-473e-85c5-3db01a837e46?alt=media&token=d9385122-0e17-4b26-b5c9-cbea8bee10af"
+                "value": "workshop/muWUrHfxMSJVEUt00fug/cesar.png"
               }
             ],
             "style": { "width": "calc(33% - 10px)" },
@@ -243,7 +243,7 @@
                 "style": { "width": "calc(100% - 10px)" },
                 "subtext": "",
                 "type": "image",
-                "value": "https://firebasestorage.googleapis.com/v0/b/rebus-5141f.appspot.com/o/images%2F9O2G5r2t9BYVPRqjhXQlwaCNPyE2%2Fe03bff03-b986-4260-94b0-5707427703e8?alt=media&token=41ff20b0-2be1-41c1-93a0-43f03e6c393f",
+                "value": "workshop/muWUrHfxMSJVEUt00fug/rachel.png",
                 "id": "e03bff03-b986-4260-94b0-5707427703e8"
               }
             ]
@@ -257,7 +257,7 @@
                 "type": "image",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "value": "https://firebasestorage.googleapis.com/v0/b/rebus-5141f.appspot.com/o/images%2F9O2G5r2t9BYVPRqjhXQlwaCNPyE2%2F72aa9024-e590-4851-89cd-1b756ebfb96d?alt=media&token=f93702f3-e364-40b3-87fd-4ff81f7bc206"
+                "value": "workshop/muWUrHfxMSJVEUt00fug/hector.png"
               }
             ],
             "solutionInfo": {

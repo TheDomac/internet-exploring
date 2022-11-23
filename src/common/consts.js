@@ -1,10 +1,4 @@
-export const env = process.env.REACT_APP_STAGE.toUpperCase();
-
-export const workshopCollectionName =
-  process.env[`REACT_APP_COLLECTION_${env}`];
-
-export const toBeDeletedCollectionName =
-  process.env[`REACT_APP_TO_BE_DELETED_${env}`];
+export const env = process.env.REACT_APP_STAGE;
 
 export const clueTypes = {
   TEXT: "text",

@@ -1,11 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useContext, Fragment } from "react";
+import { Fragment } from "react";
 
 import { Button } from "../../common/components/Button.styled";
-import { CheckboxButton } from "../../common/components/CheckboxButton.styled";
 import ArrowBack from "../../common/components/ArrowBack";
-import { WorkshopContext } from "../../common/services/WorkshopContext";
 import {
   PuzzleBox,
   Wrapper,
@@ -24,13 +22,8 @@ export const TextLink = styled.a`
 const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
 
 const Workshop = () => {
-  const navigate = useNavigate();
-  const { initPuzzle } = useContext(WorkshopContext);
 
-  const handleCreateNewRiddleClick = () => {
-    initPuzzle();
-    navigate("/play/workshop/new");
-  };
+  const handleCreateNewRiddleClick = () => {};
 
   const workshopSolvedPuzzlesIDs =
     localStorage.getItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS) ||
@@ -57,22 +50,6 @@ const Workshop = () => {
           >
             Create new riddle
           </Button>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: 15,
-          }}
-        >
-          <Link to="/play/workshop">
-            <CheckboxButton $isChecked style={{ width: 245 }}>
-              Workshop
-            </CheckboxButton>
-          </Link>
-          <Link to="/play/workshop/my-riddles">
-            <CheckboxButton style={{ width: 245 }}>My riddles</CheckboxButton>
-          </Link>
         </div>
 
         <div style={{ display: "flex", flexWrap: "wrap" }}>

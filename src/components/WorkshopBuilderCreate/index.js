@@ -1,18 +1,11 @@
 import { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
 
 import Modal, { ButtonsWrapper, Text } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
-import getImageClueValues from "../../common/services/getImageClueValues";
-import uploadImages from "../../common/services/uploadImages";
-import { db } from "../../common/firebase";
 import {
   LOCAL_STORAGE_KEYS,
   RIDDLE_STATUSES,
-  workshopCollectionName,
-  clueTypes,
 } from "../../common/consts";
 import { Button } from "../../common/components/Button.styled";
 import { AuthContext } from "../../common/services/AuthContext";
@@ -53,7 +46,6 @@ const WorkshopBuilderCreate = () => {
   const saveLoading = useToggle();
   const saveError = useToggle();
   const preview = useToggle();
-  const navigate = useNavigate();
 
   const [userNickname, setUserNickname] = useState(initialUserNickname || "");
   const [userSocialMediaURL, setUserSocialMediaURL] = useState(
@@ -72,10 +64,6 @@ const WorkshopBuilderCreate = () => {
     setUserSocialMediaURL(e.target.value);
   };
 
-  // const handleSave = () => {
-  //   console.log(puzzle)
-  // }
-
   const handleSave = async (e) => {
     const isDraft = e.target.name === "draft";
     const status = isDraft
@@ -88,49 +76,18 @@ const WorkshopBuilderCreate = () => {
       userSocialMediaURL
     );
 
-    try {
-      saveLoading.setOn();
-      saveError.setOff();
+    const newPuzzle = {
+      ...puzzle,
+      uid: user.uid,
+      status,
+      userNickname,
+      userSocialMediaURL,
+      message: "",
+    };
 
-      const imageClueValues = getImageClueValues(puzzle.rebuses);
-      const uploadedImages = await uploadImages(imageClueValues, user.uid);
-      const newPuzzle = {
-        ...puzzle,
-        uid: user.uid,
-        status,
-        userNickname,
-        userSocialMediaURL,
-        message: "",
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp(),
-        rebuses: puzzle.rebuses.map((r) => ({
-          ...r,
-          clues: r.clues.map((c) => ({
-            ...c,
-            clueValues: c.clueValues.map((cv) => {
-              if (cv.type !== clueTypes.IMAGE) {
-                return cv;
-              }
-              const foundUploadedImage = uploadedImages.find(
-                (icv) => icv.id === cv.id
-              ).downloadURL;
-              return {
-                ...cv,
-                value: foundUploadedImage,
-              };
-            }),
-          })),
-        })),
-      };
-
-      await addDoc(collection(db, workshopCollectionName), newPuzzle);
-      saveLoading.setOff();
-      navigate(`/play/workshop/my-riddles?successStatus=${status}`);
-    } catch (error) {
-      saveError.setOn();
-      saveLoading.setOff();
-    }
-  };
+    console.log("newPuzzle")
+    console.log(newPuzzle)
+};
 
   const handleCloseModal = () => {
     saveModal.setOff();

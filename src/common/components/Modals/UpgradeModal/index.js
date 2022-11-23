@@ -86,8 +86,7 @@ const UpgradeModal = () => {
                 borderRadius: "5px",
               }}
             >
-              Workshop where you can play riddles made by other players or
-              create your own.
+              Workshop where you can play riddles made by other players.
             </p>
 
             {user ? (
