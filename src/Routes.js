@@ -19,8 +19,6 @@ import TempPage from "./components/Temp";
 import WorkshopPlayPage from "./components/WorkshopPlay";
 import { AuthContext } from "./common/services/AuthContext";
 
-import { env } from "./common/consts";
-
 const RoutesGroup = () => {
   const { user, loadedAuth } = useContext(AuthContext);
   return (
@@ -28,10 +26,10 @@ const RoutesGroup = () => {
       <Routes>
         {user?.id && (
           <>
-            {env === "dev" && <Route
+            <Route
               path="/play/workshop/new"
               element={<WorkshopBuilderCreatePage />}
-            />}
+            />
             <Route path="/play/workshop" element={<WorkshopPage />} />
             <Route
               path="/play/workshop/:riddleId"

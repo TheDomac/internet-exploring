@@ -1,12 +1,16 @@
 import { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
-import Modal, { ButtonsWrapper } from "../../common/components/Modal";
+import Modal, { ButtonsWrapper, Text, ModalInfo } from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import {
   LOCAL_STORAGE_KEYS,
   RIDDLE_STATUSES,
+  workshopCollectionName
 } from "../../common/consts";
+import { db } from "../../common/firebase";
 import { Button } from "../../common/components/Button.styled";
 import Alert from "../../common/components/Alert.styled";
 import ArrowBack from "../../common/components/ArrowBack";
@@ -34,6 +38,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
 );
 
 const WorkshopBuilderCreate = () => {
+  const navigate = useNavigate()
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
   const { user } = useContext(AuthContext);
 
@@ -41,6 +46,7 @@ const WorkshopBuilderCreate = () => {
   const saveLoading = useToggle();
   const saveError = useToggle();
   const preview = useToggle();
+  const arrivalModal = useToggle(true)
 
   const [userNickname, setUserNickname] = useState(user.nickname);
   const [userSocialMediaURL, setUserSocialMediaURL] = useState(
@@ -60,11 +66,6 @@ const WorkshopBuilderCreate = () => {
   };
 
   const handleSave = async (e) => {
-    const isDraft = e.target.name === "draft";
-    const status = isDraft
-      ? RIDDLE_STATUSES.DRAFT
-      : RIDDLE_STATUSES.NEEDS_APPROVAL;
-
     localStorage.setItem(LOCAL_STORAGE_KEYS.USER_NICKNAME, userNickname);
     localStorage.setItem(
       LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL,
@@ -74,14 +75,25 @@ const WorkshopBuilderCreate = () => {
     const newPuzzle = {
       ...puzzle,
       uid: user.id,
-      status,
       userNickname,
       userSocialMediaURL,
-      message: "",
+      createdAt: serverTimestamp()
     };
 
-    console.log("newPuzzle")
+    saveError.setOff();
     console.log(newPuzzle)
+    saveLoading.setOn();
+
+    try {
+      await addDoc(collection(db, workshopCollectionName), newPuzzle);
+      saveLoading.setOff();
+      navigate(`/play/workshop?successStatus=true`);
+    } catch (error) {
+      console.log("ERROR")
+      console.log(error)
+      saveError.setOn()
+      saveLoading.setOff();
+    }
   };
 
 
@@ -108,6 +120,27 @@ const WorkshopBuilderCreate = () => {
 
   return (
     <>
+              {arrivalModal.isOn &&       <Modal
+        isModalShown={arrivalModal.isOn}
+        onClose={arrivalModal.setOff}
+      >
+        <ModalInfo
+          onClose={arrivalModal.setOff}
+        >
+          <Text style={{ fontSize: 25}}>
+              Welcome to workshop builder!
+          </Text>
+          <Text>
+
+          If you have an idea for a riddle feel free to create a mockup for it here and then submit it for review. Internet Exploring will contact you as soon as review process is done.
+          </Text>
+          <Text>
+            Thank you for playing Internet Exploring!
+
+          </Text>
+          </ModalInfo>
+      </Modal>
+}
       {saveModal.isOn && (
         <Modal isModalShown={saveModal.isOn} onClose={handleCloseModal}>
           {saveError.isOn ? (
@@ -135,25 +168,17 @@ const WorkshopBuilderCreate = () => {
                   type="text"
                   value={userSocialMediaURL}
                   onChange={handleUserSocialMediaURLChange}
-                  placeholder="Your social media link"
+                  placeholder="Your e-mail or social media link"
                 />
               </>
               <ButtonsWrapper>
                 <Button
-                  disabled={saveLoading.isOn || !userNickname}
+                  $primary
+                  disabled={saveLoading.isOn || !userNickname || !userSocialMediaURL}
                   onClick={handleSave}
                   style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
                 >
-                  Save for review
-                </Button>
-
-                <Button
-                  disabled={saveLoading.isOn || !userNickname}
-                  name="draft"
-                  onClick={handleSave}
-                  style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
-                >
-                  Save as draft
+                  Submit
                 </Button>
                 <Button
                   style={{ fontSize: 16, flex: 1 }}

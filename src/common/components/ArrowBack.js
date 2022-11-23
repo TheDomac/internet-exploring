@@ -7,6 +7,7 @@ const ArrowWrapper = styled.div`
   left: 10px;
   width: 100px;
   cursor: pointer;
+  z-index: 3;
 `;
 
 const StyledSvg = styled.svg`
