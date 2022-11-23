@@ -1,6 +1,6 @@
 export const env = process.env.REACT_APP_STAGE.toUpperCase();
 
-export const workshopCollectionName = "workshopPuzzles"
+export const workshopCollectionName = "workshopPuzzles";
 export const clueTypes = {
   TEXT: "text",
   IMAGE: "image",
@@ -37,20 +37,6 @@ export const LOCAL_STORAGE_KEYS = {
   USER_NICKNAME: "userNickname",
   USER_SOCIAL_MEDIA_URL: "userSocialMediaURL",
   WORKSHOP_SOLVED_PUZZLES_IDS: "workshopSolvedPuzzlesIDs",
-};
-
-export const RIDDLE_STATUSES = {
-  DRAFT: "draft",
-  DONE: "done",
-  NEEDS_APPROVAL: "needs_approval",
-  DENIED: "denied",
-};
-
-export const RIDDLE_STATUSES_TITLES = {
-  [RIDDLE_STATUSES.DRAFT]: "Draft",
-  [RIDDLE_STATUSES.DONE]: "Approved",
-  [RIDDLE_STATUSES.NEEDS_APPROVAL]: "Waiting for approval",
-  [RIDDLE_STATUSES.DENIED]: "Rejected",
 };
 
 export const statuses = {

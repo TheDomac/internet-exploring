@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-import Modal, { ButtonsWrapper, Text, ModalInfo } from "../../common/components/Modal";
+import Modal, {
+  ButtonsWrapper,
+  Text,
+  ModalInfo,
+} from "../../common/components/Modal";
 import { useToggle } from "../../common/services/useToggle";
 import {
   LOCAL_STORAGE_KEYS,
-  RIDDLE_STATUSES,
-  workshopCollectionName
+  workshopCollectionName,
 } from "../../common/consts";
 import { db } from "../../common/firebase";
 import { Button } from "../../common/components/Button.styled";
@@ -38,7 +41,7 @@ const initialUserSocialMediaURL = localStorage.getItem(
 );
 
 const WorkshopBuilderCreate = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { initPuzzle, puzzle } = useContext(WorkshopContext);
   const { user } = useContext(AuthContext);
 
@@ -46,7 +49,7 @@ const WorkshopBuilderCreate = () => {
   const saveLoading = useToggle();
   const saveError = useToggle();
   const preview = useToggle();
-  const arrivalModal = useToggle(true)
+  const arrivalModal = useToggle(true);
 
   const [userNickname, setUserNickname] = useState(user.nickname);
   const [userSocialMediaURL, setUserSocialMediaURL] = useState(
@@ -77,11 +80,11 @@ const WorkshopBuilderCreate = () => {
       uid: user.id,
       userNickname,
       userSocialMediaURL,
-      createdAt: serverTimestamp()
+      createdAt: serverTimestamp(),
     };
 
     saveError.setOff();
-    console.log(newPuzzle)
+    console.log(newPuzzle);
     saveLoading.setOn();
 
     try {
@@ -89,13 +92,12 @@ const WorkshopBuilderCreate = () => {
       saveLoading.setOff();
       navigate(`/play/workshop?successStatus=true`);
     } catch (error) {
-      console.log("ERROR")
-      console.log(error)
-      saveError.setOn()
+      console.log("ERROR");
+      console.log(error);
+      saveError.setOn();
       saveLoading.setOff();
     }
   };
-
 
   const handleCloseModal = () => {
     saveModal.setOff();
@@ -120,27 +122,19 @@ const WorkshopBuilderCreate = () => {
 
   return (
     <>
-              {arrivalModal.isOn &&       <Modal
-        isModalShown={arrivalModal.isOn}
-        onClose={arrivalModal.setOff}
-      >
-        <ModalInfo
-          onClose={arrivalModal.setOff}
-        >
-          <Text style={{ fontSize: 25}}>
-              Welcome to workshop builder!
-          </Text>
-          <Text>
-
-          If you have an idea for a riddle feel free to create a mockup for it here and then submit it for review. Internet Exploring will contact you as soon as review process is done.
-          </Text>
-          <Text>
-            Thank you for playing Internet Exploring!
-
-          </Text>
+      {arrivalModal.isOn && (
+        <Modal isModalShown={arrivalModal.isOn} onClose={arrivalModal.setOff}>
+          <ModalInfo onClose={arrivalModal.setOff}>
+            <Text style={{ fontSize: 25 }}>Welcome to workshop builder!</Text>
+            <Text>
+              If you have an idea for a riddle feel free to create a mockup for
+              it here and then submit it for review. Internet Exploring will
+              contact you as soon as review process is done.
+            </Text>
+            <Text>Thank you for playing Internet Exploring!</Text>
           </ModalInfo>
-      </Modal>
-}
+        </Modal>
+      )}
       {saveModal.isOn && (
         <Modal isModalShown={saveModal.isOn} onClose={handleCloseModal}>
           {saveError.isOn ? (
@@ -174,7 +168,9 @@ const WorkshopBuilderCreate = () => {
               <ButtonsWrapper>
                 <Button
                   $primary
-                  disabled={saveLoading.isOn || !userNickname || !userSocialMediaURL}
+                  disabled={
+                    saveLoading.isOn || !userNickname || !userSocialMediaURL
+                  }
                   onClick={handleSave}
                   style={{ marginRight: "10px", flex: 1, fontSize: 16 }}
                 >

@@ -156,7 +156,7 @@
       "style": {},
       "clues": [
         {
-          "clueGroup": 1,
+          "clueGroup": 0,
           "clueValues": [
             {
               "type": "image",
@@ -200,7 +200,7 @@
           }
         },
         {
-          "clueGroup": 1,
+          "clueGroup": 0,
           "clueValues": [
             {
               "id": "73076672-c643-425d-bc79-e9e0b7ff69d2",
