@@ -19,7 +19,6 @@ import WorkshopPlayPage from "./components/WorkshopPlay";
 import { useContext } from "react";
 import { AuthContext } from "./common/services/AuthContext";
 
-
 const RoutesGroup = () => {
   const { upgradedUser, loadedAuth } = useContext(AuthContext);
 

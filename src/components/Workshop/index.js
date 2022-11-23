@@ -64,11 +64,14 @@ const Workshop = () => {
           </Button>
         </div>
         {successAlertStatus && (
-          <Alert style={{ marginBottom: 15, textAlign: "center" }} $type="success">
-            Thank you for submitting your mockup! You will receive a message on the contact info that you submitted soon!
+          <Alert
+            style={{ marginBottom: 15, textAlign: "center" }}
+            $type="success"
+          >
+            Thank you for submitting your mockup! You will receive a message on
+            the contact info that you submitted soon!
           </Alert>
         )}
-
 
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {workshopPuzzles.map((puzzle) => (
