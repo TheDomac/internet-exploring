@@ -2,7 +2,7 @@
   "name": "internet-exploring",
   "description": "What if the Internet was your escape room?",
   "homepage": "./",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": "public/electron.js",
   "author": "Domagoj Zganec",
   "private": true,
