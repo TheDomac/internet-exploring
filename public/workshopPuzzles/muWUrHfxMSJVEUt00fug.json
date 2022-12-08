@@ -408,12 +408,5 @@
         ]
       }
     ],
-    "name": "A note of achievement",
-    "userNickname": "TheDomac",
-    "status": "done",
-    "message": "",
-    "userSocialMediaURL": "https://www.reddit.com/user/TheDomac",
-    "updatedAt": { "seconds": 1658243588, "nanoseconds": 268000000 },
-    "uid": "9O2G5r2t9BYVPRqjhXQlwaCNPyE2",
-    "createdAt": { "seconds": 1658243588, "nanoseconds": 268000000 }
+    "name": "A note of achievement"
   }
