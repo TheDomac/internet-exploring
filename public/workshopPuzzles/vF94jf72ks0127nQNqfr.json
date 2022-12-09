@@ -9,9 +9,9 @@
             "style": { "width": "calc(33% - 10px)" },
             "clueValues": [
               {
-                "type": "text",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/squidGame.png",
                 "id": "ff2fc50e-5f95-4a9c-8057-ffeefba9fbd9",
-                "value": "Squid game",
                 "style": { "width": "calc(100% - 10px)" },
                 "subtext": ""
               }
@@ -31,11 +31,11 @@
             "style": { "width": "calc(33% - 10px)" },
             "clueValues": [
               {
-                "value": "Money Heist",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/moneyHeist.png",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "id": "ccdd377c-e3a9-4da0-af5a-c11d6c8a1cc5",
-                "type": "text"
+                "id": "ccdd377c-e3a9-4da0-af5a-c11d6c8a1cc5"
               }
             ],
             "dependsOn": [],
@@ -54,8 +54,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "The Queen's Gambit",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/queensGambit.png",
                 "subtext": "",
                 "id": "6d5a8ac4-963a-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
@@ -94,12 +94,12 @@
           {
             "clueGroup": 0,
             "id": "111111-mjzjj-49a5-bfe9-3320c267d718",
-            "style": { "width": "calc(33% - 10px)" },
+            "style": { "width": "calc(50% - 10px)" },
             "clueValues": [
               {
-                "type": "text",
                 "id": "ff2fc50e-5f95-4a9c-8057-ffeefba9fbd9",
-                "value": "Ratatouille",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/ratatouille.png",
                 "style": { "width": "calc(100% - 10px)" },
                 "subtext": ""
               }
@@ -116,14 +116,14 @@
             "dependsOn": []
           },
           {
-            "style": { "width": "calc(33% - 10px)" },
+            "style": { "width": "calc(50% - 10px)" },
             "clueValues": [
               {
-                "value": "Up",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/up.png",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "id": "ccdd377c-e3a9-4da0-af5a-c11d6c8a1cc5",
-                "type": "text"
+                "id": "ccdd377c-e3a9-4da0-af5a-c11d6c8a1cc5"
               }
             ],
             "dependsOn": [],
@@ -142,8 +142,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "Finding Nemo",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/findingNemo.png",
                 "subtext": "",
                 "id": "6d5a8ac4-33qa-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
@@ -154,7 +154,7 @@
             "helperText": "",
             "id": "9485250b-1b39-gfgf-9348-2417e9579a43",
             "subtext": "",
-            "style": { "width": "calc(33% - 10px)" },
+            "style": { "width": "calc(50% - 10px)" },
             "solutionInfo": {
               "type": "text",
               "possibleSolutions": [
@@ -182,9 +182,9 @@
             "style": { "width": "calc(33% - 10px)" },
             "clueValues": [
               {
-                "type": "text",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/thor.png",
                 "id": "87687-5f95-4a9c-8057-ffeefba9fbd9",
-                "value": "Thor",
                 "style": { "width": "calc(100% - 10px)" },
                 "subtext": ""
               }
@@ -204,11 +204,11 @@
             "style": { "width": "calc(33% - 10px)" },
             "clueValues": [
               {
-                "value": "The Incredible Hulk",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/hulk.png",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "id": "ccdd377c-e3a9-6655-af5a-c11d6c8a1cc5",
-                "type": "text"
+                "id": "ccdd377c-e3a9-6655-af5a-c11d6c8a1cc5"
               }
             ],
             "dependsOn": [],
@@ -228,8 +228,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "Iron Man",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/ironman.png",
                 "subtext": "",
                 "id": "1s34-33qa-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
@@ -253,8 +253,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "Ghost Rider",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/ghostRider.png",
                 "subtext": "",
                 "id": "1s34-33qa-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
@@ -277,8 +277,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "Doctor Strange",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/doctorStrange.png",
                 "subtext": "",
                 "id": "ht4rhnmu-33qa-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
@@ -303,8 +303,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "Deadpool",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/deadpool.png",
                 "subtext": "",
                 "id": "otototo-33qa-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
@@ -344,9 +344,9 @@
             "style": { "width": "calc(33% - 10px)" },
             "clueValues": [
               {
-                "type": "text",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/silenceOfTheLambs.png",
                 "id": "tutututut-5f95-4a9c-8057-ffeefba9fbd9",
-                "value": "Silence of the Lambs",
                 "style": { "width": "calc(100% - 10px)" },
                 "subtext": ""
               }
@@ -366,11 +366,11 @@
             "style": { "width": "calc(33% - 10px)" },
             "clueValues": [
               {
-                "value": "Doctor Who",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/doctorWho.png",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "id": "qwxhhn-e3a9-4da0-af5a-c11d6c8a1cc5",
-                "type": "text"
+                "id": "qwxhhn-e3a9-4da0-af5a-c11d6c8a1cc5"
               }
             ],
             "dependsOn": [],
@@ -390,11 +390,11 @@
             "style": { "width": "calc(33% - 10px)" },
             "clueValues": [
               {
-                "value": "The Wolf of Wall Street",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/wolfOfWallStreet.png",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "id": "vbvgvgdfhd-e3a9-4da0-af5a-c11d6c8a1cc5",
-                "type": "text"
+                "id": "vbvgvgdfhd-e3a9-4da0-af5a-c11d6c8a1cc5"
               }
             ],
             "dependsOn": [],
@@ -414,8 +414,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "Back to the Future",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/backToTheFuture.png",
                 "subtext": "",
                 "id": "sadasda-963a-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
@@ -438,8 +438,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "Game of Thrones",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/gameOfThrones.png",
                 "subtext": "",
                 "id": "rrrttt-963a-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
@@ -462,8 +462,8 @@
           {
             "clueValues": [
               {
-                "type": "text",
-                "value": "Home Alone",
+                "type": "image",
+                "value": "workshop/vF94jf72ks0127nQNqfr/homeAlone.png",
                 "subtext": "",
                 "id": "ntttr-963a-461d-9be5-ca5d58b7fe46",
                 "style": { "width": "calc(100% - 10px)" }
