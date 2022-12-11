@@ -309,12 +309,10 @@
     {
       "style": {},
       "solutionInfo": {
-        "possibleSolutions": [
-          {
-            "id": "d55b2568-f9e9-430a-bb35-4dcc2883efee",
-            "value": "Wood"
-          }
-        ],
+        "possibleSolutions": [{
+          "id": "d55b2568-f9e9-430a-bb35-4dcc2883efee",
+          "value": "Wood"
+        }],
         "type": "text",
         "solvedText": "Wood"
       },
@@ -340,7 +338,9 @@
           "solutionInfo": {
             "type": "text",
             "solvedText": "",
-            "possibleSolutions": []
+            "possibleSolutions": [
+              
+            ]
           },
           "clueGroup": 0,
           "helperText": "It's the last name of an actor playing a ring bearer from The Lord of the Rings.",

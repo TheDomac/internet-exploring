@@ -181,12 +181,10 @@
           "solutionInfo": {
             "solvedText": "ASCII",
             "type": "text",
-            "possibleSolutions": [
-              {
-                "value": "ASCII",
-                "id": "11114d2-76d6-40dd-b540-455d56491c45"
-              }
-            ]
+            "possibleSolutions": [{
+              "value": "ASCII",
+              "id": "11114d2-76d6-40dd-b540-455d56491c45"
+            }]
           },
           "clueValues": [
             {
@@ -206,6 +204,7 @@
               "value": "9d120b63-cd86-40d1-b67d-f2ea442d8a31",
               "id": "11114c72-d8d2-44d0-9805-a18c98910340"
             }
+
           ],
           "style": {
             "width": "calc(100% - 10px)",
@@ -234,12 +233,10 @@
         }
       ],
       "solutionInfo": {
-        "possibleSolutions": [
-          {
-            "value": "Napoli",
-            "id": "f8f714d2-76d6-40dd-b540-455d56491c45"
-          }
-        ],
+        "possibleSolutions": [{
+          "value": "Napoli",
+          "id": "f8f714d2-76d6-40dd-b540-455d56491c45"
+        }],
         "type": "text",
         "solvedText": "Napoli"
       },
@@ -341,6 +338,7 @@
           },
           "dependsOn": []
         }
+
       ]
     }
   ]
