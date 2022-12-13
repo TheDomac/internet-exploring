@@ -222,7 +222,6 @@ const PuzzleContextProvider = ({ children }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [puzzleSolvingState]);
 
-  console.log("----", allPuzzles)
   const value = {
     puzzle,
     initPuzzle,
