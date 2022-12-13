@@ -11,8 +11,8 @@ import { AuthContext } from "../../../services/AuthContext";
 import { PaymentContext } from "../../../services/PaymentContext";
 import LoginForm from "../../LoginForm";
 import { env, statuses } from "../../../consts";
-import puzzles from "../../../data/puzzles";
 import { analytics } from "../../../firebase";
+import { PuzzleContext } from "../../../services/PuzzleContext";
 
 export const Wrapper = styled.div`
   text-align: center;
@@ -26,6 +26,7 @@ const UpgradeModal = () => {
   const [upgradeStatus, setUpgradeStatus] = useState(statuses.IDLE);
   const { user, upgradedUser } = useContext(AuthContext);
   const { upgradeModal } = useContext(PaymentContext);
+  const { allPuzzles } = useContext(PuzzleContext);
   const loginStep = useToggle();
 
   const handlePaymentClick = async () => {
@@ -76,7 +77,7 @@ const UpgradeModal = () => {
                 borderRadius: "5px",
               }}
             >
-              All {puzzles.length * 4} unique riddles ({puzzles.length} * 4) as
+              All {allPuzzles ? allPuzzles.puzzles.length * 4 : ""} unique riddles {allPuzzles && `(${allPuzzles.puzzles.length} * 4})`} as
               well as all future riddles that will be added to the list.
             </p>
             <p

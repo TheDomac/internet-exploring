@@ -29,7 +29,6 @@ export const WorkshopContext = createContext();
 const WorkshopContextProvider = ({ children }) => {
   const [puzzle, setPuzzle] = useState(null);
   const [selectedRebusId, setSelectedRebusId] = useState(null);
-  const [workshopPlayPuzzle, setWorkshopPlayPuzzle] = useState(null);
 
   const initPuzzle = async (fetchedPuzzle) => {
     if (fetchedPuzzle) {
@@ -47,8 +46,6 @@ const WorkshopContextProvider = ({ children }) => {
     selectedRebusId,
     setSelectedRebusId,
     initPuzzle,
-    workshopPlayPuzzle,
-    setWorkshopPlayPuzzle,
   };
 
   return (

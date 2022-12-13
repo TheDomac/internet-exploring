@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useMemo } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 
@@ -6,9 +6,8 @@ import CommonPuzzle from "../../common/components/Puzzle";
 import ArrowBack from "../../common/components/ArrowBack";
 import { useToggle } from "../../common/services/useToggle";
 
-import { WorkshopContext } from "../../common/services/WorkshopContext";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
-import workshopPuzzles from "../../common/data/workshopPuzzles.js";
+import { PuzzleContext } from "../../common/services/PuzzleContext";
 
 const WorkshopPlayPage = () => {
   const { riddleId } = useParams();
@@ -17,8 +16,7 @@ const WorkshopPlayPage = () => {
   const error = useToggle();
 
   const [fetchedPuzzle, setFetchedPuzzle] = useState(null);
-  const { workshopPlayPuzzle, setWorkshopPlayPuzzle } =
-    useContext(WorkshopContext);
+  const { allPuzzles } = useContext(PuzzleContext)
 
   const fetchPuzzle = async () => {
     try {
@@ -38,21 +36,17 @@ const WorkshopPlayPage = () => {
     }
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const publishedPuzzle = useMemo(
-    () => workshopPuzzles.find((p) => p.id === riddleId),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
-
   useEffect(() => {
-    const isCorrectWorkshopPlayPuzzle = workshopPlayPuzzle?.id === riddleId;
+    if (!allPuzzles) {
+      return;
+    }
+    const foundPuzzle = allPuzzles.workshopPuzzles.find((p) => p.id === riddleId)
 
-    if (publishedPuzzle && !isCorrectWorkshopPlayPuzzle) {
+    if (foundPuzzle) {
       fetchPuzzle();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [allPuzzles]);
 
   const handleFinish = () => {
     const workshopSolvedPuzzlesIDs = localStorage.getItem(
@@ -70,12 +64,10 @@ const WorkshopPlayPage = () => {
       );
     }
 
-    setWorkshopPlayPuzzle(null);
     navigate("/play/workshop");
   };
 
   const handleRedirect = () => {
-    setWorkshopPlayPuzzle(null);
     navigate("/play/workshop");
   };
 
@@ -95,13 +87,11 @@ const WorkshopPlayPage = () => {
     );
   }
 
-  const puzzle = fetchedPuzzle || workshopPlayPuzzle;
-
   return (
-    puzzle && (
+    fetchedPuzzle && (
       <>
         <CommonPuzzle
-          selectedPuzzle={puzzle}
+          selectedPuzzle={fetchedPuzzle}
           handleFinishClick={handleFinish}
           loading={loading.isOn}
           error={error.isOn}

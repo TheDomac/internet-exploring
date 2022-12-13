@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { logEvent } from "firebase/analytics";
 
 import ArrowBack from "../../common/components/ArrowBack";
-import puzzles from "../../common/data/puzzles";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
 import { PaymentContext } from "../../common/services/PaymentContext";
 import { AuthContext } from "../../common/services/AuthContext";
@@ -24,7 +23,7 @@ import { HomeButton } from "../Home/index.styled";
 import { analytics } from "../../common/firebase";
 
 const PuzzleList = () => {
-  const { puzzlesSolvingSync } = useContext(PuzzleContext);
+  const { puzzlesSolvingSync, allPuzzles } = useContext(PuzzleContext);
   const { upgradedUser } = useContext(AuthContext);
   const { upgradeModal } = useContext(PaymentContext);
 
@@ -32,6 +31,10 @@ const PuzzleList = () => {
     logEvent(analytics, "puzzle_list_shown");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  if (!allPuzzles) {
+    return null
+  }
 
   const renderPuzzle = (puzzle) => (
     <PuzzleRow key={puzzle.id}>
@@ -77,7 +80,7 @@ const PuzzleList = () => {
     <Wrapper>
       {upgradedUser.isOn ? (
         <>
-          {puzzles.map(renderPuzzle)}
+          {allPuzzles.puzzles.map(renderPuzzle)}
           <p style={{ textAlign: "center" }}>
             This list is frequently getting updated. Check out{" "}
             <Link style={{ textDecoration: "none" }} to="/play/workshop">
@@ -91,7 +94,7 @@ const PuzzleList = () => {
         </>
       ) : (
         <>
-          {puzzles.slice(0, NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
+          {allPuzzles.puzzles.slice(0, NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
           <div style={{ position: "relative" }}>
             <HomeButton
               style={{
@@ -116,7 +119,7 @@ const PuzzleList = () => {
               }}
             />
             <BlurredWrapper>
-              {puzzles.slice(NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
+              {allPuzzles.puzzles.slice(NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
             </BlurredWrapper>
           </div>
         </>

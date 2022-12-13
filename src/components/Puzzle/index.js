@@ -7,15 +7,16 @@ import CommonPuzzle from "../../common/components/Puzzle";
 
 import ArrowBack from "../../common/components/ArrowBack";
 import { AuthContext } from "../../common/services/AuthContext";
-import puzzles from "../../common/data/puzzles";
 import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { useToggle } from "../../common/services/useToggle";
 import { analytics } from "../../common/firebase";
+import { PuzzleContext } from "../../common/services/PuzzleContext";
 
 const Puzzle = () => {
   const params = useParams();
   const navigate = useNavigate();
   const { upgradedUser } = useContext(AuthContext);
+  const { allPuzzles } = useContext(PuzzleContext);
   const [puzzle, setPuzzle] = useState(null);
   const error = useToggle();
   const loading = useToggle(true);
@@ -41,16 +42,20 @@ const Puzzle = () => {
   };
 
   useEffect(() => {
-    const foundRiddle = puzzles.find((p) => p.id === params.puzzleId);
+    if (!allPuzzles) {
+      return;
+    }
+
+    const foundRiddle = allPuzzles.puzzles.find((p) => p.id === params.puzzleId);
     logEvent(analytics, "fetching_riddle", { riddle: foundRiddle?.name });
-    const availablePuzzlesIds = puzzles
+    const availablePuzzlesIds = allPuzzles.puzzles
       .slice(0, NUMBER_OF_FREE_RIDDLES)
       .map((p) => p.id);
     if (upgradedUser.isOn || availablePuzzlesIds.includes(params.puzzleId)) {
       fetchPuzzle();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [upgradedUser.isOn]);
+  }, [upgradedUser.isOn, allPuzzles]);
 
   const handleRedirect = () => {
     navigate("/play/puzzles");

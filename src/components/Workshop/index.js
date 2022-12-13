@@ -12,10 +12,10 @@ import {
   PuzzleLink,
 } from "../../common/components/PuzzleList.styled";
 import { WorkshopContext } from "../../common/services/WorkshopContext";
-import workshopPuzzles from "../../common/data/workshopPuzzles.js";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
 import LoginCorner from "../../common/components/LoginCorner";
 import Alert from "../../common/components/Alert.styled";
+import { PuzzleContext } from "../../common/services/PuzzleContext";
 
 export const TextLink = styled.a`
   color: #309d6d;
@@ -27,6 +27,7 @@ const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
 
 const Workshop = () => {
   const { initPuzzle } = useContext(WorkshopContext);
+  const { allPuzzles } = useContext(PuzzleContext);
   const location = useLocation();
   const navigate = useNavigate();
   const params = new URLSearchParams(location.search);
@@ -41,6 +42,10 @@ const Workshop = () => {
     localStorage.getItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS) ||
     "[]";
   const workshopSolvedPuzzlesIDsParsed = JSON.parse(workshopSolvedPuzzlesIDs);
+
+  if (!allPuzzles) {
+    return null;
+  }
 
   return (
     <>
@@ -74,7 +79,7 @@ const Workshop = () => {
         )}
 
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {workshopPuzzles.map((puzzle) => (
+          {allPuzzles.workshopPuzzles.map((puzzle) => (
             <div key={puzzle.id}>
               <PuzzleLink to={`/play/workshop/${puzzle.id}`}>
                 <PuzzleBox
