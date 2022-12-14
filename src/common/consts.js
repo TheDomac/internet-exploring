@@ -14,6 +14,7 @@ export const solutionTypes = {
   CUSTOM_COMPONENT: "customComponent",
 };
 
+export const INTERNET_EXPLORING_URL = "https://internetexploring.io"
 export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
 export const REDDIT_MY_PROFILE = "https://www.reddit.com/user/TheDomac";
 

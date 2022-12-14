@@ -1,3 +1,5 @@
+import { INTERNET_EXPLORING_URL } from "../../consts";
+
 const ImagesLoader = ({ imagesToLoad, setLoadedImages, loadedImages }) => {
   const markImageAsLoaded = (e) => {
     if (!loadedImages.includes(e.target.name)) {
@@ -7,10 +9,16 @@ const ImagesLoader = ({ imagesToLoad, setLoadedImages, loadedImages }) => {
   return (
     <div style={{ display: "none" }}>
       {imagesToLoad.map((img, i) => {
-        const file =
-          img.startsWith("http") || img.startsWith("blob")
-            ? img
-            : require(`../../../images/${img}`);
+        let file;
+        if (img.startsWith("http") || img.startsWith("blob")) {
+          file = img
+        } else if (img.startsWith("workshop")) {
+          const splitted = img.split("/")
+          file = `${INTERNET_EXPLORING_URL}/static/media/${splitted[splitted.length - 1]}`
+        } else {
+          file = `${INTERNET_EXPLORING_URL}/static/media/${img}`
+        }
+
         return (
           <img
             src={file}

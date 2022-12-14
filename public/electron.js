@@ -2,6 +2,7 @@ const path = require("path");
 const steamworks = require("steamworks.js")
 const { app, BrowserWindow, ipcMain } = require("electron");
 const isDev = require("electron-is-dev");
+const axios = require("axios")
 
 let mainWindow;
 let client;
@@ -71,5 +72,28 @@ ipcMain.on("fetch-user", (evt, arg) => {
     })
   } catch (error) {
     evt.reply("fetch-user-reply", null)
+  }
+});
+
+
+ipcMain.on("fetch-all-riddles", async (evt, arg) => {
+  try {
+    const allRiddles = await axios.get(`https://www.internetexploring.io/allPuzzles.json`, { 
+      headers: { "Accept-Encoding": "gzip,deflate,compress" } 
+  })
+    evt.reply("fetch-all-riddles-reply", allRiddles.data)
+  } catch (error) {
+    evt.reply("fetch-all-riddles-reply", null)
+  }
+});
+
+ipcMain.on("fetch-riddle", async (evt, path) => {
+  try {
+    const riddle = await axios.get(`https://www.internetexploring.io/${path}`, { 
+      headers: { "Accept-Encoding": "gzip,deflate,compress" } 
+  })
+    evt.reply("fetch-riddle-reply", riddle.data)
+  } catch (error) {
+    evt.reply("fetch-riddle-reply", null)
   }
 });

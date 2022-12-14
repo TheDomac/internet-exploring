@@ -10,12 +10,13 @@ const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     ipcRenderer.send("fetch-user");
-  }, []);
+    ipcRenderer.on("fetch-user-reply", (event, newUser) => {
+      setUser(newUser);
+      loadedAuth.setOn();
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-  ipcRenderer.on("fetch-user-reply", (event, newUser) => {
-    setUser(newUser);
-    loadedAuth.setOn();
-  });
 
   const value = {
     user,

@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext } from "react";
 import { useToggle } from "./useToggle";
 import confetti from "canvas-confetti";
+import { ipcRenderer } from "electron";
 import getIsSolved from "./getIsSolved";
 import { LOCAL_STORAGE_KEYS } from "../consts";
 
@@ -33,6 +34,7 @@ const getInitialPuzzleSolvingState = (puzzle) =>
 
 const PuzzleContextProvider = ({ children }) => {
   const [puzzle, setPuzzle] = useState(null);
+  const [allPuzzles, setAllPuzzles] = useState(null);
   const [puzzlesSolvingSync, setPuzzlesSolvingSync] = useState(
     initialPuzzlesSolvingSyncParsed
   );
@@ -46,6 +48,17 @@ const PuzzleContextProvider = ({ children }) => {
   const [viewedHelpClueIds, setViewedHelpClueIds] = useState([]);
   const [helpModalText, setHelpModalText] = useState(null);
   const [copyNotification, setCopyNotification] = useState(null);
+
+    useEffect(() => {
+      ipcRenderer.send("fetch-all-riddles");
+
+
+      ipcRenderer.on("fetch-all-riddles-reply", (event, newAllPuzzles) => {
+        setAllPuzzles(newAllPuzzles);
+      });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
 
   const handleCopyClick = async (copyInfo) => {
     try {
@@ -225,6 +238,7 @@ const PuzzleContextProvider = ({ children }) => {
     updateClueMaintenance,
     updateRebusMaintenance,
     areSolutionsHidden,
+    allPuzzles
   };
 
   return (

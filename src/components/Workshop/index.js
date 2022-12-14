@@ -14,8 +14,9 @@ import {
   PuzzleLink,
 } from "../../common/components/PuzzleList.styled";
 import Alert from "../../common/components/Alert.styled";
-import workshopPuzzles from "../../common/data/workshopPuzzles.js";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
+import { PuzzleContext } from "../../common/services/PuzzleContext";
+import { AuthContext } from "../../common/services/AuthContext";
 
 export const TextLink = styled.span`
   color: #309d6d;
@@ -27,6 +28,8 @@ const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
 
 const Workshop = () => {
   const { initPuzzle } = useContext(WorkshopContext);
+  const { allPuzzles } = useContext(PuzzleContext);
+  const { user, loadedAuth } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const params = new URLSearchParams(location.search);
@@ -46,6 +49,10 @@ const Workshop = () => {
     "[]";
   const workshopSolvedPuzzlesIDsParsed = JSON.parse(workshopSolvedPuzzlesIDs);
 
+  if (!allPuzzles) {
+    return null
+  }
+
   return (
     <>
       <Link to="/play">
@@ -62,8 +69,9 @@ const Workshop = () => {
           <Button
             style={{ maxWidth: "100%" }}
             onClick={handleCreateNewRiddleClick}
+            disabled={loadedAuth.isOn && !user}
           >
-            Create new riddle
+            {loadedAuth.isOn && !user ? "Sign in to Steam to create riddle" :"Create new riddle"}
           </Button>
         </div>
         {successAlertStatus && (
@@ -77,7 +85,7 @@ const Workshop = () => {
         )}
 
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {workshopPuzzles.map((puzzle) => (
+          {allPuzzles.workshopPuzzles.map((puzzle) => (
             <div key={puzzle.id}>
               <PuzzleLink to={`/play/workshop/${puzzle.id}`}>
                 <PuzzleBox

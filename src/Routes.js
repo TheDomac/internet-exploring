@@ -25,19 +25,16 @@ const RoutesGroup = () => {
     <Router>
       <Routes>
         {user?.id && (
-          <>
             <Route
               path="/play/workshop/new"
               element={<WorkshopBuilderCreatePage />}
             />
+        )}
             <Route path="/play/workshop" element={<WorkshopPage />} />
             <Route
               path="/play/workshop/:riddleId"
               element={<WorkshopPlayPage />}
             />
-          </>
-        )}
-
         <Route path="/play/puzzles/:puzzleId" element={<Puzzle />} />
         <Route path="/play/puzzles" element={<PuzzleList />} />
         <Route path="/play" element={<PlayPage />} />
