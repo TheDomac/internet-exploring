@@ -2,10 +2,11 @@ import React from "react";
 
 import { Container } from "../../common/components/Container.styled";
 import LoginCorner from "../../common/components/LoginCorner";
-import { REDDIT_URL } from "../../common/consts";
+import { REDDIT_URL, STEAM_URL } from "../../common/consts";
 
 import LogoImg from "../../images/Logo.png";
 import redditLogo from "../../images/redditLogo.png";
+import steamLogo from "../../images/steamLogo.png";
 import Modal, { ModalInfo } from "../../common/components/Modal";
 import Alert from "../../common/components/Alert.styled";
 import { useToggle } from "../../common/services/useToggle";
@@ -76,16 +77,41 @@ const Home = () => {
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
-        <StyledA rel="noreferrer" href={REDDIT_URL} target="_blank">
+        <div style={{ display: "flex", width: "500px"}}>
+        <StyledA rel="noreferrer" href={STEAM_URL} target="_blank" style={{ width: "100%", 
+              marginRight: "15px"}}>
           <HomeButton
             style={{
+              width: "100%",
               padding: "12px 20px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <span>View latest news</span>
+            <span>Play on Steam</span>
+            <img
+              style={{
+                display: "inline-block",
+                marginLeft: 7,
+                marginRight: 3,
+              }}
+              src={steamLogo}
+              alt="reddit"
+            />
+          </HomeButton>
+        </StyledA>
+        <StyledA rel="noreferrer" href={REDDIT_URL} target="_blank" style={{ width: "100%"}}>
+          <HomeButton
+            style={{
+              width: "100%",
+              padding: "12px 20px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span>Latest news</span>
             <img
               style={{
                 display: "inline-block",
@@ -97,6 +123,8 @@ const Home = () => {
             />
           </HomeButton>
         </StyledA>
+
+        </div>
         <div
           style={{
             display: "flex",

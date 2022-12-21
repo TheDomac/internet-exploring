@@ -17,6 +17,7 @@ export const solutionTypes = {
 export const NUMBER_OF_FREE_RIDDLES = 4;
 
 export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
+export const STEAM_URL = "https://store.steampowered.com/app/2050870/Internet_Exploring/";
 
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",
