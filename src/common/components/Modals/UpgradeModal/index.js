@@ -10,7 +10,7 @@ import { Button } from "../../Button.styled";
 import { AuthContext } from "../../../services/AuthContext";
 import { PaymentContext } from "../../../services/PaymentContext";
 import LoginForm from "../../LoginForm";
-import { env, statuses } from "../../../consts";
+import { env, statuses, STEAM_URL } from "../../../consts";
 import { analytics } from "../../../firebase";
 import { PuzzleContext } from "../../../services/PuzzleContext";
 
@@ -21,6 +21,12 @@ export const Wrapper = styled.div`
     overflow-y: auto;
   }
 `;
+
+export const TextLink = styled.a`
+  color: #309d6d;
+  text-decoration: none;
+`;
+
 
 const UpgradeModal = () => {
   const [upgradeStatus, setUpgradeStatus] = useState(statuses.IDLE);
@@ -104,6 +110,7 @@ const UpgradeModal = () => {
             ) : (
               <>
                 <p>In order to buy, you must sign in first.</p>
+                <p>Internet Exploring is also available on <TextLink rel="noreferrer" href={STEAM_URL} target="_blank">Steam</TextLink>.</p>
                 <Button
                   type="button"
                   style={{ maxWidth: "100%", width: "100%", marginBottom: 20 }}
