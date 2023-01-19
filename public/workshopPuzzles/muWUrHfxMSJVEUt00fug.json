@@ -205,19 +205,31 @@
               "type": "text",
               "possibleSolutions": [
                 {
-                  "id": "11c4b998-ad37-453c-bd4e-2c899bca02a7",
+                  "id": "56b46776-2683-4bf8-b2114-29",
+                  "value": "Julius Caesar"
+                },
+                {
+                  "id": "4cd0fdff-33a1-40f3-9483-30",
                   "value": "Caesar"
                 },
                 {
-                  "value": "Cesar",
-                  "id": "79f8de9e-7ab5-43a6-a469-be01e81b3017"
+                  "id": "bdeb8c4c-3891-47fd-a402-31",
+                  "value": "Cesar"
                 },
                 {
-                  "value": "Julius Caesar",
-                  "id": "de23d8c0-9681-4635-bc6a-07560d9c190a"
+                  "id": "54981ae2-595e-4bf4-a2120-32",
+                  "value": "Cezar"
+                },
+                {
+                  "id": "54981ae2-8676-4bf4-a2120-32",
+                  "value": "Julius Cesar"
+                },
+                {
+                  "id": "54981ae2-8676-4bf4-a2120-32",
+                  "value": "Julius Cezar"
                 }
               ],
-              "solvedText": "Caesar"
+              "solvedText": "Julius Caesar"
             },
             "dependsOn": []
           },

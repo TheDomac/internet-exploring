@@ -286,6 +286,14 @@
           {
             "id": "54981ae2-595e-4bf4-a2120-32",
             "value": "Cezar"
+          },
+          {
+            "id": "54981ae2-8676-4bf4-a2120-32",
+            "value": "Julius Cesar"
+          },
+          {
+            "id": "54981ae2-8676-4bf4-a2120-32",
+            "value": "Julius Cezar"
           }
         ],
         "solvedText": "Julius Caesar"

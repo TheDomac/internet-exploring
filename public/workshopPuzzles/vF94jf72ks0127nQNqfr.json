@@ -379,7 +379,9 @@
             "solutionInfo": {
               "solvedText": "Doctor Who",
               "possibleSolutions": [
-                { "value": "Doctor Who", "id": "tzretew-nd31-43a2-9b11-b1e09076b5e9" }
+                { "value": "Doctor Who", "id": "tzretew-nd31-43a2-9b11-b1e09076b5e9" },
+                { "value": "Dr Who", "id": "2543-nd31-43a2-9b11-b1e09076b5e9" },
+                { "value": "Dr. Who", "id": "2543-nd31-43a2-9b11-b1e09076b5e9" }
               ],
               "type": "text"
             },
