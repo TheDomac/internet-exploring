@@ -16,7 +16,7 @@ const WorkshopPlayPage = () => {
   const error = useToggle();
 
   const [fetchedPuzzle, setFetchedPuzzle] = useState(null);
-  const { allPuzzles } = useContext(PuzzleContext)
+  const { allPuzzles } = useContext(PuzzleContext);
 
   const fetchPuzzle = async () => {
     try {
@@ -40,7 +40,9 @@ const WorkshopPlayPage = () => {
     if (!allPuzzles) {
       return;
     }
-    const foundPuzzle = allPuzzles.workshopPuzzles.find((p) => p.id === riddleId)
+    const foundPuzzle = allPuzzles.workshopPuzzles.find(
+      (p) => p.id === riddleId
+    );
 
     if (foundPuzzle) {
       fetchPuzzle();

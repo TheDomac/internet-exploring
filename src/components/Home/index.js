@@ -77,53 +77,61 @@ const Home = () => {
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
-        <div style={{ display: "flex", width: "500px"}}>
-        <StyledA rel="noreferrer" href={STEAM_URL} target="_blank" style={{ width: "100%", 
-              marginRight: "15px"}}>
-          <HomeButton
-            style={{
-              width: "100%",
-              padding: "12px 20px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+        <div style={{ display: "flex", width: "500px" }}>
+          <StyledA
+            rel="noreferrer"
+            href={STEAM_URL}
+            target="_blank"
+            style={{ width: "100%", marginRight: "15px" }}
           >
-            <span>Play on Steam</span>
-            <img
+            <HomeButton
               style={{
-                display: "inline-block",
-                marginLeft: 7,
-                marginRight: 3,
+                width: "100%",
+                padding: "12px 20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-              src={steamLogo}
-              alt="reddit"
-            />
-          </HomeButton>
-        </StyledA>
-        <StyledA rel="noreferrer" href={REDDIT_URL} target="_blank" style={{ width: "100%"}}>
-          <HomeButton
-            style={{
-              width: "100%",
-              padding: "12px 20px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+            >
+              <span>Play on Steam</span>
+              <img
+                style={{
+                  display: "inline-block",
+                  marginLeft: 7,
+                  marginRight: 3,
+                }}
+                src={steamLogo}
+                alt="reddit"
+              />
+            </HomeButton>
+          </StyledA>
+          <StyledA
+            rel="noreferrer"
+            href={REDDIT_URL}
+            target="_blank"
+            style={{ width: "100%" }}
           >
-            <span>Latest news</span>
-            <img
+            <HomeButton
               style={{
-                display: "inline-block",
-                marginLeft: 7,
-                marginRight: 3,
+                width: "100%",
+                padding: "12px 20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-              src={redditLogo}
-              alt="reddit"
-            />
-          </HomeButton>
-        </StyledA>
-
+            >
+              <span>Latest news</span>
+              <img
+                style={{
+                  display: "inline-block",
+                  marginLeft: 7,
+                  marginRight: 3,
+                }}
+                src={redditLogo}
+                alt="reddit"
+              />
+            </HomeButton>
+          </StyledA>
         </div>
         <div
           style={{

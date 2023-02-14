@@ -46,7 +46,9 @@ const Puzzle = () => {
       return;
     }
 
-    const foundRiddle = allPuzzles.puzzles.find((p) => p.id === params.puzzleId);
+    const foundRiddle = allPuzzles.puzzles.find(
+      (p) => p.id === params.puzzleId
+    );
     logEvent(analytics, "fetching_riddle", { riddle: foundRiddle?.name });
     const availablePuzzlesIds = allPuzzles.puzzles
       .slice(0, NUMBER_OF_FREE_RIDDLES)

@@ -27,7 +27,6 @@ export const TextLink = styled.a`
   text-decoration: none;
 `;
 
-
 const UpgradeModal = () => {
   const [upgradeStatus, setUpgradeStatus] = useState(statuses.IDLE);
   const { user, upgradedUser } = useContext(AuthContext);
@@ -83,7 +82,8 @@ const UpgradeModal = () => {
                 borderRadius: "5px",
               }}
             >
-              All {allPuzzles ? allPuzzles.puzzles.length * 4 : ""} unique riddles {allPuzzles && `(${allPuzzles.puzzles.length} * 4})`} as
+              All {allPuzzles ? allPuzzles.puzzles.length * 4 : ""} unique
+              riddles {allPuzzles && `(${allPuzzles.puzzles.length} * 4})`} as
               well as all future riddles that will be added to the list.
             </p>
             <p
@@ -110,7 +110,13 @@ const UpgradeModal = () => {
             ) : (
               <>
                 <p>In order to buy, you must sign in first.</p>
-                <p>Internet Exploring is also available on <TextLink rel="noreferrer" href={STEAM_URL} target="_blank">Steam</TextLink>.</p>
+                <p>
+                  Internet Exploring is also available on{" "}
+                  <TextLink rel="noreferrer" href={STEAM_URL} target="_blank">
+                    Steam
+                  </TextLink>
+                  .
+                </p>
                 <Button
                   type="button"
                   style={{ maxWidth: "100%", width: "100%", marginBottom: 20 }}

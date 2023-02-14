@@ -33,7 +33,7 @@ const PuzzleList = () => {
   }, []);
 
   if (!allPuzzles) {
-    return null
+    return null;
   }
 
   const renderPuzzle = (puzzle) => (
@@ -94,7 +94,9 @@ const PuzzleList = () => {
         </>
       ) : (
         <>
-          {allPuzzles.puzzles.slice(0, NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
+          {allPuzzles.puzzles
+            .slice(0, NUMBER_OF_FREE_RIDDLES)
+            .map(renderPuzzle)}
           <div style={{ position: "relative" }}>
             <HomeButton
               style={{
@@ -119,7 +121,9 @@ const PuzzleList = () => {
               }}
             />
             <BlurredWrapper>
-              {allPuzzles.puzzles.slice(NUMBER_OF_FREE_RIDDLES).map(renderPuzzle)}
+              {allPuzzles.puzzles
+                .slice(NUMBER_OF_FREE_RIDDLES)
+                .map(renderPuzzle)}
             </BlurredWrapper>
           </div>
         </>

@@ -20,6 +20,28 @@
         }
       ],
     "puzzles": [
+      {
+        "id": "Kn3yls643KRUrov3SFSm",
+        "name": "Same place, different time",
+        "rebuses": [
+          {
+            "id": "a41a7074-2729-44c9-b689-82b876c042c8",
+            "solutionInfo": { "solvedText": "Nikola Tesla" }
+          },
+          {
+            "id": "bc625d6b-ce5b-44c4-a9e0-9c85471d5f6f",
+            "solutionInfo": { "solvedText": "John Lennon" }
+          },
+          {
+            "id": "e8d50c30-abce-4fe3-9dc8-dafab1ddf338",
+            "solutionInfo": { "solvedText": "Richard Nixon" }
+          },
+          {
+            "id": "76ffeb7b-b2e0-4a5c-843f-4b89cdbdfb89",
+            "solutionInfo": { "solvedText": "New York" }
+          }
+        ]
+      },
         {
           "id": "DWAFgWYPsJeU8qtoSqkJ",
           "name": "Celebratory Chemistry",
@@ -39,28 +61,6 @@
             {
               "id": "7fc1a5de-7ba1-4446-8f3b-a45818a61773",
               "solutionInfo": { "solvedText": "Firework" }
-            }
-          ]
-        },
-        {
-          "id": "Kn3yls643KRUrov3SFSm",
-          "name": "Same place, different time",
-          "rebuses": [
-            {
-              "id": "a41a7074-2729-44c9-b689-82b876c042c8",
-              "solutionInfo": { "solvedText": "Nikola Tesla" }
-            },
-            {
-              "id": "bc625d6b-ce5b-44c4-a9e0-9c85471d5f6f",
-              "solutionInfo": { "solvedText": "John Lennon" }
-            },
-            {
-              "id": "e8d50c30-abce-4fe3-9dc8-dafab1ddf338",
-              "solutionInfo": { "solvedText": "Richard Nixon" }
-            },
-            {
-              "id": "76ffeb7b-b2e0-4a5c-843f-4b89cdbdfb89",
-              "solutionInfo": { "solvedText": "New York" }
             }
           ]
         },

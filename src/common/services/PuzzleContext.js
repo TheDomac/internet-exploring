@@ -63,10 +63,9 @@ const PuzzleContextProvider = ({ children }) => {
     }
   };
 
-    useEffect(() => {
-      fetchAllPuzzles()
-    },
-       [])
+  useEffect(() => {
+    fetchAllPuzzles();
+  }, []);
 
   const handleCopyClick = async (copyInfo) => {
     try {
