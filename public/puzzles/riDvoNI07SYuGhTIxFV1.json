@@ -56,6 +56,32 @@
       "clues": [
         {
           "subtext": "",
+          "id": "1-2-3-4",
+          "dependsOn": [],
+          "solutionInfo": {
+            "type": "text",
+            "possibleSolutions": [],
+            "solvedText": ""
+          },
+          "helperText": "",
+          "clueGroup": 0,
+          "clueValues": [
+            {
+              "style": {
+                "width": "calc(100% - 10px)"
+              },
+              "value": "Writers",
+              "id": "2-3d08-4a55-2-3ca4ef1e2fc2",
+              "type": "text",
+              "subtext": ""
+            }
+          ],
+          "style": {
+            "width": "calc(100% - 10px)"
+          }
+        },
+        {
+          "subtext": "",
           "id": "d2587207-a3df-4148-bc0f-af6e8cc9c500",
           "dependsOn": [],
           "solutionInfo": {
