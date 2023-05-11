@@ -32,7 +32,7 @@
           "helperText": "It's also a continent.",
           "clueValues": [
             {
-              "value": "australia.png",
+              "value": "6T8XI2Pz.png",
               "id": "f7a34759-9040-450c-870f-4f8634fea9d0",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -72,7 +72,7 @@
               "style": {
                 "width": "calc(100% - 10px)"
               },
-              "value": "rio_de_janeiro.png",
+              "value": "L6gJALQU.png",
               "type": "image"
             }
           ]
@@ -87,7 +87,7 @@
             {
               "subtext": "",
               "id": "b138d08b-da27-4566-a5f1-3d187dbae149",
-              "value": "wembley.png",
+              "value": "qDo8V1se.png",
               "type": "image",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -169,7 +169,7 @@
                 "width": "calc(100% - 10px)"
               },
               "type": "image",
-              "value": "arm.png",
+              "value": "qt8HWYfk.png",
               "subtext": "",
               "id": "ed9be914-2908-4c3f-b9b0-5836fcfc83b4"
             }
@@ -329,7 +329,7 @@
               "subtext": "",
               "id": "05fab6af-6c4b-4d36-84c9-92b44a708612",
               "type": "image",
-              "value": "elijahWood.png"
+              "value": "1eDxnQPP.png"
             }
           ],
           "style": {

@@ -25,7 +25,7 @@
             {
               "id": "7071d4fb-4e6c-4de0-888c-756a2746e2d8",
               "subtext": "",
-              "value": "bishop.png",
+              "value": "G5FBSTi4.png",
               "type": "image",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -116,7 +116,7 @@
               "subtext": "Belt, Hole, Widow",
               "id": "7838309e-b361-45ad-aa88-a1b97fea40a7",
               "type": "image",
-              "value": "dark.png",
+              "value": "NnVsm5rs.png",
               "style": {
                 "width": "calc(100% - 10px)"
               }
@@ -138,7 +138,7 @@
           "dependsOn": [],
           "clueValues": [
             {
-              "value": "light.png",
+              "value": "CXuQHghH.png",
               "type": "image",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -170,7 +170,7 @@
           "clueGroup": 0,
           "clueValues": [
             {
-              "value": "dark.png",
+              "value": "NnVsm5rs.png",
               "type": "image",
               "id": "9e1bfc87-3255-4aa3-9e7b-a21b6b0d0b41",
               "subtext": "Web, Matter, Chocolate",

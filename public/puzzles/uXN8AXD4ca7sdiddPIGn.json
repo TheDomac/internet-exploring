@@ -24,7 +24,7 @@
           },
           "clueValues": [
             {
-              "value": "evaMendesRole.png",
+              "value": "rbz55o9r.png",
               "id": "56860815-4bff-4909-9efe-95c23a327a5e",
               "type": "image",
               "style": {
@@ -38,7 +38,7 @@
                 "width": "calc(50% - 10px)",
                 "marginLeft": "-5px"
               },
-              "value": "evaMendesActor.png",
+              "value": "b9wVPtIo.png",
               "type": "image",
               "id": "eb051392-7f41-4e5b-8314-55edcdeb9127",
               "subtext": ""
@@ -48,7 +48,7 @@
                 "width": "calc(80% - 10px)"
               },
               "subtext": "",
-              "value": "actor.png",
+              "value": "uBfT3gXD.png",
               "type": "image",
               "id": "16237f29-7065-4a1c-9f98-b693e7d1a174"
             }
@@ -63,7 +63,7 @@
           "dependsOn": [],
           "clueValues": [
             {
-              "value": "williamHMacyRole.png",
+              "value": "P38pvf9T.png",
               "id": "56860815-4bff-4909-9efe-95c23a327a5e",
               "type": "image",
               "style": {
@@ -77,7 +77,7 @@
                 "width": "calc(50% - 10px)",
                 "marginLeft": "-5px"
               },
-              "value": "williamHMacyActor.png",
+              "value": "DjjacRRu.png",
               "type": "image",
               "id": "eb051392-7f41-4e5b-8314-55edcdeb9127",
               "subtext": ""
@@ -87,7 +87,7 @@
                 "width": "calc(80% - 10px)"
               },
               "subtext": "",
-              "value": "actor.png",
+              "value": "uBfT3gXD.png",
               "type": "image",
               "id": "16237f29-7065-4a1c-9f98-b693e7d1a174"
             }
@@ -135,7 +135,7 @@
           "helperText": "Who is this actress who played in The Queen's Gambit?",
           "clueValues": [
             {
-              "value": "anyaTaylorJoyRole.png",
+              "value": "Hgyi4xjP.png",
               "id": "56860815-4bff-4909-9efe-95c23a327a5e",
               "type": "image",
               "style": {
@@ -149,7 +149,7 @@
                 "width": "calc(50% - 10px)",
                 "marginLeft": "-5px"
               },
-              "value": "anyaTaylorJoyActor.png",
+              "value": "zeVKkoLh.png",
               "type": "image",
               "id": "eb051392-7f41-4e5b-8314-55edcdeb9127",
               "subtext": ""
@@ -159,7 +159,7 @@
                 "width": "calc(80% - 10px)"
               },
               "subtext": "",
-              "value": "actor.png",
+              "value": "uBfT3gXD.png",
               "type": "image",
               "id": "16237f29-7065-4a1c-9f98-b693e7d1a174"
             }
@@ -429,7 +429,7 @@
         {
           "clueValues": [
             {
-              "value": "location.png",
+              "value": "RL7Vmm5S.png",
               "type": "image",
               "style": {
                 "width": "calc(100% - 10px)"

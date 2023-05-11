@@ -21,7 +21,7 @@
             {
               "type": "image",
               "id": "b4a49596-af42-4233-be06-145d3f1ec106",
-              "value": "weakestFundamentalForce.png",
+              "value": "CQtgl9KX.png",
               "subtext": "",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -76,7 +76,7 @@
                 "width": "calc(100% - 10px)"
               },
               "type": "image",
-              "value": "2019.png"
+              "value": "5ZEPtsbh.png"
             }
           ],
           "solutionInfo": {
@@ -118,7 +118,7 @@
           "dependsOn": [],
           "clueValues": [
             {
-              "value": "asteroids.png",
+              "value": "Ps2fxE7j.png",
               "id": "3d9087e4-0a29-44e9-8783-f4c911cd73cd",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -429,7 +429,7 @@
               "style": {
                 "width": "calc(50% - 10px)"
               },
-              "value": "location.png",
+              "value": "RL7Vmm5S.png",
               "id": "c7aa2dcd-0633-4426-a2f4-8122ff40de96",
               "subtext": "Space",
               "type": "image"

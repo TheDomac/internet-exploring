@@ -65,7 +65,7 @@
           },
           "clueValues": [
             {
-              "value": "july.png",
+              "value": "0onJFTQx.png",
               "id": "511b6954-ab1f-4c7a-b998-3f58519e5904",
               "type": "image",
               "style": {
@@ -132,7 +132,7 @@
               "style": {
                 "width": "calc(100% - 10px)"
               },
-              "value": "Cake.png",
+              "value": "eXGkSm7J.png",
               "subtext": "",
               "type": "image",
               "id": "8a58c659-2dbe-43df-b158-2d085e4029a2"
@@ -162,7 +162,7 @@
           "dependsOn": [],
           "clueValues": [
             {
-              "value": "beatles_arrow_4.png",
+              "value": "GpIkBGqB.png",
               "subtext": "",
               "id": "3cd9a3d9-63fb-4240-b9c7-4c63f0163167",
               "style": {
@@ -229,7 +229,7 @@
             {
               "id": "b276a822-e337-45fd-a9e3-4f310021e5ad",
               "type": "image",
-              "value": "nixon.png",
+              "value": "lYat40GI.png",
               "subtext": "",
               "style": {
                 "width": "calc(100% - 10px)"
@@ -358,7 +358,7 @@
               "id": "efeeae04-50d9-4769-843d-b25cdb790f61",
               "subtext": "",
               "type": "image",
-              "value": "location.png"
+              "value": "RL7Vmm5S.png"
             }
           ],
           "helperText": "In which city did they die?"
