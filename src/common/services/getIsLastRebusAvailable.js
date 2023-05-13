@@ -13,7 +13,8 @@ const getIsLastRebusAvailable = (puzzleSolvingState) => {
     return Boolean(cluesSolvedSolution || rebusSolvedSolution);
   });
 
-  return arePreviousRebusesSolved;
+  // return arePreviousRebusesSolved;
+  return true;
 };
 
 export default getIsLastRebusAvailable;

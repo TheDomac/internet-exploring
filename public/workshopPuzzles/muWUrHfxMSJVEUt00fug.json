@@ -86,7 +86,7 @@
                 "style": { "width": "calc(100% - 10px)" },
                 "id": "8df4c054-50a3-4c29-aa7e-66aac83e4fc1",
                 "subtext": "",
-                "value": "workshop/muWUrHfxMSJVEUt00fug/whichBodyPart.png",
+                "value": "workshop/muWUrHfxMSJVEUt00fug/15a.png",
                 "type": "image"
               }
             ]
@@ -125,7 +125,7 @@
             "clueValues": [
               {
                 "style": { "width": "calc(100% - 10px)" },
-                "value": "workshop/muWUrHfxMSJVEUt00fug/water.png",
+                "value": "workshop/muWUrHfxMSJVEUt00fug/14a.png",
                 "subtext": "",
                 "type": "image",
                 "id": "fc3eb370-ffd2-473a-93bb-04b6acfd2f53"
@@ -193,7 +193,7 @@
                 "type": "image",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "value": "workshop/muWUrHfxMSJVEUt00fug/cesar.png"
+                "value": "workshop/muWUrHfxMSJVEUt00fug/11a.png"
               }
             ],
             "style": { "width": "calc(33% - 10px)" },
@@ -255,7 +255,7 @@
                 "style": { "width": "calc(100% - 10px)" },
                 "subtext": "",
                 "type": "image",
-                "value": "workshop/muWUrHfxMSJVEUt00fug/rachel.png",
+                "value": "workshop/muWUrHfxMSJVEUt00fug/13a.png",
                 "id": "e03bff03-b986-4260-94b0-5707427703e8"
               }
             ]
@@ -269,7 +269,7 @@
                 "type": "image",
                 "subtext": "",
                 "style": { "width": "calc(100% - 10px)" },
-                "value": "workshop/muWUrHfxMSJVEUt00fug/hector.png"
+                "value": "workshop/muWUrHfxMSJVEUt00fug/12a.png"
               }
             ],
             "solutionInfo": {
