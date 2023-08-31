@@ -48,3 +48,6 @@ export const statuses = {
   ERROR: "error",
   SUCCESS: "success",
 };
+
+
+export const PRICE = "$2.99"

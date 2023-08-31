@@ -10,7 +10,7 @@ import { Button } from "../../Button.styled";
 import { AuthContext } from "../../../services/AuthContext";
 import { PaymentContext } from "../../../services/PaymentContext";
 import LoginForm from "../../LoginForm";
-import { env, statuses, STEAM_URL } from "../../../consts";
+import { env, PRICE, statuses, STEAM_URL } from "../../../consts";
 import { analytics } from "../../../firebase";
 import { PuzzleContext } from "../../../services/PuzzleContext";
 
@@ -73,7 +73,7 @@ const UpgradeModal = () => {
         ) : (
           <>
             <p>
-              Buying the full game ($2.99) gives you access to the following:
+              Buying the full game gives you access to the following:
             </p>
             <p
               style={{
@@ -105,7 +105,7 @@ const UpgradeModal = () => {
               >
                 {upgradeStatus === statuses.LOADING
                   ? "Loading..."
-                  : "Buy ($3.49)"}
+                  : `Buy (${PRICE})`}
               </Button>
             ) : (
               <>
