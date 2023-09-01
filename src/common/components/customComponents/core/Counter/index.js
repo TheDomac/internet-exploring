@@ -26,10 +26,10 @@ const Counter = ({
   stateMaintenanceValue,
 }) => {
   const [selectedIndex, setSelectedIndex] = useState(
-    stateMaintenanceValue?.selectedIndex || 0
+    stateMaintenanceValue?.selectedIndex || 0,
   );
   const [number, setNumber] = useState(
-    stateMaintenanceValue?.number || solution.map((n) => null)
+    stateMaintenanceValue?.number || solution.map((n) => null),
   );
   const wrongAnswer = useToggle();
 

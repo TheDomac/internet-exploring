@@ -37,7 +37,7 @@ const TextInput = ({
   const correctSolution = possibleSolutions.find(
     (s) =>
       s.value.toLowerCase().replace(/\s+/g, "") ===
-      value.toLowerCase().replace(/\s+/g, "") // regex for removing spaces
+      value.toLowerCase().replace(/\s+/g, ""), // regex for removing spaces
   );
 
   const handleSubmit = (e) => {

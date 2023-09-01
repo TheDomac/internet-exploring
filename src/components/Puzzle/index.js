@@ -47,7 +47,7 @@ const Puzzle = () => {
     }
 
     const foundRiddle = allPuzzles.puzzles.find(
-      (p) => p.id === params.puzzleId
+      (p) => p.id === params.puzzleId,
     );
     logEvent(analytics, "fetching_riddle", { riddle: foundRiddle?.name });
     const availablePuzzlesIds = allPuzzles.puzzles

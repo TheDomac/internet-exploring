@@ -40,7 +40,7 @@ const UpgradeModal = () => {
       const functions = getFunctions();
       const createStripeCheckout = httpsCallable(
         functions,
-        "createStripeCheckout"
+        "createStripeCheckout",
       );
       const response = await createStripeCheckout({ env, userId: user.uid });
       window.location.href = response.data.url;
@@ -72,9 +72,7 @@ const UpgradeModal = () => {
           <LoginForm />
         ) : (
           <>
-            <p>
-              Buying the full game gives you access to the following:
-            </p>
+            <p>Buying the full game gives you access to the following:</p>
             <p
               style={{
                 padding: "10px",

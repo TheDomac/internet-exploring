@@ -16,7 +16,7 @@ const validate = (puzzle) => {
     !puzzle.rebuses.every(
       (r) =>
         r.solutionInfo.possibleSolutions.length > 0 ||
-        r.clues.find((c) => c.solutionInfo.possibleSolutions.length > 0)
+        r.clues.find((c) => c.solutionInfo.possibleSolutions.length > 0),
     )
   )
     return "Every riddle needs to have a possible solution or at least one clue with a possible solution.";
@@ -29,8 +29,8 @@ const validate = (puzzle) => {
       r.clues.every(
         (c) =>
           isWidthNumber(c.style.width) &&
-          c.clueValues.every((cv) => isWidthNumber(cv.style.width))
-      )
+          c.clueValues.every((cv) => isWidthNumber(cv.style.width)),
+      ),
     )
   )
     return "Every width value needs to be a number between 1 and 100.";
@@ -40,8 +40,8 @@ const validate = (puzzle) => {
         (c) =>
           c.solutionInfo.possibleSolutions.length === 0 ||
           (c.solutionInfo.possibleSolutions.length > 0 &&
-            c.solutionInfo.solvedText)
-      )
+            c.solutionInfo.solvedText),
+      ),
     )
   )
     return "Every riddle and clue with a possible solution needs to have a solved text.";

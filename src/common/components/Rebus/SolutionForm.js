@@ -32,7 +32,7 @@ const SolutionForm = ({ handleFinishClick }) => {
 
   const { cluesSolvedSolution, rebusSolvedSolution } = getIsSolved(
     puzzleSolvingState,
-    selectedRebusIndex
+    selectedRebusIndex,
   );
 
   return (

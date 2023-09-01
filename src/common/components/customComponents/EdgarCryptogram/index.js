@@ -109,14 +109,14 @@ const EdgarCryptogram = ({
   updateMaintenance,
 }) => {
   const [letters, setLetters] = useState(
-    stateMaintenanceValue || initialLetters
+    stateMaintenanceValue || initialLetters,
   );
   const [selectedHashedLetter, setSelectedHashLetter] = useState(null);
   const finished = useToggle(solved);
 
   useEffect(() => {
     const test = solutionAsSymbols.map((symbol) =>
-      hash[symbol] !== undefined ? letters[hash[symbol]] : symbol
+      hash[symbol] !== undefined ? letters[hash[symbol]] : symbol,
     );
     const isSame = test.every((symbol, i) => symbol === solutionAsSymbols[i]);
     if (isSame) {

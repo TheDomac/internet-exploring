@@ -49,5 +49,4 @@ export const statuses = {
   SUCCESS: "success",
 };
 
-
-export const PRICE = "$2.99"
+export const PRICE = "$2.99";

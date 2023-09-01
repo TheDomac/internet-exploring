@@ -14,7 +14,7 @@ const LeftBalls = ({ ballsArray, handleDrop }) => {
         canDrop: monitor.canDrop(),
       }),
     }),
-    [ballsArray]
+    [ballsArray],
   );
 
   const isActive = canDrop && isOver;

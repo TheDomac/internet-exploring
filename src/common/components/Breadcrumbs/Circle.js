@@ -76,7 +76,7 @@ const Circle = ({ rebusIndex }) => {
       title={isDisabled ? "Solve other riddles first" : ""}
       $isSelected={rebusIndex === selectedRebusIndex}
       $isSolved={Boolean(
-        isSolved.cluesSolvedSolution || isSolved.rebusSolvedSolution
+        isSolved.cluesSolvedSolution || isSolved.rebusSolvedSolution,
       )}
     >
       {rebusIndex + 1}
