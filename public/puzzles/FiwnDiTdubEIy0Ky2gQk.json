@@ -164,15 +164,20 @@
               "style": {
                 "width": "calc(100% - 10px)"
               },
-              "subtext": "",
+              "subtext": "Get Hard",
               "type": "image",
               "value": "S5FZTPCw.png"
             }
           ],
           "subtext": "",
           "solutionInfo": {
-            "possibleSolutions": [],
-            "solvedText": "",
+            "possibleSolutions": [
+              {
+              "value": "Kevin Hart",
+              "id": "bnfg-3404-fsdqw-8cae-ee"
+            }
+          ],
+            "solvedText": "Kevin Hart",
             "type": "text"
           },
           "dependsOn": [],
@@ -192,7 +197,7 @@
                 "width": "calc(100% - 10px)"
               },
               "id": "12a30856-db7c-43b1-b281-ea291debbd99",
-              "subtext": "",
+              "subtext": "He's just not that into you",
               "type": "image",
               "value": "iSo7YcAE.png"
             }
@@ -200,11 +205,16 @@
           "subtext": "",
           "id": "8b16932e-d444-490f-874c-989f64538e17",
           "solutionInfo": {
-            "solvedText": "",
+            "solvedText": "Ginnifer Goodwin",
             "type": "text",
-            "possibleSolutions": []
+            "possibleSolutions": [
+              {
+                "value": "Ginnifer Goodwin",
+                "id": "7-3404-765-234-1"
+              }
+            ]
           },
-          "helperText": "He's just not that into you (2009)",
+          "helperText": "",
           "style": {
             "width": "calc(50% - 10px)"
           }
