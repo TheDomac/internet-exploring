@@ -1,17 +1,15 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Fragment } from "react";
 import { useLocation } from "react-router";
 
-import { Button } from "../../common/components/Button.styled";
 import ArrowBack from "../../common/components/ArrowBack";
 import {
   PuzzleBox,
   Wrapper,
   PuzzleLink,
 } from "../../common/components/PuzzleList.styled";
-import { WorkshopContext } from "../../common/services/WorkshopContext";
 import { LOCAL_STORAGE_KEYS } from "../../common/consts";
 import LoginCorner from "../../common/components/LoginCorner";
 import Alert from "../../common/components/Alert.styled";
@@ -26,17 +24,10 @@ export const TextLink = styled.a`
 const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
 
 const Workshop = () => {
-  const { initPuzzle } = useContext(WorkshopContext);
   const { allPuzzles } = useContext(PuzzleContext);
   const location = useLocation();
-  const navigate = useNavigate();
   const params = new URLSearchParams(location.search);
   const successAlertStatus = params.get("successStatus");
-
-  const handleCreateNewRiddleClick = () => {
-    initPuzzle();
-    navigate("/play/workshop/new");
-  };
 
   const workshopSolvedPuzzlesIDs =
     localStorage.getItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS) ||
@@ -61,12 +52,9 @@ const Workshop = () => {
             marginBottom: 15,
           }}
         >
-          <Button
-            style={{ maxWidth: "100%" }}
-            onClick={handleCreateNewRiddleClick}
-          >
-            Create new riddle
-          </Button>
+          <p>
+            If you have an idea for a riddle, please contact us at contact@internetexploring.io
+          </p>
         </div>
         {successAlertStatus && (
           <Alert

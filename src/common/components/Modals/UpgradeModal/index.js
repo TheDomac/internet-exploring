@@ -84,15 +84,6 @@ const UpgradeModal = () => {
               riddles {allPuzzles && `(${allPuzzles.puzzles.length} * 4})`} as
               well as all future riddles that will be added to the list.
             </p>
-            <p
-              style={{
-                padding: "10px",
-                border: "1px solid #1a744a",
-                borderRadius: "5px",
-              }}
-            >
-              Workshop where you can play riddles made by other players.
-            </p>
 
             {user ? (
               <Button
@@ -108,20 +99,35 @@ const UpgradeModal = () => {
             ) : (
               <>
                 <p>In order to buy, you must sign in first.</p>
-                <p>
+
+                {/* <p>
                   Internet Exploring is also available on{" "}
                   <TextLink rel="noreferrer" href={STEAM_URL} target="_blank">
                     Steam
                   </TextLink>
                   .
-                </p>
+                </p> */}
                 <Button
                   type="button"
-                  style={{ maxWidth: "100%", width: "100%", marginBottom: 20 }}
+                  style={{ maxWidth: "100%", width: "100%" }}
                   onClick={loginStep.setOn}
                 >
                   Sign in
                 </Button>
+                <p>or</p>
+                <a
+                            rel="noreferrer"
+                            href={STEAM_URL}
+                            target="_blank"
+                >
+                <Button
+                  type="button"
+                  style={{ maxWidth: "100%", width: "100%", marginBottom: 40 }}
+                >
+                  Play on Steam
+                </Button>
+                </a>
+
               </>
             )}
           </>

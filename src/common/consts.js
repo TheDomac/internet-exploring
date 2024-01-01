@@ -14,7 +14,7 @@ export const solutionTypes = {
   CUSTOM_COMPONENT: "customComponent",
 };
 
-export const NUMBER_OF_FREE_RIDDLES = 4;
+export const NUMBER_OF_FREE_RIDDLES = 3;
 
 export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
 export const STEAM_URL =

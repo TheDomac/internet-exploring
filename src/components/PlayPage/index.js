@@ -1,7 +1,4 @@
-import React, { useContext } from "react";
-
-import { PaymentContext } from "../../common/services/PaymentContext";
-import { AuthContext } from "../../common/services/AuthContext";
+import React from "react";
 
 import { Link } from "react-router-dom";
 
@@ -12,9 +9,6 @@ import ArrowBack from "../../common/components/ArrowBack";
 import LoginCorner from "../../common/components/LoginCorner";
 
 const PlayPage = () => {
-  const { upgradeModal } = useContext(PaymentContext);
-  const { upgradedUser } = useContext(AuthContext);
-
   return (
     <>
       <LoginCorner />
@@ -22,16 +16,11 @@ const PlayPage = () => {
         <Link to="/play/puzzles" style={{ marginBottom: "40px" }}>
           <Button style={{ maxWidth: "100%" }}>Riddles</Button>
         </Link>
-        {upgradedUser.isOn ? (
-          <Link to="/play/workshop">
+
+        <Link to="/play/workshop">
             <Button style={{ maxWidth: "100%" }}>Workshop</Button>
           </Link>
-        ) : (
-          <Button onClick={upgradeModal.setOn} style={{ maxWidth: "100%" }}>
-            Workshop
-          </Button>
-        )}
-        <Link to="/">
+                <Link to="/">
           <ArrowBack />
         </Link>
       </Container>
