@@ -45,7 +45,7 @@ const getIsLit = (tiles, tilesToCheck, checkedTiles = []) => {
   return tilesToCheck
     .filter(
       (coord) =>
-        !checkedTiles.find((c) => c[0] === coord[0] && c[1] === coord[1]),
+        !checkedTiles.find((c) => c[0] === coord[0] && c[1] === coord[1])
     )
     .some((coord) => {
       const isConnectedToSource = getIsConnectedToSource(tiles, coord);

@@ -59,7 +59,7 @@ const Rebus = ({
               ...r,
               clues: r.clues.concat(newClue),
             }
-          : r,
+          : r
       ),
     };
 
@@ -80,11 +80,11 @@ const Rebus = ({
                 .map((c) => ({
                   ...c,
                   dependsOn: c.dependsOn.filter(
-                    (d) => d.value !== deleteClueId,
+                    (d) => d.value !== deleteClueId
                   ),
                 })),
             }
-          : r,
+          : r
       ),
     };
 

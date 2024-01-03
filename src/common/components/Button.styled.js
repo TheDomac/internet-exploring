@@ -11,10 +11,8 @@ export const Button = styled.button`
   font-size: 20px;
   cursor: pointer;
   transition: 300ms;
-  box-shadow:
-    rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
-    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
-    rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
   font-family: "Fredoka";
   box-sizing: border-box;
   background: ${({ $primary }) => ($primary ? "#309d6d" : "transparent")};

@@ -62,7 +62,7 @@ const Sidebar = ({
                 solvedText: e.target.value,
               },
             }
-          : r,
+          : r
       ),
     };
 
@@ -97,7 +97,7 @@ const Sidebar = ({
                 width: `calc(${e.target.value}% - 10px)`,
               },
             }
-          : cv,
+          : cv
       ),
     };
     updateClue({ rebusId: rebus.id, clueId: selectedClue.id, newClue });
@@ -118,7 +118,7 @@ const Sidebar = ({
                 }),
               },
             }
-          : r,
+          : r
       ),
     };
 
@@ -140,11 +140,11 @@ const Sidebar = ({
                         ...s,
                         value: newSolution,
                       }
-                    : s,
+                    : s
                 ),
               },
             }
-          : r,
+          : r
       ),
     };
 
@@ -158,7 +158,7 @@ const Sidebar = ({
 
   const handleRebusDateSolutionChange = (solutionId, name, value) => {
     const foundSolution = rebus.solutionInfo.possibleSolutions.find(
-      (s) => s.id === solutionId,
+      (s) => s.id === solutionId
     );
     const newRebusSolution = {
       ...foundSolution.value,
@@ -177,11 +177,11 @@ const Sidebar = ({
               solutionInfo: {
                 ...r.solutionInfo,
                 possibleSolutions: r.solutionInfo.possibleSolutions.filter(
-                  (s) => s.id !== solutionId,
+                  (s) => s.id !== solutionId
                 ),
               },
             }
-          : r,
+          : r
       ),
     };
 
@@ -194,7 +194,7 @@ const Sidebar = ({
       solutionInfo: {
         ...selectedClue.solutionInfo,
         possibleSolutions: selectedClue.solutionInfo.possibleSolutions.filter(
-          (s) => s.id !== solutionId,
+          (s) => s.id !== solutionId
         ),
       },
     };
@@ -219,7 +219,7 @@ const Sidebar = ({
                     : [],
               },
             }
-          : r,
+          : r
       ),
     };
 
@@ -264,7 +264,7 @@ const Sidebar = ({
                   ...possibleSolution,
                   value: newSolution,
                 }
-              : possibleSolution,
+              : possibleSolution
         ),
       },
     };
@@ -276,7 +276,7 @@ const Sidebar = ({
 
   const handleClueDateSolutionChange = (solutionId, name, value) => {
     const foundSolution = selectedClue.solutionInfo.possibleSolutions.find(
-      (possibleSolution) => possibleSolution.id === solutionId,
+      (possibleSolution) => possibleSolution.id === solutionId
     );
     const newClueSolution = {
       ...foundSolution.value,
@@ -541,7 +541,7 @@ const Sidebar = ({
                       style={{ paddingRight: "25px" }}
                       placeholder="Solution..."
                       onChange={handleClueTextSolutionChange(
-                        possibleSolution.id,
+                        possibleSolution.id
                       )}
                     />
                     <DeleteButton
@@ -565,7 +565,7 @@ const Sidebar = ({
                   />
                 )}
               </Fragment>
-            ),
+            )
           )}
           <Button
             onClick={handleAddClueSolution}

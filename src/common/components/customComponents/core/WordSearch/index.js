@@ -15,9 +15,7 @@ const Grid = styled.div`
   grid-template-rows: repeat(8, 1fr);
   background: white;
   border-radius: 3px;
-  box-shadow:
-    rgba(0, 0, 0, 0.16) 0px 3px 6px,
-    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 `;
 
 const Cell = styled.div`
@@ -62,16 +60,16 @@ const generateLettersClickedArray = (array) =>
 
 const WordSearch = ({ letters, words, strikeThroughTracking }) => {
   const [circledLetters, setCircledLetters] = useState(
-    generateLettersClickedArray(letters),
+    generateLettersClickedArray(letters)
   );
 
   const handleLetterClick = (i, j) => () => {
     const newCircledLetters = circledLetters.map((row, rowIndex) =>
       rowIndex === i
         ? row.map((isCircled, letterIndex) =>
-            letterIndex === j ? !isCircled : isCircled,
+            letterIndex === j ? !isCircled : isCircled
           )
-        : row,
+        : row
     );
 
     setCircledLetters(newCircledLetters);
@@ -86,13 +84,13 @@ const WordSearch = ({ letters, words, strikeThroughTracking }) => {
               {letter}
               <Image src={Circled} alt="circled" shown={circledLetters[i][j]} />
             </Cell>
-          )),
+          ))
         )}
       </Grid>
       <WordWrapper>
         {words.map((word, i) => {
           const isDone = strikeThroughTracking[word].every(
-            ([y, x]) => circledLetters[y][x],
+            ([y, x]) => circledLetters[y][x]
           );
           return (
             <Word done={isDone} key={word}>

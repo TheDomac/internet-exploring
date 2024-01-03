@@ -10,7 +10,7 @@ const getMineCount = (boardData, x, y) => {
     ? aroundCode.concat(
         boardData[y - 1][x - 1],
         boardData[y - 1][x],
-        boardData[y - 1][x + 1],
+        boardData[y - 1][x + 1]
       )
     : aroundCode;
   aroundCode = aroundCode.concat(boardData[y][x - 1], boardData[y][x + 1]);
@@ -18,12 +18,12 @@ const getMineCount = (boardData, x, y) => {
     ? aroundCode.concat(
         boardData[y + 1][x - 1],
         boardData[y + 1][x],
-        boardData[y + 1][x + 1],
+        boardData[y + 1][x + 1]
       )
     : aroundCode;
 
   mineCount = aroundCode.filter((v) =>
-    [CODES.MINE, CODES.MINE_FLAG, CODES.MINE_QUESTION].includes(v),
+    [CODES.MINE, CODES.MINE_FLAG, CODES.MINE_QUESTION].includes(v)
   ).length;
 
   return mineCount;
@@ -46,7 +46,7 @@ const expandOpenedCell = (oldBoardData, xPos, yPos) => {
       ? aroundPoint.concat(
           { x: x - 1, y: y - 1 },
           { x, y: y - 1 },
-          { x: x + 1, y: y - 1 },
+          { x: x + 1, y: y - 1 }
         )
       : aroundPoint;
     aroundPoint = aroundPoint.concat({ x: x - 1, y }, { x: x + 1, y });
@@ -54,7 +54,7 @@ const expandOpenedCell = (oldBoardData, xPos, yPos) => {
       ? aroundPoint.concat(
           { x: x - 1, y: y + 1 },
           { x, y: y + 1 },
-          { x: x + 1, y: y + 1 },
+          { x: x + 1, y: y + 1 }
         )
       : aroundPoint;
 

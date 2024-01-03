@@ -4,7 +4,7 @@ const getFlaggedCellsInRowCount = (row) =>
   row.reduce(
     (prev, cell) =>
       [CODES.FLAG, CODES.MINE_FLAG].includes(cell) ? prev + 1 : prev,
-    0,
+    0
   );
 
 const getFlagsCount = (boardData) =>

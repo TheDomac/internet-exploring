@@ -10,7 +10,7 @@ import {
   Wrapper,
   PuzzleLink,
 } from "../../common/components/PuzzleList.styled";
-import { LOCAL_STORAGE_KEYS } from "../../common/consts";
+import { EMAIL, LOCAL_STORAGE_KEYS, REDDIT_URL } from "../../common/consts";
 import LoginCorner from "../../common/components/LoginCorner";
 import Alert from "../../common/components/Alert.styled";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
@@ -43,7 +43,6 @@ const Workshop = () => {
       <Link to="/play">
         <ArrowBack />
       </Link>
-      <LoginCorner />
       <Wrapper>
         <div
           style={{
@@ -53,7 +52,15 @@ const Workshop = () => {
           }}
         >
           <p>
-            If you have an idea for a riddle, please contact us at contact@internetexploring.io
+            Have an idea for a riddle? Send an email to{" "}
+            <TextLink href={`mailto:${EMAIL}`} target="_blank">
+              {EMAIL}
+            </TextLink>{" "}
+            or a message on{" "}
+            <TextLink href={REDDIT_URL} target="_blank" rel="noreferrer">
+              Reddit
+            </TextLink>
+            .
           </p>
         </div>
         {successAlertStatus && (

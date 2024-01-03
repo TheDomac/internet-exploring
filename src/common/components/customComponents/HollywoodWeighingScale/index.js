@@ -47,11 +47,11 @@ const HollywoodWeighingScale = ({
 
   const sumOfLeftBalls = positions.left.reduce(
     (prev, ball) => prev + ball.weight,
-    0,
+    0
   );
   const sumOfRightBalls = positions.right.reduce(
     (prev, ball) => prev + ball.weight,
-    0,
+    0
   );
   let tilt = 0;
   if (sumOfLeftBalls > sumOfRightBalls) {

@@ -18,9 +18,9 @@ const PlayPage = () => {
         </Link>
 
         <Link to="/play/workshop">
-            <Button style={{ maxWidth: "100%" }}>Workshop</Button>
-          </Link>
-                <Link to="/">
+          <Button style={{ maxWidth: "100%" }}>Workshop</Button>
+        </Link>
+        <Link to="/">
           <ArrowBack />
         </Link>
       </Container>

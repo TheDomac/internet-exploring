@@ -36,7 +36,7 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick, loading, error }) => {
     }, []) || [];
 
   const areAllImagesLoaded = imagesToLoad.every((img) =>
-    loadedImages.includes(img),
+    loadedImages.includes(img)
   );
   const isLoading = loading || !areAllImagesLoaded;
 

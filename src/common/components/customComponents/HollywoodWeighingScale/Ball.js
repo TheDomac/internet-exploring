@@ -17,7 +17,7 @@ const Ball = ({ ball, handleDrop, ballsArray }) => {
         handlerId: monitor.getHandlerId(),
       }),
     }),
-    [ballsArray],
+    [ballsArray]
   );
 
   return (

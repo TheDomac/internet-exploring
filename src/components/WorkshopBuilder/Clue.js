@@ -34,7 +34,7 @@ const Clue = ({
   };
 
   const foundDependencyClue = rebus.clues.find(
-    (c) => c.id === dependencyClueId,
+    (c) => c.id === dependencyClueId
   );
 
   const handleDependencySelectClick = () => {

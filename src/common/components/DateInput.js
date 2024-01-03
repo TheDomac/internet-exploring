@@ -100,7 +100,7 @@ const DateInput = ({
       }
 
       return possibleSolutionValueWithoutSpaces === dateWithoutSpaces;
-    }),
+    })
   );
 
   const handleSubmit = (e) => {

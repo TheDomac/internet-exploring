@@ -19,7 +19,7 @@ const ClueValue = ({
     const newClue = {
       ...clue,
       clueValues: clue.clueValues.map((cv) =>
-        cv.id === clueValue.id ? { ...cv, subtext: e.target.value } : cv,
+        cv.id === clueValue.id ? { ...cv, subtext: e.target.value } : cv
       ),
     };
 
@@ -32,7 +32,7 @@ const ClueValue = ({
     const newClue = {
       ...clue,
       clueValues: clue.clueValues.map((cv) =>
-        cv.id === clueValue.id ? { ...cv, type: newType, value: "" } : cv,
+        cv.id === clueValue.id ? { ...cv, type: newType, value: "" } : cv
       ),
     };
 
@@ -43,7 +43,7 @@ const ClueValue = ({
     const newClue = {
       ...clue,
       clueValues: clue.clueValues.map((cv) =>
-        cv.id === clueValue.id ? { ...cv, value: e.target.value } : cv,
+        cv.id === clueValue.id ? { ...cv, value: e.target.value } : cv
       ),
     };
 
@@ -58,7 +58,7 @@ const ClueValue = ({
       const newClue = {
         ...clue,
         clueValues: clue.clueValues.map((cv) =>
-          cv.id === clueValue.id ? { ...cv, value: imageObjectURL } : cv,
+          cv.id === clueValue.id ? { ...cv, value: imageObjectURL } : cv
         ),
       };
 

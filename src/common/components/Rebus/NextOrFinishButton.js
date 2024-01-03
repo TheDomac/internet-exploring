@@ -72,7 +72,7 @@ const NextOrFinishButton = ({ isSolved, handleFinishClick }) => {
 
       localStorage.setItem(
         LOCAL_STORAGE_KEYS.SOLVED_PUZZLES,
-        JSON.stringify(newPuzzlesSolvingSync),
+        JSON.stringify(newPuzzlesSolvingSync)
       );
       setPuzzlesSolvingSync(newPuzzlesSolvingSync);
     }

@@ -5,7 +5,7 @@ const getIsSolved = (puzzleSolvingState, rebusIndex) => {
   const cluesSolvedSolution =
     rebusInPuzzleSolvingState.solution === undefined &&
     Object.keys(rebusInPuzzleSolvingState.clues).every(
-      (key) => rebusInPuzzleSolvingState.clues[key],
+      (key) => rebusInPuzzleSolvingState.clues[key]
     );
 
   return {

@@ -50,10 +50,10 @@ const RichPortWeighingScale = ({
 }) => {
   const [positions, setPositions] = useState(initialPositions);
   const [firstSolution, setFirstSolution] = useState(
-    stateMaintenanceValue?.firstSolution || "",
+    stateMaintenanceValue?.firstSolution || ""
   );
   const [secondSolution, setSecondSolution] = useState(
-    stateMaintenanceValue?.secondSolution || "",
+    stateMaintenanceValue?.secondSolution || ""
   );
 
   const handleMaintenanceUpdate = (key, value) => {
@@ -69,11 +69,11 @@ const RichPortWeighingScale = ({
 
   const sumOfLeftBalls = positions.left.reduce(
     (prev, ball) => prev + ball.weight,
-    0,
+    0
   );
   const sumOfRightBalls = positions.right.reduce(
     (prev, ball) => prev + ball.weight,
-    0,
+    0
   );
   let tilt = 0;
   if (sumOfLeftBalls > sumOfRightBalls) {

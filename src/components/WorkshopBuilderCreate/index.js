@@ -38,10 +38,10 @@ const StyledInput = styled.input`
 `;
 
 const initialUserNickname = localStorage.getItem(
-  LOCAL_STORAGE_KEYS.USER_NICKNAME,
+  LOCAL_STORAGE_KEYS.USER_NICKNAME
 );
 const initialUserSocialMediaURL = localStorage.getItem(
-  LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL,
+  LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL
 );
 
 const WorkshopBuilderCreate = () => {
@@ -58,7 +58,7 @@ const WorkshopBuilderCreate = () => {
 
   const [userNickname, setUserNickname] = useState(initialUserNickname || "");
   const [userSocialMediaURL, setUserSocialMediaURL] = useState(
-    initialUserSocialMediaURL || "",
+    initialUserSocialMediaURL || ""
   );
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const WorkshopBuilderCreate = () => {
     localStorage.setItem(LOCAL_STORAGE_KEYS.USER_NICKNAME, userNickname);
     localStorage.setItem(
       LOCAL_STORAGE_KEYS.USER_SOCIAL_MEDIA_URL,
-      userSocialMediaURL,
+      userSocialMediaURL
     );
 
     const newPuzzle = {

@@ -50,7 +50,7 @@ const Sudoku = ({ initialGame, onFinish, solved, solution }) => {
           cell.x === selectedCell.x && cell.y === selectedCell.y
             ? value
             : cell.value,
-      })),
+      }))
     );
 
     setGame(updatedGame);

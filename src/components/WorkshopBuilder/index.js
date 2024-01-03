@@ -100,10 +100,10 @@ const WorkshopBuilder = ({ puzzle, handleSave, handlePreview }) => {
                         [key]: value,
                       }),
                     }
-                  : c,
+                  : c
               ),
             }
-          : r,
+          : r
       ),
     };
     setPuzzle(newPuzzle);

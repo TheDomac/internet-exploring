@@ -8,7 +8,7 @@ const getIsLastRebusAvailable = (puzzleSolvingState) => {
 
     const { cluesSolvedSolution, rebusSolvedSolution } = getIsSolved(
       puzzleSolvingState,
-      i,
+      i
     );
     return Boolean(cluesSolvedSolution || rebusSolvedSolution);
   });

@@ -101,7 +101,7 @@ const Home = () => {
                   marginRight: 3,
                 }}
                 src={steamLogo}
-                alt="reddit"
+                alt="steam"
               />
             </HomeButton>
           </StyledA>

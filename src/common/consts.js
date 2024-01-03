@@ -20,6 +20,8 @@ export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
 export const STEAM_URL =
   "https://store.steampowered.com/app/2050870/Internet_Exploring/";
 
+export const EMAIL = "contact@internetexploring.io";
+
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",
   [solutionTypes.CUSTOM_COMPONENT]: "",
@@ -49,4 +51,4 @@ export const statuses = {
   SUCCESS: "success",
 };
 
-export const PRICE = "$2.99";
+export const PRICE = "$4.99";

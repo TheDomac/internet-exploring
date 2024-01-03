@@ -31,7 +31,7 @@ const Clue = ({ clue, clueIndex }) => {
     clue.dependsOn.length > 0 &&
     !clue.dependsOn.every(
       (dependency) =>
-        puzzleSolvingState[selectedRebusIndex].clues[dependency.value],
+        puzzleSolvingState[selectedRebusIndex].clues[dependency.value]
     );
 
   const isHelpUsed = viewedHelpClueIds.includes(clue.id);
@@ -114,7 +114,7 @@ const Clue = ({ clue, clueIndex }) => {
               id={clue.id}
               possibleSolutions={clue.solutionInfo.possibleSolutions}
               isSolved={Boolean(
-                puzzleSolvingState[selectedRebusIndex].clues[clue.id],
+                puzzleSolvingState[selectedRebusIndex].clues[clue.id]
               )}
               solvedText={clue.solutionInfo.solvedText}
               markAsSolved={markClueAsSolved}
@@ -130,7 +130,7 @@ const Clue = ({ clue, clueIndex }) => {
               id={clue.id}
               possibleSolutions={clue.solutionInfo.possibleSolutions}
               isSolved={Boolean(
-                puzzleSolvingState[selectedRebusIndex].clues[clue.id],
+                puzzleSolvingState[selectedRebusIndex].clues[clue.id]
               )}
               solvedText={clue.solutionInfo.solvedText}
               markAsSolved={markClueAsSolved}

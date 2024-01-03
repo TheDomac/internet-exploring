@@ -15,8 +15,9 @@ exports.createStripeCheckout = functions.https.onCall(async (data, context) => {
       quantity: 1,
       price_data: {
         currency: "usd",
-        // 299$ - DEPLOY AFTER CHANGE - firebase deploy --only functions
-        unit_amount: 299,
+        // 4.99$ - DEPLOY AFTER CHANGE - firebase deploy --only functions
+        // and update PRICE const in common/consts
+        unit_amount: 499,
         product_data: {
           name: "Internet Exploring",
           description: "What if the Internet was your escape room?",

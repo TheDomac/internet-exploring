@@ -18,7 +18,7 @@ import {
   TextLink,
   BlurredWrapper,
 } from "./index.styled";
-import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
+import { EMAIL, NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { HomeButton } from "../Home/index.styled";
 import { analytics } from "../../common/firebase";
 
@@ -66,9 +66,7 @@ const PuzzleList = () => {
                 !areAllPreviousRebusesSolved
               }
             >
-              <span style={{ fontSize: isSolved ? 20 : 40 }}>
-                {isSolved ? rebus.solutionInfo.solvedText : "?"}
-              </span>
+              <span style={{ fontSize: 40 }}>?</span>
             </PuzzleBox>
           </PuzzleLink>
         );
@@ -88,7 +86,7 @@ const PuzzleList = () => {
             </Link>{" "}
             for more!
             <br /> You can send your suggestions and ideas to
-            contact@internetexploring.io
+            {EMAIL}
             <br />
           </p>
         </>

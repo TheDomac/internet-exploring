@@ -13,7 +13,7 @@ const BottomBalls = ({ ballsArray, handleDrop }) => {
         canDrop: monitor.canDrop(),
       }),
     }),
-    [ballsArray],
+    [ballsArray]
   );
 
   const isActive = canDrop && isOver;

@@ -13,6 +13,7 @@ import LoginForm from "../../LoginForm";
 import { env, PRICE, statuses, STEAM_URL } from "../../../consts";
 import { analytics } from "../../../firebase";
 import { PuzzleContext } from "../../../services/PuzzleContext";
+import steamLogo from "../../../../images/steamLogo.png";
 
 export const Wrapper = styled.div`
   text-align: center;
@@ -40,7 +41,7 @@ const UpgradeModal = () => {
       const functions = getFunctions();
       const createStripeCheckout = httpsCallable(
         functions,
-        "createStripeCheckout",
+        "createStripeCheckout"
       );
       const response = await createStripeCheckout({ env, userId: user.uid });
       window.location.href = response.data.url;
@@ -72,17 +73,18 @@ const UpgradeModal = () => {
           <LoginForm />
         ) : (
           <>
-            <p>Buying the full game gives you access to the following:</p>
             <p
               style={{
-                padding: "10px",
+                padding: "20px",
                 border: "1px solid #1a744a",
                 borderRadius: "5px",
+                fontSize: 20,
               }}
             >
-              All {allPuzzles ? allPuzzles.puzzles.length * 4 : ""} unique
-              riddles {allPuzzles && `(${allPuzzles.puzzles.length} * 4})`} as
-              well as all future riddles that will be added to the list.
+              Support Internet Exploring and gain access to all{" "}
+              {allPuzzles ? allPuzzles.puzzles.length * 4 : ""}{" "}
+              {allPuzzles && `(${allPuzzles.puzzles.length} * 4)`} unique and
+              challenging riddles.
             </p>
 
             {user ? (
@@ -98,15 +100,10 @@ const UpgradeModal = () => {
               </Button>
             ) : (
               <>
-                <p>In order to buy, you must sign in first.</p>
+                <p>
+                  In order to purchase the full game, you must sign in first.
+                </p>
 
-                {/* <p>
-                  Internet Exploring is also available on{" "}
-                  <TextLink rel="noreferrer" href={STEAM_URL} target="_blank">
-                    Steam
-                  </TextLink>
-                  .
-                </p> */}
                 <Button
                   type="button"
                   style={{ maxWidth: "100%", width: "100%" }}
@@ -115,19 +112,28 @@ const UpgradeModal = () => {
                   Sign in
                 </Button>
                 <p>or</p>
-                <a
-                            rel="noreferrer"
-                            href={STEAM_URL}
-                            target="_blank"
-                >
-                <Button
-                  type="button"
-                  style={{ maxWidth: "100%", width: "100%", marginBottom: 40 }}
-                >
-                  Play on Steam
-                </Button>
+                <a rel="noreferrer" href={STEAM_URL} target="_blank">
+                  <Button
+                    type="button"
+                    style={{
+                      maxWidth: "100%",
+                      width: "100%",
+                      marginBottom: 40,
+                    }}
+                  >
+                    <img
+                      style={{
+                        display: "inline-block",
+                        marginRight: 7,
+                        marginLeft: -10,
+                        marginBottom: -10,
+                      }}
+                      src={steamLogo}
+                      alt="steam"
+                    />
+                    Play on Steam
+                  </Button>
                 </a>
-
               </>
             )}
           </>
