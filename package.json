@@ -33,7 +33,8 @@
     "start": "react-app-rewired start",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "package": "react-app-rewired build && electron-forge package",
+    "package": "REACT_APP_STAGE=prod react-app-rewired build && electron-forge package",
+    "package:windows": "REACT_APP_STAGE=prod react-app-rewired build && electron-forge package --platform win32",
     "make": "REACT_APP_STAGE=prod react-app-rewired build && electron-forge make",
     "prettier": "npx prettier --write ./src"
   },
