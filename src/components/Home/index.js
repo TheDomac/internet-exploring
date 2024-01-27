@@ -23,11 +23,13 @@ import {
   StyledLink,
   StyledA,
 } from "./index.styled";
+import useIsWeb from "../../common/services/useIsWeb";
 
 const Home = () => {
   const termsModal = useToggle();
   const privacyPolicyModal = useToggle();
   const whyInternetExploringModal = useToggle();
+  const isWeb = useIsWeb()
 
   return (
     <>
@@ -78,7 +80,7 @@ const Home = () => {
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
         <div style={{ display: "flex", width: "500px" }}>
-          <StyledA
+          {isWeb && <StyledA
             rel="noreferrer"
             href={STEAM_URL}
             target="_blank"
@@ -104,7 +106,7 @@ const Home = () => {
                 alt="steam"
               />
             </HomeButton>
-          </StyledA>
+          </StyledA>}
           <StyledA
             rel="noreferrer"
             href={REDDIT_URL}

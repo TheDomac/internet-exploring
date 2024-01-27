@@ -11,7 +11,6 @@ import {
   PuzzleLink,
 } from "../../common/components/PuzzleList.styled";
 import { EMAIL, LOCAL_STORAGE_KEYS, REDDIT_URL } from "../../common/consts";
-import LoginCorner from "../../common/components/LoginCorner";
 import Alert from "../../common/components/Alert.styled";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
 

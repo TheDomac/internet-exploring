@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../services/AuthContext";
 import { PaymentContext } from "../../services/PaymentContext";
+import useIsWeb from "../../services/useIsWeb";
 
 const Button = styled.button`
   cursor: pointer;
@@ -47,6 +48,11 @@ const LoginCorner = ({ redirectAfterLogout = true }) => {
   const { handleLogOutClick, user, loadedAuth } = useContext(AuthContext);
   const { loginModal } = useContext(PaymentContext);
   const navigate = useNavigate();
+  const isWeb = useIsWeb()
+
+  if (!isWeb) {
+    return null
+  }
 
   const handleClick = () => {
     if (redirectAfterLogout) {
