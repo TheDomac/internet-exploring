@@ -11,6 +11,7 @@ import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { useToggle } from "../../common/services/useToggle";
 import { analytics } from "../../common/firebase";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
+import useIsWeb from "../../common/services/useIsWeb";
 
 const Puzzle = () => {
   const params = useParams();
@@ -20,6 +21,7 @@ const Puzzle = () => {
   const [puzzle, setPuzzle] = useState(null);
   const error = useToggle();
   const loading = useToggle(true);
+  const isWeb = useIsWeb()
 
   const fetchPuzzle = async () => {
     try {
@@ -53,7 +55,7 @@ const Puzzle = () => {
     const availablePuzzlesIds = allPuzzles.puzzles
       .slice(0, NUMBER_OF_FREE_RIDDLES)
       .map((p) => p.id);
-    if (upgradedUser.isOn || availablePuzzlesIds.includes(params.puzzleId)) {
+    if (upgradedUser.isOn || availablePuzzlesIds.includes(params.puzzleId) || !isWeb) {
       fetchPuzzle();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

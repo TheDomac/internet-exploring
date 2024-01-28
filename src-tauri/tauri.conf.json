@@ -20,7 +20,7 @@
     },
     "bundle": {
       "active": true,
-      "targets": "deb",
+      "targets": ["deb", "nsis"],
       "identifier": "com.internet-exploring",
       "icon": [
         "icons/32x32.png",

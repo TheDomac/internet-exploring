@@ -21,11 +21,13 @@ import {
 import { EMAIL, NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { HomeButton } from "../Home/index.styled";
 import { analytics } from "../../common/firebase";
+import useIsWeb from "../../common/services/useIsWeb";
 
 const PuzzleList = () => {
   const { puzzlesSolvingSync, allPuzzles } = useContext(PuzzleContext);
   const { upgradedUser } = useContext(AuthContext);
   const { upgradeModal } = useContext(PaymentContext);
+  const isWeb = useIsWeb()
 
   useEffect(() => {
     logEvent(analytics, "puzzle_list_shown");
@@ -76,7 +78,7 @@ const PuzzleList = () => {
 
   return (
     <Wrapper>
-      {upgradedUser.isOn ? (
+      {upgradedUser.isOn || !isWeb ? (
         <>
           {allPuzzles.puzzles.map(renderPuzzle)}
           <p style={{ textAlign: "center" }}>

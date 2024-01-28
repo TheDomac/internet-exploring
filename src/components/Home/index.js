@@ -80,7 +80,7 @@ const Home = () => {
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
         <div style={{ display: "flex", width: "500px" }}>
-          {isWeb && <StyledA
+          {isWeb && <><StyledA
             rel="noreferrer"
             href={STEAM_URL}
             target="_blank"
@@ -106,7 +106,7 @@ const Home = () => {
                 alt="steam"
               />
             </HomeButton>
-          </StyledA>}
+          </StyledA>
           <StyledA
             rel="noreferrer"
             href={REDDIT_URL}
@@ -134,6 +134,7 @@ const Home = () => {
               />
             </HomeButton>
           </StyledA>
+          </>}
         </div>
         <div
           style={{
