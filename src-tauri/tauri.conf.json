@@ -2,8 +2,8 @@
   "build": {
     "beforeDevCommand": "",
     "beforeBuildCommand": "",
-    "devPath": "../iframe",
-    "distDir": "../iframe",
+    "devPath": "../build",
+    "distDir": "../build",
     "withGlobalTauri": true
   },
   "package": {
