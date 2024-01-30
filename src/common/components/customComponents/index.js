@@ -9,6 +9,10 @@ import GuitarCounterYCoordinate from "./GuitarCounterYCoordinate";
 import RichPortWeighingScale from "./RichPortWeighingScale";
 import HollywoodWeighingScale from "./HollywoodWeighingScale";
 import EdgarCryptogram from "./EdgarCryptogram";
+import GandhiCryptogram from "./GandhiCryptogram";
+import HelenKellerCryptogram from "./HelenKellerCryptogram";
+import ForrestGumpCryptogram from "./ForrestGumpCryptogram";
+import ShakespeareCryptogram from "./ShakespeareCryptogram";
 import ElectricVennDiagram from "./ElectricVennDiagram";
 import CesarVennDiagram from "./CesarVennDiagram";
 import MapVennDiagram from "./MapVennDiagram";
@@ -28,6 +32,10 @@ const customComponentsArray = [
   { name: "GuitarCounterYCoordinate", Component: GuitarCounterYCoordinate },
   { name: "RichPortWeighingScale", Component: RichPortWeighingScale },
   { name: "HollywoodWeighingScale", Component: HollywoodWeighingScale },
+  { name: "ShakespeareCryptogram", Component: ShakespeareCryptogram },
+  { name: "ForrestGumpCryptogram", Component: ForrestGumpCryptogram },
+  { name: "HelenKellerCryptogram", Component: HelenKellerCryptogram },
+  { name: "GandhiCryptogram", Component: GandhiCryptogram },
   { name: "EdgarCryptogram", Component: EdgarCryptogram },
   { name: "ElectricVennDiagram", Component: ElectricVennDiagram },
   { name: "CesarVennDiagram", Component: CesarVennDiagram },
