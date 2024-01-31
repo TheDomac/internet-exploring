@@ -82,12 +82,12 @@ const PuzzleList = () => {
         <>
           {allPuzzles.puzzles.map(renderPuzzle)}
           <p style={{ textAlign: "center" }}>
-            This list is frequently getting updated. Check out{" "}
+            Check out{" "}
             <Link style={{ textDecoration: "none" }} to="/play/workshop">
               <TextLink>workshop</TextLink>
             </Link>{" "}
             for more!
-            <br /> You can send your suggestions and ideas to
+            <br /> You can send your suggestions and ideas to{" "}
             {EMAIL}
             <br />
           </p>
