@@ -29,14 +29,13 @@ const WhyInternetExploring = () => {
       <p style={{ textIndent: "25px" }}>
         It's perfectly understandable how things became the way they are now but
         still, don't you miss it sometimes? That old Internet is still here
-        though, perhaps it would be good to remind yourself what it once was.
+        though, perhaps it would be good to remind yourself about that.
         How good are you really at looking up information?
       </p>
       <p style={{ textIndent: "25px" }}>
         I grew up on the Internet, made a professional career out of it and
-        spectated while public discourse became a mess. So why Internet
-        Exploring? I'm just nostalgic and had an idea that (I believe) has value
-        and turned it into reality. It's a <br />
+        watched it become a mess. So why Internet
+        Exploring? I guess I'm just nostalgic and had an idea and turned it into reality. It's a
         single-player game, but great for competing with friends. I hope you
         like it.
       </p>

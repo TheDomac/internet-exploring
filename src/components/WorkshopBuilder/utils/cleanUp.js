@@ -8,13 +8,13 @@ const cleanUp = (puzzle) => {
       solutionInfo: {
         ...rebus.solutionInfo,
         possibleSolutions: rebus.solutionInfo.possibleSolutions.filter(
-          (ps) => ps.value
+          (ps) => ps.value,
         ),
       },
       clues: rebus.clues.map((clue) => ({
         ...clue,
         clueValues: clue.clueValues.filter(
-          (clueValue) => clueValue.type !== clueTypes.NONE
+          (clueValue) => clueValue.type !== clueTypes.NONE,
         ),
         solutionInfo: {
           ...clue.solutionInfo,
@@ -23,7 +23,7 @@ const cleanUp = (puzzle) => {
               ? clue.solutionInfo.solvedText
               : "",
           possibleSolutions: clue.solutionInfo.possibleSolutions.filter(
-            (ps) => ps.value
+            (ps) => ps.value,
           ),
         },
         dependsOn: clue.dependsOn.filter((d) => d.value),

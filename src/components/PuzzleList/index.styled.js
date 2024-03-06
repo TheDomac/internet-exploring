@@ -18,9 +18,10 @@ export const PuzzleTitle = styled.div`
   margin-right: 11px;
 `;
 
-export const TextLink = styled.span`
+export const TextLink = styled.a`
   color: #309d6d;
   -webkit-text-stroke: 0.5px white;
+  text-decoration: none;
 `;
 
 export const BlurredWrapper = styled.div`

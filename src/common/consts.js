@@ -1,6 +1,6 @@
 export const env = process.env.REACT_APP_STAGE.toUpperCase();
 
-export const build = process.env.REACT_APP_BUILD
+export const build = process.env.REACT_APP_BUILD;
 
 export const workshopCollectionName = "workshopPuzzles";
 export const clueTypes = {
@@ -21,8 +21,6 @@ export const NUMBER_OF_FREE_RIDDLES = 3;
 export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
 export const STEAM_URL =
   "https://store.steampowered.com/app/2050870/Internet_Exploring/";
-
-export const EMAIL = "contact@internetexploring.io";
 
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",

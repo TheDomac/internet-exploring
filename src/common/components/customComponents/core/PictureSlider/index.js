@@ -52,10 +52,10 @@ const PictureSlider = ({
   id,
 }) => {
   const [slider, setSlider] = useState(
-    stateMaintenanceValue?.slider || initialSlider
+    stateMaintenanceValue?.slider || initialSlider,
   );
   const holeLocation = useRef(
-    stateMaintenanceValue?.holeLocation || initialHoleLocation
+    stateMaintenanceValue?.holeLocation || initialHoleLocation,
   );
 
   const handlePictureClick = (imgX, imgY) => () => {
@@ -63,7 +63,7 @@ const PictureSlider = ({
       imgX === holeLocation.current[0] && imgY + 1 === holeLocation.current[1];
     if (holeIsBottom) {
       const sliderIndex = slider.findIndex(
-        (s) => s[0] === imgX && s[1] === imgY
+        (s) => s[0] === imgX && s[1] === imgY,
       );
       const newSlider = [
         ...slider.slice(0, sliderIndex),
@@ -80,7 +80,7 @@ const PictureSlider = ({
       imgX === holeLocation.current[0] && imgY - 1 === holeLocation.current[1];
     if (holeIsTop) {
       const sliderIndex = slider.findIndex(
-        (s) => s[0] === imgX && s[1] === imgY
+        (s) => s[0] === imgX && s[1] === imgY,
       );
       const newSlider = [
         ...slider.slice(0, sliderIndex),
@@ -97,7 +97,7 @@ const PictureSlider = ({
       imgX - 1 === holeLocation.current[0] && imgY === holeLocation.current[1];
     if (holeIsLeft) {
       const sliderIndex = slider.findIndex(
-        (s) => s[0] === imgX && s[1] === imgY
+        (s) => s[0] === imgX && s[1] === imgY,
       );
       const newSlider = [
         ...slider.slice(0, sliderIndex),
@@ -114,7 +114,7 @@ const PictureSlider = ({
       imgX + 1 === holeLocation.current[0] && imgY === holeLocation.current[1];
     if (holeIsRight) {
       const sliderIndex = slider.findIndex(
-        (s) => s[0] === imgX && s[1] === imgY
+        (s) => s[0] === imgX && s[1] === imgY,
       );
       const newSlider = [
         ...slider.slice(0, sliderIndex),
@@ -131,7 +131,7 @@ const PictureSlider = ({
   const isSolvedBySlider = slider.every(
     (sliderValue, i) =>
       sliderValue[0] === correctSlider[i][0] &&
-      sliderValue[1] === correctSlider[i][1]
+      sliderValue[1] === correctSlider[i][1],
   );
 
   useEffect(() => {

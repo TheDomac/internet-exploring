@@ -40,7 +40,13 @@ const hash = {
 
 const HelenKellerCryptogram = (props) => {
   return (
-    <Cryptogram {...props} hash={hash} solution={SOLUTION} solutionAsSymbols={solutionAsSymbols} solutionAsWords={solutionAsWords} />
+    <Cryptogram
+      {...props}
+      hash={hash}
+      solution={SOLUTION}
+      solutionAsSymbols={solutionAsSymbols}
+      solutionAsWords={solutionAsWords}
+    />
   );
 };
 

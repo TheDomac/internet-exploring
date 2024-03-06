@@ -72,14 +72,17 @@ const NextOrFinishButton = ({ isSolved, handleFinishClick }) => {
 
       localStorage.setItem(
         LOCAL_STORAGE_KEYS.SOLVED_PUZZLES,
-        JSON.stringify(newPuzzlesSolvingSync)
+        JSON.stringify(newPuzzlesSolvingSync),
       );
       setPuzzlesSolvingSync(newPuzzlesSolvingSync);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSolved]);
 
-  const isLastRebusAvailable = getIsLastRebusAvailable(puzzleSolvingState, puzzle.rebuses[puzzle.rebuses.length - 1]);
+  const isLastRebusAvailable = getIsLastRebusAvailable(
+    puzzleSolvingState,
+    puzzle.rebuses[puzzle.rebuses.length - 1],
+  );
   const isDisabled =
     selectedRebusIndex === puzzleSolvingState.length - 2 &&
     !isLastRebusAvailable;

@@ -66,7 +66,10 @@ const Circle = ({ rebusIndex }) => {
 
   const isSolved = getIsSolved(puzzleSolvingState, rebusIndex);
 
-  const isLastRebusAvailable = getIsLastRebusAvailable(puzzleSolvingState, puzzle.rebuses[puzzle.rebuses.length - 1]);
+  const isLastRebusAvailable = getIsLastRebusAvailable(
+    puzzleSolvingState,
+    puzzle.rebuses[puzzle.rebuses.length - 1],
+  );
   const isDisabled =
     rebusIndex === puzzleSolvingState.length - 1 && !isLastRebusAvailable;
 
@@ -77,7 +80,7 @@ const Circle = ({ rebusIndex }) => {
       title={isDisabled ? "Solve other riddles first" : ""}
       $isSelected={rebusIndex === selectedRebusIndex}
       $isSolved={Boolean(
-        isSolved.cluesSolvedSolution || isSolved.rebusSolvedSolution
+        isSolved.cluesSolvedSolution || isSolved.rebusSolvedSolution,
       )}
     >
       {rebusIndex + 1}

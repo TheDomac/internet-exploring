@@ -76,7 +76,7 @@ const Minesweeper = ({
               openCell={openCell}
               rotateCellState={rotateCellState}
             />
-          ))
+          )),
         )}
       </Wrapper>
     </>

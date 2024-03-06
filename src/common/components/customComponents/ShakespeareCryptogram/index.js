@@ -2,8 +2,7 @@ import React from "react";
 
 import Cryptogram from "../Cryptogram";
 
-const SOLUTION =
-  "To be or not to be, that is the question.";
+const SOLUTION = "To be or not to be, that is the question.";
 const solutionAsSymbols = SOLUTION.toUpperCase().split("");
 const solutionAsWords = SOLUTION.toUpperCase()
   .split(" ")
@@ -40,7 +39,13 @@ const hash = {
 
 const ShakespeareCryptogram = (props) => {
   return (
-    <Cryptogram {...props} hash={hash} solution={SOLUTION} solutionAsSymbols={solutionAsSymbols} solutionAsWords={solutionAsWords} />
+    <Cryptogram
+      {...props}
+      hash={hash}
+      solution={SOLUTION}
+      solutionAsSymbols={solutionAsSymbols}
+      solutionAsWords={solutionAsWords}
+    />
   );
 };
 

@@ -2,7 +2,7 @@ import getIsSolved from "./getIsSolved";
 
 const getIsLastRebusAvailable = (puzzleSolvingState, lastRebus) => {
   if (lastRebus.isUnlocked) {
-    return true
+    return true;
   }
 
   const arePreviousRebusesSolved = puzzleSolvingState.every((r, i) => {
@@ -12,7 +12,7 @@ const getIsLastRebusAvailable = (puzzleSolvingState, lastRebus) => {
 
     const { cluesSolvedSolution, rebusSolvedSolution } = getIsSolved(
       puzzleSolvingState,
-      i
+      i,
     );
     return Boolean(cluesSolvedSolution || rebusSolvedSolution);
   });

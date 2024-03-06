@@ -41,7 +41,7 @@ const WorkshopPlayPage = () => {
       return;
     }
     const foundPuzzle = allPuzzles.workshopPuzzles.find(
-      (p) => p.id === riddleId
+      (p) => p.id === riddleId,
     );
 
     if (foundPuzzle) {
@@ -52,17 +52,17 @@ const WorkshopPlayPage = () => {
 
   const handleFinish = () => {
     const workshopSolvedPuzzlesIDs = localStorage.getItem(
-      LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS
+      LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS,
     );
     const workshopSolvedPuzzlesIDsParsed = JSON.parse(
-      workshopSolvedPuzzlesIDs || "[]"
+      workshopSolvedPuzzlesIDs || "[]",
     );
     if (!workshopSolvedPuzzlesIDsParsed.includes(riddleId)) {
       const newWorkshopSolvedPuzzlesIDs =
         workshopSolvedPuzzlesIDsParsed.concat(riddleId);
       localStorage.setItem(
         LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS,
-        JSON.stringify(newWorkshopSolvedPuzzlesIDs)
+        JSON.stringify(newWorkshopSolvedPuzzlesIDs),
       );
     }
 

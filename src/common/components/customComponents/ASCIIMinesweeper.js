@@ -55,8 +55,8 @@ const initialBoard = EMPTY_BOARD.map((row, i) =>
   row.map((column, j) =>
     minesLocations.find((c) => c[0] === j && c[1] === i)
       ? CODES.MINE
-      : CODES.NOTHING
-  )
+      : CODES.NOTHING,
+  ),
 );
 
 const ASCIIMinesweeper = () => {

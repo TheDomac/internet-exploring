@@ -156,8 +156,8 @@ const CarCircuits = () => {
                 tile.positions[2],
               ],
             }
-          : tile
-      )
+          : tile,
+      ),
     );
 
     setTiles(newTiles);

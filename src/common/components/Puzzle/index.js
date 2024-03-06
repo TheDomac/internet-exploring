@@ -36,11 +36,11 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick, loading, error }) => {
     }, []) || [];
 
   const areAllImagesLoaded = imagesToLoad.every((img) =>
-    loadedImages.includes(img)
+    loadedImages.includes(img),
   );
   const isLoading = loading || !areAllImagesLoaded;
 
-  const cluesWithHelperTextExist = rebus?.clues.find(clue => clue.helperText)
+  const cluesWithHelperTextExist = rebus?.clues.find((clue) => clue.helperText);
 
   if (isLoading) {
     return (
@@ -70,7 +70,13 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick, loading, error }) => {
         <HelpModal />
         <Rebus handleFinishClick={handleFinishClick} />
         <CopyNotification />
-        <HelpButton title={!cluesWithHelperTextExist && "No help available for this riddle."} disabled={!cluesWithHelperTextExist} onClick={helpClicked.toggle}>
+        <HelpButton
+          title={
+            !cluesWithHelperTextExist && "No help available for this riddle."
+          }
+          disabled={!cluesWithHelperTextExist}
+          onClick={helpClicked.toggle}
+        >
           {helpClicked.isOn ? (
             <FadeInP>X</FadeInP>
           ) : (

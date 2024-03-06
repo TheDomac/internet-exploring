@@ -1,18 +1,12 @@
 import { useContext } from "react";
-import { PaymentContext } from "../../services/PaymentContext";
+import { ModalsContext } from "../../services/ModalsContext";
 
 import UpgradeModal from "./UpgradeModal";
-import LoginModal from "./LoginModal";
 
 const Modals = () => {
-  const { upgradeModal, loginModal } = useContext(PaymentContext);
+  const { upgradeModal } = useContext(ModalsContext);
 
-  return (
-    <div>
-      {upgradeModal.isOn && <UpgradeModal />}
-      {loginModal.isOn && <LoginModal />}
-    </div>
-  );
+  return <div>{upgradeModal.isOn && <UpgradeModal />}</div>;
 };
 
 export default Modals;

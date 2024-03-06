@@ -2,8 +2,7 @@ import React from "react";
 
 import Cryptogram from "../Cryptogram";
 
-const SOLUTION =
-  "Be the change that you wish to see in the world.";
+const SOLUTION = "Be the change that you wish to see in the world.";
 const solutionAsSymbols = SOLUTION.toUpperCase().split("");
 const solutionAsWords = SOLUTION.toUpperCase()
   .split(" ")
@@ -40,7 +39,13 @@ const hash = {
 
 const GandhiCryptogram = (props) => {
   return (
-    <Cryptogram {...props} hash={hash} solution={SOLUTION} solutionAsSymbols={solutionAsSymbols} solutionAsWords={solutionAsWords} />
+    <Cryptogram
+      {...props}
+      hash={hash}
+      solution={SOLUTION}
+      solutionAsSymbols={solutionAsSymbols}
+      solutionAsWords={solutionAsWords}
+    />
   );
 };
 

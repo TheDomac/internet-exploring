@@ -4,8 +4,7 @@ import { logEvent } from "firebase/analytics";
 
 import ArrowBack from "../../common/components/ArrowBack";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
-import { PaymentContext } from "../../common/services/PaymentContext";
-import { AuthContext } from "../../common/services/AuthContext";
+import { ModalsContext } from "../../common/services/ModalsContext";
 import {
   Wrapper,
   PuzzleBox,
@@ -15,18 +14,17 @@ import {
 import {
   PuzzleRow,
   PuzzleTitle,
-  TextLink,
   BlurredWrapper,
 } from "./index.styled";
-import { EMAIL, NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
+import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { HomeButton } from "../Home/index.styled";
 import { analytics } from "../../common/firebase";
 import useIsWeb from "../../common/services/useIsWeb";
+import ListFooter from "./ListFooter";
 
 const PuzzleList = () => {
   const { puzzlesSolvingSync, allPuzzles } = useContext(PuzzleContext);
-  const { upgradedUser } = useContext(AuthContext);
-  const { upgradeModal } = useContext(PaymentContext);
+  const { upgradeModal } = useContext(ModalsContext);
   const isWeb = useIsWeb()
 
   useEffect(() => {
@@ -78,21 +76,7 @@ const PuzzleList = () => {
 
   return (
     <Wrapper>
-      {upgradedUser.isOn || !isWeb ? (
-        <>
-          {allPuzzles.puzzles.map(renderPuzzle)}
-          <p style={{ textAlign: "center" }}>
-            Check out{" "}
-            <Link style={{ textDecoration: "none" }} to="/play/workshop">
-              <TextLink>workshop</TextLink>
-            </Link>{" "}
-            for more!
-            <br /> You can send your suggestions and ideas to{" "}
-            {EMAIL}
-            <br />
-          </p>
-        </>
-      ) : (
+      {isWeb ? (
         <>
           {allPuzzles.puzzles
             .slice(0, NUMBER_OF_FREE_RIDDLES)
@@ -110,6 +94,15 @@ const PuzzleList = () => {
             >
               Unlock all riddles
             </HomeButton>
+            <div style={{
+              position: "absolute",
+              top: 100,
+              left: "50%",
+              transform: "translateX(-50%)",
+              zIndex: 3,
+          }}>
+            <ListFooter />
+            </div>
             <div
               style={{
                 position: "absolute",
@@ -126,6 +119,11 @@ const PuzzleList = () => {
                 .map(renderPuzzle)}
             </BlurredWrapper>
           </div>
+        </>
+      ) : (
+        <>
+          {allPuzzles.puzzles.map(renderPuzzle)}
+          <ListFooter />
         </>
       )}
 

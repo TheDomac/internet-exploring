@@ -7,12 +7,12 @@ import { LOCAL_STORAGE_KEYS } from "../consts";
 export const PuzzleContext = createContext();
 
 const initialAreAnswersHidden = localStorage.getItem(
-  LOCAL_STORAGE_KEYS.ARE_ANSWERS_HIDDEN
+  LOCAL_STORAGE_KEYS.ARE_ANSWERS_HIDDEN,
 );
 const initialAreAnswersHiddenParsed = initialAreAnswersHidden === "true";
 
 const initialPuzzlesSolvingSync = localStorage.getItem(
-  LOCAL_STORAGE_KEYS.SOLVED_PUZZLES
+  LOCAL_STORAGE_KEYS.SOLVED_PUZZLES,
 );
 
 const initialPuzzlesSolvingSyncParsed =
@@ -27,7 +27,7 @@ const getInitialPuzzleSolvingState = (puzzle) =>
           ? { ...prev, [c.id]: null }
           : { ...prev }),
       }),
-      {}
+      {},
     ),
   }));
 
@@ -35,7 +35,7 @@ const PuzzleContextProvider = ({ children }) => {
   const [allPuzzles, setAllPuzzles] = useState(null);
   const [puzzle, setPuzzle] = useState(null);
   const [puzzlesSolvingSync, setPuzzlesSolvingSync] = useState(
-    initialPuzzlesSolvingSyncParsed
+    initialPuzzlesSolvingSyncParsed,
   );
   // puzzle solving state is used for tracking correctly solved rebuses and clues - solutions are put in this object
   const [puzzleSolvingState, setPuzzleSolvingState] = useState(null);
@@ -210,7 +210,7 @@ const PuzzleContextProvider = ({ children }) => {
     const areAllSolved = puzzleSolvingState?.every((r, i) => {
       const { cluesSolvedSolution, rebusSolvedSolution } = getIsSolved(
         puzzleSolvingState,
-        i
+        i,
       );
       return Boolean(cluesSolvedSolution || rebusSolvedSolution);
     });

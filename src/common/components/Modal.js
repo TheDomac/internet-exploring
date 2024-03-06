@@ -73,13 +73,13 @@ export const ModalConfirm = ({ onConfirm, onClose, text }) => {
   );
 };
 
-export const ModalInfo = ({ onClose, text, children }) => {
+export const ModalInfo = ({ onClose, text, children, buttonText = "OK" }) => {
   return (
     <>
       {children || <Text>{text}</Text>}
       <ButtonsWrapper>
         <Button style={{ margin: "0 auto" }} onClick={onClose}>
-          OK
+          {buttonText}
         </Button>
       </ButtonsWrapper>
     </>

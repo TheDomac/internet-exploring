@@ -9,7 +9,7 @@ import {
   Wrapper,
   PuzzleLink,
 } from "../../common/components/PuzzleList.styled";
-import { EMAIL, LOCAL_STORAGE_KEYS, REDDIT_URL } from "../../common/consts";
+import { LOCAL_STORAGE_KEYS, REDDIT_URL } from "../../common/consts";
 import { PuzzleContext } from "../../common/services/PuzzleContext";
 import useIsWeb from "../../common/services/useIsWeb";
 
@@ -24,13 +24,12 @@ const addHttps = (url) => (url.startsWith("https") ? url : `https://${url}`);
 const Workshop = () => {
   const { allPuzzles } = useContext(PuzzleContext);
 
-  const isWeb = useIsWeb()
+  const isWeb = useIsWeb();
 
   const workshopSolvedPuzzlesIDs =
     localStorage.getItem(LOCAL_STORAGE_KEYS.WORKSHOP_SOLVED_PUZZLES_IDS) ||
     "[]";
   const workshopSolvedPuzzlesIDsParsed = JSON.parse(workshopSolvedPuzzlesIDs);
-
 
   if (!allPuzzles) {
     return null;
@@ -50,13 +49,13 @@ const Workshop = () => {
           }}
         >
           <p>
-            Have an idea for a riddle? Send an email to{" "}
-            <TextLink target="_blank">
-              {EMAIL}
-            </TextLink>{" "}
-            or a message on{" "}
+            Have an idea for a riddle? Send a message on{" "}
             {!isWeb && "a subreddit "}
-            <TextLink href={isWeb ? REDDIT_URL : undefined} target="_blank" rel="noreferrer">
+            <TextLink
+              href={isWeb ? REDDIT_URL : undefined}
+              target="_blank"
+              rel="noreferrer"
+            >
               {isWeb ? "Reddit" : "r/InternetExploring"}
             </TextLink>
             .
