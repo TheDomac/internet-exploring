@@ -56,6 +56,7 @@ const Circle = ({ rebusIndex }) => {
     selectedRebusIndex,
     puzzleSolvingState,
     helpClicked,
+    puzzle,
   } = useContext(PuzzleContext);
 
   const handleClick = () => {
@@ -65,7 +66,7 @@ const Circle = ({ rebusIndex }) => {
 
   const isSolved = getIsSolved(puzzleSolvingState, rebusIndex);
 
-  const isLastRebusAvailable = getIsLastRebusAvailable(puzzleSolvingState);
+  const isLastRebusAvailable = getIsLastRebusAvailable(puzzleSolvingState, puzzle.rebuses[puzzle.rebuses.length - 1]);
   const isDisabled =
     rebusIndex === puzzleSolvingState.length - 1 && !isLastRebusAvailable;
 

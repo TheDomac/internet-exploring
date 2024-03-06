@@ -40,6 +40,8 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick, loading, error }) => {
   );
   const isLoading = loading || !areAllImagesLoaded;
 
+  const cluesWithHelperTextExist = rebus?.clues.find(clue => clue.helperText)
+
   if (isLoading) {
     return (
       <Container style={{ height: "100vh" }}>
@@ -68,7 +70,7 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick, loading, error }) => {
         <HelpModal />
         <Rebus handleFinishClick={handleFinishClick} />
         <CopyNotification />
-        <HelpButton onClick={helpClicked.toggle}>
+        <HelpButton title={!cluesWithHelperTextExist && "No help available for this riddle."} disabled={!cluesWithHelperTextExist} onClick={helpClicked.toggle}>
           {helpClicked.isOn ? (
             <FadeInP>X</FadeInP>
           ) : (

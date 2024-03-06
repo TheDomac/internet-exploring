@@ -492,7 +492,8 @@
           "possibleSolutions": [],
           "type": "text"
         },
-        "id": "1122-76b4-475a-b340-311d485625e2"
+        "id": "1122-76b4-475a-b340-311d485625e2",
+        "isUnlocked": true
       }
     ],
     "name": "Emoji titles"

@@ -79,7 +79,7 @@ const NextOrFinishButton = ({ isSolved, handleFinishClick }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSolved]);
 
-  const isLastRebusAvailable = getIsLastRebusAvailable(puzzleSolvingState);
+  const isLastRebusAvailable = getIsLastRebusAvailable(puzzleSolvingState, puzzle.rebuses[puzzle.rebuses.length - 1]);
   const isDisabled =
     selectedRebusIndex === puzzleSolvingState.length - 2 &&
     !isLastRebusAvailable;
