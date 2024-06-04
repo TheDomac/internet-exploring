@@ -3,19 +3,19 @@ import React from "react";
 import { Container } from "../../common/components/Container.styled";
 import { REDDIT_URL, STEAM_URL } from "../../common/consts";
 
-import LogoImg from "../../images/Logo.png";
 import redditLogo from "../../images/redditLogo.png";
 import steamLogo from "../../images/steamLogo.png";
 import Modal, { ModalInfo } from "../../common/components/Modal";
 import Alert from "../../common/components/Alert.styled";
 import { useToggle } from "../../common/services/useToggle";
 import isMobile from "../../common/services/isMobile";
+// import { testAdd } from "../../common/firebase";
+import Logo from "./Logo";
 
 import WhyInternetExploring from "./WhyInternetExploring";
 import {
   Subtitle1,
   Subtitle2,
-  Logo,
   HomeButton,
   StyledLink,
   StyledA,
@@ -42,7 +42,7 @@ const Home = () => {
         {isMobile && (
           <Alert>This game is not recommended for mobile devices.</Alert>
         )}
-        <Logo src={LogoImg} alt="logo" />
+        <Logo />
         <Subtitle1>What if the Internet was your escape room?</Subtitle1>
         <Subtitle2>
           Solve riddles whose clues and answers are hidden online.

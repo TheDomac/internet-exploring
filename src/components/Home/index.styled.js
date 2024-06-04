@@ -36,13 +36,6 @@ export const Subtitle2 = styled.p`
   }
 `;
 
-export const Logo = styled.img`
-  max-width: 100%;
-  @media (max-height: 732px) {
-    max-height: 300px;
-  }
-`;
-
 export const HomeButton = styled(Button)`
   max-width: 100%;
   ${({ $primary }) => ($primary ? "background-color: #309d6d;" : "")}

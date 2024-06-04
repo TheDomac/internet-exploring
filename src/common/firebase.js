@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore"; 
 import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 import { GoogleAuthProvider } from "firebase/auth";
@@ -33,3 +34,13 @@ export const db = getFirestore();
 export const storage = getStorage();
 
 export const auth = getAuth();
+
+
+export const testAdd = async () => {
+  try {
+    await setDoc(doc(db, "competitivePuzzles", "testPuzzleId"), {puzzles: ["wat"]});
+  } catch (error) {
+    console.log("error", error)
+  }
+
+}
