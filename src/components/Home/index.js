@@ -1,9 +1,8 @@
 import React from "react";
 
 import { Container } from "../../common/components/Container.styled";
-import { REDDIT_URL, STEAM_URL } from "../../common/consts";
+import { STEAM_URL } from "../../common/consts";
 
-import redditLogo from "../../images/redditLogo.png";
 import steamLogo from "../../images/steamLogo.png";
 import Modal, { ModalInfo } from "../../common/components/Modal";
 import Alert from "../../common/components/Alert.styled";
@@ -13,6 +12,7 @@ import isMobile from "../../common/services/isMobile";
 import Logo from "./Logo";
 
 import WhyInternetExploring from "./WhyInternetExploring";
+import LatestNews from "./LatestNews";
 import {
   Subtitle1,
   Subtitle2,
@@ -24,10 +24,20 @@ import useIsWeb from "../../common/services/useIsWeb";
 
 const Home = () => {
   const whyInternetExploringModal = useToggle();
+  const latestNewsModal = useToggle();
   const isWeb = useIsWeb();
 
   return (
     <>
+      <Modal
+        isModalShown={latestNewsModal.isOn}
+        widthLimit={false}
+        onClose={latestNewsModal.setOff}
+      >
+        <ModalInfo onClose={latestNewsModal.setOff} buttonText="Close">
+          <LatestNews />
+        </ModalInfo>
+      </Modal>
       <Modal
         isModalShown={whyInternetExploringModal.isOn}
         widthLimit={false}
@@ -55,22 +65,18 @@ const Home = () => {
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
-        <div style={{ display: "flex", width: "500px" }}>
           {isWeb && (
-            <>
               <StyledA
                 rel="noreferrer"
                 href={STEAM_URL}
                 target="_blank"
-                style={{ width: "100%", marginRight: "15px" }}
               >
                 <HomeButton
                   style={{
-                    width: "100%",
-                    padding: "12px 20px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
+                    padding: "14px 20px",
                   }}
                 >
                   <span>Play on Steam</span>
@@ -85,36 +91,15 @@ const Home = () => {
                   />
                 </HomeButton>
               </StyledA>
-              <StyledA
-                rel="noreferrer"
-                href={REDDIT_URL}
-                target="_blank"
-                style={{ width: "100%" }}
+          )}
+                        <StyledA
+                        onClick={latestNewsModal.setOn}
               >
                 <HomeButton
-                  style={{
-                    width: "100%",
-                    padding: "12px 20px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
                 >
-                  <span>Latest news</span>
-                  <img
-                    style={{
-                      display: "inline-block",
-                      marginLeft: 7,
-                      marginRight: 3,
-                    }}
-                    src={redditLogo}
-                    alt="reddit"
-                  />
-                </HomeButton>
+Latest news                </HomeButton>
               </StyledA>
-            </>
-          )}
-        </div>
+
         <div
           style={{
             display: "flex",
