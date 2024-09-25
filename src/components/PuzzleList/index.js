@@ -11,11 +11,7 @@ import {
   PuzzleLink,
 } from "../../common/components/PuzzleList.styled";
 
-import {
-  PuzzleRow,
-  PuzzleTitle,
-  BlurredWrapper,
-} from "./index.styled";
+import { PuzzleRow, PuzzleTitle, BlurredWrapper } from "./index.styled";
 import { NUMBER_OF_FREE_RIDDLES } from "../../common/consts";
 import { HomeButton } from "../Home/index.styled";
 import { analytics } from "../../common/firebase";
@@ -25,7 +21,7 @@ import ListFooter from "./ListFooter";
 const PuzzleList = () => {
   const { puzzlesSolvingSync, allPuzzles } = useContext(PuzzleContext);
   const { upgradeModal } = useContext(ModalsContext);
-  const isWeb = useIsWeb()
+  const isWeb = useIsWeb();
 
   useEffect(() => {
     logEvent(analytics, "puzzle_list_shown");
@@ -94,14 +90,16 @@ const PuzzleList = () => {
             >
               Unlock all riddles
             </HomeButton>
-            <div style={{
-              position: "absolute",
-              top: 100,
-              left: "50%",
-              transform: "translateX(-50%)",
-              zIndex: 3,
-          }}>
-            <ListFooter />
+            <div
+              style={{
+                position: "absolute",
+                top: 100,
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 3,
+              }}
+            >
+              <ListFooter />
             </div>
             <div
               style={{

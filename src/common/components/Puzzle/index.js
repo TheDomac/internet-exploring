@@ -72,7 +72,9 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick, loading, error }) => {
         <CopyNotification />
         <HelpButton
           title={
-            cluesWithHelperTextExist ? undefined : "No help available for this riddle."
+            cluesWithHelperTextExist
+              ? undefined
+              : "No help available for this riddle."
           }
           disabled={!cluesWithHelperTextExist}
           onClick={helpClicked.toggle}

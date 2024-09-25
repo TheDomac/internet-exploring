@@ -43,7 +43,10 @@ const Home = () => {
         widthLimit={false}
         onClose={whyInternetExploringModal.setOff}
       >
-        <ModalInfo onClose={whyInternetExploringModal.setOff} buttonText="Close">
+        <ModalInfo
+          onClose={whyInternetExploringModal.setOff}
+          buttonText="Close"
+        >
           <WhyInternetExploring />
         </ModalInfo>
       </Modal>
@@ -65,40 +68,32 @@ const Home = () => {
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
-          {isWeb && (
-              <StyledA
-                rel="noreferrer"
-                href={STEAM_URL}
-                target="_blank"
-              >
-                <HomeButton
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "14px 20px",
-                  }}
-                >
-                  <span>Play on Steam</span>
-                  <img
-                    style={{
-                      display: "inline-block",
-                      marginLeft: 7,
-                      marginRight: 3,
-                    }}
-                    src={steamLogo}
-                    alt="steam"
-                  />
-                </HomeButton>
-              </StyledA>
-          )}
-                        <StyledA
-                        onClick={latestNewsModal.setOn}
-              >
-                <HomeButton
-                >
-Latest news                </HomeButton>
-              </StyledA>
+        {isWeb && (
+          <StyledA rel="noreferrer" href={STEAM_URL} target="_blank">
+            <HomeButton
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "14px 20px",
+              }}
+            >
+              <span>Play on Steam</span>
+              <img
+                style={{
+                  display: "inline-block",
+                  marginLeft: 7,
+                  marginRight: 3,
+                }}
+                src={steamLogo}
+                alt="steam"
+              />
+            </HomeButton>
+          </StyledA>
+        )}
+        <StyledA onClick={latestNewsModal.setOn}>
+          <HomeButton>Latest news </HomeButton>
+        </StyledA>
 
         <div
           style={{
