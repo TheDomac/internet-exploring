@@ -27,8 +27,6 @@
     "eject": "react-app-rewired eject",
     "deploy": "yarn build:prod && netlify deploy --prod",
     "prettier": "npx prettier --write ./src",
-    "deleteWorkshopPuzzle": "node deleteWorkshopPuzzle.js",
-    "addNewWorkshopPuzzle": "node addNewWorkshopPuzzle.js",
     "tauri": "tauri",
     "tauri:build": "tauri build"
   },

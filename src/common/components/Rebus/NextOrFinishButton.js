@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 import getIsLastRebusAvailable from "../../services/getIsLastRebusAvailable";
 import { PuzzleContext } from "../../services/PuzzleContext";
-import { LOCAL_STORAGE_KEYS } from "../../consts";
 import { FadeInButton } from "../FadeIn";
 
 const StyledNextOrFinishButton = styled(FadeInButton)`
@@ -70,10 +69,6 @@ const NextOrFinishButton = ({ isSolved, handleFinishClick }) => {
         [puzzle.id]: previousSolvedPuzzle.concat(rebus.id),
       };
 
-      localStorage.setItem(
-        LOCAL_STORAGE_KEYS.SOLVED_PUZZLES,
-        JSON.stringify(newPuzzlesSolvingSync),
-      );
       setPuzzlesSolvingSync(newPuzzlesSolvingSync);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

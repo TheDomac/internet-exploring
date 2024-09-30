@@ -2,18 +2,10 @@ import { useState, useEffect, createContext } from "react";
 import { useToggle } from "./useToggle";
 import confetti from "canvas-confetti";
 import getIsSolved from "./getIsSolved";
-import { LOCAL_STORAGE_KEYS } from "../consts";
 
 export const PuzzleContext = createContext();
 
-const initialAreAnswersHidden = localStorage.getItem(
-  LOCAL_STORAGE_KEYS.ARE_ANSWERS_HIDDEN,
-);
-const initialAreAnswersHiddenParsed = initialAreAnswersHidden === "true";
-
-const initialPuzzlesSolvingSync = localStorage.getItem(
-  LOCAL_STORAGE_KEYS.SOLVED_PUZZLES,
-);
+const initialPuzzlesSolvingSync = localStorage.getItem("solved");
 
 const initialPuzzlesSolvingSyncParsed =
   JSON.parse(initialPuzzlesSolvingSync) || {};
@@ -43,7 +35,6 @@ const PuzzleContextProvider = ({ children }) => {
   const [stateMaintenance, setStateMaintenance] = useState(null);
   const [selectedRebusIndex, setSelectedRebusIndex] = useState(0);
   const helpClicked = useToggle();
-  const areSolutionsHidden = useToggle(initialAreAnswersHiddenParsed);
   const [viewedHelpClueIds, setViewedHelpClueIds] = useState([]);
   const [helpModalText, setHelpModalText] = useState(null);
   const [copyNotification, setCopyNotification] = useState(null);
@@ -244,7 +235,6 @@ const PuzzleContextProvider = ({ children }) => {
     stateMaintenance,
     updateClueMaintenance,
     updateRebusMaintenance,
-    areSolutionsHidden,
     allPuzzles,
   };
 

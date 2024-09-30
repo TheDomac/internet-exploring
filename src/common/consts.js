@@ -2,7 +2,6 @@ export const env = process.env.REACT_APP_STAGE.toUpperCase();
 
 export const build = process.env.REACT_APP_BUILD;
 
-export const workshopCollectionName = "workshopPuzzles";
 export const clueTypes = {
   TEXT: "text",
   IMAGE: "image",
@@ -16,11 +15,9 @@ export const solutionTypes = {
   CUSTOM_COMPONENT: "customComponent",
 };
 
-export const NUMBER_OF_FREE_RIDDLES = 3;
+export const REDDIT_PROFILE_URL = "https://www.reddit.com/user/TheDomac";
 
-export const REDDIT_URL = "https://www.reddit.com/r/internetexploring/";
-export const STEAM_URL =
-  "https://store.steampowered.com/app/2050870/Internet_Exploring/";
+export const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/internetexploring";
 
 export const DEFAULT_SOLUTION_VALUES = {
   [solutionTypes.TEXT]: "",
@@ -34,14 +31,6 @@ export const DEFAULT_SOLUTION_VALUES = {
     minute: "",
     second: "",
   },
-};
-
-export const LOCAL_STORAGE_KEYS = {
-  SOLVED_PUZZLES: "solvedPuzzles",
-  ARE_ANSWERS_HIDDEN: "areAnswersHidden",
-  USER_NICKNAME: "userNickname",
-  USER_SOCIAL_MEDIA_URL: "userSocialMediaURL",
-  WORKSHOP_SOLVED_PUZZLES_IDS: "workshopSolvedPuzzlesIDs",
 };
 
 export const statuses = {

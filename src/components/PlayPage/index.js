@@ -1,26 +1,82 @@
-import React from "react";
-
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-
-import { Container } from "../../common/components/Container.styled";
-import { Button } from "../../common/components/Button.styled";
+import styled from "styled-components";
+import { Fragment } from "react";
 
 import ArrowBack from "../../common/components/ArrowBack";
+import {
+  PuzzleBox,
+  Wrapper,
+  PuzzleLink,
+} from "../../common/components/PuzzleList.styled";
+import { BUY_ME_A_COFFEE_URL, REDDIT_PROFILE_URL } from "../../common/consts";
+import { PuzzleContext } from "../../common/services/PuzzleContext";
+
+export const TextLink = styled.a`
+  color: #309d6d;
+  -webkit-text-stroke: 0.5px white;
+  text-decoration: none;
+`;
+
 
 const PlayPage = () => {
-  return (
-    <Container style={{ height: "100vh" }}>
-      <Link to="/play/puzzles" style={{ marginBottom: "40px" }}>
-        <Button style={{ maxWidth: "100%" }}>Riddles</Button>
-      </Link>
+  const { allPuzzles } = useContext(PuzzleContext);
 
-      <Link to="/play/workshop">
-        <Button style={{ maxWidth: "100%" }}>Workshop</Button>
-      </Link>
+  const solvedPuzzlesIds =
+    localStorage.getItem("solved") ||
+    "[]";
+  const solvedPuzzlesIDsParsed = JSON.parse(solvedPuzzlesIds);
+
+  if (!allPuzzles) {
+    return null;
+  }
+
+  return (
+    <>
       <Link to="/">
         <ArrowBack />
       </Link>
-    </Container>
+      <Wrapper>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {allPuzzles.puzzles.map((puzzle) => (
+            <div key={puzzle.id} >
+              <PuzzleLink to={`/play/${puzzle.id}`}>
+                <PuzzleBox
+                  $isSolved={solvedPuzzlesIDsParsed.includes(puzzle.id)}
+                  title={puzzle.name}
+                >
+                  <span style={{ wordBreak: "break-word" }}>
+                    {puzzle.name.length > 65
+                      ? `${puzzle.name.slice(0, 65)}...`
+                      : puzzle.name}
+                  </span>
+                </PuzzleBox>
+              </PuzzleLink>
+            </div>
+          ))}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: 15,
+            fontSize: 20,
+          }}
+        >
+          <p style={{ textAlign: "center"}}>
+          Feel free to reach out with suggestions or ideas via{" "}
+            <TextLink href={REDDIT_PROFILE_URL} target="_blank" rel="noreferrer">
+              Reddit
+            </TextLink>.<br />
+            To keep this project alive, you can{" "}
+            <TextLink href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noreferrer">
+              buy me a beer
+            </TextLink>.
+          </p>
+        </div>
+
+      </Wrapper>
+    </>
   );
 };
 

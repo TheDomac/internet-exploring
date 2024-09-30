@@ -1,16 +1,16 @@
 import React from "react";
 
 import { Container } from "../../common/components/Container.styled";
-import { STEAM_URL } from "../../common/consts";
 
-import steamLogo from "../../images/steamLogo.png";
 import Modal, { ModalInfo } from "../../common/components/Modal";
 import Alert from "../../common/components/Alert.styled";
 import { useToggle } from "../../common/services/useToggle";
 import isMobile from "../../common/services/isMobile";
+import { BuyMeACoffeeLogo } from "./BuyMeACoffeeLogo";
 // import { testAdd } from "../../common/firebase";
 import Logo from "./Logo";
 
+import { BUY_ME_A_COFFEE_URL } from "../../common/consts";
 import WhyInternetExploring from "./WhyInternetExploring";
 import LatestNews from "./LatestNews";
 import {
@@ -20,12 +20,10 @@ import {
   StyledLink,
   StyledA,
 } from "./index.styled";
-import useIsWeb from "../../common/services/useIsWeb";
 
 const Home = () => {
   const whyInternetExploringModal = useToggle();
   const latestNewsModal = useToggle();
-  const isWeb = useIsWeb();
 
   return (
     <>
@@ -68,29 +66,23 @@ const Home = () => {
         <StyledLink to="/tutorial" style={{ marginBottom: "20px" }}>
           <HomeButton>Tutorial</HomeButton>
         </StyledLink>
-        {isWeb && (
-          <StyledA rel="noreferrer" href={STEAM_URL} target="_blank">
-            <HomeButton
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "14px 20px",
-              }}
-            >
-              <span>Play on Steam</span>
-              <img
-                style={{
-                  display: "inline-block",
-                  marginLeft: 7,
-                  marginRight: 3,
-                }}
-                src={steamLogo}
-                alt="steam"
-              />
-            </HomeButton>
-          </StyledA>
-        )}
+
+        <StyledA rel="noreferrer" href={BUY_ME_A_COFFEE_URL} target="_blank">
+          <HomeButton
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "14px 20px",
+            }}
+          >
+            <span style={{ display: "inline-block", marginRight: 7 }}>
+              Buy me a beer
+            </span>
+            <BuyMeACoffeeLogo />
+          </HomeButton>
+        </StyledA>
+
         <StyledA onClick={latestNewsModal.setOn}>
           <HomeButton>Latest news </HomeButton>
         </StyledA>

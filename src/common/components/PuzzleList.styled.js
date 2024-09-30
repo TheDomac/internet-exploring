@@ -15,9 +15,9 @@ export const Wrapper = styled(FadeInDiv)`
 `;
 
 export const PuzzleBox = styled.div`
-  max-width: 170px;
-  width: 170px;
-  height: 170px;
+  max-width: 229px;
+  width: 229px;
+  height: 229px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@ export const PuzzleBox = styled.div`
   padding: 20px;
   text-align: center;
   transition: 300ms;
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
   position: relative;
 
