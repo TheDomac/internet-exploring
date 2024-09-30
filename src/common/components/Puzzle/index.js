@@ -15,7 +15,7 @@ import { Container } from "../Container.styled";
 import Alert from "../Alert.styled";
 import { clueTypes } from "../../consts";
 
-const Puzzle = ({ selectedPuzzle, handleFinishClick, loading, error }) => {
+const Puzzle = ({ selectedPuzzle, handleFinishClick, error }) => {
   const [loadedImages, setLoadedImages] = useState([]);
   const location = useLocation();
   const { puzzle, initPuzzle, helpClicked, rebus } = useContext(PuzzleContext);
@@ -38,11 +38,10 @@ const Puzzle = ({ selectedPuzzle, handleFinishClick, loading, error }) => {
   const areAllImagesLoaded = imagesToLoad.every((img) =>
     loadedImages.includes(img),
   );
-  const isLoading = loading || !areAllImagesLoaded;
 
   const cluesWithHelperTextExist = rebus?.clues.find((clue) => clue.helperText);
 
-  if (isLoading) {
+  if (!areAllImagesLoaded) {
     return (
       <Container style={{ height: "100vh" }}>
         <ImagesLoader

@@ -32,12 +32,3 @@ export const DEFAULT_SOLUTION_VALUES = {
     second: "",
   },
 };
-
-export const statuses = {
-  IDLE: "idle",
-  LOADING: "loading",
-  ERROR: "error",
-  SUCCESS: "success",
-};
-
-export const PRICE = "$4.99";

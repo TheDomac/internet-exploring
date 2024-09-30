@@ -1,6 +1,6 @@
 import {
-  BrowserRouter as Router,
   Routes,
+  HashRouter as Router,
   Route,
   Navigate,
 } from "react-router-dom";
@@ -11,7 +11,6 @@ import PlayPage from "./components/PlayPage";
 
 import TutorialPage from "./components/Tutorial";
 import TempPage from "./components/Temp";
-
 
 const RoutesGroup = () => {
   return (

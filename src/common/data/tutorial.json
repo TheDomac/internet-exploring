@@ -125,7 +125,7 @@
             },
             {
               "id": "10101010-e359-4abd-a7ea-222",
-              "value": "The final riddle will be available once you solve all previous ones.",
+              "value": "The final riddle is sometimes unlocked only once you solve all previous ones.",
               "type": "text",
               "subtext": "",
               "style": {

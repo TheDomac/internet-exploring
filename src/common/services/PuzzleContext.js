@@ -2,6 +2,7 @@ import { useState, useEffect, createContext } from "react";
 import { useToggle } from "./useToggle";
 import confetti from "canvas-confetti";
 import getIsSolved from "./getIsSolved";
+import { allPuzzles } from "../allPuzzles";
 
 export const PuzzleContext = createContext();
 
@@ -24,7 +25,6 @@ const getInitialPuzzleSolvingState = (puzzle) =>
   }));
 
 const PuzzleContextProvider = ({ children }) => {
-  const [allPuzzles, setAllPuzzles] = useState(null);
   const [puzzle, setPuzzle] = useState(null);
   const [puzzlesSolvingSync, setPuzzlesSolvingSync] = useState(
     initialPuzzlesSolvingSyncParsed,
@@ -38,25 +38,6 @@ const PuzzleContextProvider = ({ children }) => {
   const [viewedHelpClueIds, setViewedHelpClueIds] = useState([]);
   const [helpModalText, setHelpModalText] = useState(null);
   const [copyNotification, setCopyNotification] = useState(null);
-
-  const fetchAllPuzzles = async () => {
-    try {
-      const file = await fetch("../../../allPuzzles.json", {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
-      const newAllPuzzles = await file.json();
-      setAllPuzzles(newAllPuzzles);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchAllPuzzles();
-  }, []);
 
   const handleCopyClick = async (copyInfo) => {
     try {

@@ -18,18 +18,11 @@ export const TextLink = styled.a`
   text-decoration: none;
 `;
 
-
 const PlayPage = () => {
   const { allPuzzles } = useContext(PuzzleContext);
 
-  const solvedPuzzlesIds =
-    localStorage.getItem("solved") ||
-    "[]";
+  const solvedPuzzlesIds = localStorage.getItem("solved") || "[]";
   const solvedPuzzlesIDsParsed = JSON.parse(solvedPuzzlesIds);
-
-  if (!allPuzzles) {
-    return null;
-  }
 
   return (
     <>
@@ -38,8 +31,8 @@ const PlayPage = () => {
       </Link>
       <Wrapper>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {allPuzzles.puzzles.map((puzzle) => (
-            <div key={puzzle.id} >
+          {allPuzzles.map((puzzle) => (
+            <div key={puzzle.id}>
               <PuzzleLink to={`/play/${puzzle.id}`}>
                 <PuzzleBox
                   $isSolved={solvedPuzzlesIDsParsed.includes(puzzle.id)}
@@ -63,18 +56,27 @@ const PlayPage = () => {
             fontSize: 20,
           }}
         >
-          <p style={{ textAlign: "center"}}>
-          Feel free to reach out with suggestions or ideas via{" "}
-            <TextLink href={REDDIT_PROFILE_URL} target="_blank" rel="noreferrer">
+          <p style={{ textAlign: "center" }}>
+            Feel free to reach out with suggestions or ideas via{" "}
+            <TextLink
+              href={REDDIT_PROFILE_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
               Reddit
-            </TextLink>.<br />
-            To keep this project alive, you can{" "}
-            <TextLink href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noreferrer">
-              buy me a beer
-            </TextLink>.
+            </TextLink>
+            .<br />
+            To keep this game alive, please consider{" "}
+            <TextLink
+              href={BUY_ME_A_COFFEE_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              buying me a beer
+            </TextLink>
+            .
           </p>
         </div>
-
       </Wrapper>
     </>
   );

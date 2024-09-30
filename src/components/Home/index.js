@@ -56,7 +56,7 @@ const Home = () => {
         <Logo />
         <Subtitle1>What if the Internet was your escape room?</Subtitle1>
         <Subtitle2>
-          Solve riddles whose clues and answers are hidden online.
+          Solve riddles whose clues and answers are hidden online
         </Subtitle2>
 
         <StyledLink to="/play" style={{ marginBottom: "20px" }}>

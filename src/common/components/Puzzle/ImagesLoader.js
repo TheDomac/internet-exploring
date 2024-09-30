@@ -11,6 +11,7 @@ const ImagesLoader = ({ imagesToLoad, setLoadedImages, loadedImages }) => {
           img.startsWith("http") || img.startsWith("blob")
             ? img
             : require(`../../../images/${img}`);
+
         return (
           <img
             src={file}

@@ -6,9 +6,9 @@ import Routes from "./Routes";
 
 const App = () => {
   return (
-      <PuzzleContextProvider>
-        <Routes />
-      </PuzzleContextProvider>
+    <PuzzleContextProvider>
+      <Routes />
+    </PuzzleContextProvider>
   );
 };
 
