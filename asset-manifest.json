@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/internet-exploring/static/css/main.7a459899.css",
+    "main.css": "/internet-exploring/static/css/main.7587b425.css",
     "main.js": "/internet-exploring/static/js/main.c0266645.js",
     "static/media/1U37PuUF.png": "/internet-exploring/static/media/1U37PuUF.png",
     "static/media/kuponi.jpeg": "/internet-exploring/static/media/kuponi.jpeg",
@@ -95,11 +95,11 @@
     "static/media/googleLogo.svg": "/internet-exploring/static/media/googleLogo.svg",
     "index.html": "/internet-exploring/index.html",
     "static/media/Circled.svg": "/internet-exploring/static/media/Circled.90ab955b303f6dbcecd33888608e9de2.svg",
-    "main.7a459899.css.map": "/internet-exploring/static/css/main.7a459899.css.map",
+    "main.7587b425.css.map": "/internet-exploring/static/css/main.7587b425.css.map",
     "main.c0266645.js.map": "/internet-exploring/static/js/main.c0266645.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a459899.css",
+    "static/css/main.7587b425.css",
     "static/js/main.c0266645.js"
   ]
 }
