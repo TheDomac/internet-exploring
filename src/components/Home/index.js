@@ -12,7 +12,6 @@ import Logo from "./Logo";
 
 import { BUY_ME_A_COFFEE_URL } from "../../common/consts";
 import WhyInternetExploring from "./WhyInternetExploring";
-import LatestNews from "./LatestNews";
 import {
   Subtitle1,
   Subtitle2,
@@ -23,19 +22,9 @@ import {
 
 const Home = () => {
   const whyInternetExploringModal = useToggle();
-  const latestNewsModal = useToggle();
 
   return (
     <>
-      <Modal
-        isModalShown={latestNewsModal.isOn}
-        widthLimit={false}
-        onClose={latestNewsModal.setOff}
-      >
-        <ModalInfo onClose={latestNewsModal.setOff} buttonText="Close">
-          <LatestNews />
-        </ModalInfo>
-      </Modal>
       <Modal
         isModalShown={whyInternetExploringModal.isOn}
         widthLimit={false}
@@ -81,10 +70,6 @@ const Home = () => {
             </span>
             <BuyMeACoffeeLogo />
           </HomeButton>
-        </StyledA>
-
-        <StyledA onClick={latestNewsModal.setOn}>
-          <HomeButton>Latest news </HomeButton>
         </StyledA>
 
         <div
