@@ -31,7 +31,26 @@ const PlayPage = () => {
       </Link>
       <Wrapper>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {allPuzzles.map((puzzle) => (
+          {allPuzzles.slice(0, 20).map((puzzle) => (
+            <div key={puzzle.id}>
+              <PuzzleLink to={`/play/${puzzle.id}`}>
+                <PuzzleBox
+                  $isSolved={solvedPuzzlesIDsParsed.includes(puzzle.id)}
+                  title={puzzle.name}
+                >
+                  <span style={{ wordBreak: "break-word" }}>
+                    {puzzle.name.length > 65
+                      ? `${puzzle.name.slice(0, 65)}...`
+                      : puzzle.name}
+                  </span>
+                </PuzzleBox>
+              </PuzzleLink>
+            </div>
+          ))}
+        </div>
+        <h1 style={{ textAlign: "center", marginTop: 30}}>Extras</h1>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {allPuzzles.slice(20).map((puzzle) => (
             <div key={puzzle.id}>
               <PuzzleLink to={`/play/${puzzle.id}`}>
                 <PuzzleBox
